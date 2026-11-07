@@ -1,6 +1,9 @@
 ---
 
-import { getEntry, render } from "astro:content";
+import { createMarkdownProcessor } from "@astrojs/markdown-remark";
+import remarkEmoji from "remark-emoji";
+import sanitizeHtml from "sanitize-html";
+import aboutContent from "@/config/aboutContent.json";
 import Markdown from "@components/common/Markdown.astro";
 import { profileConfig } from "@/config/profileConfig";
 import { siteConfig } from "@/config/siteConfig";
@@ -10,13 +13,9 @@ import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import { getAuthorAvatarUrl } from "@/utils/schema-image";
 import { buildProfilePage } from "@/utils/schema-utils";
 
-const aboutPost = await getEntry("spec", "about");
-
-if (!aboutPost) {
-	throw new Error("About page content not found");
-}
-
-const { Content } = await render(aboutPost);
+const processor = await createMarkdownProcessor({ remarkPlugins: [remarkEmoji] });
+const rendered = await processor.render(aboutContent.body);
+const aboutHtml = sanitizeHtml(rendered.code, { allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]), allowedAttributes: { ...sanitizeHtml.defaults.allowedAttributes, img: ["src", "alt", "title", "width", "height"] } });
 
 const avatarUrl = await getAuthorAvatarUrl();
 const jsonLd = buildProfilePage({
@@ -32,7 +31,7 @@ const jsonLd = buildProfilePage({
     <div class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full ">
             <Markdown class="mt-2">
-                <Content />
+                <div set:html={aboutHtml} />
             </Markdown>
         </div>
     </div>

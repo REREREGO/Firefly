@@ -56,6 +56,7 @@ const foldOnFilter = collapseAllButFirst;
   class="card-base px-8 py-6"
   data-fold={foldOnFilter ? "true" : "false"}
 >
+  <header class="mb-6"><h1 class="text-2xl font-bold text-90">时间线</h1><p class="text-50 mt-2">沿着时间，回看每一次记录。按发布日期从新到旧排列。</p></header>
   {/* 筛选头部：默认隐藏，客户端在有筛选时填充并显示 */}
   <div id="archive-filter-header" class="mb-5 hidden">
     <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
@@ -106,11 +107,11 @@ const foldOnFilter = collapseAllButFirst;
             <a
               href={getPostUrlBySlug(post.id)}
               aria-label={post.data.title}
-              class="archive-post group btn-plain block! h-10 w-full rounded-lg hover:text-[initial]"
+              class="archive-post group btn-plain block! min-h-14 w-full rounded-lg hover:text-[initial]"
               data-tags={JSON.stringify(post.data.tags || [])}
               data-category={post.data.category || ""}
             >
-              <div class="flex flex-row justify-start items-center h-full">
+              <div class="flex flex-row justify-start items-center min-h-14 h-full">
                 {/* date */}
                 <div class="w-[15%] md:w-[10%] transition text-sm text-right text-50">
                   {formatDate(post.data.published)}

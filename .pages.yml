@@ -44,10 +44,27 @@ content:
   - name: about
     label: 关于我
     type: file
-    path: src/content/spec/about.md
-    format: yaml-frontmatter
+    path: src/config/aboutContent.json
+    format: json
     fields:
       - { name: body, label: 正文, type: rich-text }
+  - name: banners
+    label: 首页图片序列与备用图库
+    type: file
+    path: src/config/bannerGallery.json
+    format: json
+    fields:
+      - name: slides
+        label: 展示序列（从上到下播放，最多10张）
+        type: image
+        list:
+          min: 1
+          max: 10
+      - name: reserve
+        label: 备用图库（最多30张，不参与轮播）
+        type: image
+        list:
+          max: 30
 actions:
   - name: deploy
     label: 发布网站

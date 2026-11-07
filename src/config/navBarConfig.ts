@@ -151,7 +151,7 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		icon: "material-symbols:home",
 	},
 	Archive: {
-		name: "归档",
+		name: "时间线",
 		url: "/archive/",
 		icon: "material-symbols:archive",
 	},
