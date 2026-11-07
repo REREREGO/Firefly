@@ -114,7 +114,7 @@ const stats = [
 <WidgetLayout name={i18n(I18nKey.siteStats)} showTitle={showTitle} id="site-stats" class={className} style={style}>
   <div class="flex flex-col gap-2">
     {stats.map((stat) => (
-      <div class="flex items-center justify-between px-3 py-1.5">
+      <div class="flex items-center justify-between px-3 py-1.5" class:list={{ "activity-accent": stat.id === "last-update" }}>
         <div class="flex items-center gap-2.5">
           <div class="text-(--primary) text-xl">
             <Icon name={stat.icon} />
@@ -190,3 +190,9 @@ const stats = [
     });
   }
 </script>
+
+<style>
+  .activity-accent { --activity-red: #b91c1c; }
+  :global(.dark) .activity-accent { --activity-red: #ef4444; }
+  .activity-accent div, .activity-accent span { color: var(--activity-red); }
+</style>
