@@ -15,15 +15,15 @@ draft: false
 
     碰撞域越大，发生碰撞的概率越高。
 
-![image\.png](/Firefly/uploads/course-internet/image-21.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-21.png)
 
     广播域（broadcast domain）：指这样一部分网络，其中任何一台设备发出的广播通信都能被该部分网络中的所有其他设备所接收。
 
-![image\.png](/Firefly/uploads/course-internet/image-13.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-13.png)
 
     以太网交换机的每个接口都处于一个独立的碰撞域（或冲突域）中，但所有计算机都处于同一个广播域中。
 
-![image\.png](/Firefly/uploads/course-internet/image-24.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-24.png)
 
 #### 理解并掌握集线器与交换机的差别
 
@@ -31,7 +31,7 @@ draft: false
 
     1. 本质：传统以太网采用星形拓扑，在拓扑中心增加一个可靠性非常高的设备，叫做集线器。集线器本身必须非常可靠。现在的**堆栈式**集线器有4\-8个集线器堆叠起来使用。集线器一般有少量的容错能力和网络管理能力。
 
-![image\.png](/Firefly/uploads/course-internet/image-29.png)
+        ![image\.png](/Firefly/uploads/course-internet/image-29.png)
 
     1. 特点
 
@@ -171,7 +171,7 @@ draft: false
 
     9. 协议 占8位，表明数据报携带何种协议。
 
-![image\.png](/Firefly/uploads/course-internet/image-27.png)
+        ![image\.png](/Firefly/uploads/course-internet/image-27.png)
 
     10. **首部检验和 **占16位。这个字段只检验数据报的首部，但不包括数据部分。不采用复杂的CRC检验码而采用简单的计算方法：
 
@@ -205,7 +205,7 @@ draft: false
 
 1. 分类的IP地址：
 
-![filename\.png](/Firefly/uploads/course-internet/filename.png)
+    ![filename\.png](/Firefly/uploads/course-internet/filename.png)
 
     1. A类地址：**单播地址**，net\-id：8位，host\-id：24位，以“0”开头。
 
@@ -219,7 +219,7 @@ draft: false
 
 2. 特殊IP地址：
 
-![image\.png](/Firefly/uploads/course-internet/image-10.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-10.png)
 
 #### 理解并掌握子网掩码的作用与计算
 
@@ -231,7 +231,7 @@ draft: false
 
 2. 计算
 
-![image\.png](/Firefly/uploads/course-internet/image-15.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-15.png)
 
     1. 凡是从其他网络发送给本单位某个主机的 IP 数据报，仍然是根据 IP 数据报的目的网络号 net\-id，先找到连接在本单位网络上的路由器。
 
@@ -249,9 +249,9 @@ draft: false
 
 - 计算示例：载荷 4000 字节，IP 头 20 字节，MTU=1500 → 每片载荷 1480、1480、1040，偏移分别为 0、185、370，前两片 MF=1，最后一片 MF=0。
 
-![image\.png](/Firefly/uploads/course-internet/image-33.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-33.png)
 
-![image\.png](/Firefly/uploads/course-internet/image-19.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-19.png)
 
 #### 理解并掌握不同 ICMP 报文类型的作用
 
@@ -415,7 +415,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 1. **三次握手**
 
-![image\.png](/Firefly/uploads/course-internet/image-23.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-23.png)
 
     1. A 的 TCP 向 B 发出连接请求报文段，其首部中的同步位 SYN = 1 ，并选择序号 x ，表明下一个报文段的第一个数据字节的序号是 x \+ 1 。 
 
@@ -431,7 +431,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 2. **四次挥手**
 
-![image\.png](/Firefly/uploads/course-internet/image-34.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-34.png)
 
     1. 现在 A 的应用进程先向其 TCP 发出连接释放报文段，并停止再发送数据，主动关闭 TCP 连接。A 把连接释放报文段首部的 FIN = 1 ，其序号 seq = u ，等待 B 的确认。 
 
@@ -447,17 +447,17 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 1. 滑动窗口
 
-![image\.png](/Firefly/uploads/course-internet/image-7.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-7.png)
 
 2. 累计确认
 
-![image\.png](/Firefly/uploads/course-internet/image-35.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-35.png)
 
 #### 理解 TCP 的重传机制
 
 1. 超时重传
 
-![image\.png](/Firefly/uploads/course-internet/image-36.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-36.png)
 
     1. 重传机制的其中一个方式，就是在发送数据时，设定一个定时器，当超过指定的时间后，没有收到对方的 ACK 确认应答报文，就会重发该数据，也就是我们常说的超时重传。
 
@@ -517,11 +517,11 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 5. 域名结构
 
-![image\.png](/Firefly/uploads/course-internet/image-11.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-11.png)
 
 6. 域名解析过程
 
-![image\.png](/Firefly/uploads/course-internet/image-4.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-4.png)
 
     主机 m\.xyz\.com 发送邮件给主机 y\.abc\.com，其查询主机 y\.abc\.com 的 IP 地址的步骤： 
 
@@ -549,7 +549,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 - 标志：DNS 报文中的标志字段。
 
-![image\.png](/Firefly/uploads/course-internet/image-28.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-28.png)
 
     - QR（Response）：查询请求/响应的标志信息。查询请求时，值为 0；响应时，值为 1。
 
@@ -587,7 +587,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
     - 资源记录部分是指 DNS 报文格式中的最后三个字段，包括回答问题区域字段、权威名称服务器区域字段、附加信息区域字段。这三个字段均采用一种称为资源记录的格式，格式如图所示。
 
-![image\.png](/Firefly/uploads/course-internet/image-25.png)
+        ![image\.png](/Firefly/uploads/course-internet/image-25.png)
 
     - 域名：DNS 请求的域名。
 
@@ -615,7 +615,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 3. **HTTP 的操作过程 **
 
-![image\.png](/Firefly/uploads/course-internet/image-30.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-30.png)
 
     1. 非持续连接
 
@@ -653,7 +653,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
     3. 介绍功能
 
-![image\.png](/Firefly/uploads/course-internet/image-12.png)
+        ![image\.png](/Firefly/uploads/course-internet/image-12.png)
 
 响应报文：
 
@@ -663,7 +663,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
     - 状态码：状态码是一个三位数字，用来表示处理的结果，下面列出了状态码的类别：
 
-![image\.png](/Firefly/uploads/course-internet/image-3.png)
+        ![image\.png](/Firefly/uploads/course-internet/image-3.png)
 
     3. 状态描述：这个是作为状态码的补充，是一段更详细的文字，帮助人们理解原因。
 
@@ -671,7 +671,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
 3. 响应包体：服务器返回给浏览器的响应信息，响应数据的格式是根据服务器来的，常见的响应数据格式有：text/html、application/json 等。
 
-![image\.png](/Firefly/uploads/course-internet/image-1.png)
+    ![image\.png](/Firefly/uploads/course-internet/image-1.png)
 
 ### 第五章 网络安全
 
@@ -687,7 +687,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
     1. 对称加密：
 
-![image\.png](/Firefly/uploads/course-internet/image.png)
+        ![image\.png](/Firefly/uploads/course-internet/image.png)
 
         1. 所谓对称密钥密码体制是一种**加密密钥**与**解密密钥**相同的密码体制。 
 
@@ -695,7 +695,7 @@ TCP报文首部的前20个字节是固定的，后面有4n字节是根据需要�
 
     2. 非对称加密
 
-![image\.png](/Firefly/uploads/course-internet/image-32.png)
+        ![image\.png](/Firefly/uploads/course-internet/image-32.png)
 
         1. 使用**不同的加密密钥与解密密钥**，是一种“由已知加密密钥推导出解密密钥在计算上是不可行的”密码体制。 
 
