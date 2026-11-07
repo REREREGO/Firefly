@@ -2,8 +2,11 @@ import gallery from "./bannerGallery.json";
 import authorSettings from "./authorSettings.json";
 import type { BackgroundWallpaperConfig } from "@/types/backgroundWallpaper";
 
-if (gallery.slides.length > 10 || gallery.reserve.length > 30) throw new Error("首页图片限制：展示最多10张，备用最多30张");
-const orderedSlides = gallery.slides.filter(Boolean);
+const galleryData: { slides?: string[]; reserve?: string[] } = gallery;
+const gallerySlides = Array.isArray(galleryData.slides) ? galleryData.slides : [];
+const galleryReserve = Array.isArray(galleryData.reserve) ? galleryData.reserve : [];
+if (gallerySlides.length > 10 || galleryReserve.length > 30) throw new Error("首页图片限制：展示最多10张，备用最多30张");
+const orderedSlides = gallerySlides.filter(Boolean);
 const slideSources = orderedSlides.length ? orderedSlides : ["assets/images/ibuki.jpg"];
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 覆盖透明，"none" 纯色背景无壁纸
