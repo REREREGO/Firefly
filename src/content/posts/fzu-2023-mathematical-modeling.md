@@ -59,7 +59,7 @@ B，D两脚与地面的距离之和：$g(\theta){}$
 
 
 $$
-\left \begin{array}{r} f\left( \theta_{i} \right) = 0  g\left( \theta_{i} \right) \geq 0 \end{array},\ \ \  \right.\ \left \begin{array}{r} f\left( \theta_{i} + \frac{\pi}{2} \right) \geq 0  g\left( \theta_{i} + \frac{\pi}{2} \right) = 0 \end{array} \right.\ {}
+\left\{ \begin{array}{r} f\left( \theta_{i} \right) = 0 \\ g\left( \theta_{i} \right) \geq 0 \end{array},\ \ \  \right.\ \left\{ \begin{array}{r} f\left( \theta_{i} + \frac{\pi}{2} \right) \geq 0 \\ g\left( \theta_{i} + \frac{\pi}{2} \right) = 0 \end{array} \right.\ {}
 $$
 
 
@@ -104,7 +104,7 @@ $$
 
 
 $$
-S = (x,y)|x = 0,\ y = 0,1,2,3;x = 1,y = 1;x = 2,y = 2;x = 3,y = 0,1,2,3{}
+S = \{(x,y)|x = 0,\ y = 0,1,2,3;x = 1,y = 1;x = 2,y = 2;x = 3,y = 0,1,2,3\}{}
 $$
 
 
@@ -118,7 +118,7 @@ $$
 
 
 $$
-D = (u,v)|u + v = 1,2{}
+D = \{(u,v)|u + v = 1,2\}{}
 $$
 
 
@@ -397,7 +397,7 @@ $$
 
 **模型求解**
 
-解得：$\left \begin{array}{r} T' = \sqrt{\frac{2c_{1}}{rc_{2}} \cdot \frac{c_{2} + c_{3}}{c_{3}}} = \mu T  Q' = \sqrt{\frac{2c_{1}r}{c_{2}} \cdot \frac{c_{3}}{c_{2} + c_{3}}} = \frac{Q}{\mu} \end{array} \right.\ {}$，其中$\mu = \sqrt{\frac{c_{2} + c_{3}}{c_{3}}}{}$
+解得：$\left\{ \begin{array}{r} T' = \sqrt{\frac{2c_{1}}{rc_{2}} \cdot \frac{c_{2} + c_{3}}{c_{3}}} = \mu T \\ Q' = \sqrt{\frac{2c_{1}r}{c_{2}} \cdot \frac{c_{3}}{c_{2} + c_{3}}} = \frac{Q}{\mu} \end{array} \right.\ {}$，其中$\mu = \sqrt{\frac{c_{2} + c_{3}}{c_{3}}}{}$
 
 ### 生猪的出售时机
 
@@ -551,7 +551,7 @@ $$
 
 
 $$
-\left \begin{array}{r} b\alpha r^{\alpha - 1} - \frac{4kq^{2}}{r^{5}} = 0  b\alpha r_{1}^{\alpha - 1} - \frac{4kq^{2}}{r_{1}^{5}} = 0 \end{array} \right.\  \Rightarrow \frac{r}{r_{1}} = 4^{\frac{1}{\alpha + 4}}{}
+\left\{ \begin{array}{r} b\alpha r^{\alpha - 1} - \frac{4kq^{2}}{r^{5}} = 0 \\ b\alpha r_{1}^{\alpha - 1} - \frac{4kq^{2}}{r_{1}^{5}} = 0 \end{array} \right.\  \Rightarrow \frac{r}{r_{1}} = 4^{\frac{1}{\alpha + 4}}{}
 $$
 
 
@@ -612,7 +612,7 @@ $$
 
 2. 等式约束的转化
 
-对于一个等式约束：$\sum_{j = 1}^{n}{a_{ij} \cdot x_{j} = b_{i}\ \ \  \Rightarrow}\ \ \ \left \begin{array}{r} \sum_{j = 1}^{n}{a_{ij} \cdot x_{j} \geq b_{i}}  \sum_{j = 1}^{n}{{( - a}*{ij}) \cdot x*{j} \geq ( - b_{i})} \end{array} \right.\ {}$
+对于一个等式约束：$\sum_{j = 1}^{n}{a_{ij} \cdot x_{j} = b_{i}\ \ \  \Rightarrow}\ \ \ \left\{ \begin{array}{r} \sum_{j = 1}^{n}{a_{ij} \cdot x_{j} \geq b_{i}} \\ \sum_{j = 1}^{n}{{( - a}_{ij}) \cdot x_{j} \geq ( - b_{i})} \end{array} \right.\ {}$
 
 3. 无符号限制变量转化
 
@@ -673,7 +673,7 @@ $$
 &nbsp;
 
 $$
-s.t.\left \begin{array}{r} g_{i}(x) \leq 0,\ \ \ i = 1,2,\ldots,m  h_{j}(x) = 0,\ \ \ j = 1,2,\ldots,n \end{array} \right.\ {}
+s.t.\left\{ \begin{array}{r} g_{i}(x) \leq 0,\ \ \ i = 1,2,\ldots,m \\ h_{j}(x) = 0,\ \ \ j = 1,2,\ldots,n \end{array} \right.\ {}
 $$
 
 
@@ -832,9 +832,9 @@ $$
 
 约束条件：
 
-供应限制：$\left \begin{array}{r} x_{11} + x_{12} + x_{13} + x_{14} = 50  x_{21} + x_{22} + x_{23} + x_{24} = 60  x_{31} + x_{32} + x_{33} = 50 \end{array} \right.\ {}$
+供应限制：$\left\{ \begin{array}{r} x_{11} + x_{12} + x_{13} + x_{14} = 50 \\ x_{21} + x_{22} + x_{23} + x_{24} = 60 \\ x_{31} + x_{32} + x_{33} = 50 \end{array} \right.\ {}$
 
-需求限制：$\left \begin{array}{r} 30 \leq x_{11} + x_{21} + x_{31} \leq 80  70 \leq x_{12} + x_{22} + x_{32} \leq 140  10 \leq x_{13} + x_{23} + x_{33} \leq 30  10 \leq x_{14} + x_{24} \leq 50 \end{array} \right.\ {}$
+需求限制：$\left\{ \begin{array}{r} 30 \leq x_{11} + x_{21} + x_{31} \leq 80 \\ 70 \leq x_{12} + x_{22} + x_{32} \leq 140 \\ 10 \leq x_{13} + x_{23} + x_{33} \leq 30 \\ 10 \leq x_{14} + x_{24} \leq 50 \end{array} \right.\ {}$
 
 **模型求解**
 
@@ -897,7 +897,7 @@ $$
 
 货舱重量：$\sum_{i = 1}^{4}x_{ij} \leq W_{j}{}$
 
-货舱容积：$\sum_{i = 1}^{4}{v_{i} \cdot x}*{ij} \leq V*{j}{}$
+货舱容积：$\sum_{i = 1}^{4}{v_{i} \cdot x}_{ij} \leq V_{j}{}$
 
 平衡要求：$\frac{\sum_{i = 1}^{4}x_{ij}}{W_{j}} = \frac{\sum_{i = 1}^{4}x_{ik}}{W_{k}},\ \ \ j,k = 1,2,3,\ \ \ j \neq k{}$
 
@@ -969,7 +969,7 @@ $$
 &nbsp;
 
 $$
-s.t.\ \left \begin{array}{r} x_{1},x_{2},x_{3} = 0\ or\  \geq 80  1.5 \cdot x_{1} + 3 \cdot x_{2} + 5 \cdot x_{3} \leq 600  280 \cdot x_{1} + 250 \cdot x_{2} + 400 \cdot x_{3} \leq 60000 \end{array} \right.\ {}
+s.t.\ \left\{ \begin{array}{r} x_{1},x_{2},x_{3} = 0\ or\  \geq 80 \\ 1.5 \cdot x_{1} + 3 \cdot x_{2} + 5 \cdot x_{3} \leq 600 \\ 280 \cdot x_{1} + 250 \cdot x_{2} + 400 \cdot x_{3} \leq 60000 \end{array} \right.\ {}
 $$
 
 
@@ -991,7 +991,7 @@ $$
 &nbsp;
 
 $$
-\left \begin{array}{r} x_{1} \cdot \left( x_{1} - 80 \right) \geq 0  x_{2} \cdot \left( x_{2} - 80 \right) \geq 0  x_{3} \cdot \left( x_{3} - 80 \right) \geq 0  x_{1},x_{2},x_{3}均为整数 \end{array} \right.\ {}
+\left\{ \begin{array}{r} x_{1} \cdot \left( x_{1} - 80 \right) \geq 0 \\ x_{2} \cdot \left( x_{2} - 80 \right) \geq 0 \\ x_{3} \cdot \left( x_{3} - 80 \right) \geq 0 \\ x_{1},x_{2},x_{3}均为整数 \end{array} \right.\ {}
 $$
 
 
@@ -1024,7 +1024,7 @@ $$
 
 
 $$
-c(x) = \left \begin{array}{r} 10x,\ \ \ (0 \leq x \leq 500)  8x + 1000,\ \ \ (500 \leq x \leq 1000)  6x + 3000,\ \ \ (1000 \leq x \leq 1500) \end{array} \right.\ {}
+c(x) = \left\{ \begin{array}{r} 10x,\ \ \ (0 \leq x \leq 500) \\ 8x + 1000,\ \ \ (500 \leq x \leq 1000) \\ 6x + 3000,\ \ \ (1000 \leq x \leq 1500) \end{array} \right.\ {}
 $$
 
 
@@ -1034,7 +1034,7 @@ $$
 
 
 $$
-s.t.\left \begin{array}{r} x_{11} + x_{12} \leq 500 + x  x_{21} + x_{22} \leq 1000  x \leq 1500  \frac{x_{11}}{x_{11} + x_{21}} \geq 0.5  \frac{x_{12}}{x_{12} + x_{22}} \geq 0.6 \end{array} \right.\ {}
+s.t.\left\{ \begin{array}{r} x_{11} + x_{12} \leq 500 + x \\ x_{21} + x_{22} \leq 1000 \\ x \leq 1500 \\ \frac{x_{11}}{x_{11} + x_{21}} \geq 0.5 \\ \frac{x_{12}}{x_{12} + x_{22}} \geq 0.6 \end{array} \right.\ {}
 $$
 
 
@@ -1058,7 +1058,7 @@ $$
 
 
 $$
-\left \begin{array}{r} \left( x_{1} - 500 \right) \cdot x_{2} = 0\ \ \ \ \ \ 只有购买x_{1} = 500t时才能购买x_{2}  \left( x_{2} - 500 \right) \cdot x_{3} = 0\ \ \ \ \ \ 只有购买x_{2} = 500t时才能购买x_{3} \end{array} \right.\ {}
+\left\{ \begin{array}{r} \left( x_{1} - 500 \right) \cdot x_{2} = 0\ \ \ \ \ \ 只有购买x_{1} = 500t时才能购买x_{2} \\ \left( x_{2} - 500 \right) \cdot x_{3} = 0\ \ \ \ \ \ 只有购买x_{2} = 500t时才能购买x_{3} \end{array} \right.\ {}
 $$
 
 
@@ -1070,7 +1070,7 @@ $$
 
 
 $$
-\left \begin{array}{r} 500y_{2} \leq x_{1} \leq 500y_{1}  500y_{3} \leq x_{2} \leq 500y_{2}  x_{3} \leq 500y_{3} \end{array}\ \ \ y_{1},y_{2},y_{3} = 0\ or\ 1 \right.\ {}
+\left\{ \begin{array}{r} 500y_{2} \leq x_{1} \leq 500y_{1} \\ 500y_{3} \leq x_{2} \leq 500y_{2} \\ x_{3} \leq 500y_{3} \end{array}\ \ \ y_{1},y_{2},y_{3} = 0\ or\ 1 \right.\ {}
 $$
 
 
@@ -1162,7 +1162,7 @@ $$
 &nbsp;
 
 $$
-\therefore\left \begin{array}{r} \frac{di}{dt} = \lambda i(t) \cdot \lbrack 1 - i(t)\rbrack  i(0) = i_{0} \end{array} \Rightarrow i(t) = \frac{1}{1 + \left( \frac{1}{i_{0}} - 1 \right) \cdot e^{- \lambda t}} \right.\ {}
+\therefore\left\{ \begin{array}{r} \frac{di}{dt} = \lambda i(t) \cdot \lbrack 1 - i(t)\rbrack \\ i(0) = i_{0} \end{array} \Rightarrow i(t) = \frac{1}{1 + \left( \frac{1}{i_{0}} - 1 \right) \cdot e^{- \lambda t}} \right.\ {}
 $$
 
 
@@ -1194,7 +1194,7 @@ $$
 &nbsp;
 
 $$
-\Rightarrow \left \begin{array}{r} \frac{di}{dt} = \lambda \cdot i(t) \cdot \left\lbrack 1 - i(t) \right\rbrack - \mu \cdot i(t) = - \lambda \cdot i(t) \cdot \left\lbrack i(t) - \left( 1 - \frac{1}{\sigma} \right) \right\rbrack  i(0) = i_{0} \end{array} \right.\ {}
+\Rightarrow \left\{ \begin{array}{r} \frac{di}{dt} = \lambda \cdot i(t) \cdot \left\lbrack 1 - i(t) \right\rbrack - \mu \cdot i(t) = - \lambda \cdot i(t) \cdot \left\lbrack i(t) - \left( 1 - \frac{1}{\sigma} \right) \right\rbrack \\ i(0) = i_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1221,7 +1221,7 @@ $$
 
 
 $$
-\left \begin{array}{r} N\left\lbrack i(t + \Delta t) - i(t) \right\rbrack = \lambda Ns(t)i(t)\Delta t - \mu Ni(t)\Delta t  N\left\lbrack s(t + \Delta t) - s(t) \right\rbrack = - \lambda Ns(t)i(t)\Delta t\ \ \ 减少量包括病人和移出者  N\left\lbrack r(t + \Delta t) - r(t) \right\rbrack = \mu Ni(t)\Delta t \end{array} \right.\ {}
+\left\{ \begin{array}{r} N\left\lbrack i(t + \Delta t) - i(t) \right\rbrack = \lambda Ns(t)i(t)\Delta t - \mu Ni(t)\Delta t \\ N\left\lbrack s(t + \Delta t) - s(t) \right\rbrack = - \lambda Ns(t)i(t)\Delta t\ \ \ 减少量包括病人和移出者 \\ N\left\lbrack r(t + \Delta t) - r(t) \right\rbrack = \mu Ni(t)\Delta t \end{array} \right.\ {}
 $$
 
 
@@ -1229,7 +1229,7 @@ $$
 &nbsp;
 
 $$
-\Rightarrow \left \begin{array}{r} \frac{di}{dt} = \lambda s(t)i(t) - \mu i(t)  \frac{ds}{dt} = - \lambda s(t)i(t)  \frac{dr}{dt} = \mu i(t)  i(0) = i_{0},\ \ \ s(0) = s_{0} \end{array} \right.\ {}
+\Rightarrow \left\{ \begin{array}{r} \frac{di}{dt} = \lambda s(t)i(t) - \mu i(t) \\ \frac{ds}{dt} = - \lambda s(t)i(t) \\ \frac{dr}{dt} = \mu i(t) \\ i(0) = i_{0},\ \ \ s(0) = s_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1266,7 +1266,7 @@ $$
 
 
 $$
-\left \begin{array}{r} \dot{x}(t) = f(x,y) - \alpha x + u(t),\ \ \ \alpha > 0  \dot{y}(t) = g(x,y) - \beta y + v(t),\ \ \ \beta > 0 \end{array} \right.\ {}
+\left\{ \begin{array}{r} \dot{x}(t) = f(x,y) - \alpha x + u(t),\ \ \ \alpha > 0 \\ \dot{y}(t) = g(x,y) - \beta y + v(t),\ \ \ \beta > 0 \end{array} \right.\ {}
 $$
 
 
@@ -1296,7 +1296,7 @@ $$
 
 
 $$
-\left \begin{array}{r} \dot{x}(t) = - ay - \alpha x + u(t)  \dot{y}(t) = - bx - \beta y + v(t) \end{array} \right.\ {}
+\left\{ \begin{array}{r} \dot{x}(t) = - ay - \alpha x + u(t) \\ \dot{y}(t) = - bx - \beta y + v(t) \end{array} \right.\ {}
 $$
 
 
@@ -1310,7 +1310,7 @@ $$
 
 
 $$
-\left \begin{array}{r} \dot{x} = - ay  \dot{y} = - bx  x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
+\left\{ \begin{array}{r} \dot{x} = - ay \\ \dot{y} = - bx \\ x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1320,7 +1320,7 @@ $$
 
 
 $$
-\frac{dy}{dx} = \frac{bx}{ay} \Rightarrow \left \begin{array}{r} ay^{2} - bx^{2} = k  k = ay_{0}^{2} - bx_{0}^{2} \end{array} \right.\ {}
+\frac{dy}{dx} = \frac{bx}{ay} \Rightarrow \left\{ \begin{array}{r} ay^{2} - bx^{2} = k \\ k = ay_{0}^{2} - bx_{0}^{2} \end{array} \right.\ {}
 $$
 
 
@@ -1352,7 +1352,7 @@ $k = 0{}$时，平局
 
 
 $$
-\left \begin{array}{r} \dot{x} = - cxy  \dot{y} = - dxy  x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
+\left\{ \begin{array}{r} \dot{x} = - cxy \\ \dot{y} = - dxy \\ x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1362,7 +1362,7 @@ $$
 
 
 $$
-\frac{dy}{dx} = \frac{d}{c} \Rightarrow \left \begin{array}{r} cy - dx = m  m = cy_{0} - dx_{0} \end{array} \right.\ {}
+\frac{dy}{dx} = \frac{d}{c} \Rightarrow \left\{ \begin{array}{r} cy - dx = m \\ m = cy_{0} - dx_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1388,7 +1388,7 @@ $m = 0{}$时，平局
 
 
 $$
-\left \begin{array}{r} \dot{x} = - cxy  \dot{y} = - bx  x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \Rightarrow \left \begin{array}{r} cy^{2} - 2bx = n  n = cy_{0}^{2} - 2bx_{0} \end{array} \right.\  \right.\ {}
+\left\{ \begin{array}{r} \dot{x} = - cxy \\ \dot{y} = - bx \\ x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \Rightarrow \left\{ \begin{array}{r} cy^{2} - 2bx = n \\ n = cy_{0}^{2} - 2bx_{0} \end{array} \right.\  \right.\ {}
 $$
 
 
@@ -1437,7 +1437,7 @@ $n > 0{}$时，乙方胜：$\because n > 0\ \ \therefore\left( \frac{y_{0}}{x_{0
 
 
 $$
-\left \begin{array}{r} \dot{x_{1}}(t) = - k_{12}x_{1} - k_{13}x_{1} + k_{21}x_{2} + f_{0}(t)  \dot{x_{2}}(t) = k_{12}x_{1} - k_{21}x_{2} \end{array} \right.\ {}
+\left\{ \begin{array}{r} \dot{x_{1}}(t) = - k_{12}x_{1} - k_{13}x_{1} + k_{21}x_{2} + f_{0}(t) \\ \dot{x_{2}}(t) = k_{12}x_{1} - k_{21}x_{2} \end{array} \right.\ {}
 $$
 
 
@@ -1447,12 +1447,12 @@ $$
 
 
 $$
-\left \begin{array}{r} \dot{c_{1}}(t) = - \left( k_{12} + k_{13} \right)c_{1} + \frac{V_{2}}{V_{1}}k_{21}c_{2} + \frac{f_{0}(t)}{V_{1}}  \dot{c_{2}}(t) = \frac{V_{1}}{V_{2}}k_{12}c_{1} - k_{21}c_{2} \end{array} \right.\ {}
+\left\{ \begin{array}{r} \dot{c_{1}}(t) = - \left( k_{12} + k_{13} \right)c_{1} + \frac{V_{2}}{V_{1}}k_{21}c_{2} + \frac{f_{0}(t)}{V_{1}} \\ \dot{c_{2}}(t) = \frac{V_{1}}{V_{2}}k_{12}c_{1} - k_{21}c_{2} \end{array} \right.\ {}
 $$
 
 
 
-对应的其次方程通解：$\left \begin{array}{r} c_{1}(t) = A_{1}e^{- \alpha t} + B_{1}e^{- \beta t}  c_{2}(t) = A_{2}e^{- \alpha t} + B_{2}e^{- \beta t} \end{array} \right.\ {}$其中，$\left \begin{array}{r} \alpha + \beta = k_{12} + k_{21} + k_{13}  \alpha\beta = k_{21}k_{13} \end{array} \right.\ {}$
+对应的其次方程通解：$\left\{ \begin{array}{r} c_{1}(t) = A_{1}e^{- \alpha t} + B_{1}e^{- \beta t} \\ c_{2}(t) = A_{2}e^{- \alpha t} + B_{2}e^{- \beta t} \end{array} \right.\ {}$其中，$\left\{ \begin{array}{r} \alpha + \beta = k_{12} + k_{21} + k_{13} \\ \alpha\beta = k_{21}k_{13} \end{array} \right.\ {}$
 
 几种常见的给药方式
 
@@ -1464,7 +1464,7 @@ $$
 
 
 
-解得$\left \begin{array}{r} c_{1}(t) = \frac{D_{0}}{V_{1}(\beta - \alpha)}\lbrack(k_{21} - \alpha)e^{- \alpha t} + (\beta - k_{21})e^{- \beta t}\rbrack  c_{2}(t) = \frac{D_{0}k_{12}}{V_{2}(\beta - \alpha)}\lbrack e^{- \alpha t} - e^{- \beta t}\rbrack \end{array} \right.\ {}$
+解得$\left\{ \begin{array}{r} c_{1}(t) = \frac{D_{0}}{V_{1}(\beta - \alpha)}\lbrack(k_{21} - \alpha)e^{- \alpha t} + (\beta - k_{21})e^{- \beta t}\rbrack \\ c_{2}(t) = \frac{D_{0}k_{12}}{V_{2}(\beta - \alpha)}\lbrack e^{- \alpha t} - e^{- \beta t}\rbrack \end{array} \right.\ {}$
 
 
 
@@ -1485,7 +1485,7 @@ $t > T{}$时，$c_{1}(0){}$和$c_{2}(0){}$按指数规律趋于0
 3. 口服或肌肉注射：相当于药物（剂量$D_{0}{}$）先进入吸收室，吸收后再进入中心室，有：
 
 $$
-\left \begin{array}{r} x_{0}(t) = - k_{01}x_{0}  x_{0}(t) = D_{0}e^{- k_{01}t} \end{array} \right.\  \Rightarrow x_{0}(t) = D_{0}e^{- k_{01}t}{}
+\left\{ \begin{array}{r} x_{0}(t) = - k_{01}x_{0} \\ x_{0}(t) = D_{0}e^{- k_{01}t} \end{array} \right.\  \Rightarrow x_{0}(t) = D_{0}e^{- k_{01}t}{}
 $$
 
 
@@ -1538,7 +1538,7 @@ $$
 
 
 $$
-q(x) - q(x + \Delta x) = \left \begin{array}{r} bq(x)\Delta\tau,\ \ \ 0 \leq x \leq l_{1}  \beta q(x)\Delta\tau,\ \ \ l_{1} \leq x \leq l \end{array},\ \ \ \Delta\tau = \frac{\Delta x}{v} \right.\ {}
+q(x) - q(x + \Delta x) = \left\{ \begin{array}{r} bq(x)\Delta\tau,\ \ \ 0 \leq x \leq l_{1} \\ \beta q(x)\Delta\tau,\ \ \ l_{1} \leq x \leq l \end{array},\ \ \ \Delta\tau = \frac{\Delta x}{v} \right.\ {}
 $$
 
 
@@ -1546,7 +1546,7 @@ $$
 &nbsp;
 
 $$
-\frac{dq}{dx} = \left \begin{array}{r}  - \frac{b}{v}q(x),\ \ \ 0 \leq x \leq l_{1}   - \frac{\beta}{v}q(x),\ \ \ l_{1} \leq x \leq l \end{array} \right.\ ,\ \ \ \left \begin{array}{r} q_{0} = aH_{0}  H_{0} = uw_{0} \end{array} \right.\  \Rightarrow q(x) = \left \begin{array}{r} aH_{0}e^{- \frac{bx}{v}},\ \ \ \ \ \ 0 \leq x \leq l_{1}  aH_{0}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
+\frac{dq}{dx} = \left\{ \begin{array}{r}  - \frac{b}{v}q(x),\ \ \ 0 \leq x \leq l_{1} \\  - \frac{\beta}{v}q(x),\ \ \ l_{1} \leq x \leq l \end{array} \right.\ ,\ \ \ \left\{ \begin{array}{r} q_{0} = aH_{0} \\ H_{0} = uw_{0} \end{array} \right.\  \Rightarrow q(x) = \left\{ \begin{array}{r} aH_{0}e^{- \frac{bx}{v}},\ \ \ \ \ \ 0 \leq x \leq l_{1} \\ aH_{0}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
 $$
 
 
@@ -1554,7 +1554,7 @@ $$
 2. 求$q(l,t){}$，在$t{}$时刻，香烟点燃至$x = ut{}$
 
 $$
-\left \begin{array}{r} H_{0} \Rightarrow H(t) = uw(ut,\ t)  x \Rightarrow x - ut,\ \ \ ut \leq x \leq l_{1}  l_{1} \Rightarrow l_{1} - ut,\ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
+\left\{ \begin{array}{r} H_{0} \Rightarrow H(t) = uw(ut,\ t) \\ x \Rightarrow x - ut,\ \ \ ut \leq x \leq l_{1} \\ l_{1} \Rightarrow l_{1} - ut,\ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
 $$
 
 
@@ -1562,7 +1562,7 @@ $$
 &nbsp;
 
 $$
-q(x,t) = \left \begin{array}{r} aH(t)e^{- \frac{b(x - ut)}{v}},\ \ \ \ \ \ ut \leq x \leq l_{1}  aH(t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
+q(x,t) = \left\{ \begin{array}{r} aH(t)e^{- \frac{b(x - ut)}{v}},\ \ \ \ \ \ ut \leq x \leq l_{1} \\ aH(t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
 $$
 
 
@@ -1582,7 +1582,7 @@ $$
 
 
 $$
-\left \begin{array}{r} q(x,t) = aH(t)e^{- \frac{b(x - ut)}{v}}  H(t) = uw(ut,t) \end{array} \Rightarrow w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{- \frac{a'but}{v}} \right),\ \ \ a' = 1 - a \right.\ {}
+\left\{ \begin{array}{r} q(x,t) = aH(t)e^{- \frac{b(x - ut)}{v}} \\ H(t) = uw(ut,t) \end{array} \Rightarrow w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{- \frac{a'but}{v}} \right),\ \ \ a' = 1 - a \right.\ {}
 $$
 
 
@@ -1590,7 +1590,7 @@ $$
 4. 计算$Q{}$：吸入一支烟，毒物进入人体的总量
 
 $$
-\left \begin{array}{r} w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{\frac{a'but}{v}} \right)  q(l,t) = auw(ut,t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta l_{2}}{v}} = \frac{auw_{0}}{a'}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta l_{2}}{v}}\left( e^{\frac{but}{v}} - ae^{- \frac{abut}{v}} \right) \end{array} \right.\ {}
+\left\{ \begin{array}{r} w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{\frac{a'but}{v}} \right) \\ q(l,t) = auw(ut,t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta l_{2}}{v}} = \frac{auw_{0}}{a'}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta l_{2}}{v}}\left( e^{\frac{but}{v}} - ae^{- \frac{abut}{v}} \right) \end{array} \right.\ {}
 $$
 
 
@@ -1609,12 +1609,12 @@ $$
 2. 过滤嘴因素$e^{- \frac{\beta l_{2}}{v}}{}$，$\beta,\ l_{2}{}$有负指数作用
 3. 烟草的吸收作用$\varphi(r){}$：烟草为什么有作用?
 
-$\left \begin{array}{r} r = \frac{a'bl_{1}}{v} \ll 1  \ \varphi(r) \doteq 1 - \frac{r}{2} \end{array} \Rightarrow Q \doteq aMe^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \right.\ {}$，$b,\ l_{1}{}$具有线性作用
+$\left\{ \begin{array}{r} r = \frac{a'bl_{1}}{v} \ll 1 \\ \ \varphi(r) \doteq 1 - \frac{r}{2} \end{array} \Rightarrow Q \doteq aMe^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \right.\ {}$，$b,\ l_{1}{}$具有线性作用
 
 4. 与另一支不带过滤嘴的香烟比较，$w_{0},\ b,a,\ v,\ l{}$ 均相同，吸至 $x = l_{1}{}$扔掉
 
 $$
-\left \begin{array}{r} 带滤嘴：Q_{1} = \frac{aw_{0}v}{a'b}e^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right)  不带滤嘴：Q_{2} = \frac{aw_{0}v}{a'b}e^{- \frac{bl_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \end{array} \right.\  {}
+\left\{ \begin{array}{r} 带滤嘴：Q_{1} = \frac{aw_{0}v}{a'b}e^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \\ 不带滤嘴：Q_{2} = \frac{aw_{0}v}{a'b}e^{- \frac{bl_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \end{array} \right.\  {}
 $$
 
 则$\frac{Q_{1}}{Q_{2}} = e^{- \frac{(\beta - b)l_{2}}{v}} \Rightarrow \beta > b \Rightarrow Q_{1} < Q_{2}{}$，提高$\beta - b{}$ 与加长$l_{2}{}$，效果相同
@@ -1811,14 +1811,14 @@ $$
 
 拉东变换$P_{f}(L) = \int_{L}^{}{f(x,y})dl{}$，拉东逆变换$f(Q) = - \frac{1}{\pi}\int_{0}^{\infty}\frac{dF_{Q}(q)}{q}{}$，其中$F_{Q}(q){}$是与$Q{}$相距$q{}$的直线L的线积分$P_{f}(L){}$对所有$q{}$的平均值，实际上只能在有限条直线上得到投影(线积分)
 
-如何计算？设$\ln{\left( \frac{I_{0}}{I} \right)*{i} =}b*{i},\ \ \ \mu_{j} = x_{j}{}$，像素的边长和射线的宽度均为$\sigma{}$，则
+如何计算？设$\ln{\left( \frac{I_{0}}{I} \right)_{i} =}b_{i},\ \ \ \mu_{j} = x_{j}{}$，像素的边长和射线的宽度均为$\sigma{}$，则
 
 中心线法：射线$L_{i}{}$的中心线在像素$j{}$内的长度$l_{ij}{}$与$\sigma{}$之比为$a_{ij}{}$
 
 
 
 $$
-\sum_{j \in J\left( L_{i} \right)}^{}{\mu_{j}\Delta l_{j} = \ln\left( \frac{I_{0}}{I} \right)*{i} \Rightarrow \sum*{j = 1}^{m}{a_{ij}x_{j} = b_{i},\ \ \ i = 1,2,\ldots,n \Rightarrow Ax = b}}{}
+\sum_{j \in J\left( L_{i} \right)}^{}{\mu_{j}\Delta l_{j} = \ln\left( \frac{I_{0}}{I} \right)_{i} \Rightarrow \sum_{j = 1}^{m}{a_{ij}x_{j} = b_{i},\ \ \ i = 1,2,\ldots,n \Rightarrow Ax = b}}{}
 $$
 
 
@@ -1880,7 +1880,7 @@ $$
 方程模型：若点在$P_{0}{}$附近，可以用直线来近似曲线：\
 
 $$
-\left \begin{array}{r} y_{k} = f(x_{k})  x_{k + 1} = h(y_{k}) \end{array} \Rightarrow \left \begin{array}{r} y_{k} - y_{0} = - \alpha\left( x_{k} - x_{0} \right),\ \ \ \alpha > 0  x_{k + 1} - x_{k} = \beta\left( y_{k} - y_{0} \right),\ \ \ \beta > 0 \end{array} \right.\  \right.\ {}
+\left\{ \begin{array}{r} y_{k} = f(x_{k}) \\ x_{k + 1} = h(y_{k}) \end{array} \Rightarrow \left\{ \begin{array}{r} y_{k} - y_{0} = - \alpha\left( x_{k} - x_{0} \right),\ \ \ \alpha > 0 \\ x_{k + 1} - x_{k} = \beta\left( y_{k} - y_{0} \right),\ \ \ \beta > 0 \end{array} \right.\  \right.\ {}
 $$
 
 
@@ -2184,7 +2184,7 @@ A层m个因素为：$A_{1},A_{2},\ldots,A_{m}{}$，对总目标$Z{}$排序为$a_
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image61.png)
 
-B层的层次总排序为$\left \begin{array}{r} B_{1}:a_{1}b_{11} + a_{2}b_{12} + \ldots + a_{m}b_{1m}  B_{2}:a_{1}b_{21} + a_{2}b_{22} + \ldots + a_{m}b_{2m}  \ldots  B_{n}:a_{1}b_{n1} + a_{2}b_{n2} + \ldots + a_{m}b_{nm} \end{array} \right.\ {}$
+B层的层次总排序为$\left\{ \begin{array}{r} B_{1}:a_{1}b_{11} + a_{2}b_{12} + \ldots + a_{m}b_{1m} \\ B_{2}:a_{1}b_{21} + a_{2}b_{22} + \ldots + a_{m}b_{2m} \\ \ldots \\ B_{n}:a_{1}b_{n1} + a_{2}b_{n2} + \ldots + a_{m}b_{nm} \end{array} \right.\ {}$
 
 B层第i个因素对总目标的权值为：$\sum_{j = 1}^{m}{a_{j}b_{ij}}{}$
 
@@ -2346,7 +2346,7 @@ $$
 
 定义$E = 1 - D{}$，表示一周期内未运走商品和生产总数之比，当$n \gg 1{}$时，$E \approx \frac{n}{2m} \propto n,\ \ \ E \propto \frac{1}{m}{}$
 
-若$n = 10,m = 40{}$，则$D \approx 87.5{}$，提高效率的途径：增加挂钩数$m{}$
+若$n = 10,m = 40{}$，则$D \approx 87.5\%{}$，提高效率的途径：增加挂钩数$m{}$
 
 ### 报童的诀窍
 
