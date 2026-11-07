@@ -1,12 +1,22 @@
 ---
 title: 福州大学2023级数学建模课程复习提纲
 published: 2026-11-08
+updated: 2026-11-08
 description: 数学建模课程复习提纲，涵盖初等模型、优化模型、数学规划、微分方程、差分模型、离散模型与概率模型。
 category: 学习笔记
-tags: [数学建模, 福州大学, 课程复习]
+tags:
+  - 数学建模
+  - 福州大学
+  - 课程复习
 image: /uploads/math-modeling-2023/cover.png
 draft: false
+pinned: false
 ---
+## 前言
+
+我们的考法是考课程中出现过的类似模型，我建议你要有举一反三的能力，并且问题的思路完成清晰，结果是不需要算的。这门课程的重点是用什么方法解决什么样的问题。
+
+接下来我们按课程单元进行归纳
 
 ## 建立数学模型
 
@@ -18,13 +28,9 @@ draft: false
 
 **模型假设**
 
-1.  四条腿一样长，椅脚与地面点接触，四脚连线呈正方形
-
-2.  地面高度连续变化，可视为数学上的连续曲面
-
-3.  地面相对平坦，使椅子在任意位置至少三只脚同时着地
-
-
+1. 四条腿一样长，椅脚与地面点接触，四脚连线呈正方形
+2. 地面高度连续变化，可视为数学上的连续曲面
+3. 地面相对平坦，使椅子在任意位置至少三只脚同时着地
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image1.png)
 
@@ -53,7 +59,7 @@ B，D两脚与地面的距离之和：$g(\theta){}$
 
 
 $$
-\left\{ \begin{array}{r} f\left( \theta_{i} \right) = 0 \\ g\left( \theta_{i} \right) \geq 0 \end{array},\ \ \  \right.\ \left\{ \begin{array}{r} f\left( \theta_{i} + \frac{\pi}{2} \right) \geq 0 \\ g\left( \theta_{i} + \frac{\pi}{2} \right) = 0 \end{array} \right.\ {}
+\left \begin{array}{r} f\left( \theta_{i} \right) = 0  g\left( \theta_{i} \right) \geq 0 \end{array},\ \ \  \right.\ \left \begin{array}{r} f\left( \theta_{i} + \frac{\pi}{2} \right) \geq 0  g\left( \theta_{i} + \frac{\pi}{2} \right) = 0 \end{array} \right.\ {}
 $$
 
 
@@ -72,14 +78,13 @@ $$
 
 故椅子可以在不平的地面上放稳
 
-<span class="mark">\
-</span>
+\
 
 ### 商人们怎样安全过河
 
 **问题**
 
-随从们密约：在河的任一岸, 一旦随从的人数比商人多, 就杀人越货；但是乘船渡河的方案由商人决定。\
+随从们密约：在河的任一岸, 一旦随从的人数比商人多, 就杀人越货；但是乘船渡河的方案由商人决定。  
 商人们怎样才能安全过河?
 
 **问题分析 多步决策过程**
@@ -99,7 +104,7 @@ $$
 
 
 $$
-S = \{(x,y)|x = 0,\ y = 0,1,2,3;x = 1,y = 1;x = 2,y = 2;x = 3,y = 0,1,2,3\}{}
+S = (x,y)|x = 0,\ y = 0,1,2,3;x = 1,y = 1;x = 2,y = 2;x = 3,y = 0,1,2,3{}
 $$
 
 
@@ -113,7 +118,7 @@ $$
 
 
 $$
-D = \{(u,v)|u + v = 1,2\}{}
+D = (u,v)|u + v = 1,2{}
 $$
 
 
@@ -148,12 +153,10 @@ $$
 
 ## 初等模型
 
-• 研究对象的机理比较简单\
+• 研究对象的机理比较简单  
 • 用静态、线性、确定性模型即可达到建模目的
 
 ### 光盘的数据容量
-
-
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image3.png)
 
@@ -168,9 +171,7 @@ $$
 **激光波长**
 
 - 当光盘运转时激光束要能识别出信道上的凹坑所携带的信息，必须精确地聚焦
-
 - 光的衍射使激光束在光盘上形成圆状的光斑
-
 - 为了提高存储数据的线密度，应该使光斑尽量小，而光斑的大小与激光波长成正比
 
 
@@ -193,7 +194,7 @@ $$
 
 圆环面积和信道间距之比：$L_{CLV} \approx \frac{\pi \cdot \left( R_{2}^{2} - R_{1}^{2} \right)}{d}{}$
 
-同心圆平均周长\*总圈数：$L_{CLV} \approx 2\pi \cdot \frac{R_{1} + R_{2}}{2} \cdot \frac{\left( R_{2} - R_{1} \right)}{d}{}$
+同心圆平均周长总圈数：$L_{CLV} \approx 2\pi \cdot \frac{R_{1} + R_{2}}{2} \cdot \frac{\left( R_{2} - R_{1} \right)}{d}{}$
 
 其中，$R_{1}{}$表示内圆半径，$R_{2}{}$表示外圆半径，$d{}$表示信道间距
 
@@ -239,7 +240,7 @@ $$
 
 前进阻力：浸没部分与水的摩擦力
 
-对桨手体重、功率、阻力与艇速的关系等作出假定\
+对桨手体重、功率、阻力与艇速的关系等作出假定  
 运用合适的物理定律建立模型
 
 **模型建立**
@@ -262,7 +263,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \because s^{\frac{1}{2}} \propto A^{\frac{1}{3}},\ \ \ A \propto W = w_{0} + n \cdot w \propto n,\ \ \therefore s \propto n^{\frac{2}{3}}{}
@@ -270,7 +271,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \because v \propto \left( \frac{n}{s} \right)^{\frac{1}{3}},\ \ \ s \propto n^{\frac{2}{3}},\ \ \therefore v \propto n^{\frac{1}{9}}{}
@@ -278,7 +279,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 t = \frac{L}{v} \propto \frac{1}{v} = n^{- \frac{1}{9}}{}
@@ -316,8 +317,8 @@ $$
 
 **问题**
 
-配件厂为装配线生产若干种产品，轮换产品时因更换设备要付生产准备费，产量大于需求时要付贮存费。该厂生产能力非常大，即所需数量可在很短时间内产出。\
-已知某产品日需求量100件，生产准备费$c_{1} = 5000{}$元，贮存费每日每件1元。试安排该产品的生产计划，即多少天生产一次（生产周期），每次产量多少，使总费用最小。\
+配件厂为装配线生产若干种产品，轮换产品时因更换设备要付生产准备费，产量大于需求时要付贮存费。该厂生产能力非常大，即所需数量可在很短时间内产出。  
+已知某产品日需求量100件，生产准备费$c_{1} = 5000{}$元，贮存费每日每件1元。试安排该产品的生产计划，即多少天生产一次（生产周期），每次产量多少，使总费用最小。  
 **要求** 不只是回答问题，而且要建立生产周期、产量与需求量、准备费、贮存费之间的关系
 
 **问题分析**
@@ -325,17 +326,15 @@ $$
 依题意，日需求100件，准备费5000元，储存费每日每件1元。
 
 - 每天生产一次，每次100件，准备费5000元，无存储费。总费用5000元，每天平均费用5000元。
-
 - 10天生产一次，每次1000件，准备费5000元，存储费$= \sum_{i = 0}^{9}{i*100} = 4500{}$元。总费用9500元，每天平均费用950元。
-
 - 50天生产一次，每次5000件，准备费5000元，存储费$= \sum_{i = 0}^{49}{i*100} = 122500{}$元。总费用127500元，平均每天费用2550元。
 
 存在最佳的周期和产量，使得总费用最少。目标函数为每天平均费用。
 
 **模型假设**
 
-产品每天的需求量为常数$r{}$。\
-每次生产准备费为$c_{1}{}$, 每天每件产品存储费为$c_{2}{}$。\
+产品每天的需求量为常数$r{}$。  
+每次生产准备费为$c_{1}{}$, 每天每件产品存储费为$c_{2}{}$。  
 生产能力为无限大（相对于需求量），当贮存量降到0时，Q件产品立即生产出来供给需求。
 
 **模型建立**
@@ -360,7 +359,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 C(T) = \frac{C_{ALL}}{T} = \frac{c_{1}}{T} + c_{2} \cdot \frac{rT}{2}{}
@@ -398,14 +397,14 @@ $$
 
 **模型求解**
 
-解得：$\left\{ \begin{array}{r} T' = \sqrt{\frac{2c_{1}}{rc_{2}} \cdot \frac{c_{2} + c_{3}}{c_{3}}} = \mu T \\ Q' = \sqrt{\frac{2c_{1}r}{c_{2}} \cdot \frac{c_{3}}{c_{2} + c_{3}}} = \frac{Q}{\mu} \end{array} \right.\ {}$，其中$\mu = \sqrt{\frac{c_{2} + c_{3}}{c_{3}}}{}$
+解得：$\left \begin{array}{r} T' = \sqrt{\frac{2c_{1}}{rc_{2}} \cdot \frac{c_{2} + c_{3}}{c_{3}}} = \mu T  Q' = \sqrt{\frac{2c_{1}r}{c_{2}} \cdot \frac{c_{3}}{c_{2} + c_{3}}} = \frac{Q}{\mu} \end{array} \right.\ {}$，其中$\mu = \sqrt{\frac{c_{2} + c_{3}}{c_{3}}}{}$
 
 ### 生猪的出售时机
 
 **问题**
 
-饲养场每天投入4元资金，用于饲料、人力、设备，估计可使80kg重的生猪体重增加2kg\
-市场价格目前为8元/kg，但是预测每天会降低 0.1元，问生猪应何时出售?\
+饲养场每天投入4元资金，用于饲料、人力、设备，估计可使80kg重的生猪体重增加2kg  
+市场价格目前为8元/kg，但是预测每天会降低 0.1元，问生猪应何时出售?  
 如果估计和预测有误差，对结果有何影响?
 
 **问题分析**
@@ -432,8 +431,8 @@ $Q(10) = 660 > 640{}$，在10天后出售可多得利润20元
 
 **问题**
 
-森林失火后，要确定派出消防队员的数量\
-队员多，森林损失小，救援费用大；队员少，森林损失大，救援费用小\
+森林失火后，要确定派出消防队员的数量  
+队员多，森林损失小，救援费用大；队员少，森林损失大，救援费用小  
 综合考虑损失费和救援费，确定队员数量
 
 **问题分析**
@@ -456,7 +455,7 @@ $0 \leq t \leq t_{1}{}$, $\frac{dB}{dt}{}$ 与 $t{}$成正比，系数$\beta{}$ 
 
 火势以失火点为中心，均匀向四周呈圆形蔓延
 
-半径 $r{}$与 $t{}$ 成正比，面积 $B{}$与 $t^{2}{}$ 成正比，$\frac{dB}{dt}{}$与 $t{}$ 成正比\
+半径 $r{}$与 $t{}$ 成正比，面积 $B{}$与 $t^{2}{}$ 成正比，$\frac{dB}{dt}{}$与 $t{}$ 成正比  
 $t_{1} \leq t \leq t_{2}{}$, $\beta{}$ 降为$\beta - \lambda x{}$ ($\lambda{}$为队员的平均灭火速度)
 
 $f_{1}(x){}$与$B(t_{2}){}$成正比，系数$c_{1}{}$ (烧毁单位面积损失费）
@@ -501,22 +500,20 @@ $$
 
 ### 血管分支
 
-
-
 ![原文插图](/Firefly/uploads/math-modeling-2023/image11.png)
 
 **问题**
 
 机体提供能量维持血液在血管中的流动给血管壁以营养
 
-为了克服血液流动的阻力，消耗能量与取决于血管的几何形状\
+为了克服血液流动的阻力，消耗能量与取决于血管的几何形状  
 在长期进化中动物血管的几何形状已经达到能量最小原则
 
 研究在能量最小原则下，血管分支处粗细血管半径比例和分岔角度
 
 **模型假设**
 
-一条粗血管和两条细血管在分支点对称地处于同一平面\
+一条粗血管和两条细血管在分支点对称地处于同一平面  
 血液流动近似于黏性流体在刚性管道中的运动
 
 血液给血管壁的能量随管壁的内表面积和体积的增加而增加，管壁厚度$d{}$近似与血管半径$r{}$成正比，图中的流量$q = 2q_{1}{}$
@@ -554,12 +551,12 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} b\alpha r^{\alpha - 1} - \frac{4kq^{2}}{r^{5}} = 0 \\ b\alpha r_{1}^{\alpha - 1} - \frac{4kq^{2}}{r_{1}^{5}} = 0 \end{array} \right.\  \Rightarrow \frac{r}{r_{1}} = 4^{\frac{1}{\alpha + 4}}{}
+\left \begin{array}{r} b\alpha r^{\alpha - 1} - \frac{4kq^{2}}{r^{5}} = 0  b\alpha r_{1}^{\alpha - 1} - \frac{4kq^{2}}{r_{1}^{5}} = 0 \end{array} \right.\  \Rightarrow \frac{r}{r_{1}} = 4^{\frac{1}{\alpha + 4}}{}
 $$
 
 
 
-
+&nbsp;
 
 $$
 \cos\theta = 2\left( \frac{r}{r_{1}} \right)^{- 4} \Rightarrow 2^{\frac{\alpha - 4}{\alpha + 4}}{}
@@ -579,7 +576,7 @@ $\because 1 \leq \alpha \leq 2\ \ \ \ \ \ \ \ \therefore 1.26 \leq \frac{r}{r_{1
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image12.png)
 
- 
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image13.png)
 
@@ -597,7 +594,7 @@ $\because 1 \leq \alpha \leq 2\ \ \ \ \ \ \ \ \therefore 1.26 \leq \frac{r}{r_{1
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image14.png)
 
- 
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image15.png)
 
@@ -605,9 +602,7 @@ $\because 1 \leq \alpha \leq 2\ \ \ \ \ \ \ \ \therefore 1.26 \leq \frac{r}{r_{1
 
 将一般形式化成规范形式：
 
-1.  目标函数的转化
-
-
+1. 目标函数的转化
 
 $$
 \max z = - \min( - z){}
@@ -615,11 +610,11 @@ $$
 
 
 
-2.  等式约束的转化
+2. 等式约束的转化
 
-对于一个等式约束：$\sum_{j = 1}^{n}{a_{ij} \cdot x_{j} = b_{i}\ \ \  \Rightarrow}\ \ \ \left\{ \begin{array}{r} \sum_{j = 1}^{n}{a_{ij} \cdot x_{j} \geq b_{i}} \\ \sum_{j = 1}^{n}{{( - a}_{ij}) \cdot x_{j} \geq ( - b_{i})} \end{array} \right.\ {}$
+对于一个等式约束：$\sum_{j = 1}^{n}{a_{ij} \cdot x_{j} = b_{i}\ \ \  \Rightarrow}\ \ \ \left \begin{array}{r} \sum_{j = 1}^{n}{a_{ij} \cdot x_{j} \geq b_{i}}  \sum_{j = 1}^{n}{{( - a}*{ij}) \cdot x*{j} \geq ( - b_{i})} \end{array} \right.\ {}$
 
-3.  无符号限制变量转化
+3. 无符号限制变量转化
 
 对于一个无符号限制变量$x_{j}{}$，引入两个非负变量$x_{j}^{+} \geq 0{}$和$x_{j}^{-} \geq 0{}$，并设：
 
@@ -633,9 +628,7 @@ $$
 
 将一般形式化成标准形式：
 
-1.  目标函数的转化
-
-
+1. 目标函数的转化
 
 $$
 \max z = - \min( - z){}
@@ -643,7 +636,7 @@ $$
 
 
 
-2.  不等式约束的转化
+2. 不等式约束的转化
 
 对于一个不等式约束$\sum_{j = 1}^{n}{a_{ij}x_{j} \geq b_{i}}{}$，引入一个剩余变量$s_{i}{}$，转化为：
 
@@ -677,10 +670,10 @@ $$
 
 
 
-
+&nbsp;
 
 $$
-s.t.\left\{ \begin{array}{r} g_{i}(x) \leq 0,\ \ \ i = 1,2,\ldots,m \\ h_{j}(x) = 0,\ \ \ j = 1,2,\ldots,n \end{array} \right.\ {}
+s.t.\left \begin{array}{r} g_{i}(x) \leq 0,\ \ \ i = 1,2,\ldots,m  h_{j}(x) = 0,\ \ \ j = 1,2,\ldots,n \end{array} \right.\ {}
 $$
 
 
@@ -689,9 +682,8 @@ $$
 
 求解方法
 
-1.  若$f(x){}$形式简单，直接通过求$\nabla f(x) = 0{}$（$f(x){}$的梯度）求出最优解$x^{*}{}$
-
-2.  求$\nabla f(x){}$困难，采用下降迭代法：根据目标函数的特征采用搜索的方法寻找
+1. 若$f(x){}$形式简单，直接通过求$\nabla f(x) = 0{}$（$f(x){}$的梯度）求出最优解$x^{*}{}$
+2. 求$\nabla f(x){}$困难，采用下降迭代法：根据目标函数的特征采用搜索的方法寻找
 
 ### 奶制品的生产和销售
 
@@ -731,7 +723,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 12 \cdot x_{1} + 8 \cdot x_{2} \leq 480 \Rightarrow l_{2}:12 \cdot x_{1} + 8 \cdot x_{2} = 480{}
@@ -739,7 +731,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 3 \cdot x_{1} \leq 480 \Rightarrow l_{3}:3 \cdot x_{1} = 480{}
@@ -747,7 +739,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 x_{1},x_{2} \geq 0 \Rightarrow l_{4}:x_{1} = 0,\ \ \ l_{5}:x_{2} = 0{}
@@ -775,7 +767,7 @@ $$
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image17.png)
 
- 
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image18.png)
 
@@ -789,9 +781,8 @@ $$
 
 每1kg的$A_{1}{}$产品，经过2h的深加工并花费3元，可以得到0.8kg的$B_{1}{}$产品，获利为44元/kg；每1kg的$A_{2}{}$产品，经过2h的深加工并花费3元，可以得到0.75kg的$B_{1}{}$产品，获利为32元/kg。
 
-1.  假设每天有50桶牛奶可用于生产，总工时为480h，且$A_{1}{}$产品至多生产100kg，如何决策生产？
-
-2.  如果30元可增加1桶牛奶，3元可增加1h加工时间，应否投资？现投资150元，可赚回多少？
+1. 假设每天有50桶牛奶可用于生产，总工时为480h，且$A_{1}{}$产品至多生产100kg，如何决策生产？
+2. 如果30元可增加1桶牛奶，3元可增加1h加工时间，应否投资？现投资150元，可赚回多少？
 
 **模型建立**
 
@@ -841,9 +832,9 @@ $$
 
 约束条件：
 
-供应限制：$\left\{ \begin{array}{r} x_{11} + x_{12} + x_{13} + x_{14} = 50 \\ x_{21} + x_{22} + x_{23} + x_{24} = 60 \\ x_{31} + x_{32} + x_{33} = 50 \end{array} \right.\ {}$
+供应限制：$\left \begin{array}{r} x_{11} + x_{12} + x_{13} + x_{14} = 50  x_{21} + x_{22} + x_{23} + x_{24} = 60  x_{31} + x_{32} + x_{33} = 50 \end{array} \right.\ {}$
 
-需求限制：$\left\{ \begin{array}{r} 30 \leq x_{11} + x_{21} + x_{31} \leq 80 \\ 70 \leq x_{12} + x_{22} + x_{32} \leq 140 \\ 10 \leq x_{13} + x_{23} + x_{33} \leq 30 \\ 10 \leq x_{14} + x_{24} \leq 50 \end{array} \right.\ {}$
+需求限制：$\left \begin{array}{r} 30 \leq x_{11} + x_{21} + x_{31} \leq 80  70 \leq x_{12} + x_{22} + x_{32} \leq 140  10 \leq x_{13} + x_{23} + x_{33} \leq 30  10 \leq x_{14} + x_{24} \leq 50 \end{array} \right.\ {}$
 
 **模型求解**
 
@@ -861,13 +852,10 @@ $$
 
 **模型假设**
 
-1.  每种货物可以分割到任意小
-
-2.  每种货物可以在一个或多个货舱中任意分布
-
-3.  多种货物可以混装，并保证不留空隙
-
-4.  所给出的数据都是精确的，没有误差
+1. 每种货物可以分割到任意小
+2. 每种货物可以在一个或多个货舱中任意分布
+3. 多种货物可以混装，并保证不留空隙
+4. 所给出的数据都是精确的，没有误差
 
 **模型建立**
 
@@ -885,7 +873,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 w = (18,15,23,\ 12)\ \ \ v = (480,650,580,390),p = (3100,3800,3500,2850){}
@@ -909,7 +897,7 @@ $$
 
 货舱重量：$\sum_{i = 1}^{4}x_{ij} \leq W_{j}{}$
 
-货舱容积：$\sum_{i = 1}^{4}{v_{i} \cdot x}_{ij} \leq V_{j}{}$
+货舱容积：$\sum_{i = 1}^{4}{v_{i} \cdot x}*{ij} \leq V*{j}{}$
 
 平衡要求：$\frac{\sum_{i = 1}^{4}x_{ij}}{W_{j}} = \frac{\sum_{i = 1}^{4}x_{ik}}{W_{k}},\ \ \ j,k = 1,2,3,\ \ \ j \neq k{}$
 
@@ -927,9 +915,8 @@ $$
 
 汽车厂生产三种类型汽车，已知各类型的每辆车对钢材、劳动时间的需求，利润及工程每月的现有量如下
 
-1.  制定月生产计划，使工厂的利润最大
-
-2.  如果生产某一类汽车，则至少生产80辆
+1. 制定月生产计划，使工厂的利润最大
+2. 如果生产某一类汽车，则至少生产80辆
 
 **模型假设**
 
@@ -955,11 +942,9 @@ $$
 
 结果为小数怎么办
 
-1.  舍去小数
-
-2.  试探
-
-3.  模型中修改条件：$x_{1},x_{2},x_{3}{}$为非负整数→整数规划（IP）
+1. 舍去小数
+2. 试探
+3. 模型中修改条件：$x_{1},x_{2},x_{3}{}$为非负整数→整数规划（IP）
 
 整数规划
 
@@ -981,34 +966,32 @@ $$
 
 
 
-
+&nbsp;
 
 $$
-s.t.\ \left\{ \begin{array}{r} x_{1},x_{2},x_{3} = 0\ or\  \geq 80 \\ 1.5 \cdot x_{1} + 3 \cdot x_{2} + 5 \cdot x_{3} \leq 600 \\ 280 \cdot x_{1} + 250 \cdot x_{2} + 400 \cdot x_{3} \leq 60000 \end{array} \right.\ {}
+s.t.\ \left \begin{array}{r} x_{1},x_{2},x_{3} = 0\ or\  \geq 80  1.5 \cdot x_{1} + 3 \cdot x_{2} + 5 \cdot x_{3} \leq 600  280 \cdot x_{1} + 250 \cdot x_{2} + 400 \cdot x_{3} \leq 60000 \end{array} \right.\ {}
 $$
 
 
 
 两种解决方法：
 
-1.  
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image24.png)
 
 将其分解为8个LP子模型，然后去除不可能的模型，逐个求解
 
-2.  引入0-1变量，化为整数规划
-
-
+2. 引入0-1变量，化为整数规划
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image25.png)
 
 
 
-
+&nbsp;
 
 $$
-\left\{ \begin{array}{r} x_{1} \cdot \left( x_{1} - 80 \right) \geq 0 \\ x_{2} \cdot \left( x_{2} - 80 \right) \geq 0 \\ x_{3} \cdot \left( x_{3} - 80 \right) \geq 0 \\ x_{1},x_{2},x_{3}均为整数 \end{array} \right.\ {}
+\left \begin{array}{r} x_{1} \cdot \left( x_{1} - 80 \right) \geq 0  x_{2} \cdot \left( x_{2} - 80 \right) \geq 0  x_{3} \cdot \left( x_{3} - 80 \right) \geq 0  x_{1},x_{2},x_{3}均为整数 \end{array} \right.\ {}
 $$
 
 
@@ -1025,9 +1008,9 @@ $$
 
 
 
-市场上可买到不超过1500t的原油A：\
-• 购买量不超过500t时的单价为10000元/t；\
-• 购买量超过500t但不超过1000t时，超过500t的部分8000元/t；\
+市场上可买到不超过1500t的原油A：  
+• 购买量不超过500t时的单价为10000元/t；  
+• 购买量超过500t但不超过1000t时，超过500t的部分8000元/t；  
 • 购买量超过1000t时，超过1000t的部分6000元/t
 
 问：该如何安排原油的采购和加工
@@ -1041,7 +1024,7 @@ $$
 
 
 $$
-c(x) = \left\{ \begin{array}{r} 10x,\ \ \ (0 \leq x \leq 500) \\ 8x + 1000,\ \ \ (500 \leq x \leq 1000) \\ 6x + 3000,\ \ \ (1000 \leq x \leq 1500) \end{array} \right.\ {}
+c(x) = \left \begin{array}{r} 10x,\ \ \ (0 \leq x \leq 500)  8x + 1000,\ \ \ (500 \leq x \leq 1000)  6x + 3000,\ \ \ (1000 \leq x \leq 1500) \end{array} \right.\ {}
 $$
 
 
@@ -1051,7 +1034,7 @@ $$
 
 
 $$
-s.t.\left\{ \begin{array}{r} x_{11} + x_{12} \leq 500 + x \\ x_{21} + x_{22} \leq 1000 \\ x \leq 1500 \\ \frac{x_{11}}{x_{11} + x_{21}} \geq 0.5 \\ \frac{x_{12}}{x_{12} + x_{22}} \geq 0.6 \end{array} \right.\ {}
+s.t.\left \begin{array}{r} x_{11} + x_{12} \leq 500 + x  x_{21} + x_{22} \leq 1000  x \leq 1500  \frac{x_{11}}{x_{11} + x_{21}} \geq 0.5  \frac{x_{12}}{x_{12} + x_{22}} \geq 0.6 \end{array} \right.\ {}
 $$
 
 
@@ -1075,7 +1058,7 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} \left( x_{1} - 500 \right) \cdot x_{2} = 0\ \ \ \ \ \ 只有购买x_{1} = 500t时才能购买x_{2} \\ \left( x_{2} - 500 \right) \cdot x_{3} = 0\ \ \ \ \ \ 只有购买x_{2} = 500t时才能购买x_{3} \end{array} \right.\ {}
+\left \begin{array}{r} \left( x_{1} - 500 \right) \cdot x_{2} = 0\ \ \ \ \ \ 只有购买x_{1} = 500t时才能购买x_{2}  \left( x_{2} - 500 \right) \cdot x_{3} = 0\ \ \ \ \ \ 只有购买x_{2} = 500t时才能购买x_{3} \end{array} \right.\ {}
 $$
 
 
@@ -1087,7 +1070,7 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} 500y_{2} \leq x_{1} \leq 500y_{1} \\ 500y_{3} \leq x_{2} \leq 500y_{2} \\ x_{3} \leq 500y_{3} \end{array}\ \ \ y_{1},y_{2},y_{3} = 0\ or\ 1 \right.\ {}
+\left \begin{array}{r} 500y_{2} \leq x_{1} \leq 500y_{1}  500y_{3} \leq x_{2} \leq 500y_{2}  x_{3} \leq 500y_{3} \end{array}\ \ \ y_{1},y_{2},y_{3} = 0\ or\ 1 \right.\ {}
 $$
 
 
@@ -1108,17 +1091,16 @@ $$
 
 特点：动态模型
 
-• 描述对象特征随时间(空间)的演变过程\
-• 分析对象特征的变化规律\
-• 预报对象特征的未来性态\
+• 描述对象特征随时间(空间)的演变过程  
+• 分析对象特征的变化规律  
+• 预报对象特征的未来性态  
 • 研究控制对象特征的手段
 
 方法：微分方程建模
 
-• 根据函数及其变化率之间的关系确定函数\
-• 根据建模目的和问题分析作出简化假设\
+• 根据函数及其变化率之间的关系确定函数  
+• 根据建模目的和问题分析作出简化假设  
 • 按照内在规律或用类比法建立微分方程
-
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image29.png)
 
@@ -1142,7 +1124,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \because\frac{di}{dt} = \lambda i(t),\ \ \ i(0) = i_{0},\ \ \therefore i(t) = i_{0}e^{\lambda t}{}
@@ -1160,11 +1142,8 @@ $$
 
 假设：
 
-1.  总人数$N{}$不变，病人和健康人的比例为$i(t),\ s(t){}$
-
-2.  每个病人每天有效接触人数为$\lambda{}$，且使健康人致病
-
-
+1. 总人数$N{}$不变，病人和健康人的比例为$i(t),\ s(t){}$
+2. 每个病人每天有效接触人数为$\lambda{}$，且使健康人致病
 
 $$
 N\left\lbrack i(t + \Delta t) - i(t) \right\rbrack = \lambda \cdot s(t) \cdot N \cdot i(t) \cdot \Delta t{}
@@ -1172,7 +1151,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \because\frac{di}{dt} = \lambda s(t)i(t),\ \ \ s(t) + i(t) = 1{}
@@ -1180,15 +1159,15 @@ $$
 
 
 
-
+&nbsp;
 
 $$
-\therefore\left\{ \begin{array}{r} \frac{di}{dt} = \lambda i(t) \cdot \lbrack 1 - i(t)\rbrack \\ i(0) = i_{0} \end{array} \Rightarrow i(t) = \frac{1}{1 + \left( \frac{1}{i_{0}} - 1 \right) \cdot e^{- \lambda t}} \right.\ {}
+\therefore\left \begin{array}{r} \frac{di}{dt} = \lambda i(t) \cdot \lbrack 1 - i(t)\rbrack  i(0) = i_{0} \end{array} \Rightarrow i(t) = \frac{1}{1 + \left( \frac{1}{i_{0}} - 1 \right) \cdot e^{- \lambda t}} \right.\ {}
 $$
 
 
 
-
+&nbsp;
 
 $$
 \Rightarrow t_{m} = \lambda^{- 1}ln(\frac{1}{i_{0}} - 1){}
@@ -1204,7 +1183,7 @@ $$
 
 建模：
 
-> 
+
 
 $$
 N \cdot \left\lbrack i(t + \Delta t) - i(t) \right\rbrack = \lambda \cdot s(t) \cdot N \cdot i(t) \cdot \Delta t - \mu \cdot N \cdot i(t) \cdot \Delta t{}
@@ -1212,10 +1191,10 @@ $$
 
 
 
-
+&nbsp;
 
 $$
-\Rightarrow \left\{ \begin{array}{r} \frac{di}{dt} = \lambda \cdot i(t) \cdot \left\lbrack 1 - i(t) \right\rbrack - \mu \cdot i(t) = - \lambda \cdot i(t) \cdot \left\lbrack i(t) - \left( 1 - \frac{1}{\sigma} \right) \right\rbrack \\ i(0) = i_{0} \end{array} \right.\ {}
+\Rightarrow \left \begin{array}{r} \frac{di}{dt} = \lambda \cdot i(t) \cdot \left\lbrack 1 - i(t) \right\rbrack - \mu \cdot i(t) = - \lambda \cdot i(t) \cdot \left\lbrack i(t) - \left( 1 - \frac{1}{\sigma} \right) \right\rbrack  i(0) = i_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1232,9 +1211,8 @@ $$
 
 假设：
 
-1.  总人数$N{}$不变，病人、健康人和移出者比例分别为$i(t),s(t),r(t){}$
-
-2.  病人日接触率$\lambda{}$，日治愈率$\mu{}$，接触数$\sigma = \lambda/\mu{}$
+1. 总人数$N{}$不变，病人、健康人和移出者比例分别为$i(t),s(t),r(t){}$
+2. 病人日接触率$\lambda{}$，日治愈率$\mu{}$，接触数$\sigma = \lambda/\mu{}$
 
 建模：
 
@@ -1243,15 +1221,15 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} N\left\lbrack i(t + \Delta t) - i(t) \right\rbrack = \lambda Ns(t)i(t)\Delta t - \mu Ni(t)\Delta t \\ N\left\lbrack s(t + \Delta t) - s(t) \right\rbrack = - \lambda Ns(t)i(t)\Delta t\ \ \ 减少量包括病人和移出者 \\ N\left\lbrack r(t + \Delta t) - r(t) \right\rbrack = \mu Ni(t)\Delta t \end{array} \right.\ {}
+\left \begin{array}{r} N\left\lbrack i(t + \Delta t) - i(t) \right\rbrack = \lambda Ns(t)i(t)\Delta t - \mu Ni(t)\Delta t  N\left\lbrack s(t + \Delta t) - s(t) \right\rbrack = - \lambda Ns(t)i(t)\Delta t\ \ \ 减少量包括病人和移出者  N\left\lbrack r(t + \Delta t) - r(t) \right\rbrack = \mu Ni(t)\Delta t \end{array} \right.\ {}
 $$
 
 
 
-
+&nbsp;
 
 $$
-\Rightarrow \left\{ \begin{array}{r} \frac{di}{dt} = \lambda s(t)i(t) - \mu i(t) \\ \frac{ds}{dt} = - \lambda s(t)i(t) \\ \frac{dr}{dt} = \mu i(t) \\ i(0) = i_{0},\ \ \ s(0) = s_{0} \end{array} \right.\ {}
+\Rightarrow \left \begin{array}{r} \frac{di}{dt} = \lambda s(t)i(t) - \mu i(t)  \frac{ds}{dt} = - \lambda s(t)i(t)  \frac{dr}{dt} = \mu i(t)  i(0) = i_{0},\ \ \ s(0) = s_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1270,27 +1248,25 @@ $$
 
 第一次世界大战Lanchester提出预测战役结局的模型
 
-战争分类：正规战争，游击战争，混合战争\
-只考虑双方兵力多少和战斗力强弱\
-兵力因战斗及非战斗减员而减少，因增援而增加\
+战争分类：正规战争，游击战争，混合战争  
+只考虑双方兵力多少和战斗力强弱  
+兵力因战斗及非战斗减员而减少，因增援而增加  
 战斗力与射击次数及命中率有关
 
 **一般模型**
 
 假设
 
-1.  每方战斗减员率取决于双方的兵力和战斗力
-
-2.  每方非战斗减员率与本方兵力成正比
-
-3.  甲乙双方的兵力为$x(t),y(t){}$，战斗力为$a,b{}$，增援率为$u(t){}$, $v(t){}$，非战斗减员率$\alpha,\ \beta{}$
+1. 每方战斗减员率取决于双方的兵力和战斗力
+2. 每方非战斗减员率与本方兵力成正比
+3. 甲乙双方的兵力为$x(t),y(t){}$，战斗力为$a,b{}$，增援率为$u(t){}$, $v(t){}$，非战斗减员率$\alpha,\ \beta{}$
 
 模型建立
 
 
 
 $$
-\left\{ \begin{array}{r} \dot{x}(t) = f(x,y) - \alpha x + u(t),\ \ \ \alpha > 0 \\ \dot{y}(t) = g(x,y) - \beta y + v(t),\ \ \ \beta > 0 \end{array} \right.\ {}
+\left \begin{array}{r} \dot{x}(t) = f(x,y) - \alpha x + u(t),\ \ \ \alpha > 0  \dot{y}(t) = g(x,y) - \beta y + v(t),\ \ \ \beta > 0 \end{array} \right.\ {}
 $$
 
 
@@ -1320,12 +1296,12 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} \dot{x}(t) = - ay - \alpha x + u(t) \\ \dot{y}(t) = - bx - \beta y + v(t) \end{array} \right.\ {}
+\left \begin{array}{r} \dot{x}(t) = - ay - \alpha x + u(t)  \dot{y}(t) = - bx - \beta y + v(t) \end{array} \right.\ {}
 $$
 
 
 
-
+&nbsp;
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image33.png)
 
@@ -1334,7 +1310,7 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} \dot{x} = - ay \\ \dot{y} = - bx \\ x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
+\left \begin{array}{r} \dot{x} = - ay  \dot{y} = - bx  x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1344,7 +1320,7 @@ $$
 
 
 $$
-\frac{dy}{dx} = \frac{bx}{ay} \Rightarrow \left\{ \begin{array}{r} ay^{2} - bx^{2} = k \\ k = ay_{0}^{2} - bx_{0}^{2} \end{array} \right.\ {}
+\frac{dy}{dx} = \frac{bx}{ay} \Rightarrow \left \begin{array}{r} ay^{2} - bx^{2} = k  k = ay_{0}^{2} - bx_{0}^{2} \end{array} \right.\ {}
 $$
 
 
@@ -1376,7 +1352,7 @@ $k = 0{}$时，平局
 
 
 $$
-\left\{ \begin{array}{r} \dot{x} = - cxy \\ \dot{y} = - dxy \\ x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
+\left \begin{array}{r} \dot{x} = - cxy  \dot{y} = - dxy  x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1386,7 +1362,7 @@ $$
 
 
 $$
-\frac{dy}{dx} = \frac{d}{c} \Rightarrow \left\{ \begin{array}{r} cy - dx = m \\ m = cy_{0} - dx_{0} \end{array} \right.\ {}
+\frac{dy}{dx} = \frac{d}{c} \Rightarrow \left \begin{array}{r} cy - dx = m  m = cy_{0} - dx_{0} \end{array} \right.\ {}
 $$
 
 
@@ -1412,7 +1388,7 @@ $m = 0{}$时，平局
 
 
 $$
-\left\{ \begin{array}{r} \dot{x} = - cxy \\ \dot{y} = - bx \\ x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \Rightarrow \left\{ \begin{array}{r} cy^{2} - 2bx = n \\ n = cy_{0}^{2} - 2bx_{0} \end{array} \right.\  \right.\ {}
+\left \begin{array}{r} \dot{x} = - cxy  \dot{y} = - bx  x(0) = x_{0},\ \ \ y(0) = y_{0} \end{array} \Rightarrow \left \begin{array}{r} cy^{2} - 2bx = n  n = cy_{0}^{2} - 2bx_{0} \end{array} \right.\  \right.\ {}
 $$
 
 
@@ -1423,10 +1399,10 @@ $n > 0{}$时，乙方胜：$\because n > 0\ \ \therefore\left( \frac{y_{0}}{x_{0
 
 **问题**
 
-药物进入机体形成血药浓度(单位体积血液的药物量)，血药浓度需保持在一定范围内------给药方案设计\
+药物进入机体形成血药浓度(单位体积血液的药物量)，血药浓度需保持在一定范围内------给药方案设计  
 药物在体内吸收、分布和排除过程 ------药物动力学
 
-建立房室模型------药物动力学的基本步骤\
+建立房室模型------药物动力学的基本步骤  
 房室------机体的一部分，药物在一个房室内均匀分布(血药浓度为常数)，在房室间按一定规律转移
 
 本节讨论二室模型------中心室(心、肺、肾等)和周边室(四肢、肌肉等)
@@ -1449,7 +1425,7 @@ $n > 0{}$时，乙方胜：$\because n > 0\ \ \therefore\left( \frac{y_{0}}{x_{0
 
 中心室(1)和周边室(2),容积不变
 
-药物从体外进入中心室，在二室间相互转移，最终从中心室排出体外\
+药物从体外进入中心室，在二室间相互转移，最终从中心室排出体外  
 药物在房室间转移速率及向体外排除速率与该室血药浓度成正比
 
 **模型建立**
@@ -1461,7 +1437,7 @@ $n > 0{}$时，乙方胜：$\because n > 0\ \ \therefore\left( \frac{y_{0}}{x_{0
 
 
 $$
-\left\{ \begin{array}{r} \dot{x_{1}}(t) = - k_{12}x_{1} - k_{13}x_{1} + k_{21}x_{2} + f_{0}(t) \\ \dot{x_{2}}(t) = k_{12}x_{1} - k_{21}x_{2} \end{array} \right.\ {}
+\left \begin{array}{r} \dot{x_{1}}(t) = - k_{12}x_{1} - k_{13}x_{1} + k_{21}x_{2} + f_{0}(t)  \dot{x_{2}}(t) = k_{12}x_{1} - k_{21}x_{2} \end{array} \right.\ {}
 $$
 
 
@@ -1471,18 +1447,16 @@ $$
 
 
 $$
-\left\{ \begin{array}{r} \dot{c_{1}}(t) = - \left( k_{12} + k_{13} \right)c_{1} + \frac{V_{2}}{V_{1}}k_{21}c_{2} + \frac{f_{0}(t)}{V_{1}} \\ \dot{c_{2}}(t) = \frac{V_{1}}{V_{2}}k_{12}c_{1} - k_{21}c_{2} \end{array} \right.\ {}
+\left \begin{array}{r} \dot{c_{1}}(t) = - \left( k_{12} + k_{13} \right)c_{1} + \frac{V_{2}}{V_{1}}k_{21}c_{2} + \frac{f_{0}(t)}{V_{1}}  \dot{c_{2}}(t) = \frac{V_{1}}{V_{2}}k_{12}c_{1} - k_{21}c_{2} \end{array} \right.\ {}
 $$
 
 
 
-对应的其次方程通解：$\left\{ \begin{array}{r} c_{1}(t) = A_{1}e^{- \alpha t} + B_{1}e^{- \beta t} \\ c_{2}(t) = A_{2}e^{- \alpha t} + B_{2}e^{- \beta t} \end{array} \right.\ {}$其中，$\left\{ \begin{array}{r} \alpha + \beta = k_{12} + k_{21} + k_{13} \\ \alpha\beta = k_{21}k_{13} \end{array} \right.\ {}$
+对应的其次方程通解：$\left \begin{array}{r} c_{1}(t) = A_{1}e^{- \alpha t} + B_{1}e^{- \beta t}  c_{2}(t) = A_{2}e^{- \alpha t} + B_{2}e^{- \beta t} \end{array} \right.\ {}$其中，$\left \begin{array}{r} \alpha + \beta = k_{12} + k_{21} + k_{13}  \alpha\beta = k_{21}k_{13} \end{array} \right.\ {}$
 
 几种常见的给药方式
 
-1.  快速静脉注射：$t = 0{}$ 瞬时注射剂量$D_{0}{}$的药物进入中心室,血药浓度立即为$D_{0}/V_{1}{}$，有：
-
-
+1. 快速静脉注射：$t = 0{}$ 瞬时注射剂量$D_{0}{}$的药物进入中心室,血药浓度立即为$D_{0}/V_{1}{}$，有：
 
 $$
 f_{0}(t) = 0,\ c_{1}(0) = \frac{D_{0}}{V_{1}},c_{2}(0) = 0{}
@@ -1490,9 +1464,9 @@ $$
 
 
 
-解得$\left\{ \begin{array}{r} c_{1}(t) = \frac{D_{0}}{V_{1}(\beta - \alpha)}\lbrack(k_{21} - \alpha)e^{- \alpha t} + (\beta - k_{21})e^{- \beta t}\rbrack \\ c_{2}(t) = \frac{D_{0}k_{12}}{V_{2}(\beta - \alpha)}\lbrack e^{- \alpha t} - e^{- \beta t}\rbrack \end{array} \right.\ {}$
+解得$\left \begin{array}{r} c_{1}(t) = \frac{D_{0}}{V_{1}(\beta - \alpha)}\lbrack(k_{21} - \alpha)e^{- \alpha t} + (\beta - k_{21})e^{- \beta t}\rbrack  c_{2}(t) = \frac{D_{0}k_{12}}{V_{2}(\beta - \alpha)}\lbrack e^{- \alpha t} - e^{- \beta t}\rbrack \end{array} \right.\ {}$
 
-2.  
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image37.png)
 
@@ -1508,12 +1482,10 @@ $$
 
 $t > T{}$时，$c_{1}(0){}$和$c_{2}(0){}$按指数规律趋于0
 
-3.  口服或肌肉注射：相当于药物（剂量$D_{0}{}$）先进入吸收室，吸收后再进入中心室，有：
-
-
+3. 口服或肌肉注射：相当于药物（剂量$D_{0}{}$）先进入吸收室，吸收后再进入中心室，有：
 
 $$
-\left\{ \begin{array}{r} x_{0}(t) = - k_{01}x_{0} \\ x_{0}(t) = D_{0}e^{- k_{01}t} \end{array} \right.\  \Rightarrow x_{0}(t) = D_{0}e^{- k_{01}t}{}
+\left \begin{array}{r} x_{0}(t) = - k_{01}x_{0}  x_{0}(t) = D_{0}e^{- k_{01}t} \end{array} \right.\  \Rightarrow x_{0}(t) = D_{0}e^{- k_{01}t}{}
 $$
 
 
@@ -1522,25 +1494,20 @@ $$
 
 **问题**
 
-过滤嘴的作用与它的材料和长度有什么关系?\
+过滤嘴的作用与它的材料和长度有什么关系?  
 人体吸入的毒物量与哪些因素有关，其中什么因素影响大，什么因素影响小?
 
-**问题分析**\
-在基本合理的简化假设下，用精确的数学工具解决一个看来不易下手的实际问题.\
-引入两个基本函数：流量$q(x,t){}$和密度$w(x,t){}$，运用物理学的守恒定律建立微分方程，构造动态模型\
+**问题分析**  
+在基本合理的简化假设下，用精确的数学工具解决一个看来不易下手的实际问题.  
+引入两个基本函数：流量$q(x,t){}$和密度$w(x,t){}$，运用物理学的守恒定律建立微分方程，构造动态模型  
 对求解结果进行定性和定量分析，得到合乎实际的结论
 
 **模型假设**
 
-1.  烟草部分长$l_{1}{}$，过滤嘴长$l_{2}{}$，总长度$l = l_{1} + l_{2}{}$，毒物量$M{}$在烟草部分均匀分布，密度$w_{0} = M/l_{1}{}$.
-
-2.  点燃处毒物随烟雾进入空气和沿香烟穿行的数量比是$a':a,\ a' + a = 1{}$
-
-3.  未点燃的烟草和过滤嘴对随烟雾穿行的毒物的(单位时间)吸收率分别是$b{}$和$\beta{}$
-
-4.  烟雾沿香烟穿行速度是常数$v{}$，香烟燃烧速度是常数$u{}$， $v > > u{}$
-
-
+1. 烟草部分长$l_{1}{}$，过滤嘴长$l_{2}{}$，总长度$l = l_{1} + l_{2}{}$，毒物量$M{}$在烟草部分均匀分布，密度$w_{0} = M/l_{1}{}$.
+2. 点燃处毒物随烟雾进入空气和沿香烟穿行的数量比是$a':a,\ a' + a = 1{}$
+3. 未点燃的烟草和过滤嘴对随烟雾穿行的毒物的(单位时间)吸收率分别是$b{}$和$\beta{}$
+4. 烟雾沿香烟穿行速度是常数$v{}$，香烟燃烧速度是常数$u{}$， $v > > u{}$
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image38.png)
 
@@ -1558,52 +1525,49 @@ $aH(t){}$是$t{}$时刻毒物被吸入的量
 
 吸入一支烟的毒物进入人体总量为：\
 
-
 $$
 Q = \int_{0}^{T}{q(l,t)dt,}\ \ \ \ \ \ T = \frac{l_{1}}{u}{}
 $$
 
 
 
-1.  求$q(x,0) = q(x){}$
+1. 求$q(x,0) = q(x){}$
 
 由于流量守恒，$q(x,0) = q(x){}$，则有
 
 
 
 $$
-q(x) - q(x + \Delta x) = \left\{ \begin{array}{r} bq(x)\Delta\tau,\ \ \ 0 \leq x \leq l_{1} \\ \beta q(x)\Delta\tau,\ \ \ l_{1} \leq x \leq l \end{array},\ \ \ \Delta\tau = \frac{\Delta x}{v} \right.\ {}
+q(x) - q(x + \Delta x) = \left \begin{array}{r} bq(x)\Delta\tau,\ \ \ 0 \leq x \leq l_{1}  \beta q(x)\Delta\tau,\ \ \ l_{1} \leq x \leq l \end{array},\ \ \ \Delta\tau = \frac{\Delta x}{v} \right.\ {}
 $$
 
 
 
-
-
-$$
-\frac{dq}{dx} = \left\{ \begin{array}{r}  - \frac{b}{v}q(x),\ \ \ 0 \leq x \leq l_{1} \\  - \frac{\beta}{v}q(x),\ \ \ l_{1} \leq x \leq l \end{array} \right.\ ,\ \ \ \left\{ \begin{array}{r} q_{0} = aH_{0} \\ H_{0} = uw_{0} \end{array} \right.\  \Rightarrow q(x) = \left\{ \begin{array}{r} aH_{0}e^{- \frac{bx}{v}},\ \ \ \ \ \ 0 \leq x \leq l_{1} \\ aH_{0}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
-$$
-
-
-
-2.  求$q(l,t){}$，在$t{}$时刻，香烟点燃至$x = ut{}$
-
-
+&nbsp;
 
 $$
-\left\{ \begin{array}{r} H_{0} \Rightarrow H(t) = uw(ut,\ t) \\ x \Rightarrow x - ut,\ \ \ ut \leq x \leq l_{1} \\ l_{1} \Rightarrow l_{1} - ut,\ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
+\frac{dq}{dx} = \left \begin{array}{r}  - \frac{b}{v}q(x),\ \ \ 0 \leq x \leq l_{1}   - \frac{\beta}{v}q(x),\ \ \ l_{1} \leq x \leq l \end{array} \right.\ ,\ \ \ \left \begin{array}{r} q_{0} = aH_{0}  H_{0} = uw_{0} \end{array} \right.\  \Rightarrow q(x) = \left \begin{array}{r} aH_{0}e^{- \frac{bx}{v}},\ \ \ \ \ \ 0 \leq x \leq l_{1}  aH_{0}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
 $$
 
 
 
-
+2. 求$q(l,t){}$，在$t{}$时刻，香烟点燃至$x = ut{}$
 
 $$
-q(x,t) = \left\{ \begin{array}{r} aH(t)e^{- \frac{b(x - ut)}{v}},\ \ \ \ \ \ ut \leq x \leq l_{1} \\ aH(t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
+\left \begin{array}{r} H_{0} \Rightarrow H(t) = uw(ut,\ t)  x \Rightarrow x - ut,\ \ \ ut \leq x \leq l_{1}  l_{1} \Rightarrow l_{1} - ut,\ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
 $$
 
 
 
+&nbsp;
 
+$$
+q(x,t) = \left \begin{array}{r} aH(t)e^{- \frac{b(x - ut)}{v}},\ \ \ \ \ \ ut \leq x \leq l_{1}  aH(t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta\left( x - l_{1} \right)}{v}},\ \ \ \ \ \ l_{1} \leq x \leq l \end{array} \right.\ {}
+$$
+
+
+
+&nbsp;
 
 $$
 q(l,t) = auw(ut,t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta l_{2}}{v}}{}
@@ -1611,29 +1575,27 @@ $$
 
 
 
-3.  求$w(ut,t){}$：考察$\Delta t{}$内毒物密度的增量
+3. 求$w(ut,t){}$：考察$\Delta t{}$内毒物密度的增量
 
 单位长度烟雾毒物被吸收的部分：$w(x,t + \Delta t) - w(x,t) = b\frac{q(x,t)}{v}\Delta t{}$
 
 
 
 $$
-\left\{ \begin{array}{r} q(x,t) = aH(t)e^{- \frac{b(x - ut)}{v}} \\ H(t) = uw(ut,t) \end{array} \Rightarrow w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{- \frac{a'but}{v}} \right),\ \ \ a' = 1 - a \right.\ {}
+\left \begin{array}{r} q(x,t) = aH(t)e^{- \frac{b(x - ut)}{v}}  H(t) = uw(ut,t) \end{array} \Rightarrow w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{- \frac{a'but}{v}} \right),\ \ \ a' = 1 - a \right.\ {}
 $$
 
 
 
-4.  计算$Q{}$：吸入一支烟，毒物进入人体的总量
-
-
+4. 计算$Q{}$：吸入一支烟，毒物进入人体的总量
 
 $$
-\left\{ \begin{array}{r} w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{\frac{a'but}{v}} \right) \\ q(l,t) = auw(ut,t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta l_{2}}{v}} = \frac{auw_{0}}{a'}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta l_{2}}{v}}\left( e^{\frac{but}{v}} - ae^{- \frac{abut}{v}} \right) \end{array} \right.\ {}
+\left \begin{array}{r} w(ut,t) = \frac{w_{0}}{a'}\left( 1 - ae^{\frac{a'but}{v}} \right)  q(l,t) = auw(ut,t)e^{- \frac{b\left( l_{1} - ut \right)}{v}}e^{- \frac{\beta l_{2}}{v}} = \frac{auw_{0}}{a'}e^{- \frac{bl_{1}}{v}}e^{- \frac{\beta l_{2}}{v}}\left( e^{\frac{but}{v}} - ae^{- \frac{abut}{v}} \right) \end{array} \right.\ {}
 $$
 
 
 
-
+&nbsp;
 
 $$
 Q = \int_{0}^{\frac{l_{1}}{u}}{q(l,t)dt = \frac{aw_{0}v}{a'b}e^{- \frac{\beta l_{2}}{v}}\left( 1 - e^{- \frac{a'bl_{1}}{v}} \right) = aMe^{- \frac{\beta l_{2}}{v}}\varphi(r),\ \ \ r = \frac{a'bl_{1}}{v},\ \ \ \varphi(r) = \frac{1 - e^{- r}}{r}}{}
@@ -1643,20 +1605,16 @@ $$
 
 **结果分析**
 
-1.  $Q{}$与$a,M{}$成正比， $aM是{}$毒物集中在$x = l{}$ 处的吸入量
+1. $Q{}$与$a,M{}$成正比， $aM是{}$毒物集中在$x = l{}$ 处的吸入量
+2. 过滤嘴因素$e^{- \frac{\beta l_{2}}{v}}{}$，$\beta,\ l_{2}{}$有负指数作用
+3. 烟草的吸收作用$\varphi(r){}$：烟草为什么有作用?
 
-2.  过滤嘴因素$e^{- \frac{\beta l_{2}}{v}}{}$，$\beta,\ l_{2}{}$有负指数作用
+$\left \begin{array}{r} r = \frac{a'bl_{1}}{v} \ll 1  \ \varphi(r) \doteq 1 - \frac{r}{2} \end{array} \Rightarrow Q \doteq aMe^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \right.\ {}$，$b,\ l_{1}{}$具有线性作用
 
-3.  烟草的吸收作用$\varphi(r){}$：烟草为什么有作用?
-
-$\left\{ \begin{array}{r} r = \frac{a'bl_{1}}{v} \ll 1 \\ \ \varphi(r) \doteq 1 - \frac{r}{2} \end{array} \Rightarrow Q \doteq aMe^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \right.\ {}$，$b,\ l_{1}{}$具有线性作用
-
-4.  与另一支不带过滤嘴的香烟比较，$w_{0},\ b,a,\ v,\ l{}$ 均相同，吸至 $x = l_{1}{}$扔掉
-
-
+4. 与另一支不带过滤嘴的香烟比较，$w_{0},\ b,a,\ v,\ l{}$ 均相同，吸至 $x = l_{1}{}$扔掉
 
 $$
-\left\{ \begin{array}{r} 带滤嘴：Q_{1} = \frac{aw_{0}v}{a'b}e^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \\ 不带滤嘴：Q_{2} = \frac{aw_{0}v}{a'b}e^{- \frac{bl_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \end{array} \right.\  {}
+\left \begin{array}{r} 带滤嘴：Q_{1} = \frac{aw_{0}v}{a'b}e^{- \frac{\beta l_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right)  不带滤嘴：Q_{2} = \frac{aw_{0}v}{a'b}e^{- \frac{bl_{2}}{v}}\left( 1 - \frac{a'bl_{1}}{2v} \right) \end{array} \right.\  {}
 $$
 
 则$\frac{Q_{1}}{Q_{2}} = e^{- \frac{(\beta - b)l_{2}}{v}} \Rightarrow \beta > b \Rightarrow Q_{1} < Q_{2}{}$，提高$\beta - b{}$ 与加长$l_{2}{}$，效果相同
@@ -1723,9 +1681,8 @@ $$
 
 适用领域
 
-1.  种群数量模型 (鱼塘中的鱼群, 森林中的树木)
-
-2.  经济领域中的增长规律(耐用消费品的售量)
+1. 种群数量模型 (鱼塘中的鱼群, 森林中的树木)
+2. 经济领域中的增长规律(耐用消费品的售量)
 
 **考虑年龄结构和生育模式的人口模型**
 
@@ -1753,7 +1710,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \frac{\partial p}{\partial r} + \frac{\partial p}{\partial t} = - \mu(r,t)p(r,t){}
@@ -1769,8 +1726,8 @@ $$
 
 国民经济各个部门之间存在着相互依存和制约关系，每个部门将其他部门的产品或半成品经过加工（投入）变为自己的产品（产出）
 
-根据各部门间投入和产出的平衡关系，确定各部门的产出水平以满足社会的需求\
-20世纪30年代由美国经济学家列昂节夫提出和研究\
+根据各部门间投入和产出的平衡关系，确定各部门的产出水平以满足社会的需求  
+20世纪30年代由美国经济学家列昂节夫提出和研究  
 从静态扩展到动态，与数量经济分析方法日益融合，应用领域不断扩大
 
 问题：建立静态投入产出数学模型，讨论具体应用
@@ -1819,16 +1776,15 @@ $$
 
 
 
-
 ![原文插图](/Firefly/uploads/math-modeling-2023/image46.png)
 
 ### CT技术的图像重建
 
-**问题**\
-CT技术在工业无损探测、资源勘探、生态监测等领域也得到了广泛的应用\
+**问题**  
+CT技术在工业无损探测、资源勘探、生态监测等领域也得到了广泛的应用  
 **how it work**
 
-在不同深度的断面上,从各个角度用探测器接收旋转的X光管发出、穿过人体而使强度衰减的射线;经过测量和计算将人体器官和组织的影像重新构建\
+在不同深度的断面上,从各个角度用探测器接收旋转的X光管发出、穿过人体而使强度衰减的射线;经过测量和计算将人体器官和组织的影像重新构建  
 **模型建立**
 
 
@@ -1855,19 +1811,19 @@ $$
 
 拉东变换$P_{f}(L) = \int_{L}^{}{f(x,y})dl{}$，拉东逆变换$f(Q) = - \frac{1}{\pi}\int_{0}^{\infty}\frac{dF_{Q}(q)}{q}{}$，其中$F_{Q}(q){}$是与$Q{}$相距$q{}$的直线L的线积分$P_{f}(L){}$对所有$q{}$的平均值，实际上只能在有限条直线上得到投影(线积分)
 
-如何计算？设$\ln{\left( \frac{I_{0}}{I} \right)_{i} =}b_{i},\ \ \ \mu_{j} = x_{j}{}$，像素的边长和射线的宽度均为$\sigma{}$，则
+如何计算？设$\ln{\left( \frac{I_{0}}{I} \right)*{i} =}b*{i},\ \ \ \mu_{j} = x_{j}{}$，像素的边长和射线的宽度均为$\sigma{}$，则
 
 中心线法：射线$L_{i}{}$的中心线在像素$j{}$内的长度$l_{ij}{}$与$\sigma{}$之比为$a_{ij}{}$
 
 
 
 $$
-\sum_{j \in J\left( L_{i} \right)}^{}{\mu_{j}\Delta l_{j} = \ln\left( \frac{I_{0}}{I} \right)_{i} \Rightarrow \sum_{j = 1}^{m}{a_{ij}x_{j} = b_{i},\ \ \ i = 1,2,\ldots,n \Rightarrow Ax = b}}{}
+\sum_{j \in J\left( L_{i} \right)}^{}{\mu_{j}\Delta l_{j} = \ln\left( \frac{I_{0}}{I} \right)*{i} \Rightarrow \sum*{j = 1}^{m}{a_{ij}x_{j} = b_{i},\ \ \ i = 1,2,\ldots,n \Rightarrow Ax = b}}{}
 $$
 
 
 
-
+&nbsp;
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image48.png)
 
@@ -1897,11 +1853,9 @@ $$
 
 问题：
 
-1.  描述商品数量与价格的变化规律
-
-2.  商品数量与价格的振荡在什么条件下趋向稳定?
-
-3.  当不稳定时政府能采取什么干预手段使之稳定?
+1. 描述商品数量与价格的变化规律
+2. 商品数量与价格的振荡在什么条件下趋向稳定?
+3. 当不稳定时政府能采取什么干预手段使之稳定?
 
 **模型建立**
 
@@ -1925,14 +1879,13 @@ $$
 
 方程模型：若点在$P_{0}{}$附近，可以用直线来近似曲线：\
 
-
 $$
-\left\{ \begin{array}{r} y_{k} = f(x_{k}) \\ x_{k + 1} = h(y_{k}) \end{array} \Rightarrow \left\{ \begin{array}{r} y_{k} - y_{0} = - \alpha\left( x_{k} - x_{0} \right),\ \ \ \alpha > 0 \\ x_{k + 1} - x_{k} = \beta\left( y_{k} - y_{0} \right),\ \ \ \beta > 0 \end{array} \right.\  \right.\ {}
+\left \begin{array}{r} y_{k} = f(x_{k})  x_{k + 1} = h(y_{k}) \end{array} \Rightarrow \left \begin{array}{r} y_{k} - y_{0} = - \alpha\left( x_{k} - x_{0} \right),\ \ \ \alpha > 0  x_{k + 1} - x_{k} = \beta\left( y_{k} - y_{0} \right),\ \ \ \beta > 0 \end{array} \right.\  \right.\ {}
 $$
 
 
 
-
+&nbsp;
 
 $$
 x_{k + 1} - x_{0} = - \alpha\beta\left( x_{k} - x_{0} \right) = ( - \alpha\beta)^{k}\left( x_{1} - x_{0} \right),\ \ \ k_{f} = \alpha,k_{g} = \frac{1}{\beta}{}
@@ -1968,33 +1921,29 @@ $$
 
 **问题分析**
 
-体重变化由体内能量守恒破坏引起\
+体重变化由体内能量守恒破坏引起  
 饮食（吸收热量）引起体重增加
 
 代谢和运动（消耗热量）引起体重减少
 
 **模型假设**
 
-1.  体重增加正比于吸收的热量------每8000kcal增加体重1kg
-
-2.  代谢引起的体重减少正比于体重------每周每千克体重消耗200 \~ 320kcal (因人而异), 相当于70kg的人每天消耗2000 \~ 3200kcal
-
-3.  运动引起的体重减少正比于体重，且与运动形式有关
-
-4.  为了安全与健康，每周体重减少不宜超过1.5kg，每周吸收热量不要小于10000kcal
+1. 体重增加正比于吸收的热量------每8000kcal增加体重1kg
+2. 代谢引起的体重减少正比于体重------每周每千克体重消耗200  320kcal (因人而异), 相当于70kg的人每天消耗2000  3200kcal
+3. 运动引起的体重减少正比于体重，且与运动形式有关
+4. 为了安全与健康，每周体重减少不宜超过1.5kg，每周吸收热量不要小于10000kcal
 
 **问题**
 
 某甲体重100kg，目前每周吸收20000kcal热量，体重维持不变. 现欲减肥至75kg
 
-1.  在不运动的情况下安排一个两阶段计划
+1. 在不运动的情况下安排一个两阶段计划
 
-> 第一阶段：每周减肥1kg，每周吸收热量逐渐减少,直至达到下限（10000kcal）；\
+> 第一阶段：每周减肥1kg，每周吸收热量逐渐减少,直至达到下限（10000kcal）；  
 > 第二阶段：每周吸收热量保持下限，减肥达到目标
 
-2.  若要加快进程，第二阶段增加运动，试安排计划
-
-3.  给出达到目标后维持体重的方案
+2. 若要加快进程，第二阶段增加运动，试安排计划
+3. 给出达到目标后维持体重的方案
 
 **模型建立**
 
@@ -2002,11 +1951,11 @@ $$
 
 其中，$\alpha = 1/8000(\frac{kg}{cal}){}$，代谢消耗系数为$\beta{}$
 
-1.  不运动情况下的两阶段减肥计划
+1. 不运动情况下的两阶段减肥计划
 
 a)  确定甲的代谢消耗系数：每周洗手20000kcal，w=100kg不变，即每周每千克体重消耗 20000/100=200kcal
 
-> 
+
 
 $$
 w = w + \alpha c - \beta w \Rightarrow \beta = \frac{\alpha c}{w} = \frac{20000}{80 \times 100} = 0.025{}
@@ -2024,7 +1973,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \Rightarrow c(k + 1) = \frac{1}{\alpha}\left\lbrack \beta w(k) - 1 \right\rbrack,\ \ \ w(k) = w(0) - k{}
@@ -2032,7 +1981,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 c(k + 1) = \frac{\beta}{\alpha}w(0) - \frac{1}{\alpha}(1 + \beta k) = 12000 - 200k \geq C_{m} = 10000 \Rightarrow k \leq 10{}
@@ -2054,7 +2003,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 w(k + n) = (1 - \beta)^{n}w(k) + \alpha C_{m}\left\lbrack \sum_{i = 0}^{n - 1}(1 - \beta)^{i} \right\rbrack = (1 - \beta)^{n}\left\lbrack w(k) - \frac{\alpha C_{m}}{\beta} \right\rbrack + \frac{\alpha C_{m}}{\beta}{}
@@ -2076,9 +2025,9 @@ $$
 
 第二阶段19周, 每周吸收热量保持10000kcal, 体重按$w(k + n) = {0.975}^{n}\left\lbrack w(k) - 50 \right\rbrack + 50,\ \ \ n = 1,2,\ldots,19{}$减少至75kg
 
-<!-- -->
 
-2.  第二阶段增加运动的减肥计划
+
+2. 第二阶段增加运动的减肥计划
 
 根据资料每小时每千克体重消耗的热量 $\gamma(kcal){}$:
 
@@ -2090,7 +2039,7 @@ $$
 
 模型更新：$w(k + 1) = w(k) + \alpha c(k + 1) - \beta'w(k),\ \ \ \beta' = \beta + \alpha\gamma t{}$，其中$t{}$表示每周的运动时间（$h{}$）。$\alpha\gamma t = 0.003{}$, 即$\gamma t = 24{}$，此时$w(k + n)\left( 1 - \beta' \right)^{n}\left\lbrack w(k) - \frac{\alpha C_{m}}{\beta'} \right\rbrack + \frac{\alpha C_{m}}{\beta'}{}$，代入后求得此时$n = 14{}$，故运动$\gamma t = 24{}$ (每周跳舞8h或自行车10h), 14周即可完成
 
-3.  达到目标体重75kg后维持不变的方案
+3. 达到目标体重75kg后维持不变的方案
 
 每周吸收热量$c(k){}$不变保持常数$C{}$，使得体重不变
 
@@ -2102,7 +2051,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \Rightarrow C = \frac{(\beta + \alpha\gamma t)w}{\alpha}{}
@@ -2126,7 +2075,7 @@ $$
 
 运用层次分析法构造系统模型时，大体可以分为以下四个步骤：
 
-1.  建立层次结构模型
+1. 建立层次结构模型
 
 将决策的目标、考虑的因素（决策准则）和决策对象按它们之间的相互关系分为最高层、中间层和最低层，绘出层次结构图。
 
@@ -2152,21 +2101,19 @@ $$
 
 
 
-2.  构造判断(成对比较)矩阵
+2. 构造判断(成对比较)矩阵
 
 在确定各层次各因素之间的权重时，如果只是定性的结果，则常常不容易被别人接受，因而Saaty等人提出：一致矩阵法，即：
 
-<!-- -->
 
-1)  不把所有因素放在一起比较，而是两两相互比较
 
-2)  采用相对尺度，以尽可能减少性质不同的诸因素相互比较的困难，以提高准确度。
-
-3)  心理学家认为成对比较的因素不宜超过9个，即每层不要超过9个因素。
+1. 不把所有因素放在一起比较，而是两两相互比较
+2. 采用相对尺度，以尽可能减少性质不同的诸因素相互比较的困难，以提高准确度。
+3. 心理学家认为成对比较的因素不宜超过9个，即每层不要超过9个因素。
 
 > 判断矩阵是表示本层所有因素针对上一层某一个因素的相对重要性的比较。判断矩阵的元素aij用Saaty的1---9标度方法给出。
 >
-> 
+>
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image57.png)
 
@@ -2176,7 +2123,7 @@ $$
 
 
 
-3.  
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image59.png)
 
@@ -2188,7 +2135,7 @@ $$
 
 一致阵性质：
 
-<!-- -->
+
 
 a.  $A{}$的秩为1，$A{}$的唯一非零特征根为$n{}$ $Aw = nw{}$
 
@@ -2196,8 +2143,8 @@ b.  非零特征根$n{}$所对应的特征向量归一化后可作为权向量
 
 > 但是一致阵是很严格的，允许有在一定范围内不一致，用对应于最大特征根$\lambda{}$的特征向量作为权向量$w{}$，即$Aw = \lambda w{}$
 >
-> 对应于判断矩阵最大特征根$\lambda_{\max}{}$的特征向量，经归一化(使向量中各元素之和等于1)后记为$W{}$。\
-> $W{}$的元素为同一层次因素对于上一层次因素某因素相对重要性的排序权值，这一过程称为层次单排序。\
+> 对应于判断矩阵最大特征根$\lambda_{\max}{}$的特征向量，经归一化(使向量中各元素之和等于1)后记为$W{}$。  
+> $W{}$的元素为同一层次因素对于上一层次因素某因素相对重要性的排序权值，这一过程称为层次单排序。  
 > 能否确认层次单排序，需要进行一致性检验，所谓一致性检验是指对$A{}$确定不一致的允许范围。
 >
 > 定理：n 阶一致阵的唯一非零特征根为$\lambda = n{}$
@@ -2206,24 +2153,22 @@ b.  非零特征根$n{}$所对应的特征向量归一化后可作为权向量
 >
 > 则一致性指标为：$CI = \frac{\lambda - n}{n - 1}{}$
 >
-> $CI = 0{}$，有完全的一致性\
+> $CI = 0{}$，有完全的一致性  
 > $CI{}$接近于0，有满意的一致性
 >
 > $CI{}$越大，不一致性越严重
 >
 > 为了衡量$CI{}$的大小，引出随机一致性指标 $RI{}$：随机构造500个成对比较矩阵$A_{1},A_{2},\ldots,A_{500}{}$，各自的一致性指标为$CI_{1},CI_{2},\ldots,CI_{500}{}$
 >
-> 
+>
 
 $$
 RI = \frac{\sum_{i = 1}^{50}{CI_{i}}}{500} = \frac{\frac{\lambda_{1} + \lambda_{2} + \ldots + \lambda_{500}}{500} - n}{n - 1}{}
 $$
 
-
->
 > 一致性比率$CR = \frac{CI}{RI}{}$，$RI{}$取和$CI{}$相同的$n{}$，如果$CR = \frac{CI}{RI} < 0.1{}$，则认为有较满意的一致性，通过一致性检验；否则要重新构造成对比较矩阵A，对 $a_{ij}{}$ 加以调整
 
-4.  
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image60.png)
 
@@ -2239,7 +2184,7 @@ A层m个因素为：$A_{1},A_{2},\ldots,A_{m}{}$，对总目标$Z{}$排序为$a_
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image61.png)
 
-B层的层次总排序为$\left\{ \begin{array}{r} B_{1}:a_{1}b_{11} + a_{2}b_{12} + \ldots + a_{m}b_{1m} \\ B_{2}:a_{1}b_{21} + a_{2}b_{22} + \ldots + a_{m}b_{2m} \\ \ldots \\ B_{n}:a_{1}b_{n1} + a_{2}b_{n2} + \ldots + a_{m}b_{nm} \end{array} \right.\ {}$
+B层的层次总排序为$\left \begin{array}{r} B_{1}:a_{1}b_{11} + a_{2}b_{12} + \ldots + a_{m}b_{1m}  B_{2}:a_{1}b_{21} + a_{2}b_{22} + \ldots + a_{m}b_{2m}  \ldots  B_{n}:a_{1}b_{n1} + a_{2}b_{n2} + \ldots + a_{m}b_{nm} \end{array} \right.\ {}$
 
 B层第i个因素对总目标的权值为：$\sum_{j = 1}^{m}{a_{j}b_{ij}}{}$
 
@@ -2253,7 +2198,7 @@ $$
 CR = \frac{a_{1}CI_{1} + a_{2}CI_{2} + \ldots + a_{m}CI_{m}}{a_{1}RI_{1} + a_{2}RI_{2} + \ldots + a_{m}RI_{m}} {}
 $$
 
-当$CR < 0.1{}$时，认为层次总排序通过一致性检验。层次总排序具有满意的一致性，否则需要重新调整那些一致性比率高的判断矩阵的元素取值。\
+当$CR < 0.1{}$时，认为层次总排序通过一致性检验。层次总排序具有满意的一致性，否则需要重新调整那些一致性比率高的判断矩阵的元素取值。  
 到此，根据最下层（决策层）的层次总排序做出最后决策。
 
 **例子1**
@@ -2268,7 +2213,7 @@ $$
 
 
 
-
+&nbsp;
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image63.png)
 
@@ -2282,43 +2227,45 @@ $$
 
 某单位拟从3名干部中选拔一名领导，选拔的标准有政策水平、工作作风、业务知识、口才、写作能力和健康状况。下面用AHP方法对3人综合评估、量化排序。\
 
-
 ![原文插图](/Firefly/uploads/math-modeling-2023/image65.png)
 
- 
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image66.png)
 
 
 
-
+&nbsp;
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image67.png)
 
- 
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image68.png)
 
- 
+
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image69.png)
 
 
 
-**总结**\
+**总结**  
 层次分析法的基本步骤归纳如下：
 
-1.  建立层次结构模型
+1. 建立层次结构模型
 
 该结构图包括目标层，准则层，方案层
 
-2.  构造成对比较矩阵\
-从第二层开始用成对比较矩阵和1\~9尺度。
+2. 构造成对比较矩阵\
 
-3.  计算单排序权向量并做一致性检验\
+从第二层开始用成对比较矩阵和19尺度。
+
+3. 计算单排序权向量并做一致性检验\
+
 对每个成对比较矩阵计算最大特征值及其对应的特征向量，利用一致性指标、随机一致性指标和一致性比率做一致性检验。若检验通过，特征向量（归一化后）即为权向量；若不通过，需要重新构造成对比较矩阵。
 
-4.  计算总排序权向量并做一致性检验\
+4. 计算总排序权向量并做一致性检验\
+
 计算最下层对最上层总排序的权向量。利用总排序一致性比率：
 
 
@@ -2343,8 +2290,6 @@ $$
 
 ### 传送系统的效率
 
-
-
 ![原文插图](/Firefly/uploads/math-modeling-2023/image70.png)
 
 **问题**
@@ -2357,16 +2302,13 @@ $$
 
 Tip：可以用一个周期内传送带运走的产品数占产品总数的比例，作为衡量传送带效率的数量指标
 
-工人们生产周期虽然相同，但稳态下每人生产完一件产品的时刻不会一致，可以认为是随机的，并且在一个周期内任一时刻的可能性相同\
+工人们生产周期虽然相同，但稳态下每人生产完一件产品的时刻不会一致，可以认为是随机的，并且在一个周期内任一时刻的可能性相同  
 **模型假设**
 
-1.  n个工作台均匀排列，n个工人生产相互独立，生产周期是常数
-
-2.  生产进入稳态，每人生产完一件产品的时刻在一个周期内是等可能的
-
-3.  一周期内m个均匀排列的挂钩通过每一工作台的上方，到达第一个工作台的挂钩都是空的
-
-4.  每人在生产完一件产品时都能且只能触到一只挂钩，若这只挂钩是空的，则可将产品挂上运走；若该钩非空，则这件产品被放下，退出运送系统
+1. n个工作台均匀排列，n个工人生产相互独立，生产周期是常数
+2. 生产进入稳态，每人生产完一件产品的时刻在一个周期内是等可能的
+3. 一周期内m个均匀排列的挂钩通过每一工作台的上方，到达第一个工作台的挂钩都是空的
+4. 每人在生产完一件产品时都能且只能触到一只挂钩，若这只挂钩是空的，则可将产品挂上运走；若该钩非空，则这件产品被放下，退出运送系统
 
 **模型建立**
 
@@ -2404,13 +2346,13 @@ $$
 
 定义$E = 1 - D{}$，表示一周期内未运走商品和生产总数之比，当$n \gg 1{}$时，$E \approx \frac{n}{2m} \propto n,\ \ \ E \propto \frac{1}{m}{}$
 
-若$n = 10,m = 40{}$，则$D \approx 87.5\%{}$，提高效率的途径：增加挂钩数$m{}$
+若$n = 10,m = 40{}$，则$D \approx 87.5{}$，提高效率的途径：增加挂钩数$m{}$
 
 ### 报童的诀窍
 
 **问题**
 
-报童售报： $a{}$ (零售价) \> $b{}$(购进价) \> $c{}$(退回价)，则售出一份赚 $a - b{}$；退回一份赔 $b - c{}$。\
+报童售报： $a{}$ (零售价)  $b{}$(购进价)  $c{}$(退回价)，则售出一份赚 $a - b{}$；退回一份赔 $b - c{}$。  
 每天购进多少份可使收入最大？
 
 **问题分析**
@@ -2447,7 +2389,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \frac{dG}{dn} = (a - b)np(n) - \int_{0}^{n}{(b - c)p(r)dr} - (a - b)np(n) + \int_{n}^{\infty}{(a - b)p(r)dr}{}
@@ -2455,7 +2397,7 @@ $$
 
 
 
-
+&nbsp;
 
 $$
 \frac{dG}{dn} = - \int_{0}^{n}{(b - c)p(r)dr} + \int_{n}^{\infty}{(a - b)p(r)dr}{}
@@ -2470,5 +2412,4 @@ $$
 
 
 ![原文插图](/Firefly/uploads/math-modeling-2023/image71.png)
-
 
