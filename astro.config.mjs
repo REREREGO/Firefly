@@ -25,6 +25,7 @@ import rehypeSlug from "rehype-slug";
 import remarkAdmonitionToBlockquoteCallout from "remark-admonition-to-blockquote-callout";
 import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkMath from "remark-math";
+import remarkEmoji from "remark-emoji";
 import remarkSectionize from "remark-sectionize";
 import {
 	commentConfig,
@@ -286,6 +287,7 @@ export default defineConfig({
 	markdown: {
 		processor: unified({
 			remarkPlugins: [
+                remarkEmoji,
 				...(siteConfig.post.rehypeCallouts.enablePythonMarkdownAdmonitions !==
 				false
 					? [remarkAdmonitionToBlockquoteCallout]
@@ -390,3 +392,4 @@ export default defineConfig({
 		},
 	},
 });
+
