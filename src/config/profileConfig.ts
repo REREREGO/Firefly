@@ -30,9 +30,9 @@ export const profileConfig: ProfileConfig = {
 		},
 		
 		{
-			name: "RSS",
-			icon: "fa7-solid:rss",
-			url: "/rss/",
+			name: "Email",
+			icon: "fa7-solid:envelope",
+			url: "mailto:longxizheng2005@163.com",
 			showName: false,
 		},
 		{
