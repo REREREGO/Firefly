@@ -22,7 +22,7 @@ import { getBackgroundImages, isHomePage } from "@/utils/layout-utils";
 import { resolveNavMenuLinks } from "@/utils/nav-menu-utils";
 import { getEffectiveSidebarState } from "@/utils/sidebar-effective-utils";
 import Layout from "./Layout.astro";
-import { url } from "@/utils/url-utils";
+
 
 import "@/styles/expressive-code.css";
 
@@ -71,8 +71,7 @@ const {
 
 const isHomePageCheck = isHomePage(Astro.url.pathname);
 const isPostPage = !!postSlug;
-const isWowsPage = Astro.url.pathname.startsWith(url("/wows/"));
-const shouldRenderCategoryBar = !!siteConfig.categoryBar && !isHomePageCheck && !isWowsPage;
+const shouldRenderCategoryBar = !!siteConfig.categoryBar && isHomePageCheck;
 const navbarWidthFull = siteConfig.navbar.widthFull ?? false;
 
 const banner = getBannerVisibilityState({

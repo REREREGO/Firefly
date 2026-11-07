@@ -2,7 +2,7 @@
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { Icon } from "astro-icon/components";
-import { getCategoryList, getSortedPostsList } from "@/utils/content-utils";
+import { getCategoryList } from "@/utils/content-utils";
 import { url } from "@/utils/url-utils";
 
 interface Props {
@@ -12,7 +12,6 @@ interface Props {
 const { currentPostCategory } = Astro.props as Props;
 
 const categories = await getCategoryList();
-const totalPosts = (await getSortedPostsList()).length;
 const homeUrl = url("/");
 const archiveUrl = url("/archive/");
 
@@ -59,17 +58,7 @@ function initialActive(categoryName: string): {
     >
       <Icon name="material-symbols:home" class="text-lg" />
     </a>
-    <a
-      href={archiveUrl}
-      class="category-pill focus-ring-inset text-sm px-4 py-1.5 whitespace-nowrap shrink-0
-             transition-colors duration-150 ease-out flex items-center justify-center"
-      data-category-name="__archive__"
-      data-active={initialActive("__archive__").active ? "" : undefined}
-    >
-      {i18n(I18nKey.archive)}
-      <span class="pill-count">{totalPosts}</span>
-    </a>
-    <div class="category-divider shrink-0"></div>
+<div class="category-divider shrink-0"></div>
     <div class="scroll-area relative">
       <div class="scroll-fade scroll-fade-left" aria-hidden="true"></div>
       <div class="category-scroll flex gap-2 overflow-x-auto">
