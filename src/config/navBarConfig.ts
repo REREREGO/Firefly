@@ -132,7 +132,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 	icon: "material-symbols:docs",
 	// });
 
-	return { links } as NavBarConfig;
+	return { links: [LinkPresets.Home, LinkPresets.Archive, LinkPresets.About, { name: "GitHub", url: "https://github.com/REREREGO", external: true, icon: "fa7-brands:github" }] } as NavBarConfig;
 };
 
 // 导航搜索配置
