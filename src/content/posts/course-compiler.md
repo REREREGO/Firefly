@@ -63,14 +63,13 @@ draft: false
 
         2. 用**∑\***表示**∑**上的所有**字符串的全体**，包含空字**ε**
 
-![image\.png](/Firefly/uploads/course-compiler/image-40.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-40.png)
 
         3. **∑\(\*\)**的子集**U**和**V**的**连接****（****积****）**：$UV=\{\alpha \beta |\alpha \in U \And\beta\in V \}$
 
-![image\.png](/Firefly/uploads/course-compiler/image-37.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-37.png)
 
-        4. V自身的n次积：$V^n = VV...V(n个V)
-$
+        4. V自身的n次积：$V^n = VV...V(n个V) $
 
             1. $V^0=\{\epsilon\}$
 
@@ -78,12 +77,11 @@ $
 
             3. $V^+$是V的正规闭包：$V^+=VV^*$
 
-![image\.png](/Firefly/uploads/course-compiler/image-127.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-127.png)
 
 3. 上下文无关文法
 
-    1. 文法的定义：文法$G
-$是一个四元组$(V_T,V_N,P,S)$
+    1. 文法的定义：文法$G $是一个四元组$(V_T,V_N,P,S)$
 
         1. $V_T $：终结符\(terminal\)集（非空） ，文法所定义的语言的基本符号的集合，仅出现在产生式右部（体）
 
@@ -93,11 +91,9 @@ $是一个四元组$(V_T,V_N,P,S)$
 
             1. 例：$V_N =\{ <句子>,<主语>,<谓语>,......\}$** **
 
-        3. $S
-$：开始符号\(start symbol\)：唯一的起始非终结符，表示该文法中最大的语法成分
+        3. $S $：开始符号\(start symbol\)：唯一的起始非终结符，表示该文法中最大的语法成分
 
-            1. 例：$S
-$* =* \<句子\>
+            1. 例：$S $* =* \<句子\>
 
             2. 两种说明方式：
 
@@ -203,11 +199,11 @@ $* =* \<句子\>
 
                 2. 给定一种语言，能确定其文法，但文法**不唯一**
 
-![image\.png](/Firefly/uploads/course-compiler/image-23.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-23.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-34.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-34.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-111.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-111.png)
 
             4. 等价文法：设 $G_1$ 和 $G_2$ 是两个文法，若 $L(G_1) = L(G_2)$，称 $G_1$ 与 $G_2$ 为**等价文法**。
 
@@ -227,13 +223,13 @@ $* =* \<句子\>
 
             - 全部叶子结点从左到右构成开始符号推导得到的符号串
 
-![image\.png](/Firefly/uploads/course-compiler/image-185.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-185.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-115.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-115.png)
 
         6. 二义性：若文法**存在某个句子（句型）**对应**两棵不同的语法树**，则称该**文法是二义的**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-147.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-147.png)
 
             1. 可以基于**优先级**和**结合性**构建无二义的文法
 
@@ -253,15 +249,15 @@ $* =* \<句子\>
 
                 - 可以通过说明对于**某一个串**存在**两个不同**的最右推导来证明文法二义
 
-![image\.png](/Firefly/uploads/course-compiler/image-194.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-194.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-88.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-88.png)
 
 ## 第三章
 
 1. **词法分析的任务：**从左向右逐行扫描源程序的字符，识别出各个**单词**，确定**单词的类型**。并将识别出的单词转换成统一的机内表示——**词法单元**（ *token* ）形式，对应语法分析的终结符。
 
-![image\.png](/Firefly/uploads/course-compiler/image-29.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-29.png)
 
     1. 编译程序是在单词的级别上来分析和翻译源程序，因此，词法分析是编译的基础
 
@@ -293,8 +289,7 @@ $* =* \<句子\>
 
         5. **子序列：**删除0或多个符号所得的串。bnan, nn, ε
 
-    3. **正则式RE：**基于字母表构造串的一组**规则**（**模板****、****模式**），如果$r
-$是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
+    3. **正则式RE：**基于字母表构造串的一组**规则**（**模板****、****模式**），如果$r $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         1. 模式（Pattern）：描述某个记号的词素组合的构造规则
 
@@ -306,7 +301,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         4. **正则语言：**由正则式生成的**串的集合**称为**正则语言**。语言中**串**的数量可能有限，也可能无限，它们就是词法分析时的**词素**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-134.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-134.png)
 
     4. 有穷自动机FA：是对**一类处理系统**建立的**数学模型**
 
@@ -316,13 +311,13 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         3. 有穷自动机（FA）的理论模型是“无输出的识别器”，其核心能力是：**识别字符串是否属于某个正则语言，即回答“是”或“否”。**
 
-![image\.png](/Firefly/uploads/course-compiler/image-109.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-109.png)
 
         4. FA的分类
 
             1. **确定的有穷自动机DFA：**DFA 是 NFA 的一个特例
 
-![image\.png](/Firefly/uploads/course-compiler/image-131.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-131.png)
 
                 - 对状态转换图的形式化定义
 
@@ -332,7 +327,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
             2. **不确定的有穷自动机NFA：**
 
-![image\.png](/Firefly/uploads/course-compiler/image-28.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-28.png)
 
             3. 从状态图看 NFA 和 DFA 的区别
 
@@ -360,13 +355,13 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
             - 带标记的**有向边**：如果对于**输入 **$a$，存在一个从状态 $p$ 到状态 $q$ 的转换，就在 $p$、$q$ 之间画一条有向边，并标记上 $a$
 
-![image\.png](/Firefly/uploads/course-compiler/image-187.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-187.png)
 
         2. **状态转换表：**描述各个状态下，对应于各个输入的状态迁移。
 
-![image\.png](/Firefly/uploads/course-compiler/image-178.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-178.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-20.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-20.png)
 
     6. FA 对输入字符串的接受
 
@@ -380,7 +375,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         - 在到达某个终态之后，只要输入带上还有符号，FA 就继续前进，以便寻找**尽可能长的匹配**
 
-![image\.png](/Firefly/uploads/course-compiler/image-86.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-86.png)
 
     7. DFA 和 NFA 的等价性
 
@@ -404,29 +399,29 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         1. 正则式$\varepsilon$对应 NFA：**增加2个状态，1条边**
 
-![image\.png](/Firefly/uploads/course-compiler/image-81.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-81.png)
 
         2. 正则式$a\in \Sigma$ 对应NFA：**增加2个状态，1条边**
 
-![image\.png](/Firefly/uploads/course-compiler/image-55.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-55.png)
 
         3. 若 $s, t$ 是正则式，$N(s)$ 和 $N(t)$ 是对应的 NFA，则 $s \mid t$ 对应之 NFA 为：**增加2个状态，4条边**
 
-![image\.png](/Firefly/uploads/course-compiler/image-184.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-184.png)
 
         4. 若 $s, t$ 为正则式，$N(s)$ 和 $N(t)$ 是对应的 NFA，则 $st$ 对应之 NFA 为：**减少1个状态**
 
-![image\.png](/Firefly/uploads/course-compiler/image-112.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-112.png)
 
         5. 如果 $s$ 是正则式，$N(s)$ 为对应 NFA，则 $s^*$ 对应之 NFA 为：**增加2个状态，4条边**
 
-![image\.png](/Firefly/uploads/course-compiler/image-105.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-105.png)
 
 4. NFA→DFA：子集构造法
 
     1. **前置知识：**NFA状态集上的表示
 
-![image\.png](/Firefly/uploads/course-compiler/image-67.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-67.png)
 
         - $\varepsilon\text{-closure}(s)$：$s \in S$ —— **状态 **$s$** 的 **$\varepsilon$** 闭包**
 
@@ -452,7 +447,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
             3. 计算下一行的 $I_a$，$I_b$，重复第 2 步，**直到所有第 2、3 列子集都出现在第一列为止。**
 
-![image\.png](/Firefly/uploads/course-compiler/image.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image.png)
 
             4. 将上表看作一个状态转换矩阵，每个子集看成一个状态。该表唯一刻画了一个**确定的有穷自动机 DFA**
 
@@ -460,9 +455,9 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
                 - **终态**是含有原终态 $\{ F\}$ 的子集
 
-![image\.png](/Firefly/uploads/course-compiler/image-60.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-60.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-165.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-165.png)
 
 5. DFA→最小化DFA
 
@@ -496,7 +491,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
             2. 若 $I$ 含有原来的终态，则其为新的终态
 
-![image\.png](/Firefly/uploads/course-compiler/image-19.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-19.png)
 
 ## 第四章
 
@@ -504,7 +499,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
     1. 语法分析：**语法分析**是编译程序的**核心过程**。它的任务是按照给定的文法，从源程序符号串中识别出各类语法成分，并进行语法检查，为语义分析和代码生成做准备。
 
-![image\.png](/Firefly/uploads/course-compiler/image-130.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-130.png)
 
     2. **上下文无关文法 ****CFG****：** 是一个四元式 $G = (V_T,\ V_N,\ S,\ P)$，基于文法自动构建编译器
 
@@ -532,7 +527,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         - **最左推导**：每次总是选择**最左侧**的符号进行替换
 
-![image\.png](/Firefly/uploads/course-compiler/image-102.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-102.png)
 
         - **最右推导**：每次总是选择**最右侧**的符号进行替换
 
@@ -544,7 +539,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
             - 每个**叶子结点**的标号既可以是**非终结符**，也可以是**终结符**。从左到右排列所有叶子结点标号得到一个句型。
 
-![image\.png](/Firefly/uploads/course-compiler/image-139.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-139.png)
 
     5. 文法二义性：一个文法是**二义**的，如果：
 
@@ -554,7 +549,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         - 能为**某个句子**（句型）生成**多个最右推导**
 
-![image\.png](/Firefly/uploads/course-compiler/image-12.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-12.png)
 
 2. 语法分析方法：
 
@@ -574,7 +569,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
         2. **自底向上**：从**叶结点**开始，逐步构造**根结点**
 
-![image\.png](/Firefly/uploads/course-compiler/image-180.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-180.png)
 
 3. **预测分析法：LL\(1\)**
 
@@ -594,7 +589,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
                 - 间接左递归
 
-![image\.png](/Firefly/uploads/course-compiler/image-155.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-155.png)
 
             - **解决方法**：重写文法，消除左递归
 
@@ -604,10 +599,7 @@ $是正则式, 则$L(r)$表示$r$描述的**语言**（正规集、正则集）
 
             2. 当出现形如 $A \to \alpha\beta_1 \mid \alpha\beta_2$（存在**共同前缀**）的产生式，此时无法确认应该选择 $A$ 的哪个产生式，可以通过改写产生式（**提取左公因子**）来推后这个决定，等获得足够信息后再做出正确的选择。
 
-            3. $\begin{aligned}
-A &\to \alpha A' \\
-A' &\to \beta_1 \mid \beta_2
-\end{aligned}$
+            3. $\begin{aligned} A &\to \alpha A' \\ A' &\to \beta_1 \mid \beta_2 \end{aligned}$
 
             - **原因**：匹配失败
 
@@ -621,14 +613,11 @@ A' &\to \beta_1 \mid \beta_2
 
             2. **左递归消除**：将直接**左递归**转化为直接**右递归**，将产生式转换成下面形式，得新的文法 $G'$：
 
-                1. $\begin{aligned}
-A &\to \beta A' \\
-A' &\to \alpha A' \mid \varepsilon
-\end{aligned}$
+                1. $\begin{aligned} A &\to \beta A' \\ A' &\to \alpha A' \mid \varepsilon \end{aligned}$
 
-![image\.png](/Firefly/uploads/course-compiler/image-8.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-8.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-100.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-100.png)
 
         2. **间接左递归**：由**多步推导**带来的左递归
 
@@ -636,35 +625,31 @@ A' &\to \alpha A' \mid \varepsilon
 
             2. 【例】给定文法 $G(S)$：
 
-                1. $\begin{aligned}
-S &\to Qc \mid c \\
-Q &\to Rb \mid b \\
-R &\to Sa \mid a
-\end{aligned}$
+                1. $\begin{aligned} S &\to Qc \mid c \\ Q &\to Rb \mid b \\ R &\to Sa \mid a \end{aligned}$
 
                 2. 没有直接左递归，但 $S$、$Q$、$R$ 都是左递归的
 
                     1. $S \Rightarrow Qc \Rightarrow Rbc \Rightarrow Sabc$
 
-![image\.png](/Firefly/uploads/course-compiler/image-96.png)
+                        ![image\.png](/Firefly/uploads/course-compiler/image-96.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-136.png)
+                        ![image\.png](/Firefly/uploads/course-compiler/image-136.png)
 
             3. **为什么A存在间接左递归，而S不存在？**算法中的"消除左递归"是按非终结符顺序逐步代入，规则是：对于排序为 P₁, P₂, \.\.\., Pₙ 的非终结符，处理 Pᵢ 时，把所有 Pⱼ（j \< i）代入 Pᵢ 的产生式。
 
-![image\.png](/Firefly/uploads/course-compiler/image-144.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-144.png)
 
     4. 提左公因子：消除回溯必须保证：对文法的任何非终结符，当要它去匹配输入串时，能够根据它所面临的输入符号**准确地指派**它的一个候选去执行任务，并且此候选的工作结果应是确信无疑的。
 
         1. 通过改写产生式来**推迟决定**，等读入了足够多的输入，获得足够信息后再做出正确的选择
 
-![image\.png](/Firefly/uploads/course-compiler/image-13.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-13.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-90.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-90.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-150.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-150.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-41.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-41.png)
 
     5. 计算FIRST集、FOLLOW集及SELECT集
 
@@ -696,21 +681,21 @@ R &\to Sa \mid a
 
                 4. 如果所有 $X_i$ 可空，则将 $\varepsilon$ 加入 $\text{FIRST}(X_1 X_2 \dots X_n)$
 
-![image\.png](/Firefly/uploads/course-compiler/image-35.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-35.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-138.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-138.png)
 
         2. FOLLOW 函数（FOLLOW 集）：对于文法 $G[S]$ 的非终结符号 $A$：$t \in \text{FOLLOW}(A)$ 当且仅当：
 
             - $S \stackrel{*}{\Rightarrow} \dots At \dots$
 
-            - 这里 $t$ 为**终结符**或输入结束标志 $\$$
+            - 这里 $t$ 为**终结符**或输入结束标志 $\char36 $
 
             - 计算非终结符的 FOLLOW 集
 
-                - 反复执行以下规则，直到无法加入新的终结符和 $\$$：
+                - 反复执行以下规则，直到无法加入新的终结符和 $\char36 $：
 
-                    1. 如果 $S$ 是开始符，将 $\$$$ 加入 $$\text{FOLLOW}(S)$$，这里 $$\$$ 是输入结束标记。
+                    1. 如果 $S$ 是开始符，将 $\char36$ 加入 $\text{FOLLOW}(S)$，这里 $\char36$ 是输入结束标记。
 
                     2. 如果有规则 $A \to \alpha B \beta$，则将 $\text{FIRST}(\beta)$ 中的终结符加入 $\text{FOLLOW}(B)$。
 
@@ -728,9 +713,9 @@ R &\to Sa \mid a
 
                 - 当 $\beta$ **可空**时，$\text{FOLLOW}(B)$ 中加入 $(\text{FIRST}(\beta) - \{\varepsilon\}) \cup \text{FOLLOW}(A)$
 
-![image\.png](/Firefly/uploads/course-compiler/image-143.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-143.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-93.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-93.png)
 
         3. SELECT集，产生式的**可选集：**产生式 $A \to \beta$ 的可选集是指可以选用该产生式时，对应的输入符号的集合，记为 $\text{SELECT}(A \to \beta)$。
 
@@ -750,9 +735,9 @@ R &\to Sa \mid a
 
             - 如果 $\beta$ 可空，那么 $\alpha$ 不能推导出以 $\text{FOLLOW}(A)$ 中某个符号开头的串
 
-![image\.png](/Firefly/uploads/course-compiler/image-43.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-43.png)
 
-    6. **构建预测分析表\(产生式）**表的每一行对应一个非终结符，每一列对应一个输入符号（**终结符**和输入结束标志 $\$$）
+    6. **构建预测分析表\(产生式）**表的每一行对应一个非终结符，每一列对应一个输入符号（**终结符**和输入结束标志 $\char36 $）
 
         1. 正常描述（不大正常）
 
@@ -768,31 +753,31 @@ R &\to Sa \mid a
 
         2. 基于SELECT集的描述
 
-            1. 为每条规则 $A \to \alpha$，若终结符 $a$ 或 $\$$ $ 在 $$\text{SELECT}(A \to \alpha)$$ 中时，则将 $$A \to \alpha$$ 加入 $$M[A, a]$$ 或 $$M[A, \$]$中。
+            1. 为每条规则 $A \to \alpha$，若终结符 $a$ 或 $\char36$ 在 $\text{SELECT}(A \to \alpha)$ 中时，则将 $A \to \alpha$ 加入 $M[A, a]$ 或 $M[A, \char36]$ 中。
 
             2. 分析表中**未定义项目**均为错误。
 
             3. 若表中存在**多重定义项目\(一个格里面有多个\)**，则本文法**非 LL\(1\)**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-161.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-161.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-181.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-181.png)
 
     7. 考虑错误处理的预测分析表（同步词法单元的）：
 
-        1. 为每条规则 $A \to \alpha$，若终结符 $a$ 或 $\$$ $ 在 $$\text{FOLLOW}(A)且不在\text{SELECT}(A\rightarrow\alpha)$$ 中时，则将 $$synch$$ 加入 $$M[A, a]$$ 或 $$M[A, \$]$中。
+        1. 为每条规则 $A \to \alpha$，若终结符 $a$ 或 $\char36$ 在 $\text{FOLLOW}(A)$ 且不在 $\text{SELECT}(A\rightarrow\alpha)$ 中时，则将 $synch$ 加入 $M[A, a]$ 或 $M[A, \char36]$ 中。
 
-![image\.png](/Firefly/uploads/course-compiler/image-121.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-121.png)
 
     8. 构建句子的分析过程（栈、输入及动作）
 
         1. LL（1）分析：
 
-![image\.png](/Firefly/uploads/course-compiler/image-116.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-116.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-152.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-152.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-132.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-132.png)
 
         2. **预测分析中的错误恢复（恐慌模式）**：忽略输入中的符号，直到出现栈顶的**同步词法单元**（也称**同步符号**）。
 
@@ -804,9 +789,9 @@ R &\to Sa \mid a
 
             - 结合错误恢复的预测分析过程
 
-![image\.png](/Firefly/uploads/course-compiler/image-26.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-26.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-176.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-176.png)
 
 4. 自底向上分析：LR\(0\),SLR\(1\),LR\(1\),LALR\(1\)
 
@@ -818,7 +803,7 @@ R &\to Sa \mid a
 
         2. 直接短语：$A \Rightarrow \beta$，则称$\boldsymbol{\beta}$是句型$\alpha\beta\delta$相对于A的**直接短语**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-4.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-4.png)
 
         3. 句柄：一个句型的**最左直接短语**称为该句型的句柄
 
@@ -826,11 +811,11 @@ R &\to Sa \mid a
 
             2. 一个无二义文法的右句型只有唯一的句柄
 
-![image\.png](/Firefly/uploads/course-compiler/image-52.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-52.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-5.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-5.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-128.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-128.png)
 
         4. 规范\-归约语法分析：
 
@@ -840,7 +825,7 @@ R &\to Sa \mid a
 
             - **句柄**在被识别（归约）时，完整地出现在栈顶。
 
-![image\.png](/Firefly/uploads/course-compiler/image-3.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-3.png)
 
             > $S$ 是文法的开始符，$w$ 为待识别的输入串
             > 
@@ -860,13 +845,13 @@ R &\to Sa \mid a
 
             - 在自底向上的分析中，总是采用最左归约的方式，因此把**最左归约**称为**规范归约**
 
-![image\.png](/Firefly/uploads/course-compiler/image-78.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-78.png)
 
             - **规范归约**是**最右推导**的逆过程，则**最右推导**相应地称为**规范推导**
 
-![image\.png](/Firefly/uploads/course-compiler/image-73.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-73.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-140.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-140.png)
 
             - 由规范推导推出的句型称为**规范句型**
 
@@ -938,15 +923,15 @@ R &\to Sa \mid a
 
                         2. **特殊的归约项目**，使用产生式$S'→α$进行归约，表示整个句子已经分析完毕，分析成功，即输入串为该文法的句子。
 
-![image\.png](/Firefly/uploads/course-compiler/image-49.png)
+                            ![image\.png](/Firefly/uploads/course-compiler/image-49.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-175.png)
+                            ![image\.png](/Firefly/uploads/course-compiler/image-175.png)
 
                     > 关键提示：归约项目 和 归约项目或移进项目 共存于一个项目集合中会引起冲突
                     > 
                     > 
 
-![image\.png](/Firefly/uploads/course-compiler/image-58.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-58.png)
 
                     1. 增广文法：文法 $G[S]$ 的**增广文法** $G'$：
 
@@ -990,13 +975,13 @@ R &\to Sa \mid a
 
             `}`
 
-![image\.png](/Firefly/uploads/course-compiler/image-63.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-63.png)
 
             4. LR（0）自动机的使用
 
-![image\.png](/Firefly/uploads/course-compiler/image-188.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-188.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-39.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-39.png)
 
         3. **构建LR分析表**
 
@@ -1010,21 +995,21 @@ R &\to Sa \mid a
 
             2. 构建过程：
 
-![image\.png](/Firefly/uploads/course-compiler/image-46.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-46.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-74.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-74.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-117.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-117.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-80.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-80.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-151.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-151.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-125.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-125.png)
 
                 1. 注：可规约状态面临所有输入符号都有唯一的转移状态
 
-            3. **ACTION\[s，a\]：**当状态s**面临输入符号a**时，应采取的动作。语法分析动作函数 **ACTION** 有两个参数：状态 $i$，当前输入 $a$（**终结符**或 $\$$）
+            3. **ACTION\[s，a\]：**当状态s**面临输入符号a**时，应采取的动作。语法分析动作函数 **ACTION** 有两个参数：状态 $i$，当前输入 $a$（**终结符**或 $\char36 $）
 
                 - **移入**（$s_j$）：移入状态 $j$，同时移入符号 $a$
 
@@ -1064,11 +1049,11 @@ R &\to Sa \mid a
 
                 `}`
 
-![image\.png](/Firefly/uploads/course-compiler/image-7.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-7.png)
 
         4. **构建句子的分析过程（状态栈、符号栈、输入及动作）**
 
-![image\.png](/Firefly/uploads/course-compiler/image-118.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-118.png)
 
     3. **SLR\(1\)**：只在FOLLOW\(A\)中填入归约项$A→α•$，解决LR（0）的一些冲突。LR\(0\)文法太简单，能分析的文法有限，没有太大的实用价值
 
@@ -1078,23 +1063,23 @@ R &\to Sa \mid a
 
         3. LR\(0\)冲突问题：一个GOTO对应多个状态
 
-![image\.png](/Firefly/uploads/course-compiler/image-126.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-126.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-51.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-51.png)
 
         4. SLR分析表的构建
 
             若一个文法构造出的SLR分析表里**不存在移进\-归约、归约\-归约冲突**，则该文法称为**SLR文法**
 
-![image\.png](/Firefly/uploads/course-compiler/image-172.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-172.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-186.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-186.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-6.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-6.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-171.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-171.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-89.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-89.png)
 
             > 整体构造步骤与LR\(0\)分析表基本一致
             > 
@@ -1110,25 +1095,25 @@ R &\to Sa \mid a
 
                 - **规则3（归约）：**若归约项目$A→α· ∈ I_i$ 且 $A≠S'$，对所有$a∈\text{FOLLOW}(A)$，令 $\text{ACTION}[i,a] = r_j$（$j$ 是产生式$A→α$的编号）
 
-                - **规则4（接受）：**若接受项目$S'→S· ∈ I_i$，则 $\text{ACTION}[i,\$]$\]= acc
+                - **规则4（接受）：**若接受项目$S'→S· ∈ I_i$，则 $\text{ACTION}[i,\char36 ]$\]= acc
 
                 - **规则5（报错）：**所有未被上述规则定义的表格条目，统一赋值为`error`
 
                 - SLR文法定义 若一个文法构造出的SLR分析表里**不存在移进\-归约、归约\-归约冲突**，则该文法称为**SLR文法**
 
-![image\.png](/Firefly/uploads/course-compiler/image-183.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-183.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-72.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-72.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-22.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-22.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-53.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-53.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-9.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-9.png)
 
         5. SLR分析仍然可能存在冲突
 
-![image\.png](/Firefly/uploads/course-compiler/image-148.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-148.png)
 
             1. SLR只是简单地考察下一个输入符号b是否属于与归约项目A→α相关联的FOLLOW\(A\)，但b∈FOLLOW\(A\)只是归约α的一个必要条件，而非充分条件
 
@@ -1140,7 +1125,7 @@ R &\to Sa \mid a
 
         1. **LR\(1\) 项目**：LR\(0\) 项目的扩充，包含**终结符**或**结束标记**作为第 2 个成分（**搜索符**）。一般形式为：$A \to \alpha \bullet \beta,\ a$
 
-            1. 其中：$A \to \alpha \bullet \beta$ 是产生式，$a \in T \cup \{\$ \}$
+            1. 其中：$A \to \alpha \bullet \beta$ 是产生式，$a \in T \cup \{\char36  \}$
 
             2. 搜索符 $a$ 是**归约条件**：
 
@@ -1162,9 +1147,9 @@ R &\to Sa \mid a
 
                 - 归约项目的后继符号既不采用 **SLR\(1\)** 的 **FOLLOW** 集方法，也不采用 **LR\(1\)** 的完全精确法
 
-![image\.png](/Firefly/uploads/course-compiler/image-107.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-107.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-42.png)
+                    ![image\.png](/Firefly/uploads/course-compiler/image-42.png)
 
             
 
@@ -1180,7 +1165,7 @@ R &\to Sa \mid a
 
             1. 仍然有冲突出现的可能
 
-![image\.png](/Firefly/uploads/course-compiler/image-122.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-122.png)
 
     5. LALR（1）
 
@@ -1194,23 +1179,23 @@ R &\to Sa \mid a
 
             3. 压缩不会导致**移入/归约冲突**
 
-![image\.png](/Firefly/uploads/course-compiler/image-64.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-64.png)
 
 5. 构建LR分析器消除文法二义性
 
     1. 用优先级和结合性消除算术表达式文法二义性
 
-![image\.png](/Firefly/uploads/course-compiler/image-179.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-179.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-76.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-76.png)
 
     2. 用if和else的配对关系消除选择结构文法二义性
 
-![image\.png](/Firefly/uploads/course-compiler/image-141.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-141.png)
 
 6. 小结
 
-![image\.png](/Firefly/uploads/course-compiler/image-75.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-75.png)
 
 ## 第五章
 
@@ -1238,11 +1223,11 @@ R &\to Sa \mid a
         > 
         > 
 
-![image\.png](/Firefly/uploads/course-compiler/image-108.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-108.png)
 
         1. 注释分析树：**在结点上****标记相应的属性值****的语法分析树称为注释分析树**
 
-![image\.png](/Firefly/uploads/course-compiler/image-163.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-163.png)
 
         2. 文法属性：综合属性和继承属性
 
@@ -1252,7 +1237,7 @@ R &\to Sa \mid a
                 |---|---|
                 |                E → E₁ \+ T|                E\.val = E₁\.val \+ T\.val|
 
-![image\.png](/Firefly/uploads/course-compiler/image-113.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-113.png)
 
                 1. 终结符可以具有综合属性。终结符的综合属性值是由词法分析器提供的**词法值**，在SDD中没有计算终结符属性值的语义规则。
 
@@ -1262,23 +1247,23 @@ R &\to Sa \mid a
             |---|---|
             |            $D \to T\ L$|            $L.inh = T.type$|
 
-![image\.png](/Firefly/uploads/course-compiler/image-38.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-38.png)
 
             - **终结符没有继承属性**。终结符从**词法分析器**处获得的属性值被归为**综合属性**值。
 
-![image\.png](/Firefly/uploads/course-compiler/image-137.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-137.png)
 
     3. **注释分析树**
 
-![image\.png](/Firefly/uploads/course-compiler/image-189.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-189.png)
 
         1. 例子
 
-![image\.png](/Firefly/uploads/course-compiler/image-47.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-47.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-177.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-177.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-11.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-11.png)
 
     4. **依赖图****：**语法树中各结点的综合属性和继承属性之间的相互依赖关系可以用**依赖图**（有向图）来描述。**依赖图**指出语法树中各结点属性值的**计算顺序**。
 
@@ -1290,9 +1275,9 @@ R &\to Sa \mid a
 
             - 一个依赖图的任何**拓扑排序**都给出一棵语法树中结点的**语义规则计算的有效顺序**
 
-![image\.png](/Firefly/uploads/course-compiler/image-68.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-68.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-145.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-145.png)
 
     5. **良定义**\-依赖图的拓扑排序：
 
@@ -1304,11 +1289,11 @@ R &\to Sa \mid a
 
         - 对于同时具有**继承属性**和综合属性的 SDD，**不能保证**一定存在一个顺序来计算所有的属性值。
 
-![image\.png](/Firefly/uploads/course-compiler/image-25.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-25.png)
 
         - 从计算的角度看，给定一个 SDD，很难确定是否存在某棵语法分析树，使得 *SDD* 的属性之间存在循环依赖关系，但可以给出**一组充分条件**，满足这组充分条件的 *SDD* 是**无循环依赖**的
 
-![image\.png](/Firefly/uploads/course-compiler/image-95.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-95.png)
 
     2. S\-SDD：仅仅使用**综合属性**的 SDD 称为 **S 属性的 SDD**，或 **S\-属性定义**、**S\-SDD**
 
@@ -1350,7 +1335,7 @@ R &\to Sa \mid a
 
     5. **抽象语法树**：在语法分析树中**去掉**那些对翻译**不必要的信息**，从而获得更有效的源程序中间表示，这种经变换后的语法树称为**抽象语法树**
 
-![image\.png](/Firefly/uploads/course-compiler/image-99.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-99.png)
 
     1. 表达式抽象语法树的构建：两个建立结点的函数（返回值为指向新建立结点的指针）
 
@@ -1398,13 +1383,13 @@ R &\to Sa \mid a
 
         2. 如果S\-SDD的基本文法可以使用LR分析技术，那么它的SDT可以在LR语法分析过程中实现
 
-![image\.png](/Firefly/uploads/course-compiler/image-44.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-44.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-114.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-114.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-1.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-1.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-83.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-83.png)
 
     2. L\-SDT：
 
@@ -1412,23 +1397,23 @@ R &\to Sa \mid a
 
         2. 将计算一个产生式左部符号的**综合属性**的动作放置在这个产生式右部的**最右端**
 
-![image\.png](/Firefly/uploads/course-compiler/image-119.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-119.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-54.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-54.png)
 
     3. LL分析法：自顶向下分析
 
-![image\.png](/Firefly/uploads/course-compiler/image-2.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-2.png)
 
         1. 消除S\-SDD的左递归（消除方法和前面第四单元的一样，不同的就是我们需要考虑它的新翻译模式）
 
-![image\.png](/Firefly/uploads/course-compiler/image-62.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-62.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-146.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-146.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-160.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-160.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-56.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-56.png)
 
             1. 这里的新翻译模式的想法也很简单：就是要给这个**新的R一个继承属性**，让它实现自顶向下的分析，也就是LL文法的核心。 那我们最初的R\.i只能从左兄弟那边继承了，所以是**R\.i=f\(X\.x\)**，接下来一路传下去R\.i，下面的R\.i都是前一个R\.i和左兄弟Y\.y的函数，**R1\.i=g\(R\.i,Y\.y\)**
 
@@ -1444,13 +1429,13 @@ R &\to Sa \mid a
 
             3. SDT前面提到过，就是把继承属性放在编号的前面，综合属性放在后面。所以我们可以看到，C前面放的都是C的继承属性，C后面S1前面放的是S1的继承属性，S1后面就是S1的综合属性
 
-![image\.png](/Firefly/uploads/course-compiler/image-61.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-61.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-154.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-154.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-65.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-65.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-195.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-195.png)
 
     4. LR分析法：自底向上分析
 
@@ -1460,11 +1445,11 @@ R &\to Sa \mid a
 
             2. 就是把夹在中间的\{\}里面的继承属性拿非终结符替换掉，把它作为综合属性单独列出来
 
-![image\.png](/Firefly/uploads/course-compiler/image-82.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-82.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-48.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-48.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-45.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-45.png)
 
 ## 第六章
 
@@ -1474,7 +1459,7 @@ R &\to Sa \mid a
 
     - **后端**：基于中间表示产生目标代码
 
-![image\.png](/Firefly/uploads/course-compiler/image-33.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-33.png)
 
     - **中间语言（表示）的特点**
 
@@ -1508,7 +1493,7 @@ R &\to Sa \mid a
 
             - 自左至右扫描后缀是，每碰到运算量就把它推进栈。每碰到k目运算符就把它作用于栈顶的k个项，并用结果替代这k个项
 
-![image\.png](/Firefly/uploads/course-compiler/image-157.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-157.png)
 
     2. 图形
 
@@ -1524,11 +1509,11 @@ R &\to Sa \mid a
 
             - **tips：重复部分进行加环就是DAG图的本质，这个具体看作业题，比较有代表性。除此之外，关于编码方法这部分，编码是先写id等字母，然后是数字，接着是符号。左右两栏是进行操作的两行的行号。**
 
-![image\.png](/Firefly/uploads/course-compiler/image-123.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-123.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-57.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-57.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-149.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-149.png)
 
     3. **三地址码**：三地码（*TAC* ，三地址代码）用来描述指令序列，**指令的右侧最多有一个运算符**。
 
@@ -1536,27 +1521,27 @@ R &\to Sa \mid a
 
         - DAG和AST的三地址码是不一样的，具体可以参考下面这个例题：
 
-![image\.png](/Firefly/uploads/course-compiler/image-66.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-66.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-97.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-97.png)
 
         - 表示形式：四元式、三元式、间接三元式
 
-![image\.png](/Firefly/uploads/course-compiler/image-156.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-156.png)
 
         1. 赋值指令
 
-![image\.png](/Firefly/uploads/course-compiler/image-173.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-173.png)
 
         2. 跳转指令
 
-![image\.png](/Firefly/uploads/course-compiler/image-164.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-164.png)
 
         3. 过程调用
 
-![image\.png](/Firefly/uploads/course-compiler/image-71.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-71.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-50.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-50.png)
 
 2. 三地址码的表示
 
@@ -1568,13 +1553,13 @@ R &\to Sa \mid a
 
         - 用带有括号的数字表示指向三元式结构的指针
 
-![image\.png](/Firefly/uploads/course-compiler/image-59.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-59.png)
 
     2. 四元式：四元式是一个带有 4 个字段的记录结构：$op$、$arg_1$、$arg_2$ 和 $result$，$arg_1$、$arg_2$ 和 $result$ 通常指向符号表项目的入口。
 
-![image\.png](/Firefly/uploads/course-compiler/image-120.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-120.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-166.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-166.png)
 
     3. **间接三元式**：在普通三元式中，结果通过序号隐式引用，如 \(1\) $(*,\ b,\ (0))$ 引用了 \(0\) 的结果。一旦**删除或移动**某条三元式，所有引用它的序号都要修改，优化困难。
 
@@ -1588,11 +1573,11 @@ R &\to Sa \mid a
 
         - **优点**：方便优化，节省空间
 
-![image\.png](/Firefly/uploads/course-compiler/image-77.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-77.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-24.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-24.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-182.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-182.png)
 
 3. 类型和声明
 
@@ -1648,21 +1633,21 @@ R &\to Sa \mid a
 
     5. **数组**构造符 *array* ：若 $T$ 是类型表达式，$I$ 是整数，则 $array(I, T)$ 是类型表达式，它表示一个**数组类型**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-94.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-94.png)
 
     6. **指针**构造符 *pointer* ：若 $T$ 是类型表达式，则 $pointer(T)$ 是类型表达式，它表示一个**指针类型**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-27.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-27.png)
 
     7. 函数：**函数**构造符 $\to$：若 $T_1$、$T_2$、$\dots$、$T_n$ 和 $R$ 是类型表达式，则 $T_1 \times T_2 \times \dots \times T_n \to R$ 是类型表达式，它表示一个**函数**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-31.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-31.png)
 
     8. 记录构造符 *record* （结构体类型）：若有标识符 $N_1$、$N_2$、$\dots$、$N_n$ 与类型表达式 $T_1$、$T_2$、$\dots$、$T_n$，则 $record((N_1 \times T_1) \times (N_2 \times T_2) \times \dots \times (N_n \times T_n))$ 是类型表达式，它表示一个**构造类型**。
 
-![image\.png](/Firefly/uploads/course-compiler/image-167.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-167.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-192.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-192.png)
 
     9. 类型等价：结构等价和名等价
 
@@ -1676,9 +1661,9 @@ R &\to Sa \mid a
 
         1. **名等价**：满足前两个条件之一。
 
-![image\.png](/Firefly/uploads/course-compiler/image-69.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-69.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-129.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-129.png)
 
 5. **声明****：**为每个声明的名，在符号表中加入类型、位移等信息
 
@@ -1688,21 +1673,21 @@ R &\to Sa \mid a
 
     3. **声明****语句的翻译****：**对于声明语句，语义分析的主要任务是收集标识符的**类型**、**所需存储单元大小**等属性信息，并为每个名字分配一个**相对地址**，并将它们保存在相应的**符号表**记录中。
 
-![image\.png](/Firefly/uploads/course-compiler/image-10.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-10.png)
 
         - 从类型表达式可以知道该**类型**（ *type* ）在运行时刻所需的存储单元数量称为**类型的宽度**（ *width* ）
 
-![image\.png](/Firefly/uploads/course-compiler/image-17.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-17.png)
 
         - 在**编译时刻**，可以使用类型的宽度为每一个名字分配一个**相对地址**（ *offset* ）
 
         - 变量声明语句的SDT：翻译的主要任务，类型表达式和相对地址。例子：
 
-![image\.png](/Firefly/uploads/course-compiler/image-170.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-170.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-191.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-191.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-158.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-158.png)
 
 6. 表达式的翻译
 
@@ -1712,7 +1697,7 @@ R &\to Sa \mid a
 
     1. 简单算术表达式和赋值语句，应该只要会写上面的就行了
 
-![image\.png](/Firefly/uploads/course-compiler/image-85.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-85.png)
 
     2. 数组引用
 
@@ -1720,11 +1705,11 @@ R &\to Sa \mid a
 
             - 二维数组可采用：*row\-major*  **行优先**或 *column\-major* **列优先**方式存储
 
-![image\.png](/Firefly/uploads/course-compiler/image-14.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-14.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-135.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-135.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-79.png)
+                ![image\.png](/Firefly/uploads/course-compiler/image-79.png)
 
 7. **类型转换：**
 
@@ -1732,7 +1717,7 @@ R &\to Sa \mid a
 
     2. 进行一些自动的类型转换
 
-![image\.png](/Firefly/uploads/course-compiler/image-87.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-87.png)
 
     3. **拓宽转换**和**窄化转换**：
 
@@ -1752,19 +1737,19 @@ R &\to Sa \mid a
 
     2. 布尔表达式的文法：
 
-![image\.png](/Firefly/uploads/course-compiler/image-32.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-32.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-142.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-142.png)
 
     1. 短路代码：在短路（跳转）代码中，布尔运算符\&\&、\|\|、！被翻译成跳转指令。运算符本身不出现在代码中。
 
-![image\.png](/Firefly/uploads/course-compiler/image-162.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-162.png)
 
 9. 控制流的翻译
 
     1. 文法
 
-![image\.png](/Firefly/uploads/course-compiler/image-159.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-159.png)
 
         - 布尔表达式 $B$ 附加两个属性：
 
@@ -1774,25 +1759,25 @@ R &\to Sa \mid a
 
     - $S.next$ 指向紧跟在S后执行的第一条三地址指令
 
-![image\.png](/Firefly/uploads/course-compiler/image-15.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-15.png)
 
     2. 顺序
 
-![image\.png](/Firefly/uploads/course-compiler/image-92.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-92.png)
 
     3. 分支
 
-![image\.png](/Firefly/uploads/course-compiler/image-84.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-84.png)
 
     4. 循环
 
-![image\.png](/Firefly/uploads/course-compiler/image-21.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-21.png)
 
     5. 布尔表达式
 
-![image\.png](/Firefly/uploads/course-compiler/image-16.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-16.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-91.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-91.png)
 
     1. 作为条件的布尔表达式，设计两个出口：表达式为真时跳转至 `B.true`，为假时跳转至 `B.false`
 
@@ -1804,19 +1789,19 @@ R &\to Sa \mid a
 
         2. `B.false`：指向 while 语句的下一条后继语句
 
-![image\.png](/Firefly/uploads/course-compiler/image-193.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-193.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-98.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-98.png)
 
     4. **三地址码**
 
-![image\.png](/Firefly/uploads/course-compiler/image-36.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-36.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-101.png)
+        ![image\.png](/Firefly/uploads/course-compiler/image-101.png)
 
         1. **注意：避免生成冗余的goto指令**
 
-![image\.png](/Firefly/uploads/course-compiler/image-104.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-104.png)
 
 10. **回填技术：构建S\-SDT**
 
@@ -1864,23 +1849,23 @@ R &\to Sa \mid a
 
         - ***看不懂的话看这道例题就可以了。大概就是一开始goto都是没写的，写完一个个回填。根据没写的这个东西来画图***
 
-![image\.png](/Firefly/uploads/course-compiler/image-190.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-190.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-103.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-103.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-70.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-70.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-153.png)
+            ![image\.png](/Firefly/uploads/course-compiler/image-153.png)
 
 11. 控制流语句：语句S带有一个未填充的跳转链 *nextlist*, 该链同样使用回填策略来填充。*S\.nextlist* 为跳转到S之后的跳转指令列表。
 
-![image\.png](/Firefly/uploads/course-compiler/image-18.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-18.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-174.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-174.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-106.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-106.png)
 
-![image\.png](/Firefly/uploads/course-compiler/image-133.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-133.png)
 
 ## 神秘思政
 
@@ -1978,15 +1963,15 @@ LibSaas越界读取漏洞（CNVD\-2018\-15185）
 
     这两种执行方式都广泛的存在于计算机世界中
 
-![image\.png](/Firefly/uploads/course-compiler/image-110.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-110.png)
 
 7. 编译程序（代表语言：C、C\+\+）
 
-![image\.png](/Firefly/uploads/course-compiler/image-169.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-169.png)
 
 8. 解释程序（代表语言：Python、PHP）
 
-![image\.png](/Firefly/uploads/course-compiler/image-30.png)
+    ![image\.png](/Firefly/uploads/course-compiler/image-30.png)
 
 总结一下，事务都有两面性：
 
@@ -1997,6 +1982,5 @@ LibSaas越界读取漏洞（CNVD\-2018\-15185）
 9. 我国保护计算机知识产权法律：计算机软件研发中的知识产权保护：
 
 《著作权法》《计算机软件保护条例》《中华人民共和国专利法》
-
 
 
