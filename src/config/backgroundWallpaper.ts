@@ -1,3 +1,4 @@
+import authorSettings from "./authorSettings.json";
 import type { BackgroundWallpaperConfig } from "@/types/backgroundWallpaper";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
@@ -56,11 +57,11 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否启用主页横幅文字
 			enable: true,
 			// 主页横幅主标题
-			title: "REREREGO",
+			title: authorSettings.heroTitle,
 			// 主页横幅主标题字体大小
 			titleSize: "4.5rem",
 			// 主页横幅副标题
-			subtitle: ["在这里，记录每一次探索。", "学习、生活与偶然的灵感。"] ,
+			subtitle: authorSettings.heroSubtitles,
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
 			typewriter: {

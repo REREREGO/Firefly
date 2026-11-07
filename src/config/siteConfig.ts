@@ -1,3 +1,4 @@
+import authorSettings from "./authorSettings.json";
 import type { SiteConfig } from "@/types/siteConfig";
 import { resolvePageToggles } from "../utils/page-toggle-utils";
 import { resolveSiteLang } from "../utils/site-config-utils";
@@ -42,16 +43,16 @@ const pages = resolvePageToggles({
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "REREREGO",
+	title: authorSettings.title,
 
 	// 站点副标题
-	subtitle: "学习、生活与偶然的灵感",
+	subtitle: authorSettings.subtitle,
 
 	// 站点 URL
 	site_url: "https://rererego.github.io",
 
 	// 站点描述
-	description: "REREREGO 的个人博客，记录学习心得、生活片段与偶然的灵感。",
+	description: authorSettings.description,
 
 	// 站点关键词
 	keywords: [
@@ -111,7 +112,7 @@ export const siteConfig: SiteConfig = {
 		// 使用 Astro 图标库时不需要设置 valueDark，图标会自动跟随主题亮暗色切换
 		logo: { type: "icon", value: "material-symbols:water-drop", alt: "REREREGO" },
 		// 导航栏标题
-		title: "REREREGO",
+		title: authorSettings.title,
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中

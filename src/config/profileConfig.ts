@@ -1,3 +1,4 @@
+import authorSettings from "./authorSettings.json";
 import type { ProfileConfig } from "../types/profileConfig";
 
 export const profileConfig: ProfileConfig = {
@@ -9,10 +10,10 @@ export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/ibuki.jpg",
 
 	// 名字
-	name: "REREREGO",
+	name: authorSettings.name,
 
 	// 个人签名
-	bio: "记录学习，也收藏生活里的微光。",
+	bio: authorSettings.bio,
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
