@@ -70,7 +70,7 @@ const {
 
 const isHomePageCheck = isHomePage(Astro.url.pathname);
 const isPostPage = !!postSlug;
-const shouldRenderCategoryBar = !!siteConfig.categoryBar;
+const shouldRenderCategoryBar = !!siteConfig.categoryBar && !isHomePageCheck;
 const navbarWidthFull = siteConfig.navbar.widthFull ?? false;
 
 const banner = getBannerVisibilityState({

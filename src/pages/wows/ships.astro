@@ -1,0 +1,10 @@
+---
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import View from "@/wows/views/ShipsView.astro";
+import { url } from "@/utils/url-utils";
+import "@/wows/styles/global.css";
+---
+<MainGridLayout title="WoWs · 舰船战绩" description="国服 REREREGO 的战舰世界公开战绩">
+<div class="wows-scope wows-scope--plain"><View basePath={url("/wows/").replace(/\/$/, "")} />
+<p style="text-align:center;font-size:12px;padding:1rem;opacity:.7">基于 <a href="https://github.com/ShaddockNH3/wows-page" target="_blank" rel="noopener noreferrer">ShaddockNH3/wows-page</a> · MIT License · 数据为抓取时的公开战绩快照</p></div>
+</MainGridLayout>
