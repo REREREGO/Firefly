@@ -1,16 +1,16 @@
 /** 展示层用的小工具 */
 
-export const pct = (v: number, digits = 1) => `${(v * 100).toFixed(digits)}%`;
+export const pct = (v: number, digits = 1): string => `${(v * 100).toFixed(digits)}%`;
 
-export const num = (v: number) => Math.round(v).toLocaleString("en-US");
+export const num = (v: number): string => Math.round(v).toLocaleString("en-US");
 
-export const compact = (v: number) => {
+export const compact = (v: number): string => {
 	if (v >= 1_000_000) return `${(v / 1_000_000).toFixed(1)}M`;
 	if (v >= 10_000) return `${(v / 1000).toFixed(1)}k`;
 	return num(v);
 };
 
-export const date = (ts: number) => {
+export const date = (ts: number): string => {
 	if (!ts) return "—";
 	return new Date(ts * 1000).toLocaleDateString("zh-CN", {
 		year: "numeric",
@@ -19,7 +19,7 @@ export const date = (ts: number) => {
 	});
 };
 
-export const relative = (ts: number) => {
+export const relative = (ts: number): string => {
 	if (!ts) return "—";
 	const days = Math.floor((Date.now() / 1000 - ts) / 86400);
 	if (days < 0) return "刚刚";
@@ -31,14 +31,14 @@ export const relative = (ts: number) => {
 };
 
 /** 胜率分档，用于上色 */
-export const wrGrade = (wr: number) => {
+export const wrGrade = (wr: number): string => {
 	if (wr >= 0.58) return "high";
 	if (wr >= 0.52) return "above";
 	if (wr >= 0.46) return "mid";
 	return "low";
 };
 
-export const typeKey = (type: string) => {
+export const typeKey = (type: string): string => {
 	const map: Record<string, string> = {
 		Destroyer: "destroyer",
 		Cruiser: "cruiser",
@@ -49,4 +49,4 @@ export const typeKey = (type: string) => {
 	return map[type] ?? "unknown";
 };
 
-export const typeVar = (type: string) => `var(--wows-t-${typeKey(type)})`;
+export const typeVar = (type: string): string => `var(--wows-t-${typeKey(type)})`;

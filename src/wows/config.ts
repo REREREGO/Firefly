@@ -16,7 +16,7 @@ export const themes = {
 
 export type ThemeKey = keyof typeof themes;
 
-export const siteConfig = {
+export const siteConfig: { title: string; description: string; blogUrl: string; defaultTheme: ThemeKey; defaultMode: "light" | "dark" | "system"; author: string; publicAppId: string } = {
 	/** 页面标题（会显示在标签页与导航栏） */
 	title: "舰长档案",
 
@@ -24,7 +24,7 @@ export const siteConfig = {
 	description: "一个静态的战舰世界个人战绩页面。",
 
 	/** 博客主站地址，用于导航栏「返回博客」按钮；留空则不显示 */
-	blogUrl: "https://blog.attilio.cc",
+	blogUrl: "https://rererego.github.io/Firefly/",
 
 	/** 默认配色主题：blog | wows */
 	defaultTheme: "blog" as ThemeKey,
@@ -33,7 +33,7 @@ export const siteConfig = {
 	defaultMode: "system" as "light" | "dark" | "system",
 
 	/** 页脚署名 */
-	author: "ShaddockNH3",
+	author: "REREREGO",
 
 	publicAppId: import.meta.env.PUBLIC_WOWS_APP_ID || "",
 };
