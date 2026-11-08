@@ -1,7 +1,14 @@
 media:
-  input: public/uploads
-  output: https://rererego.github.io/Firefly/uploads
-  categories: [image]
+  - name: uploads
+    label: 文章图片
+    input: public/uploads
+    output: https://rererego.github.io/Firefly/uploads
+    categories: [image]
+  - name: banners
+    label: 轮播图片
+    input: public/uploads/banner-gallery
+    output: public/uploads/banner-gallery
+    categories: [image]
 content:
   - name: posts
     label: 文章管理
@@ -56,23 +63,20 @@ content:
     fields:
       - name: images
         label: 图片管理
-        description: 打开“参与首页轮播”即加入展示，关闭即移入备用。拖动左侧手柄调整顺序，开启的图片按从上到下播放。最多展示10张、备用30张，切换后请保存。删除条目不会删除媒体库中的原文件。
+        description: 开启展示，关闭备用；拖动排序。展示最多10张，备用最多30张。
         type: object
         list:
           max: 40
-          collapsible:
-            collapsed: false
-            summary: "{fields.name}"
+          collapsible: false
         fields:
-          - { name: name, label: 图片名称, type: string, required: true }
           - name: image
-            label: 图片预览（点击可替换）
+            label: false
             type: image
             required: true
             options:
-              path: public/uploads/banner-gallery
+              media: banners
           - name: active
-            label: 参与首页轮播（开=展示，关=备用）
+            label: 展示
             type: boolean
             default: false
 actions:

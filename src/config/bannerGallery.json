@@ -1,24 +1,20 @@
 {
   "images": [
     {
-      "name": "展示图片 1",
-      "image": "https://rererego.github.io/Firefly/uploads/banner-gallery/banner-05c58c9e0ac7c514a5.webp",
-      "active": true
+      "active": true,
+      "image": "public/uploads/banner-gallery/banner-05c58c9e0ac7c514a5.webp"
     },
     {
-      "name": "展示图片 2",
-      "image": "https://rererego.github.io/Firefly/uploads/banner-gallery/banner-1723230920605.webp",
-      "active": true
+      "active": true,
+      "image": "public/uploads/banner-gallery/banner-1723230920605.webp"
     },
     {
-      "name": "备用图片 1",
-      "image": "https://rererego.github.io/Firefly/uploads/banner-gallery/banner-20240122_024256.webp",
-      "active": false
+      "active": false,
+      "image": "public/uploads/banner-gallery/banner-20240122_024256.webp"
     },
     {
-      "name": "备用图片 2",
-      "image": "https://rererego.github.io/Firefly/uploads/banner-gallery/banner-20240801_030011.webp",
-      "active": false
+      "active": false,
+      "image": "public/uploads/banner-gallery/banner-20240801_030011.webp"
     }
   ]
 }
