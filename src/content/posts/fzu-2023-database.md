@@ -99,7 +99,7 @@ draft: false
     1. 创建基本表
 
         ```sql
-        CREATE TBALE [SCHEMA_NAME.]SC(
+        CREATE TABLE [SCHEMA_NAME.]SC(
         Cno CHAR(5), 
         Sno CHAR(8),
         Semester CHAR(5) NOT NULL,
@@ -193,9 +193,9 @@ draft: false
 
 6. 交并差
 
-    1. 交UNION
+    1. 并 UNION
 
-    2. 并INTERSECT
+    2. 交 INTERSECT
 
     3. 差EXCEPT
 
@@ -225,7 +225,11 @@ draft: false
 
         ```sql
         DELETE FROM 职工
-        WHERE 仓库.仓库号=职工.仓库号 AND 城市='上海'；
+        WHERE 仓库号 IN (
+            SELECT 仓库号
+            FROM 仓库
+            WHERE 城市 = '上海'
+        );
         ```
 
 ### 第四章 数据库安全性
@@ -279,7 +283,7 @@ draft: false
         2. 不能循环授权
 
         ```sql
-        GRANT UPDATE(Sno), SELECT     # GRANT ALL PRIVITLIGES 授予所有权限
+        GRANT UPDATE(Sno), SELECT     # GRANT ALL PRIVILEGES 授予所有权限
         ON TABLE Student, SC
         TO U4, U5
         WITH GRANT OPTION;            # 可以转授
