@@ -10,7 +10,7 @@ draft: false
 
 ## 第一部分：正则语言
 ### 1.1 基础概念：字母表、串、语言
-**定义：**字母表 $\Sigma$ 是一个非空有限集合；串是 $\Sigma$ 上有限长度的符号序列；语言是串的集合，即 $A\subseteq \Sigma^*$。常用符号：
+<strong>定义：</strong>字母表 $\Sigma$ 是一个非空有限集合；串是 $\Sigma$ 上有限长度的符号序列；语言是串的集合，即 $A\subseteq \Sigma^*$。常用符号：
 
 $\Sigma^* = \{\mathbf{x} \mid \mathbf{x} \text{ 是} \Sigma \text{上有穷长度的串}\},\qquad
 \Sigma^+ = \Sigma^* - \{\varepsilon\}.$
@@ -21,7 +21,7 @@ $\Sigma^\infty = \{\mathbf{x} \mid \mathbf{x} \text{ 是} \Sigma \text{上无穷
 
 
 
-**易错点：**
+<strong>易错点：</strong>
 
 - 空串 $\varepsilon$ 的长度为 0；空格是一个字符，长度为 1。
 
@@ -36,7 +36,7 @@ $\Sigma^\infty = \{\mathbf{x} \mid \mathbf{x} \text{ 是} \Sigma \text{上无穷
 
 
 ### 1.2 DFA：有穷自动机的定义
-**形式定义：** 一个确定型有穷自动机 DFA 是五元组 $M=(Q,\Sigma,\delta,q_0,F),$
+<strong>形式定义：</strong> 一个确定型有穷自动机 DFA 是五元组 $M=(Q,\Sigma,\delta,q_0,F),$
 
 其中：
 
@@ -54,13 +54,13 @@ $\Sigma^\infty = \{\mathbf{x} \mid \mathbf{x} \text{ 是} \Sigma \text{上无穷
 
 满足 $r_0=q_0$ 且 $r_{i+1}=\delta(r_i,w_{i+1})$。若 $r_n\in F$，则接受 $w$。
 
-**直观理解：**DFA 的状态就是“机器当前记住的信息”。DFA 只能记有限信息，因此适合处理“只需要有限记忆”的语言，例如奇偶性、模$k$余数、是否出现过某个子串、最后若干位信息等。
+<strong>直观理解：</strong>DFA 的状态就是“机器当前记住的信息”。DFA 只能记有限信息，因此适合处理“只需要有限记忆”的语言，例如奇偶性、模$k$余数、是否出现过某个子串、最后若干位信息等。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-116.png)
 
 ![image\.png](/Firefly/uploads/computability-notes/image-139.png)
 
-**自动机运行实例：**
+<strong>自动机运行实例：</strong>
 
 ![image\.png](/Firefly/uploads/computability-notes/image-57.png)
 
@@ -73,19 +73,19 @@ $\Sigma^\infty = \{\mathbf{x} \mid \mathbf{x} \text{ 是} \Sigma \text{上无穷
 
 
 #### DFA 设计方法
-1. **问自己要记什么。** 例如判断“1 的个数为奇数”，只需记“当前 1 的个数是奇还是偶”。
+1. <strong>问自己要记什么。</strong> 例如判断“1 的个数为奇数”，只需记“当前 1 的个数是奇还是偶”。
 
-2. **把每种记忆情况变成一个状态。** 奇数态、偶数态。
+2. <strong>把每种记忆情况变成一个状态。</strong> 奇数态、偶数态。
 
-3. **根据每个输入符号写转移。** 读到 1 时奇偶翻转，读到 0 时不变。
+3. <strong>根据每个输入符号写转移。</strong> 读到 1 时奇偶翻转，读到 0 时不变。
 
-4. **确定初始态和接受态。** 初始是偶数态；接受是奇数态。
+4. <strong>确定初始态和接受态。</strong> 初始是偶数态；接受是奇数态。
 
-5. **补全所有转移。** DFA 对每个状态、每个输入符号都必须有唯一转移。
+5. <strong>补全所有转移。</strong> DFA 对每个状态、每个输入符号都必须有唯一转移。
 
 
 
-**常见设计模板**
+<strong>常见设计模板</strong>
 
 |语言形式|状态含义|例子|
 |---|---|---|
@@ -98,14 +98,14 @@ $\Sigma^\infty = \{\mathbf{x} \mid \mathbf{x} \text{ 是} \Sigma \text{上无穷
 
 
 ### 1.3 正则语言
-**定义：**如果某语言 $L$ 能被某台 DFA $M$ 识别，即$L=L(M),$则称 $L$ 是正则语言。
+<strong>定义：</strong>如果某语言 $L$ 能被某台 DFA $M$ 识别，即$L=L(M),$则称 $L$ 是正则语言。
 
-**要点：** 正则语言不是“看起来有规律”的语言，而是“能被有限状态自动机识别”的语言。判断一个语言是否正则，关键看是否只需要有限记忆。
+<strong>要点：</strong> 正则语言不是“看起来有规律”的语言，而是“能被有限状态自动机识别”的语言。判断一个语言是否正则，关键看是否只需要有限记忆。
 
 
 
 ### 1.4 正则运算与封闭性
-**封闭性：**对某类对象进行某种运算，结果仍然属于该类对象。
+<strong>封闭性：</strong>对某类对象进行某种运算，结果仍然属于该类对象。
 
 对语言 $A,B$，正则运算包括：
 
@@ -115,7 +115,7 @@ $AB=\{xy\mid x\in A, y\in B\},$
 
 $A^*=\{\varepsilon\}\cup A\cup AA\cup AAA\cup\cdots.$
 
-**定理：**正则语言对并、连接、星号封闭；也对补、交、差、对称差封闭。
+<strong>定理：</strong>正则语言对并、连接、星号封闭；也对补、交、差、对称差封闭。
 
 
 
@@ -130,7 +130,7 @@ $\forall x,\ x \in L(M) \iff x \notin L(M')$
 
 因此 $L(M') = \Sigma^* - L(M) = \overline{L(M)}$。
 
-**易错点:** 这个证明要求自动机是完整 DFA。若缺转移，要先补上死状态。
+<strong>易错点:</strong> 这个证明要求自动机是完整 DFA。若缺转移，要先补上死状态。
 
 
 
@@ -166,17 +166,17 @@ $P(Q_2)$：$Q_2$ 的幂集，所有子集构成的集合，幂集让 $M_3$ 能�
 
 ![image\.png](/Firefly/uploads/computability-notes/image-114.png)
 
-**扩展定义** $\delta: P(Q) \times \Sigma \to P(Q)$,
+<strong>扩展定义</strong> $\delta: P(Q) \times \Sigma \to P(Q)$,
 
 $\delta(R, a) = \{\delta(s, a) \mid s \in R\}$\.
 
-集合中的**每个状态**都按标准 $\delta$ 走一步，然后把结果**收集起来**形成新集合。
+集合中的<strong>每个状态</strong>都按标准 $\delta$ 走一步，然后把结果<strong>收集起来</strong>形成新集合。
 
 $q_3 = (q_1, s)$\.
 
 $s = \begin{cases} \{q_2\}, & \text{若 } q_1 \in F_1 \\ \emptyset, & \text{否则.} \end{cases}$
 
-- 如果 $M_1$ 的初始状态 $q_1$ 就是接受状态（即空串 $\varepsilon \in L_1$），那么 $M_2$ 也应该**立即开始运行**（从 $q_2$ 开始）
+- 如果 $M_1$ 的初始状态 $q_1$ 就是接受状态（即空串 $\varepsilon \in L_1$），那么 $M_2$ 也应该<strong>立即开始运行</strong>（从 $q_2$ 开始）
 
 - 否则，$M_2$ 暂不启动（集合为空）
 
@@ -190,17 +190,17 @@ $t = \begin{cases} \{q_2\}, & \text{若 } \delta_1(r_1, a) \in F_1 \\ \emptyset,
 |---|---|---|
 |第一个分量|$\delta_1(r_1, a)$|$M_1$ 正常走一步|
 |第二个分量|$\delta_2(r_2, a) \cup t$|两部分合并|
-||$\delta_2(r_2, a)$|所有**已在运行**的 $M_2$ 实例各走一步|
-||$t$|若 $M_1$ 刚到达接受状态，则**新启动**一个 $M_2$ 实例|
+||$\delta_2(r_2, a)$|所有<strong>已在运行</strong>的 $M_2$ 实例各走一步|
+||$t$|若 $M_1$ 刚到达接受状态，则<strong>新启动</strong>一个 $M_2$ 实例|
 
 $F_3 = \{(r_1, r_2) \mid r_2 \cap F_2 \neq \emptyset\}$
 
-只要 $r_2$ 集合中**至少有一个** $M_2$ **的状态是接受状态**，$M_3$ 就接受。
+只要 $r_2$ 集合中<strong>至少有一个</strong> $M_2$ <strong>的状态是接受状态</strong>，$M_3$ 就接受。
 
 
 
 ### 1.5 NFA：非确定型有穷自动机
-**形式定义。** NFA 是五元组$N=(Q,\Sigma,\delta,q_0,F),$其中转移函数变为
+<strong>形式定义。</strong> NFA 是五元组$N=(Q,\Sigma,\delta,q_0,F),$其中转移函数变为
 
 $\delta:Q\times \Sigma_\varepsilon\to \mathcal{P}(Q),\qquad
 \Sigma_\varepsilon=\Sigma\cup\{\varepsilon\}.$
@@ -211,11 +211,11 @@ $\delta:Q\times \Sigma_\varepsilon\to \mathcal{P}(Q),\qquad
 
 2. 可以不读输入直接进行 $\varepsilon$ 移动。
 
-**接受条件：** 只要存在一条计算分支最终进入接受态，NFA 就接受该串。
+<strong>接受条件：</strong> 只要存在一条计算分支最终进入接受态，NFA 就接受该串。
 
 - 接受计算：$r_m \in F$
 
-**直观理解：** NFA 像“同时试很多种可能”。失败的分支消失，只要有一个分支成功，整体成功。
+<strong>直观理解：</strong> NFA 像“同时试很多种可能”。失败的分支消失，只要有一个分支成功，整体成功。
 
 - $M$ 接受 $w$：存在接受计算  $L(M) = \{x \mid M \text{ 接受 } x\}$
 
@@ -224,9 +224,9 @@ $\delta:Q\times \Sigma_\varepsilon\to \mathcal{P}(Q),\qquad
 
 
 ### 1.6 NFA 与 DFA 的关系：子集构造
-**定理 2\.19：** 每台 NFA 都有等价 DFA，等价：两台机器识别同样的语言。
+<strong>定理 2\.19：</strong> 每台 NFA 都有等价 DFA，等价：两台机器识别同样的语言。
 
-**核心思想：**用 DFA 的一个状态表示 NFA 当前可能处在的一组状态。若 NFA 有 $k$ 个状态，则 DFA 最多有 $2^k$ 个状态。
+<strong>核心思想：</strong>用 DFA 的一个状态表示 NFA 当前可能处在的一组状态。若 NFA 有 $k$ 个状态，则 DFA 最多有 $2^k$ 个状态。
 
 设 NFA $N=(Q,\Sigma,\delta,q_0,F).$构造 DFA $M=(Q',\Sigma,\delta',q_0',F'),$ 其中：
 
@@ -242,7 +242,7 @@ $F'=\{R\subseteq Q\mid R\cap F\neq\varnothing\}.$
 
 
 
-**证明思路：**给定 NFA，构造等价 DFA：用 DFA 模拟 NFA
+<strong>证明思路：</strong>给定 NFA，构造等价 DFA：用 DFA 模拟 NFA
 
 - DFA 记住 NFA 的所有分支
 
@@ -252,7 +252,7 @@ $\varepsilon$ 闭包：
 
 - 对每个状态子集合，经 $\varepsilon$ 移动可到达的新状态子集合
 
-**证明过程：**设 NFA $N = (Q, \Sigma, \delta, q_0, F)$，构造 DFA $M = (Q', \Sigma, \delta', q_0', F')$，$L(M) = L(N)$。
+<strong>证明过程：</strong>设 NFA $N = (Q, \Sigma, \delta, q_0, F)$，构造 DFA $M = (Q', \Sigma, \delta', q_0', F')$，$L(M) = L(N)$。
 
 令 $Q' = P(Q)$。
 
@@ -282,7 +282,7 @@ $F' = \{R \in Q' \mid R \cap F \neq \emptyset\}$
 
 
 
-**NFA如何转换成DFA：**
+<strong>NFA如何转换成DFA：</strong>
 
 - 写出子集状态
 
@@ -300,22 +300,22 @@ $F' = \{R \in Q' \mid R \cap F \neq \emptyset\}$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-83.png)
 
-**推论2\.20: **一个语言是正则的, 当且仅当有一台NFA识别它
+<strong>推论2\.20:</strong>一个语言是正则的, 当且仅当有一台NFA识别它
 
-**定理2\.22: **正则语言对并封闭
+<strong>定理2\.22:</strong>正则语言对并封闭
 
 
 
 ### 1.7 正则表达式
-**正则语言**是一类**形式语言**，是可以被以下任意一种计算模型识别的语言集合：
+<strong>正则语言</strong>是一类<strong>形式语言</strong>，是可以被以下任意一种计算模型识别的语言集合：
 
 |计算模型|说明|
 |---|---|
-|**DFA**（确定有限自动机）|五元组 $(Q, \Sigma, \delta, q_0, F)$|
-|**NFA**（非确定有限自动机）|含 $\varepsilon$ 转移、多值转移|
-|**正则表达式**|按特定语法规则构造的表达式|
+|<strong>DFA</strong>（确定有限自动机）|五元组 $(Q, \Sigma, \delta, q_0, F)$|
+|<strong>NFA</strong>（非确定有限自动机）|含 $\varepsilon$ 转移、多值转移|
+|<strong>正则表达式</strong>|按特定语法规则构造的表达式|
 
-**定义2\.26：** $R$ 是正则表达式，当且仅当 $R$ 可由以下规则递归构造：
+<strong>定义2\.26：</strong> $R$ 是正则表达式，当且仅当 $R$ 可由以下规则递归构造：
 
 1. $a$，其中 $a\in\Sigma$，表示 $\{a\}$；
 
@@ -333,7 +333,7 @@ $F' = \{R \in Q' \mid R \cap F \neq \emptyset\}$
 
 
 
-**例子：**
+<strong>例子：</strong>
 
 $\Sigma^*1\Sigma^* = \{w\mid w\text{ 至少含一个 }1\}.$
 
@@ -347,13 +347,13 @@ $0\Sigma^*0\cup 1\Sigma^*1\cup 0\cup 1=\{w\mid w\text{ 首尾符号相同}\}.$
 
 
 
-**定理2\.22:** 正则语言对并封闭
+<strong>定理2\.22:</strong> 正则语言对并封闭
 
-**证明：** 设 NFA $N_i = (Q_i, \Sigma, \delta_i, q_i, F_i)$ 识别 $A_i$，$i = 1, 2$。构造 NFA $N = (Q, \Sigma, \delta, q_0, F)$ 识别 $A_1 \cup A_2$。
+<strong>证明：</strong> 设 NFA $N_i = (Q_i, \Sigma, \delta_i, q_i, F_i)$ 识别 $A_i$，$i = 1, 2$。构造 NFA $N = (Q, \Sigma, \delta, q_0, F)$ 识别 $A_1 \cup A_2$。
 
 令 $Q = Q_1 \cup Q_2 \cup \{q_0\}$；
 
-- 把两个 NFA 的状态合并，**新增一个初始状态** $q_0$。
+- 把两个 NFA 的状态合并，<strong>新增一个初始状态</strong> $q_0$。
 
 $F = F_1 \cup F_2$。
 
@@ -370,12 +370,12 @@ $\delta(q, a) = \begin{cases}
 |---|---|
 |$q \in Q_1$|在 $N_1$ 内部，按 $N_1$ 的转移走|
 |$q \in Q_2$|在 $N_2$ 内部，按 $N_2$ 的转移走|
-|$q = q_0, a = \varepsilon$|新初始状态 $q_0$ 通过 $\varepsilon$ **同时启动** $N_1$ 和 $N_2$|
+|$q = q_0, a = \varepsilon$|新初始状态 $q_0$ 通过 $\varepsilon$ <strong>同时启动</strong> $N_1$ 和 $N_2$|
 |$q = q_0, a \neq \varepsilon$|$q_0$ 不消耗输入不能走（只能通过 $\varepsilon$ 转移）|
 
-**定理2\.23:** 正则语言对连接封闭
+<strong>定理2\.23:</strong> 正则语言对连接封闭
 
-**定理2\.24:** 正则语言对星号封闭
+<strong>定理2\.24:</strong> 正则语言对星号封闭
 
 ![image\.png](/Firefly/uploads/computability-notes/image-10.png)
 
@@ -384,16 +384,16 @@ $\delta(q, a) = \begin{cases}
 
 
 ### 1.8 正则表达式与自动机等价
-**定理 2\.28** 一个语言是正则的，当且仅当可用正则表达式描述。
+<strong>定理 2\.28</strong> 一个语言是正则的，当且仅当可用正则表达式描述。
 
 该定理由两个方向组成。
 
 
 
 #### 方向一：正则表达式 **$\Rightarrow$** NFA
-**引理 2\.29：** 正则表达式描述正则语言：每个正则表达式 *R*  都对应一个正则语言 *L*\(*R*\) ，且这个语言可以被某个有限自动机识别。
+<strong>引理 2\.29：</strong> 正则表达式描述正则语言：每个正则表达式 *R*  都对应一个正则语言 *L*\(*R*\) ，且这个语言可以被某个有限自动机识别。
 
-**证明方法：**结构归纳法：正则表达式是**递归定义**的，证明也按结构归纳：
+<strong>证明方法：</strong>结构归纳法：正则表达式是<strong>递归定义</strong>的，证明也按结构归纳：
 
 |基本情况|归纳步骤|
 |---|---|
@@ -407,7 +407,7 @@ $\delta(q, a) = \begin{cases}
 
 ![image\.png](/Firefly/uploads/computability-notes/image-67.png)
 
-1. **情况1：**单个字符 $a$，只有一个开始状态$q_1$和一个接受状态$q_2 $
+1. <strong>情况1：</strong>单个字符 $a$，只有一个开始状态$q_1$和一个接受状态$q_2 $
 
     - $R = a$，$a \in \Sigma$\.
 
@@ -419,7 +419,7 @@ $\delta(q, a) = \begin{cases}
 
     - $\delta(r, b) = \emptyset$，若 $r \neq q_1$ 或 $b \neq a$\.
 
-2. **情况2：**空串 $\varepsilon$，只有一个状态，同时是开始和接受状态
+2. <strong>情况2：</strong>空串 $\varepsilon$，只有一个状态，同时是开始和接受状态
 
     - $R = \varepsilon$\.
 
@@ -429,7 +429,7 @@ $\delta(q, a) = \begin{cases}
 
     - $\forall r, \forall b,\ \delta(r, b) = \emptyset$\.
 
-3. **情况3：**空语言$R = \emptyset$，不存在接受状态
+3. <strong>情况3：</strong>空语言$R = \emptyset$，不存在接受状态
 
     - $L(R) = \emptyset$,
 
@@ -443,32 +443,32 @@ $\delta(q, a) = \begin{cases}
 
 ![image\.png](/Firefly/uploads/computability-notes/image-150.png)
 
-4. **情况4：**并
+4. <strong>情况4：</strong>并
 
-5. **情况5：**连接
+5. <strong>情况5：</strong>连接
 
-6. **情况6：**闭包（星号）
+6. <strong>情况6：</strong>闭包（星号）
 
 
 
 #### 方向二：DFA/NFA **$\Rightarrow$** 正则表达式
-**引理 2\.32：** 正则语言可用正则表达式描述。
+<strong>引理 2\.32：</strong> 正则语言可用正则表达式描述。
 
 课件使用 GNFA（广义 NFA）方法。
 
-**GNFA 特点** 箭头标号不是单个字符，而是正则表达式。不断删除中间状态，把经过该状态的路径合并成新的正则表达式。
+<strong>GNFA 特点</strong> 箭头标号不是单个字符，而是正则表达式。不断删除中间状态，把经过该状态的路径合并成新的正则表达式。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-97.png)
 
 ![image\.png](/Firefly/uploads/computability-notes/image-100.png)
 
-- **初始状态**
+- <strong>初始状态</strong>
 
     - 有到所有其他状态的箭头
 
     - 所有其他状态都没有到它的箭头
 
-- **接受状态**
+- <strong>接受状态</strong>
 
     - 唯一，且与初始状态不同
 
@@ -476,7 +476,7 @@ $\delta(q, a) = \begin{cases}
 
     - 所有其他状态都有到它的箭头
 
-- **其他每个状态**
+- <strong>其他每个状态</strong>
 
     - 都有到自身和其他状态的箭头
 
@@ -496,7 +496,7 @@ $\delta(q, a) = \begin{cases}
 
 反复删除直到只剩初态和唯一接受态，二者之间的表达式就是语言的正则表达式。
 
-**证明：**设正则语言 $A$ 被 DFA $M$ 识别。
+<strong>证明：</strong>设正则语言 $A$ 被 DFA $M$ 识别。
 
 - 把 $M$ 转换成等价的 GNFA $G$。
 
@@ -512,7 +512,7 @@ $\delta(q, a) = \begin{cases}
 
 ![image\.png](/Firefly/uploads/computability-notes/image-151.png)
 
-- $CONVERT(G)$ 的正确性证明。**定理：** 对任意 GNFA $G$，$CONVERT(G)$ 输出的正则表达式 $R$ 满足 $L(R) = L(G)$。
+- $CONVERT(G)$ 的正确性证明。<strong>定理：</strong> 对任意 GNFA $G$，$CONVERT(G)$ 输出的正则表达式 $R$ 满足 $L(R) = L(G)$。
 
 此时只有 $q_{start}$ 和 $q_{accept}$。
 
@@ -523,11 +523,11 @@ $\delta(q, a) = \begin{cases}
 
 
 ### 1.9 非正则语言与泵引理
-**什么是非正则语言？无限状态的语言**
+<strong>什么是非正则语言？无限状态的语言</strong>
 
 ![image\.png](/Firefly/uploads/computability-notes/image-65.png)
 
-**泵引理。** 若 $A$ 是正则语言，则存在常数 $p$，称为泵长度，使得任意 $s\in A$ 且 $|s|\ge p$，都可以分解为$s=xyz,$并满足：
+<strong>泵引理。</strong> 若 $A$ 是正则语言，则存在常数 $p$，称为泵长度，使得任意 $s\in A$ 且 $|s|\ge p$，都可以分解为$s=xyz,$并满足：
 
 - $\forall i\ge 0,
 xy^iz\in A;$
@@ -536,7 +536,7 @@ xy^iz\in A;$
 
 - $|xy|\le p.$
 
-**直观解释：** DFA 只有有限个状态。当输入足够长时，前 $p$ 个字符中必然有某个状态重复。重复部分就是 $y$，可以沿着循环多走几圈或少走几圈，所以 $y$ 可以被“泵”。
+<strong>直观解释：</strong> DFA 只有有限个状态。当输入足够长时，前 $p$ 个字符中必然有某个状态重复。重复部分就是 $y$，可以沿着循环多走几圈或少走几圈，所以 $y$ 可以被“泵”。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-115.png)
 
@@ -547,7 +547,7 @@ xy^iz\in A;$
 
 2. 令 $p$ 为泵长度。
 
-3. 精心选择**（举一个合适的反例）** $s\in B$ 且 $|s|\ge p$。
+3. 精心选择<strong>（举一个合适的反例）</strong> $s\in B$ 且 $|s|\ge p$。
 
 4. 根据泵引理，$s=xyz$，满足 $|xy|\le p$、$|y|>0$。
 
@@ -573,7 +573,7 @@ $y=0^k,
 
 
 
-**补充说明：** PPT S73\-S75 列了三种情况，但由于有条件 $|xy|\le p$，实际上 $y$ 必定在前 $p$ 个 $0$ 内，因此只需讨论 $y\in 0^+$。考试中写“由 $|xy|\le p$，所以 $y$ 全由 0 组成”更加简洁。
+<strong>补充说明：</strong> PPT S73\-S75 列了三种情况，但由于有条件 $|xy|\le p$，实际上 $y$ 必定在前 $p$ 个 $0$ 内，因此只需讨论 $y\in 0^+$。考试中写“由 $|xy|\le p$，所以 $y$ 全由 0 组成”更加简洁。
 
 
 
@@ -591,7 +591,7 @@ $y=0^k,
 
 
 
-**泵引理易错点。**
+<strong>泵引理易错点。</strong>
 
 - 泵引理只能用来证明“非正则”，不能用来证明“正则”。
 
@@ -603,7 +603,7 @@ $y=0^k,
 
 ## 第二部分：上下文无关文法
 ### 2.1 CFG 的定义
-**形式定义：** 上下文无关文法 CFG 是四元组$G=(V,\Sigma,R,S),$其中：
+<strong>形式定义：</strong> 上下文无关文法 CFG 是四元组$G=(V,\Sigma,R,S),$其中：
 
 - $V$：变元或非终结符集合；
 
@@ -613,19 +613,19 @@ $y=0^k,
 
 - $S\in V$：初始变元。
 
-**派生：若某串中出现变元 **$A$**，且有产生式 **$A\to u$**，就可以把该处的 **$A$** 替换为 **$u$**。用 **$\Rightarrow$** 表示一步派生，用 **$\Rightarrow^*$** 表示零步或多步派生。**
+<strong>派生：若某串中出现变元</strong>$A$<strong>，且有产生式</strong>$A\to u$<strong>，就可以把该处的</strong>$A$<strong>替换为</strong>$u$<strong>。用</strong>$\Rightarrow$<strong>表示一步派生，用</strong>$\Rightarrow^*$<strong>表示零步或多步派生。</strong>
 
 $u \Rightarrow^* v$：
 
 $u \Rightarrow u_1 \Rightarrow u_2 \Rightarrow \ldots \Rightarrow u_n \Rightarrow v$ 或 $u = v$
 
-**文法生成的语言：**$L(G)=\{w\in\Sigma^*\mid S\Rightarrow^* w\}.$
+<strong>文法生成的语言：</strong>$L(G)=\{w\in\Sigma^*\mid S\Rightarrow^* w\}.$
 
 若某语言能由 CFG 生成，则称为上下文无关语言 CFL。
 
 例如：$G_1 = (\{A, B\},\{0, 1, \#\},\{A \to 0A1, A \to B, B \to \#\},A)$
 
-**语法分析树、派生：**
+<strong>语法分析树、派生：</strong>
 
 ![image\.png](/Firefly/uploads/computability-notes/image-73.png)
 
@@ -670,7 +670,7 @@ $S\to S_1\mid S_2.$
 
 初始变元是 $R_0$。这说明所有正则语言都是上下文无关语言。
 
-**定理：**正则语言都是上下文无关语言
+<strong>定理：</strong>正则语言都是上下文无关语言
 
 ![image\.png](/Firefly/uploads/computability-notes/image-128.png)
 
@@ -679,17 +679,17 @@ $S\to S_1\mid S_2.$
 
 
 ### 2.3 歧义性
-**最左派生：** 每一步都替换当前句型中最左边的变元。
+<strong>最左派生：</strong> 每一步都替换当前句型中最左边的变元。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-25.png)
 
 ![image\.png](/Firefly/uploads/computability-notes/image-96.png)
 
-**歧义地产生：** 若某个串有两个不同的最左派生，或等价地，有两棵不同的语法分析树，则称该串被文法歧义地产生。
+<strong>歧义地产生：</strong> 若某个串有两个不同的最左派生，或等价地，有两棵不同的语法分析树，则称该串被文法歧义地产生。
 
-**歧义文法：** 如果一个 CFG 歧义地产生某个串，则该 CFG 是歧义文法。
+<strong>歧义文法：</strong> 如果一个 CFG 歧义地产生某个串，则该 CFG 是歧义文法。
 
-**固有歧义语言：** 如果一个语言的所有 CFG 都是歧义文法，则该语言固有歧义。
+<strong>固有歧义语言：</strong> 如果一个语言的所有 CFG 都是歧义文法，则该语言固有歧义。
 
 PPT 例子：
 
@@ -718,15 +718,15 @@ CNF 只允许规则：
 
 - $a$ 是任意终结符
 
-**关键性质：** 若 CFG 已经是 CNF，则除 $\varepsilon$ 外，长度为 $n$ 的串，其派生树有 $n$ 个终结符叶子，二叉规则数为 $n-1$，所以总派生步数恰好为$2n-1.$
+<strong>关键性质：</strong> 若 CFG 已经是 CNF，则除 $\varepsilon$ 外，长度为 $n$ 的串，其派生树有 $n$ 个终结符叶子，二叉规则数为 $n-1$，所以总派生步数恰好为$2n-1.$
 
 这使得“是否能派生给定串 $w$”变成有限搜索。
 
-**等价：**两个文法生成同样的语言
+<strong>等价：</strong>两个文法生成同样的语言
 
-**定理3\.6：**任何CFG都有等价的CNF
+<strong>定理3\.6：</strong>任何CFG都有等价的CNF
 
-**证明思路：** 下列算法：
+<strong>证明思路：</strong> 下列算法：
 
 1. 添加新的初始变元
 
@@ -787,7 +787,7 @@ CNF 只允许规则：
 
 
 ### 2.5 PDA 的定义
-**形式定义。** 下推自动机 PDA 是六元组$M=(Q,\Sigma,\Gamma,\delta,q_0,F),$
+<strong>形式定义。</strong> 下推自动机 PDA 是六元组$M=(Q,\Sigma,\Gamma,\delta,q_0,F),$
 
 其中：
 
@@ -811,7 +811,7 @@ CNF 只允许规则：
 
 ![image\.png](/Firefly/uploads/computability-notes/image-91.png)
 
-**栈操作理解**
+<strong>栈操作理解</strong>
 
 - $a,\varepsilon\to X$：读入 $a$，不弹栈，压入 $X$。
 
@@ -819,13 +819,13 @@ CNF 只允许规则：
 
 - $\varepsilon,X\to Y$：不读输入，把栈顶 $X$ 替换为 $Y$。
 
-**PDA 计算的形式定义**
+<strong>PDA 计算的形式定义</strong>
 
 $M = (Q, \Sigma, \Gamma, \delta, q_0, F)$；
 
 输入 $w = w_1 w_2 \ldots w_m$，$w_i \in \Sigma_\varepsilon$
 
-**计算：** 状态\-栈符号串序列
+<strong>计算：</strong> 状态\-栈符号串序列
 
 $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
@@ -840,7 +840,7 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
 
 ### 2.6 PDA 设计方法
-### **例 1：**$\{0^n1^n\mid n\ge0\}$
+### <strong>例 1：</strong>$\{0^n1^n\mid n\ge0\}$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-35.png)
 
@@ -860,7 +860,7 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
 
 
-### **例 2：**$\{a^nb^nc^m,a^nb^mc^n\mid m,n\ge0\}$
+### <strong>例 2：</strong>$\{a^nb^nc^m,a^nb^mc^n\mid m,n\ge0\}$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-140.png)
 
@@ -870,11 +870,11 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
 - 猜 $a$ 与 $c$ 匹配：跳过任意多个 $b$，读 $c$ 时弹 $a$。
 
-**核心考点。** 这个例子说明 PDA 通常指 NPDA，因为非确定性对 CFL 很重要。
+<strong>核心考点。</strong> 这个例子说明 PDA 通常指 NPDA，因为非确定性对 CFL 很重要。
 
 
 
-### **例 3：**$\{ww^R\mid w\in\{0,1\}^*\}$
+### <strong>例 3：</strong>$\{ww^R\mid w\in\{0,1\}^*\}$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-108.png)
 
@@ -893,13 +893,13 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
 
 ### 2.7 PDA 与 CFG 的等价性
-**定理 3\.12：** 一个语言是 CFL，当且仅当存在 PDA 识别它。
+<strong>定理 3\.12：</strong> 一个语言是 CFL，当且仅当存在 PDA 识别它。
 
-**引理 3\.13：**如果一个语言是CFL，则存在PDA识别它。
+<strong>引理 3\.13：</strong>如果一个语言是CFL，则存在PDA识别它。
 
-**引理 3\.15：**如果一个语言被PDA识别，则这个语言是CFL。
+<strong>引理 3\.15：</strong>如果一个语言被PDA识别，则这个语言是CFL。
 
-**证明思路**
+<strong>证明思路</strong>
 
 - CFG 通过派生来产生串
 
@@ -947,11 +947,11 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
 - 如何把栈顶换成一串符号？
 
-    - **中间状态**
+    - <strong>中间状态</strong>
 
 ![image\.png](/Firefly/uploads/computability-notes/image-81.png)
 
-**定理 3\.12：** 一个语言是 CFL，当且仅当存在 PDA 识别它。
+<strong>定理 3\.12：</strong> 一个语言是 CFL，当且仅当存在 PDA 识别它。
 
 即：
 
@@ -962,13 +962,13 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 
 
 #### 方向一：CFG **$\Rightarrow$** PDA
-即**引理 3\.13：**如果一个语言是CFL，则存在PDA识别它。
+即<strong>引理 3\.13：</strong>如果一个语言是CFL，则存在PDA识别它。
 
 假设 $G=(V,\Sigma,R,S)$。构造 PDA 的运行逻辑：
 
 1. 初始把特殊栈底符号$\char36$和初始变元$S$压入栈。
 
-2. 若栈顶是变元 $A$，PDA 非确定性选择**每一条**产生式 $A\to u$，把 $A$ 替换为 $u$。为了让 $u$ 的第一个符号先被处理，通常按反序压栈。
+2. 若栈顶是变元 $A$，PDA 非确定性选择<strong>每一条</strong>产生式 $A\to u$，把 $A$ 替换为 $u$。为了让 $u$ 的第一个符号先被处理，通常按反序压栈。
 
 3. 若栈顶是终结符 $a$，则必须读入输入中的 $a$ 并弹出栈顶。
 
@@ -980,15 +980,15 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 
     1. 此刻输入全部读完，接受这个输入串
 
-**为什么正确。**
+<strong>为什么正确。</strong>
 
 - 若 $G$ 能派生 $w$，PDA 可以按这条派生选择产生式，最终逐个匹配输入并接受。
 
 - 若 PDA 接受 $w$，它在栈顶替换变元的过程对应一棵 CFG 派生树，因此 $G$ 能派生 $w$。
 
-**考试答法。** 一定要写清楚“栈顶是变元”和“栈顶是终结符”两种情况。
+<strong>考试答法。</strong> 一定要写清楚“栈顶是变元”和“栈顶是终结符”两种情况。
 
-**一些实际的转化例子：**
+<strong>一些实际的转化例子：</strong>
 
 ![image\.png](/Firefly/uploads/computability-notes/image-148.png)
 
@@ -1003,9 +1003,9 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 ![image\.png](/Firefly/uploads/computability-notes/image-11.png)
 
 #### 方向二：PDA **$\Rightarrow$** CFG
-即**引理 3\.15：**如果一个语言被PDA识别，则这个语言是CFL。
+即<strong>引理 3\.15：</strong>如果一个语言被PDA识别，则这个语言是CFL。
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 - 用 CFG 派生出 PDA 接受的串
 
@@ -1023,7 +1023,7 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 
 - 只有一个接受状态。
 
-**构造变元：**对 PDA 的任意两个状态$p,q$，设置变元$A_{pq}.$
+<strong>构造变元：</strong>对 PDA 的任意两个状态$p,q$，设置变元$A_{pq}.$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-142.png)
 
@@ -1033,7 +1033,7 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 
 
 
-**产生式类型：**
+<strong>产生式类型：</strong>
 
 1. 空串规则：
 
@@ -1065,11 +1065,11 @@ $A_{pq}\to aA_{rs}b.$
 
 |转移|具体含义|
 |---|---|
-|**\(p,ε\) → a → \(r,t\)**|在状态 p，栈顶为空（ε），读入 `a`，转移到状态 r，**压入 t**|
-|**\(r,t\) → b → \(s,t\)**|在状态 r，栈顶为 t，读入 `b`，转移到状态 s，**栈顶保持 t**（弹出 t 再压入 t，即不变）|
-|**\(s,t\) → b → \(q,ε\)**|在状态 s，栈顶为 t，读入 `b`，转移到状态 q，**弹出 t**（栈变空）|
+|<strong>\(p,ε\) → a → \(r,t\)</strong>|在状态 p，栈顶为空（ε），读入 `a`，转移到状态 r，<strong>压入 t</strong>|
+|<strong>\(r,t\) → b → \(s,t\)</strong>|在状态 r，栈顶为 t，读入 `b`，转移到状态 s，<strong>栈顶保持 t</strong>（弹出 t 再压入 t，即不变）|
+|<strong>\(s,t\) → b → \(q,ε\)</strong>|在状态 s，栈顶为 t，读入 `b`，转移到状态 q，<strong>弹出 t</strong>（栈变空）|
 
-**证明：** 设 PDA $P = (Q, \Sigma, \Gamma, \delta, q_0, \{q_{accept}\})$，构造等价 CFG
+<strong>证明：</strong> 设 PDA $P = (Q, \Sigma, \Gamma, \delta, q_0, \{q_{accept}\})$，构造等价 CFG
 
 $G = (\{A_{pq} \mid p, q \in Q\}, \Sigma, R, A_{q_0 q_{accept}})$，
 
@@ -1087,9 +1087,9 @@ $R$ 包含如下规则：
 
 
 
-- **断言 3\.16：** 如果 $A_{pq}$ 产生 $x$，则 $x$ 把 $P$ 从状态 $p$ 和空栈一起带到状态 $q$ 和空栈。
+- <strong>断言 3\.16：</strong> 如果 $A_{pq}$ 产生 $x$，则 $x$ 把 $P$ 从状态 $p$ 和空栈一起带到状态 $q$ 和空栈。
 
-- **证明：**（对 $A_{pq}$ 派生 $x$ 的步数进行归纳）。
+- <strong>证明：</strong>（对 $A_{pq}$ 派生 $x$ 的步数进行归纳）。
 
 - \(1\) $A_{pq} \Rightarrow x$。只能使用 $A_{pp} \to \varepsilon$。显然 $\varepsilon$ 把 $P$ 从状态 $p$ 和空栈一起带到状态 $p$ 和空栈。
 
@@ -1133,9 +1133,9 @@ $R$ 包含如下规则：
 
 
 
-- **断言 3\.17：** 如果 $x$ 把 $P$ 从状态 $p$ 和空栈一起带到状态 $q$ 和空栈，则 $A_{pq}$ 产生 $x$。
+- <strong>断言 3\.17：</strong> 如果 $x$ 把 $P$ 从状态 $p$ 和空栈一起带到状态 $q$ 和空栈，则 $A_{pq}$ 产生 $x$。
 
-**证明：**（对 $x$ 把 $P$ 从状态 $p$ 和空栈带到状态 $q$ 和空栈的步数进行归纳）。
+<strong>证明：</strong>（对 $x$ 把 $P$ 从状态 $p$ 和空栈带到状态 $q$ 和空栈的步数进行归纳）。
 
 \(1\) 0 步计算。
 
@@ -1213,7 +1213,7 @@ $R$ 包含如下规则：
 
 - 停机状态，包括接受和拒绝。
 
-与 DFA/PDA 相比，TM 的关键能力是：带子**既能读又能写**，而且读写头可以**来回移动**。这使得 TM 可以进行一般算法计算。
+与 DFA/PDA 相比，TM 的关键能力是：带子<strong>既能读又能写</strong>，而且读写头可以<strong>来回移动</strong>。这使得 TM 可以进行一般算法计算。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-154.png)
 
@@ -1236,13 +1236,13 @@ $M=(Q,\Sigma,\Gamma,\delta,q_0,q_{acc},q_{rej}),$
 
 - $q_0$ 是初始状态；
 
-- $q_{acc}$ 是**停机接受状态**；
+- $q_{acc}$ 是<strong>停机接受状态</strong>；
 
-- $q_{rej}$ 是**停机拒绝状态**，且 $q_{rej}\ne q_{acc}$。
+- $q_{rej}$ 是<strong>停机拒绝状态</strong>，且 $q_{rej}\ne q_{acc}$。
 
-**格局：** 一个格局描述 TM 某一时刻的完整状态：当前状态、带上内容、读写头位置。
+<strong>格局：</strong> 一个格局描述 TM 某一时刻的完整状态：当前状态、带上内容、读写头位置。
 
-- **格局：** $uqav$，
+- <strong>格局：</strong> $uqav$，
 
     - 当前状态：$q$，
 
@@ -1250,17 +1250,17 @@ $M=(Q,\Sigma,\Gamma,\delta,q_0,q_{acc},q_{rej}),$
 
     - 当前扫描符号：$a$
 
-- **初始格局：** $q_0w$，$w$ 是输入串
+- <strong>初始格局：</strong> $q_0w$，$w$ 是输入串
 
-- **接受格局：** $uq_{acc}av$，
+- <strong>接受格局：</strong> $uq_{acc}av$，
 
-- **拒绝格局：** $uq_{rej}av$，
+- <strong>拒绝格局：</strong> $uq_{rej}av$，
 
-- **停机格局：** $uq_{acc}av$，$uq_{rej}av$，
+- <strong>停机格局：</strong> $uq_{acc}av$，$uq_{rej}av$，
 
 ### 单带图灵机格局的产生
 
-$C_1$** 产生 **$C_2$**：**
+$C_1$<strong>产生</strong>$C_2$<strong>：</strong>
 
 - 如果 $\delta(q_i, b) = (q_j, c, L)$，则
 
@@ -1280,7 +1280,7 @@ $C_1$** 产生 **$C_2$**：**
 
 ### 单带图灵机 $M$ 接受输入 $w$
 
-$M$** 接受输入 **$w$**：**
+$M$<strong>接受输入</strong>$w$<strong>：</strong>
 
 存在格局序列 $C_1, C_2, \ldots, C_k$，使得
 
@@ -1290,7 +1290,7 @@ $M$** 接受输入 **$w$**：**
 
 3. $C_k$ 是接受格局
 
-$M$**（识别，接受）的语言：**
+$M$<strong>（识别，接受）的语言：</strong>
 
 $L(M) = \{x \mid M \text{ 接受 } x\}$
 
@@ -1310,7 +1310,7 @@ $L(M) = \{x \mid M \text{ 接受 } x\}$
 
 - 若 $w\in A$，$M$ 在$w$上停机接受；
 
-- 若 $w\notin A$，$M$ 在$w$上停机拒绝，也可以**永不停机**。
+- 若 $w\notin A$，$M$ 在$w$上停机拒绝，也可以<strong>永不停机</strong>。
 
 这种机器叫识别器。
 
@@ -1325,15 +1325,15 @@ $L(M) = \{x \mid M \text{ 接受 } x\}$
 
 这种机器叫判定器。
 
-**关系：**$\text{可判定} \subseteq \text{可识别}.$
+<strong>关系：</strong>$\text{可判定} \subseteq \text{可识别}.$
 
 判定器一定是识别器；识别器不一定是判定器。
 
 ### 一些等价术语
 
-- **图灵可识别** = 递归可枚举 = 计算可枚举 = 半可判定 = 半可计算
+- <strong>图灵可识别</strong> = 递归可枚举 = 计算可枚举 = 半可判定 = 半可计算
 
-- **图灵可判定** = 递归 = 可解 = 能行 = 可判定 = 可计算
+- <strong>图灵可判定</strong> = 递归 = 可解 = 能行 = 可判定 = 可计算
 
 ![image\.png](/Firefly/uploads/computability-notes/image-129.png)
 
@@ -1357,22 +1357,22 @@ $L(M) = \{x \mid M \text{ 接受 } x\}$
 
 ## 计算装置的工作方式：
 
-- **识别器：** 输入 $x$，输出 $0/1/?$
+- <strong>识别器：</strong> 输入 $x$，输出 $0/1/?$
 
-- **判定器：** 输入 $x$，输出 $0/1$
+- <strong>判定器：</strong> 输入 $x$，输出 $0/1$
 
-- **转换器：** 输入 $x$，输出 $y$
+- <strong>转换器：</strong> 输入 $x$，输出 $y$
 
-- **产生器：** 输入 $0^n$，输出 $x_n$
+- <strong>产生器：</strong> 输入 $0^n$，输出 $x_n$
 
-- **枚举器：** 输入 $\varepsilon$，输出 $x_1, x_2, x_3, \ldots$
+- <strong>枚举器：</strong> 输入 $\varepsilon$，输出 $x_1, x_2, x_3, \ldots$
 
     - 无遗漏，无多余（可重复），无顺序
 
 
 
 ### 3.5 枚举器与识别器等价
-**定理 4\.13：** 语言 $A$ 是图灵可识别的，当且仅当有枚举器枚举 $A$。
+<strong>定理 4\.13：</strong> 语言 $A$ 是图灵可识别的，当且仅当有枚举器枚举 $A$。
 
 #### 方向一：有枚举器 **$\Rightarrow$** 有识别器
 设枚举器 $E$ 枚举 $A$。构造识别器 $M$识别$A$：
@@ -1390,9 +1390,9 @@ $M =$ "对输入 $w$：
 
 $s_1, s_2, s_3, \ldots$ 是什么？
 
-这是 $\Sigma^*$ 的一个**枚举（排序）**，即把所有可能的字符串按某种顺序排成一列。
+这是 $\Sigma^*$ 的一个<strong>枚举（排序）</strong>，即把所有可能的字符串按某种顺序排成一列。
 
-具体例子：设 $\Sigma = \{0, 1\}$，按**短者优先**、同长度按字典序排序：
+具体例子：设 $\Sigma = \{0, 1\}$，按<strong>短者优先</strong>、同长度按字典序排序：
 
 |序号|$s_i$|说明|
 |---|---|---|
@@ -1417,20 +1417,20 @@ $E =$ "忽略输入。
 
 2. 对 $s_1, s_2, s_3, \ldots, s_i$ 中每一个，让 $M$ 以其作为输入运行 $i$ 步。
 
-    - **第 **$i = 1$** 轮：**对 $s_1$ 运行 $M$ **1** 步：
+    - <strong>第</strong>$i = 1$<strong>轮：</strong>对 $s_1$ 运行 $M$ <strong>1</strong> 步：
 
     |    输入|    运行步数|    结果|
     |---|---|---|
     |    $s_1 = \varepsilon$|    1步|    若接受，打印 $\varepsilon$|
 
-    - **第 **$i = 2$** 轮：**对 $s_1, s_2$ 各运行 $M$ **2** 步：
+    - <strong>第</strong>$i = 2$<strong>轮：</strong>对 $s_1, s_2$ 各运行 $M$ <strong>2</strong> 步：
 
     |    输入|    运行步数|    说明|
     |---|---|---|
     |    $s_1 = \varepsilon$|    2步|    之前跑了1步，现在继续到第2步|
     |    $s_2 = 0$|    2步|    新加入的，从头跑2步|
 
-    - **第 **$i = 3$** 轮：**对 $s_1, s_2, s_3$ 各运行 $M$ **3** 步：
+    - <strong>第</strong>$i = 3$<strong>轮：</strong>对 $s_1, s_2, s_3$ 各运行 $M$ <strong>3</strong> 步：
 
     |    输入|    运行步数|    说明|
     |---|---|---|
@@ -1446,7 +1446,7 @@ $E =$ "忽略输入。
 
 第 $i$ 轮，对 $s_1$,$\ldots,s_i$ 分别模拟 $M$ 的 $i$ 步；如果某次模拟接受，就打印对应串。
 
-**为什么要交错模拟。** 不能先完整运行 $M(s_1)$，因为它可能永不停机，导致后面的串永远没机会被测试。
+<strong>为什么要交错模拟。</strong> 不能先完整运行 $M(s_1)$，因为它可能永不停机，导致后面的串永远没机会被测试。
 
 
 
@@ -1465,7 +1465,7 @@ $E =$ "忽略输入。
 
 - ……
 
-- TM 概念有很强的**稳健性**
+- TM 概念有很强的<strong>稳健性</strong>
 
 ![image\.png](/Firefly/uploads/computability-notes/image-98.png)
 
@@ -1473,9 +1473,9 @@ $E =$ "忽略输入。
 
 $\delta:Q\times\Gamma^k\to Q\times\Gamma^k\times\{L,R\}^k.$
 
-**定理 4\.8：** 每个多带 TM 都有等价单带 TM。
+<strong>定理 4\.8：</strong> 每个多带 TM 都有等价单带 TM。
 
-**证明：** 单带 TM 用一条带“分段”模拟多条带：
+<strong>证明：</strong> 单带 TM 用一条带“分段”模拟多条带：
 
 ```text
 # 第一条带内容 # 第二条带内容 # 第三条带内容 # ... #
@@ -1493,9 +1493,9 @@ $\delta:Q\times\Gamma^k\to Q\times\Gamma^k\times\{L,R\}^k.$
 
 4. 若某虚拟带头向右越过当前分段末尾，就在该处插入空白符并整体右移。
 
-**结论：** 多带机只是更方便、更高效，不增加可识别/可判定能力。
+<strong>结论：</strong> 多带机只是更方便、更高效，不增加可识别/可判定能力。
 
-**证明：** 设计单带 TM $S$ 来模拟多带 TM $M$。
+<strong>证明：</strong> 设计单带 TM $S$ 来模拟多带 TM $M$。
 
 
 
@@ -1516,9 +1516,9 @@ S 的磁带布局：
 
 - $S$ 从标记左端点的第一个 $\#$ 开始扫描，
 
-    - **目标：**确定每个虚拟读写头当前指向什么符号。
+    - <strong>目标：</strong>确定每个虚拟读写头当前指向什么符号。
 
-    - **方法：**S 的读写头从最左端开始，一格一格向右移动，检查"当前位置是否是某个虚拟读写头的位置"。
+    - <strong>方法：</strong>S 的读写头从最左端开始，一格一格向右移动，检查"当前位置是否是某个虚拟读写头的位置"。
 
 - 直到标记右端点的第 $k+1$ 个 $\#$（结尾了，一共k段，共k\+1个\#）。
 
@@ -1549,9 +1549,9 @@ S 的磁带布局：
 
 - 然后 $S$ 进行第二次扫描，
 
-    - **目标：**找到每个虚拟读写头的位置，执行"写"操作，并标记新的位置。
+    - <strong>目标：</strong>找到每个虚拟读写头的位置，执行"写"操作，并标记新的位置。
 
-    - **方法：**S 的读写头再次从最左端开始，一格一格向右移动。
+    - <strong>方法：</strong>S 的读写头再次从最左端开始，一格一格向右移动。
 
     - S 的状态需要记住：M 当前状态 \+ 两个虚拟读写头位置
 
@@ -1568,7 +1568,7 @@ S 的磁带布局：
 
 （…正确性证明…）
 
-**推论 4\.9：** 图灵可识别当且仅当可用多带图灵机识别
+<strong>推论 4\.9：</strong> 图灵可识别当且仅当可用多带图灵机识别
 
 
 
@@ -1585,13 +1585,13 @@ NTM 的转移函数为$\delta:Q\times\Gamma\to \mathcal{P}(Q\times\Gamma\times\{
 
 
 
-**定理 4\.10：** 每个 NTM 都有等价 DTM。
+<strong>定理 4\.10：</strong> 每个 NTM 都有等价 DTM。
 
-**证明原理：**用DTM D来模拟NTM N
+<strong>证明原理：</strong>用DTM D来模拟NTM N
 
 ![image\.png](/Firefly/uploads/computability-notes/image-18.png)
 
-为什么不用深度优先？因为某条分支可能无限长，**深搜可能卡死**，永远看不到其他接受分支。
+为什么不用深度优先？因为某条分支可能无限长，<strong>深搜可能卡死</strong>，永远看不到其他接受分支。
 
 DTM 可使用三条带：
 
@@ -1603,7 +1603,7 @@ DTM 可使用三条带：
 
 DTM 按字典序枚举路径带内容，逐一模拟对应分支；若某分支接受，则接受。
 
-**证明：**$D =$ "对输入 $w$：
+<strong>证明：</strong>$D =$ "对输入 $w$：
 
 1. 开始时，第一个带包含 $w$，其余两个带为空。
 
@@ -1619,13 +1619,13 @@ DTM 按字典序枚举路径带内容，逐一模拟对应分支；若某分支�
 
 4. 在第三个带上，用字典序下的下一个串来替代原用的串。转到第二步。"
 
-**结论：**$\text{DTM 与 NTM 识别同样的语言类。}$并且：
+<strong>结论：</strong>$\text{DTM 与 NTM 识别同样的语言类。}$并且：
 
-**推论 4\.11：** 图灵可识别当且仅当可用**非确定型图灵机**识别
+<strong>推论 4\.11：</strong> 图灵可识别当且仅当可用<strong>非确定型图灵机</strong>识别
 
 $\text{图灵可识别} \iff \text{可由 NTM 识别},$
 
-**推论 4\.12：** 图灵可判定当且仅当可用**非确定型图灵机**判定
+<strong>推论 4\.12：</strong> 图灵可判定当且仅当可用<strong>非确定型图灵机</strong>判定
 
 $\text{图灵可判定} \iff \text{可由 NTM 判定}.$
 
@@ -1634,27 +1634,27 @@ $\text{图灵可判定} \iff \text{可由 NTM 判定}.$
 ## 第四部分：可判定性及可规约性
 ### 图灵机算法的描述方式
 
-- **形式描述：**七元组
+- <strong>形式描述：</strong>七元组
 
-- **实现描述**
+- <strong>实现描述</strong>
 
     - 用日常语言描述图灵机的运行（如何存放数据，如何移动读写头）
 
     - 不给出状态和转移函数的细节
 
-- **高层描述**
+- <strong>高层描述</strong>
 
     - 用日常语言描述算法
 
     - 不考虑对读写头和带的管理
 
-- **图灵机的输入总是串**
+- <strong>图灵机的输入总是串</strong>
 
     - 其他输入对象必须表示成串
 
         - 多项式，图，文法，自动机，\.\.\.，及其任意组合
 
-- **对象 **$O$** 的编码是 **$\langle O \rangle$
+- <strong>对象</strong>$O$<strong>的编码是</strong>$\langle O \rangle$
 
     - 多对象 $O_1, O_2, \ldots, O_k$ 的编码是 $\langle O_1, O_2, \ldots, O_k \rangle$
 
@@ -1662,15 +1662,15 @@ $\text{图灵可判定} \iff \text{可由 NTM 判定}.$
 
     - 图灵机总能把一种编码翻译成另外一种编码
 
-- **带引号的锯齿状日常语言文字段**
+- <strong>带引号的锯齿状日常语言文字段</strong>
 
-    - 将算法分成**步骤**，每个步骤可能包括图灵机计算的许多步
+    - 将算法分成<strong>步骤</strong>，每个步骤可能包括图灵机计算的许多步
 
-    - 用更深的**缩进**来表示算法的分块结构
+    - 用更深的<strong>缩进</strong>来表示算法的分块结构
 
-    - 第一行描述机器的**输入**
+    - 第一行描述机器的<strong>输入</strong>
 
-    - 如果输入是对象的编码 $\langle A \rangle$，就隐含着如下含义：图灵机首先**检查**输入是否是所要对象的编码，如果不是就拒绝
+    - 如果输入是对象的编码 $\langle A \rangle$，就隐含着如下含义：图灵机首先<strong>检查</strong>输入是否是所要对象的编码，如果不是就拒绝
 
 ![image\.png](/Firefly/uploads/computability-notes/image-90.png)
 
@@ -1681,14 +1681,14 @@ $\text{图灵可判定} \iff \text{可由 NTM 判定}.$
 ### 4.1 可判定问题的含义
 一个问题可判定，意思是存在一个对所有输入都停机的算法，能正确回答“是/否”。在形式语言框架中，把问题编码成语言 $A$，问题可判定等价于语言 $A$ 可判定。
 
-**问题和语言：**编码
+<strong>问题和语言：</strong>编码
 
-**可判定性：**存在处处停机的TM程序
+<strong>可判定性：</strong>存在处处停机的TM程序
 
 
 
 ### 4.2 关于正则语言的可判定问题
-### **4\.2\.1 DFA 接受性问题 **$A_{DFA}$
+### <strong>4\.2\.1 DFA 接受性问题</strong>$A_{DFA}$
 
 检测一个给定的确定型有穷自动机是否接受一共给定的串
 
@@ -1696,11 +1696,11 @@ $\text{图灵可判定} \iff \text{可由 NTM 判定}.$
 
 
 
-**定理 5\.1：** $A_{DFA}$ 是可判定语言。
+<strong>定理 5\.1：</strong> $A_{DFA}$ 是可判定语言。
 
 等价于：存在算法（图灵机），能判断"任意给定的DFA是否接受任意给定的字符串"，且这个算法对所有输入都必停机。这是因为DFA本身没有循环能力，模拟它运行总是有限步结束。
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 设计一个判定 $A_{DFA}$ 的 TM $M$。
 
@@ -1708,7 +1708,7 @@ $M$ 模拟 $B$ 在 $w$ 上的计算，想象一下写上述程序所需要的细
 
 
 
-**证明：** 设计一个判定 $A_{DFA}$ 的 TM $M$。
+<strong>证明：</strong> 设计一个判定 $A_{DFA}$ 的 TM $M$。
 
 $M =$ "对输入 $\langle B, w \rangle$，其中 $B$ 是 DFA，$w$ 是串：
 
@@ -1732,7 +1732,7 @@ $M$ 通过在带上写下信息，来跟踪 $B$ 在 $w$ 上运行时当前状态
 
 
 
-### **4\.2\.2 NFA 接受性问题 **$A_{NFA}$
+### <strong>4\.2\.2 NFA 接受性问题</strong>$A_{NFA}$
 
 检测一个给定的非确定型有穷自动机是否接受一共给定的串
 
@@ -1740,15 +1740,15 @@ $A_{NFA}=\{\langle B,w\rangle\mid B\text{ 是 NFA 且 }B\text{ 接受 }w\}.$
 
 
 
-**定理 5\.2：**$A_{NFA}$** **是可判定语言。
+<strong>定理 5\.2：</strong>$A_{NFA}$ 是可判定语言。
 
-**证明思路：**
+<strong>证明思路：</strong>
 
-**证法一：**用 **NTM** $N$ 模拟 NFA $B$ 在 $w$ 上计算
+<strong>证法一：</strong>用 <strong>NTM</strong> $N$ 模拟 NFA $B$ 在 $w$ 上计算
 
-**证法二：**先把 NFA $B$ 转化为等价的 DFA $C$，再用 TM $M$ 模拟 $C$ 在 $w$ 上计算
+<strong>证法二：</strong>先把 NFA $B$ 转化为等价的 DFA $C$，再用 TM $M$ 模拟 $C$ 在 $w$ 上计算
 
-**证明：** 构造判定 $A_{NFA}$ 的 TM $N$。
+<strong>证明：</strong> 构造判定 $A_{NFA}$ 的 TM $N$。
 
 $N =$ "对于输入 $\langle B, w \rangle$，$B$ 是 NFA，$w$ 是串：
 
@@ -1760,15 +1760,15 @@ $N =$ "对于输入 $\langle B, w \rangle$，$B$ 是 NFA，$w$ 是串：
 
 
 
-### **4\.2\.3 正则表达式派生性问题 **$A_{REX}$
+### <strong>4\.2\.3 正则表达式派生性问题</strong>$A_{REX}$
 
 一个正则表达式是否派生一个给定的串
 
 $A_{REX}=\{\langle R,w\rangle\mid R\text{ 是正则表达式且 }w\in L(R)\}.$
 
-**证明方法：**把正则表达式 $R$ 转成等价 NFA/DFA，再判定 NFA/DFA 是否接受 $w$。
+<strong>证明方法：</strong>把正则表达式 $R$ 转成等价 NFA/DFA，再判定 NFA/DFA 是否接受 $w$。
 
-**证明：** 下面的 TM $P$ 判定 $A_{REX}$。
+<strong>证明：</strong> 下面的 TM $P$ 判定 $A_{REX}$。
 
 $P =$ "对于输入 $\langle R, w \rangle$，$R$ 是 RE，$w$ 是串：
 
@@ -1784,15 +1784,15 @@ $P =$ "对于输入 $\langle R, w \rangle$，$R$ 是 RE，$w$ 是串：
 
 
 
-### **4\.2\.4 DFA 空性问题 **$E_{DFA}$
+### <strong>4\.2\.4 DFA 空性问题</strong>$E_{DFA}$
 
 一个DFA是否根本不接受任何串？
 
 $E_{DFA}=\{\langle A\rangle\mid A\text{ 是 DFA 且 }L(A)=\varnothing\}.$
 
-**判定方法：** 从初态开始做可达性标记；若没有接受态可达，则语言为空；否则非空。
+<strong>判定方法：</strong> 从初态开始做可达性标记；若没有接受态可达，则语言为空；否则非空。
 
-**证明：** TM $T =$ "对于输入 $\langle A \rangle$，$A$ 是 DFA：
+<strong>证明：</strong> TM $T =$ "对于输入 $\langle A \rangle$，$A$ 是 DFA：
 
 1. 标记初始状态。
 
@@ -1804,13 +1804,13 @@ $E_{DFA}=\{\langle A\rangle\mid A\text{ 是 DFA 且 }L(A)=\varnothing\}.$
 
 
 
-### **4\.2\.5 DFA 等价性问题 **$EQ_{DFA}$
+### <strong>4\.2\.5 DFA 等价性问题</strong>$EQ_{DFA}$
 
 检查两个DFA是否识别同一个语言
 
 $EQ_{DFA}=\{\langle A,B\rangle\mid A,B\text{ 是 DFA 且 }L(A)=L(B)\}.$
 
-**证明思路：**使用对称差：
+<strong>证明思路：</strong>使用对称差：
 
 ![image\.png](/Firefly/uploads/computability-notes/image-42.png)
 
@@ -1822,10 +1822,10 @@ $L(A) \oplus L(B) = (L(A) - L(B)) \cup (L(B) - L(A))$
 
 |属于 $L(A)$？|属于 $L(B)$？|属于 $L(A) \oplus L(B)$？|
 |---|---|---|
-|✅ 是|✅ 是|❌ **否**|
-|✅ 是|❌ 否|✅ **是**|
-|❌ 否|✅ 是|✅ **是**|
-|❌ 否|❌ 否|❌ **否**|
+|✅ 是|✅ 是|❌ <strong>否</strong>|
+|✅ 是|❌ 否|✅ <strong>是</strong>|
+|❌ 否|✅ 是|✅ <strong>是</strong>|
+|❌ 否|❌ 否|❌ <strong>否</strong>|
 
 正则语言对于布尔运算封闭，因此对于对称差运算封闭
 
@@ -1833,7 +1833,7 @@ $L(A) \oplus L(B) = (L(A) - L(B)) \cup (L(B) - L(A))$
 
 正则语言是否为空，这是可判定的（定理 5\.4）
 
-**证明：**
+<strong>证明：</strong>
 
 TM $F =$ "对于输入 $\langle A, B \rangle$，$A$ 和 $B$ 都是 DFA：
 
@@ -1845,23 +1845,23 @@ TM $F =$ "对于输入 $\langle A, B \rangle$，$A$ 和 $B$ 都是 DFA：
 
 |T 的结果|含义|F 的输出|
 |---|---|---|
-|T 接受 $\langle C \rangle$|$L(C) = \emptyset$|**接受** $\langle A, B \rangle$|
-|T 拒绝 $\langle C \rangle$|$L(C) \neq \emptyset$|**拒绝** $\langle A, B \rangle$|
+|T 接受 $\langle C \rangle$|$L(C) = \emptyset$|<strong>接受</strong> $\langle A, B \rangle$|
+|T 拒绝 $\langle C \rangle$|$L(C) \neq \emptyset$|<strong>拒绝</strong> $\langle A, B \rangle$|
 
 
 
 ### 4.3 关于上下文无关文法的可判定问题
-### **4\.3\.1 CFG 派生性问题 **$A_{CFG}$
+### <strong>4\.3\.1 CFG 派生性问题</strong>$A_{CFG}$
 
 检查一个CFG是否派生一个特定的串
 
 $A_{CFG}=\{\langle G,w\rangle\mid G\text{ 是 CFG 且 }G\text{ 派生 }w\}.$
 
-**定理 5\.6：**$A_{CFG}$  可判定。
+<strong>定理 5\.6：</strong>$A_{CFG}$  可判定。
 
 
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 让 $G$ 遍历所有派生，以确定哪一个是 $w$ 的派生
 
@@ -1877,7 +1877,7 @@ $A_{CFG}=\{\langle G,w\rangle\mid G\text{ 是 CFG 且 }G\text{ 派生 }w\}.$
 
 
 
-**证明：** TM $S =$ "对于输入 $\langle G, w \rangle$，$G$ 是 CFG：
+<strong>证明：</strong> TM $S =$ "对于输入 $\langle G, w \rangle$，$G$ 是 CFG：
 
 1. 把 $G$ 转化成等价的 CNF（定理 3\.6）。
 
@@ -1887,15 +1887,15 @@ $A_{CFG}=\{\langle G,w\rangle\mid G\text{ 是 CFG 且 }G\text{ 派生 }w\}.$
 
 
 
-### **4\.3\.2 CFG 空性问题 **$E_{CFG}$
+### <strong>4\.3\.2 CFG 空性问题</strong>$E_{CFG}$
 
 检查一共CFG是否不派生任何串
 
 $E_{CFG}=\{\langle G\rangle\mid G\text{ 是 CFG 且 }L(G)=\varnothing\}.$
 
-**定理5\.7：**$E_{CFG}$是可判定语言
+<strong>定理5\.7：</strong>$E_{CFG}$是可判定语言
 
-**证明思路：** TM $S$ 逐个检查所有可能的 $w$
+<strong>证明思路：</strong> TM $S$ 逐个检查所有可能的 $w$
 
 - $w$ 有无限多个，这个过程将不终止
 
@@ -1905,7 +1905,7 @@ $E_{CFG}=\{\langle G\rangle\mid G\text{ 是 CFG 且 }L(G)=\varnothing\}.$
 
 类似于 DFA 的标记算法
 
-**证明：** TM $R =$ "对于输入 $\langle G \rangle$，$G$ 是 CFG：
+<strong>证明：</strong> TM $R =$ "对于输入 $\langle G \rangle$，$G$ 是 CFG：
 
 1. 将 $G$ 中所有终结符做上标记；
 
@@ -1929,7 +1929,7 @@ PPT 指出 $EQ_{CFG}$ 不可判定。注意：DFA 等价性可判定，CFG 等�
 
 
 #### 4.3.4 每个 CFL 都可判定
-**证明思路：**
+<strong>证明思路：</strong>
 
 设 $A$ 是 CFL，把 $A$ 的 PDA 转化成 NTM
 
@@ -1939,13 +1939,13 @@ PDA 某些计算分支可能不停机，NTM 的计算分支也可能不停机，
 
 
 
-**证明：** 设 $A$ 是 CFL，$G$ 是 $A$ 的 CFG，
+<strong>证明：</strong> 设 $A$ 是 CFL，$G$ 是 $A$ 的 CFG，
 
 下面设计判定 $A$ 的 TM $M_G$。
 
 $M_G =$ "对于输入 $w$：
 
-1. 在输入 $\langle G, w \rangle$ 上运行 TM $S$（定理 5\.6**：**$A_{CFG}$  可判定）。
+1. 在输入 $\langle G, w \rangle$ 上运行 TM $S$（定理 5\.6<strong>：</strong>$A_{CFG}$  可判定）。
 
 2. 如果这个机器接受，则接受，否则拒绝。" 
 
@@ -1956,11 +1956,11 @@ $M_G =$ "对于输入 $w$：
 
 $A_{TM}=\{\langle M,w\rangle\mid M\text{ 是 TM 且 }M\text{ 接受 }w\}.$
 
-**定理 5\.9：** $A_{TM}$ 是不可判定的
+<strong>定理 5\.9：</strong> $A_{TM}$ 是不可判定的
 
-$A_{TM}$ 不可判定的意思是：**不存在任何图灵机**，能够对所有的输入 $\langle M, w \rangle$ 都停机，并正确判断 $M$ 是否接受 $w$。
+$A_{TM}$ 不可判定的意思是：<strong>不存在任何图灵机</strong>，能够对所有的输入 $\langle M, w \rangle$ 都停机，并正确判断 $M$ 是否接受 $w$。
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 $A_{TM} = \{\langle M, w \rangle \mid \text{TM } M \text{ 接受串 } w\}$
 
@@ -1969,7 +1969,7 @@ $D_{TM} = \{\langle M \rangle \mid \text{TM } M \text{ 接受串 } \langle M \ra
 |语言|定义|含义|
 |---|---|---|
 |$A_{TM}$|$\{ \langle M, w \rangle \mid M \text{ 是 TM}, M \text{ 接受 } w \}$|图灵机 $M$ 是否接受输入 $w$|
-|$D_{TM}$|$\{ \langle M \rangle \mid M \text{ 是 TM}, M \text{ 接受 } \langle M \rangle \}$|图灵机 $M$ 是否接受**它自己的编码**|
+|$D_{TM}$|$\{ \langle M \rangle \mid M \text{ 是 TM}, M \text{ 接受 } \langle M \rangle \}$|图灵机 $M$ 是否接受<strong>它自己的编码</strong>|
 
 举个例子：
 
@@ -2005,7 +2005,7 @@ $\langle M \rangle$ 的一种可能编码
 
 $D_{TM}$ 是 $A_{TM}$ 的特例（把自己的编码作为输入而接受）
 
-用**对角化法**证明 $D_{TM}$ 不可判定
+用<strong>对角化法</strong>证明 $D_{TM}$ 不可判定
 
 
 
@@ -2052,19 +2052,19 @@ $D(\langle M\rangle)=\neg H(\langle M,\langle M\rangle\rangle).$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-92.png)
 
-**考试关键。** 一定要写“构造反向机器 $D$，再令它输入自身描述 $\langle D\rangle$”。
+<strong>考试关键。</strong> 一定要写“构造反向机器 $D$，再令它输入自身描述 $\langle D\rangle$”。
 
 
 
 ### 4.5 可判定、可识别与非图灵可识别语言
-**定理 5\.16：**$A\text{ 可判定}\iff A\text{ 和 }\overline{A}\text{ 都图灵可识别}.$
+<strong>定理 5\.16：</strong>$A\text{ 可判定}\iff A\text{ 和 }\overline{A}\text{ 都图灵可识别}.$
 
 ppt中写作$A^c = \overline{A}$
 
 #### 证明
-$\Rightarrow$**：** 若 $A$ 可判定，则补语言 $\overline A$ 也可判定，因为可判定语言但是可识别的，因此二者都可识别。
+$\Rightarrow$<strong>：</strong> 若 $A$ 可判定，则补语言 $\overline A$ 也可判定，因为可判定语言但是可识别的，因此二者都可识别。
 
-$\Leftarrow$**：** 若 $A$ 由 $M_1$ 识别，$\overline A$ 由 $M_2$ 识别。构造判定器 $M$：
+$\Leftarrow$<strong>：</strong> 若 $A$ 由 $M_1$ 识别，$\overline A$ 由 $M_2$ 识别。构造判定器 $M$：
 
 1. 输入 $w$；
 
@@ -2112,7 +2112,7 @@ $M =$ "对输入 $w$：
 
 
 
-**推论5\.17：**$\overline{A_{TM}}$** **不是图灵可识别的。若它可识别，而 $A_{TM}$ 本身可识别，则 $A_{TM}$ 可判定，矛盾。
+<strong>推论5\.17：</strong>$\overline{A_{TM}}$ 不是图灵可识别的。若它可识别，而 $A_{TM}$ 本身可识别，则 $A_{TM}$ 可判定，矛盾。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-141.png)
 
@@ -2125,18 +2125,18 @@ $M =$ "对输入 $w$：
 
 $HALT_{TM}=\{\langle M,w\rangle\mid M\text{ 在输入 }w\text{ 上停机}\}.$
 
-**定理 6\.1：**$HALT_{TM}$** **不可判定。
+<strong>定理 6\.1：</strong>$HALT_{TM}$ 不可判定。
 
-**证明思路： **
+<strong>证明思路：</strong>
 
 假设 $HALT_{TM}$ 可判定，用这个假设来证明 $A_{TM}$ 可判定（规约思想，矛盾！）
 
 |语言|定义|含义|
 |---|---|---|
-|$A_{TM}$|$\{ \langle M, w \rangle \mid M \text{ 接受 } w \}$|**接受问题**：$M$ 是否接受 $w$？|
-|$HALT_{TM}$|$\{ \langle M, w \rangle \mid M \text{ 在 } w \text{ 上停机} \}$|**停机问题**：$M$ 在 $w$ 上是否**停机**（接受或拒绝，不死循环）？|
+|$A_{TM}$|$\{ \langle M, w \rangle \mid M \text{ 接受 } w \}$|<strong>接受问题</strong>：$M$ 是否接受 $w$？|
+|$HALT_{TM}$|$\{ \langle M, w \rangle \mid M \text{ 在 } w \text{ 上停机} \}$|<strong>停机问题</strong>：$M$ 在 $w$ 上是否<strong>停机</strong>（接受或拒绝，不死循环）？|
 
-**证明：**（反证）假设 TM $R$ 判定 $HALT_{TM}$，
+<strong>证明：</strong>（反证）假设 TM $R$ 判定 $HALT_{TM}$，
 
 则构造 TM $S$ 判定 $A_{TM}$，这是矛盾（定理 5\.9）！
 
@@ -2152,11 +2152,11 @@ $S =$ "在输入 $\langle M, w \rangle$ 上，其中 $M$ 是 TM，$w$ 是串：
 
 |符号|含义|
 |---|---|
-|**S**|假设存在的、能判定 $A_{TM}$ 的图灵机|
-|**R**|$A_{TM}$ 的判定器（假设存在）|
-|**M**|任意一台图灵机|
-|**w**|输入字符串|
-|**⟨M,w⟩**|图灵机 M 和输入 w 的编码对|
+|<strong>S</strong>|假设存在的、能判定 $A_{TM}$ 的图灵机|
+|<strong>R</strong>|$A_{TM}$ 的判定器（假设存在）|
+|<strong>M</strong>|任意一台图灵机|
+|<strong>w</strong>|输入字符串|
+|<strong>⟨M,w⟩</strong>|图灵机 M 和输入 w 的编码对|
 
 ![image\.png](/Firefly/uploads/computability-notes/image-43.png)
 
@@ -2165,7 +2165,7 @@ $S =$ "在输入 $\langle M, w \rangle$ 上，其中 $M$ 是 TM，$w$ 是串：
 ### 4.7 其他不可判定问题与归约思想
 #### 归约的直观描述
 
-把**做事情 A** 归结为**做事情 B，**利用做事情 B 来帮助做事情 A
+把<strong>做事情 A</strong> 归结为<strong>做事情 B，</strong>利用做事情 B 来帮助做事情 A
 
 假如 A 可以归约到 B（B\-\>A），那么
 
@@ -2175,15 +2175,15 @@ $S =$ "在输入 $\langle M, w \rangle$ 上，其中 $M$ 是 TM，$w$ 是串：
 
 
 
-### **4\.7\.1 图灵机空性问题 **$E_{TM}$
+### <strong>4\.7\.1 图灵机空性问题</strong>$E_{TM}$
 
 一个图灵机是否根本不接受任何串？
 
 $E_{TM}=\{\langle M\rangle\mid L(M)=\varnothing\}.$
 
-**定理6\.2：** $E_{TM}$ 不可判定。
+<strong>定理6\.2：</strong> $E_{TM}$ 不可判定。
 
-**证明思路：** 反证法
+<strong>证明思路：</strong> 反证法
 
 假设 $E_{TM}$ 是可判定的，利用这个假设来证明 $A_{TM}$ 是可判定的。
 
@@ -2199,7 +2199,7 @@ $M_1$ 在 $w$ 上完全模拟 $M$；
 
 若 $L(M_1)$ 非空，则接受。
 
-**证明：**（反证）假设 TM $R$ 判定 $E_{TM}$，
+<strong>证明：</strong>（反证）假设 TM $R$ 判定 $E_{TM}$，
 
 则构造 TM $S$ 判定 $A_{TM}$。
 
@@ -2241,15 +2241,15 @@ $S =$ "在输入 $\langle M, w \rangle$ 上：
 
 
 
-### **4\.7\.2 图灵机正则性问题 **$REGULAR_{TM}$
+### <strong>4\.7\.2 图灵机正则性问题</strong>$REGULAR_{TM}$
 
 检查一个图灵机是否有一个等价的有穷自动机
 
 $REGULAR_{TM}=\{\langle M\rangle\mid L(M)\text{ 是正则语言}\}.$
 
-**定理 6\.3：** $REGULAR_{TM}$ 是不可判定的。
+<strong>定理 6\.3：</strong> $REGULAR_{TM}$ 是不可判定的。
 
-**证明思路：** 使用从 $A_{TM}$ 出发的归约
+<strong>证明思路：</strong> 使用从 $A_{TM}$ 出发的归约
 
 假设 TM $R$ 判定 $REGULAR_{TM}$。
 
@@ -2271,7 +2271,7 @@ $M_2$ 自动接受 $\{0^n 1^n \mid n \ge 0\}$ 中的所有串
 
 
 
-**证明：** 假设 TM $R$ 判定 $REGULAR_{TM}$，
+<strong>证明：</strong> 假设 TM $R$ 判定 $REGULAR_{TM}$，
 
 下面构造 TM $S$ 判定 $A_{TM}$。
 
@@ -2299,15 +2299,15 @@ b\) 如果 $x$ 不具有此形式，则在 $w$ 上运行 $M$。
 
 
 
-### **4\.7\.3 图灵机等价性问题 **$EQ_{TM}$
+### <strong>4\.7\.3 图灵机等价性问题</strong>$EQ_{TM}$
 
 检查两个给定的图灵机是否识别相同的语言
 
 $EQ_{TM}=\{\langle M_1,M_2\rangle\mid L(M_1)=L(M_2)\}.$
 
-**定理 6\.4：** $EQ_{TM}$ 是不可判定的。
+<strong>定理 6\.4：</strong> $EQ_{TM}$ 是不可判定的。
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 使用从 $E_{TM}$ 出发的归约
 
@@ -2317,7 +2317,7 @@ $E_{TM}$ 是 $EQ_{TM}$ 的特例，其中一个机器识别空语言
 
 
 
-**证明：** 假设 TM $R$ 判定 $EQ_{TM}$，
+<strong>证明：</strong> 假设 TM $R$ 判定 $EQ_{TM}$，
 
 下面构造 TM $S$ 判定 $E_{TM}$。
 
@@ -2334,15 +2334,15 @@ $S =$ "对于输入 $\langle M \rangle$，$M$ 是 TM：
 ### 4.8 m\-归约
 #### 规约的形式化
 
-- **多一（many\-one）归约** — 传统叫法
+- <strong>多一（many\-one）归约</strong> — 传统叫法
 
-- **映射（mapping）归约** — Sipser 叫法
+- <strong>映射（mapping）归约</strong> — Sipser 叫法
 
-**可计算函数：**对于某个函数 $f: \Sigma^* \to \Sigma^*$，
+<strong>可计算函数：</strong>对于某个函数 $f: \Sigma^* \to \Sigma^*$，
 
 如果存在图灵机 $M$，使得在每个输入 $w$ 上 $M$ 停机，且此时 $f(w)$ 出现在带上，
 
-则说 $f$ 是**可计算函数**。
+则说 $f$ 是<strong>可计算函数</strong>。
 
 ![image\.png](/Firefly/uploads/computability-notes/image-82.png)
 
@@ -2356,7 +2356,7 @@ $S =$ "对于输入 $\langle M \rangle$，$M$ 是 TM：
 
 $\mathbf{x} \in A \iff f(x) \in B$
 
-则说语言 $A$ 可 **m 归约**到语言 $B$，记作$A \le_m B$
+则说语言 $A$ 可 <strong>m 归约</strong>到语言 $B$，记作$A \le_m B$
 
 称函数 $f$ 为从 $A$ 到 $B$ 的归约，记作
 
@@ -2366,13 +2366,13 @@ $A \le_m B \text{ via } f$
 
 
 
-**核心性质**
+<strong>核心性质</strong>
 
-**定理 6\.16：** 若 $A \le_m B$ 且 $B$ 可判定，则 $A$ 可判定。
+<strong>定理 6\.16：</strong> 若 $A \le_m B$ 且 $B$ 可判定，则 $A$ 可判定。
 
 （可判定语言类在 m 归约下封闭）
 
-**证明：** 设 $A \le_m B$ via $f$，$M$ 判定 $B$，
+<strong>证明：</strong> 设 $A \le_m B$ via $f$，$M$ 判定 $B$，
 
 则 $N$ 判定 $A$。
 
@@ -2408,21 +2408,21 @@ $A \le_m \overline{B} \text{ via } f \iff \overline{A} \le_m B \text{ via } f$
 
 m 归约的传递性：若 $A \le_m B$，且 $B \le_m C$，则 $A \le_m C$。 \#
 
-**定理 6\.22：** 若 $A \le_m B$，且 $B$ 图灵可识别，则 $A$ 图灵可识别。
+<strong>定理 6\.22：</strong> 若 $A \le_m B$，且 $B$ 图灵可识别，则 $A$ 图灵可识别。
 
 （图灵可识别语言类对 m 归约封闭）
 
 
 
-**证明：** 类似定理 6\.16 证明，$M, N$ 是识别器而非判定器。 
+<strong>证明：</strong> 类似定理 6\.16 证明，$M, N$ 是识别器而非判定器。 
 
-**定理 6\.23：** 若 $A \le_m B$，且 $A$ 非图灵可识别，则 $B$ 非图灵可识别。 \#
+<strong>定理 6\.23：</strong> 若 $A \le_m B$，且 $A$ 非图灵可识别，则 $B$ 非图灵可识别。 \#
 
 
 
-**定理 6\.24：** $EQ_{TM}$ 和 $\overline{EQ_{TM}}$ 都非图灵可识别。
+<strong>定理 6\.24：</strong> $EQ_{TM}$ 和 $\overline{EQ_{TM}}$ 都非图灵可识别。
 
-**证明：** 
+<strong>证明：</strong> 
 
 \(1\) $\overline{A_{TM}} \le_m EQ_{TM}$
 
@@ -2468,9 +2468,9 @@ $M_2 =$ "对任何输入 $x$，接受当且仅当 $M$ 接受 $w$。"
 
 ### 4.9 递归定理
 #### 自引用
-**引理 7\.1：** 存在可计算函数 $q: \Sigma^* \to \Sigma^*$，对任意串 $w$，$q(w)$ 是图灵机 $P_w$ 的描述，TM $P_w$ 打印出 $w$，然后停机。
+<strong>引理 7\.1：</strong> 存在可计算函数 $q: \Sigma^* \to \Sigma^*$，对任意串 $w$，$q(w)$ 是图灵机 $P_w$ 的描述，TM $P_w$ 打印出 $w$，然后停机。
 
-**说明：**
+<strong>说明：</strong>
 
 - $\forall w, q(w) = \langle P_w \rangle$
 
@@ -2482,7 +2482,7 @@ $M_2 =$ "对任何输入 $x$，接受当且仅当 $M$ 接受 $w$。"
 
 
 
-**证明：** TM $Q =$ "对输入串 $w$：
+<strong>证明：</strong> TM $Q =$ "对输入串 $w$：
 
 1. 构造下列 TM $P_w$：
 
@@ -2500,9 +2500,9 @@ c\) 停机。"
 
 ### 递归定理
 
-**定理 7\.2（递归定理）：** 设 TM $T$ 计算函数 $t: \Sigma^* \times \Sigma^* \to \Sigma^*$，则存在 TM $R$ 计算函数 $r: \Sigma^* \to \Sigma^*$，使得 $\forall w, r(w) = t(\langle R \rangle, w)$。
+<strong>定理 7\.2（递归定理）：</strong> 设 TM $T$ 计算函数 $t: \Sigma^* \times \Sigma^* \to \Sigma^*$，则存在 TM $R$ 计算函数 $r: \Sigma^* \to \Sigma^*$，使得 $\forall w, r(w) = t(\langle R \rangle, w)$。
 
-**说明：** 若 $t(x, y)$ 是 2 元函数，则固定输入 $x = c$ 后，变成 1 元函数 $t(c, y)$
+<strong>说明：</strong> 若 $t(x, y)$ 是 2 元函数，则固定输入 $x = c$ 后，变成 1 元函数 $t(c, y)$
 
 - 若 $t(x, y)$ 可计算，则对任意 $c$，$t(c, y)$ 也可计算
 
@@ -2530,16 +2530,16 @@ R = "输入 w：
 
 
 
-**直观解释** 如果 $t(x,w)$ 是一个“把程序描述 $x$ 当参数”的可计算过程，那么存在某个程序 $R$，它在运行时可以把自己的描述 $\langle R\rangle$ 填入第一个参数。
+<strong>直观解释</strong> 如果 $t(x,w)$ 是一个“把程序描述 $x$ 当参数”的可计算过程，那么存在某个程序 $R$，它在运行时可以把自己的描述 $\langle R\rangle$ 填入第一个参数。
 
 
 
-**考试理解：** 递归定理允许我们在 TM 的定义中写“获得自己的描述 $\langle M\rangle$”。这并不是魔法，而是定理保证存在这样的机器。
+<strong>考试理解：</strong> 递归定理允许我们在 TM 的定义中写“获得自己的描述 $\langle M\rangle$”。这并不是魔法，而是定理保证存在这样的机器。
 
 
 
 #### 应用方向
-**TM 自引用定义**
+<strong>TM 自引用定义</strong>
 
 - 可以在 $M$ 的定义中使用 $\langle M \rangle$，即 TM $M =$ "……$\langle M \rangle$……" 是合法定义！
 
@@ -2570,7 +2570,7 @@ R = "输入 w：
         ...... ⟨R⟩ ......"   ← 合法！R 知道自己的编码
     ```
 
-**代替对角化**
+<strong>代替对角化</strong>
 
 - 证明 $A_{TM}$ 不可判定，$MIN_{TM}$ 不可识别
 
@@ -2601,17 +2601,17 @@ R = "输入 w:
     3. 如果存在，则模拟 M'；否则停机"
 ```
 
-**不动点定理**
+<strong>不动点定理</strong>
 
 - $\forall$ 可计算函数 $t$，$\exists$ TM $F$，$L(t(\langle F \rangle)) = L(F)$
 
 
 
-**引理：** $A_{TM}$ 是图灵可识别的
+<strong>引理：</strong> $A_{TM}$ 是图灵可识别的
 
-$A_{TM}$ 是图灵可识别的意味着：**存在一台图灵机**，当 $M$ 接受 $w$ 时它能检测到并停机接受；但当 $M$ 不接受 $w$ 时，它可能停机拒绝，也可能永远运行下去。
+$A_{TM}$ 是图灵可识别的意味着：<strong>存在一台图灵机</strong>，当 $M$ 接受 $w$ 时它能检测到并停机接受；但当 $M$ 不接受 $w$ 时，它可能停机拒绝，也可能永远运行下去。
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 - 设计 TM $U$ 模拟 $M$ 在 $w$ 上的计算
 
@@ -2621,7 +2621,7 @@ $A_{TM}$ 是图灵可识别的意味着：**存在一台图灵机**，当 $M$ �
 
     - 当 $M$ 在 $w$ 上不停机时，$U$ 也不停机
 
-- 这样的 $U$ 称为**通用机**
+- 这样的 $U$ 称为<strong>通用机</strong>
 
     - 注意 $U$ 是固定的，$M$ 和 $w$ 是任意的
 
@@ -2629,7 +2629,7 @@ $A_{TM}$ 是图灵可识别的意味着：**存在一台图灵机**，当 $M$ �
 
 对于任意的 TM $M$ 和输入 $w$，$U$ 在 $\langle M, w \rangle$ 上的运行结果与 $M$ 在 $w$ 上的运行结果是一样的，即 $U(\langle M, w \rangle) = M(w)$。
 
-**证明：** 设计 TM $U$ 来识别 $A_{TM}$。
+<strong>证明：</strong> 设计 TM $U$ 来识别 $A_{TM}$。
 
 $U =$ "对于输入 $\langle M, w \rangle$，$M$ 是 TM，$w$ 是串：
 
@@ -2639,9 +2639,9 @@ $U =$ "对于输入 $\langle M, w \rangle$，$M$ 是 TM，$w$ 是串：
 
 
 
-**定理 7\.3：** $A_{TM}$ 是不可判定的。
+<strong>定理 7\.3：</strong> $A_{TM}$ 是不可判定的。
 
-**证明：**（反证）假设 TM $H$ 判定 $A_{TM}$。
+<strong>证明：</strong>（反证）假设 TM $H$ 判定 $A_{TM}$。
 
 如下构造 TM $B$。
 
@@ -2657,9 +2657,9 @@ $B =$ "对于输入 $w$：
 
 
 
-**定义 7\.4：** 设 $M$ 是图灵机，$M$ 的描述是字符串 $\langle M \rangle$，$M$ 的描述的长度是 $\langle M \rangle$ 含有的符号个数，如果没有与 $M$ 等价的图灵机具有更短的描述，则说 $M$ 是**极小图灵机**
+<strong>定义 7\.4：</strong> 设 $M$ 是图灵机，$M$ 的描述是字符串 $\langle M \rangle$，$M$ 的描述的长度是 $\langle M \rangle$ 含有的符号个数，如果没有与 $M$ 等价的图灵机具有更短的描述，则说 $M$ 是<strong>极小图灵机</strong>
 
-**图灵机的极小性问题**
+<strong>图灵机的极小性问题</strong>
 
 - 检测一个给定的图灵机是否极小图灵机
 
@@ -2669,11 +2669,11 @@ $B =$ "对于输入 $w$：
 
 
 
-**定理 7\.5：** $MIN_{TM}$ 不是图灵可识别的。
+<strong>定理 7\.5：</strong> $MIN_{TM}$ 不是图灵可识别的。
 
 不存在任何算法，能够可靠地识别出哪些程序已经是"最短不可压缩"的。
 
-**证明：** 假设 TM $E$ 枚举 $MIN_{TM}$。
+<strong>证明：</strong> 假设 TM $E$ 枚举 $MIN_{TM}$。
 
 构造下列 TM $C$。
 
@@ -2695,9 +2695,9 @@ $C =$ "对于输入 $w$：
 
 |属性|结果|
 |---|---|
-|D 来自 `enumerate_minimal_programs()`|所以 D 是**极小**的|
-|我们特意选了 `len(D) > len(C)`|D 的代码比 C **长**|
-|C 完全调用 D|C 和 D 功能**完全相同**|
+|D 来自 `enumerate_minimal_programs()`|所以 D 是<strong>极小</strong>的|
+|我们特意选了 `len(D) > len(C)`|D 的代码比 C <strong>长</strong>|
+|C 完全调用 D|C 和 D 功能<strong>完全相同</strong>|
 
 D 号称是"极小的"（没有更短程序能替代它），但 C 比 D 更短，却能做完全一样的事情！
 
@@ -2707,13 +2707,13 @@ D 号称是"极小的"（没有更短程序能替代它），但 C 比 D 更短�
 
 如果 $x = f(x)$，则 $x$ 称为 $f$ 的不动点。
 
-**定理 7\.6（递归定理的不动点形式）：** 对于任何一个可计算函数 $t: \Sigma^* \to \Sigma^*$，都存在一个图灵机 $F$，使得 $t(\langle F \rangle)$ 描述一个与 $F$ 等价的图灵机。
+<strong>定理 7\.6（递归定理的不动点形式）：</strong> 对于任何一个可计算函数 $t: \Sigma^* \to \Sigma^*$，都存在一个图灵机 $F$，使得 $t(\langle F \rangle)$ 描述一个与 $F$ 等价的图灵机。
 
 这是一个通用的证明框架，用来构造一个"自引用"的图灵机 F。
 
 
 
-**证明：** TM $F =$ "对输入 $w$：
+<strong>证明：</strong> TM $F =$ "对输入 $w$：
 
 1. 由递归定理得到自己的一个描述 $\langle F \rangle$
 
@@ -2726,8 +2726,8 @@ F 先拿到自己的代码，然后对自己的代码做某种"加工"（函数 
 
 
 ## 第五部分：时间、空间复杂性及难解性
-### 5.1 **$O$** 记法与 **$o$** 记法
-### **大 **$O$
+### 5.1 **$O$<strong>记法与</strong>$o$** 记法
+### <strong>大</strong>$O$
 
 设 $f,g:\mathbb{N}\to\mathbb{R}^+$。若存在常数 $c>0$ 和 $n_0$，使得对所有 $n\ge n_0$：
 
@@ -2741,7 +2741,7 @@ $f(n)\le c g(n),$
 
 
 
-### **小 **$o$
+### <strong>小</strong>$o$
 
 $f(n)=o(g(n))$
 
@@ -2755,7 +2755,7 @@ $n\log n=o(n^2),$
 
 $n^2=o(n^3).$
 
-**易错点：** $O$ 是“不超过同阶”，$o$ 是“严格低阶”。因此 $n^2=O(n^2)$，但 $n^2\ne o(n^2)$
+<strong>易错点：</strong> $O$ 是“不超过同阶”，$o$ 是“严格低阶”。因此 $n^2=O(n^2)$，但 $n^2\ne o(n^2)$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-50.png)
 
@@ -2770,7 +2770,7 @@ $time_M(n)=\max\{M\text{ 在长度为 }n\text{ 的输入上的运行步数}\}.$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-119.png)
 
-最坏情形复杂性：$time_M(n) = M$ 在长度为 $n$ 的输入上的**最大**运行步数
+最坏情形复杂性：$time_M(n) = M$ 在长度为 $n$ 的输入上的<strong>最大</strong>运行步数
 
 平均情形复杂性：$time_M(n) = M$ 在长度为 $n$ 的输入上的平均运行步数
 
@@ -2780,7 +2780,7 @@ $time_M(n)=\max\{M\text{ 在长度为 }n\text{ 的输入上的运行步数}\}.$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-87.png)
 
-**输入长度与输入规模：** 输入长度和编码有关，输入规模和编码无关
+<strong>输入长度与输入规模：</strong> 输入长度和编码有关，输入规模和编码无关
 
 ![image\.png](/Firefly/uploads/computability-notes/image-95.png)
 
@@ -2790,7 +2790,7 @@ $time_M(n)=\max\{M\text{ 在长度为 }n\text{ 的输入上的运行步数}\}.$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-120.png)
 
-**时间复杂性类** $TIME(t(n))$
+<strong>时间复杂性类</strong> $TIME(t(n))$
 
 $TIME(t(n)) = \{L \mid \text{某个 } O(t(n)) \text{ 时间的单带 DTM 判定语言 } L\}$
 
@@ -2802,22 +2802,22 @@ $A \in TIME(n^2)$
 
 ||$t(n)$|$\text{TIME}(t(n))$|
 |---|---|---|
-|**是什么**|函数|集合（语言类）|
-|**例子**|$n^2$, $n\log n$, $2^n$|$\text{TIME}(n^2)$, $\text{TIME}(n\log n)$|
-|**含义**|"这台机器花多少时间"|"这类问题需要多少时间"|
-|**关系**|$L \in \text{TIME}(t(n))$ 意味着存在某台机器时间 $\leq c \cdot t(n)$||
+|<strong>是什么</strong>|函数|集合（语言类）|
+|<strong>例子</strong>|$n^2$, $n\log n$, $2^n$|$\text{TIME}(n^2)$, $\text{TIME}(n\log n)$|
+|<strong>含义</strong>|"这台机器花多少时间"|"这类问题需要多少时间"|
+|<strong>关系</strong>|$L \in \text{TIME}(t(n))$ 意味着存在某台机器时间 $\leq c \cdot t(n)$||
 
-**模型间的复杂性关系：**时间复杂性与模型有关
+<strong>模型间的复杂性关系：</strong>时间复杂性与模型有关
 
 多带与单带：平方
 
 非确定型与确定型：指数
 
-**定理 8\.8：** 设函数 $t(n) \ge n$，则每个 $t(n)$ 时间（总共的运行步数）多带 TM 都与某个 $O(t^2(n))$ 时间单带 TM 等价
+<strong>定理 8\.8：</strong> 设函数 $t(n) \ge n$，则每个 $t(n)$ 时间（总共的运行步数）多带 TM 都与某个 $O(t^2(n))$ 时间单带 TM 等价
 
-**证明思路：** 分析定理 4\.8 的证明，每步模拟需要 $O(t(n))$ 时间，总共模拟 $t(n)$ 步
+<strong>证明思路：</strong> 分析定理 4\.8 的证明，每步模拟需要 $O(t(n))$ 时间，总共模拟 $t(n)$ 步
 
-**证明：**（略）
+<strong>证明：</strong>（略）
 
 ```text
 多带 TM 运行了 t(n) 步后：
@@ -2832,7 +2832,7 @@ $A \in TIME(n^2)$
 
 
 
-**NTM 运行时间：**判定机 NTM $N$ 的运行时间是函数 $f: \mathbb{N} \to \mathbb{N}$，
+<strong>NTM 运行时间：</strong>判定机 NTM $N$ 的运行时间是函数 $f: \mathbb{N} \to \mathbb{N}$，
 
 $f(n) =$ 在长为 $n$ 的输入上所有计算分支的最大步数。
 
@@ -2840,18 +2840,18 @@ $f(n) =$ 在长为 $n$ 的输入上所有计算分支的最大步数。
 
 
 
-**定理 8\.10：** 设函数 $t(n) \ge n$，则每个 $t(n)$ 时间单带 NTM 都与某个 $2^{O(t(n))}$ 时间单带 DTM 等价
+<strong>定理 8\.10：</strong> 设函数 $t(n) \ge n$，则每个 $t(n)$ 时间单带 NTM 都与某个 $2^{O(t(n))}$ 时间单带 DTM 等价
 
-**证明思路：** 分析定理 4\.10 的证明，每个分支模拟需要 $O(t(n))$ 时间，总共模拟 $b^{t(n)}$ 个分支，$b$ 是所有节点的最大分支数
+<strong>证明思路：</strong> 分析定理 4\.10 的证明，每个分支模拟需要 $O(t(n))$ 时间，总共模拟 $b^{t(n)}$ 个分支，$b$ 是所有节点的最大分支数
 
-**证明：**（略）
+<strong>证明：</strong>（略）
 
 
 
 ### 5.3 P 类
 $P = \bigcup_k TIME(n^k) = \{L \mid \text{某个多项式时间单带 DTM 判定语言 } L\}$。
 
-$P$** 的重要性：**对于所有与单带 DTM 多项式时间等价的计算模型来说，$P$ 是不变的；
+$P$<strong>的重要性：</strong>对于所有与单带 DTM 多项式时间等价的计算模型来说，$P$ 是不变的；
 
 $P$ 大致对应于在计算机上实际可解的问题类，实际算法往往是 $O(n)$，$O(n^2)$，$O(n^3)$，几乎没有 $O(n^{100})$。
 
@@ -2867,13 +2867,13 @@ $P$ 大致对应于在计算机上实际可解的问题类，实际算法往往�
 3. 分析运行时间是多项式。
 
 #### 例：PATH 在 P 中
-**路径问题：**
+<strong>路径问题：</strong>
 
 给定一个有向图，一个起点和一个终点，确定是否存在从起点到终点的有向路径
 
 $PATH = \{\langle G, s, t \rangle \mid \text{有向图 } G \text{ 有从 } s \text{ 到 } t \text{ 的有向路径}\}$
 
-**定理 8\.12：** $PATH \in P$
+<strong>定理 8\.12：</strong> $PATH \in P$
 
 分析：
 
@@ -2888,17 +2888,17 @@ $PATH = \{\langle G, s, t \rangle \mid \text{有向图 } G \text{ 有从 } s \te
 
 
 #### 例：RELPRIME 在 P 中
-**互素问题：**确定两个自然数是否互素
+<strong>互素问题：</strong>确定两个自然数是否互素
 
 $RELPRIME=\{\langle x,y\rangle\mid x,y\text{ 互素}\}.$
 
 ||说明|
 |---|---|
-|**输入**|两个整数 $x, y$|
-|**编码**|二进制表示|
-|**输入长度 **$n$|$\lceil \log_2 x \rceil + \lceil \log_2 y \rceil = O(\log x + \log y)$|
+|<strong>输入</strong>|两个整数 $x, y$|
+|<strong>编码</strong>|二进制表示|
+|<strong>输入长度</strong>$n$|$\lceil \log_2 x \rceil + \lceil \log_2 y \rceil = O(\log x + \log y)$|
 
-**定理 8\.13：** $RELPRIME \in P$
+<strong>定理 8\.13：</strong> $RELPRIME \in P$
 
 分析：输入规模：数的二进制表示的长度 $n$
 
@@ -2923,7 +2923,7 @@ $RELPRIME=\{\langle x,y\rangle\mid x,y\text{ 互素}\}.$
 
 
 #### 例：CFL 在 P 中
-**定理 8\.14：** 若 $L$ 是 CFL，则 $L \in P$。
+<strong>定理 8\.14：</strong> 若 $L$ 是 CFL，则 $L \in P$。
 
 分析：
 
@@ -2935,13 +2935,13 @@ $RELPRIME=\{\langle x,y\rangle\mid x,y\text{ 互素}\}.$
 
 
 
-||**P 类**|**NP 类**|
+||<strong>P 类</strong>|<strong>NP 类</strong>|
 |---|---|---|
-|**问什么**|能快速**找到**解吗？|能快速**验证**解吗？|
-|**算法类型**|确定性算法|非确定性算法 / 验证器|
-|**时间**|多项式时间**求解**|多项式时间**验证**|
-|**难度**|相对"容易"|可能"很难"（目前认为）|
-|**关系**|$\text{P} \subseteq \text{NP}$|是否相等？未知|
+|<strong>问什么</strong>|能快速<strong>找到</strong>解吗？|能快速<strong>验证</strong>解吗？|
+|<strong>算法类型</strong>|确定性算法|非确定性算法 / 验证器|
+|<strong>时间</strong>|多项式时间<strong>求解</strong>|多项式时间<strong>验证</strong>|
+|<strong>难度</strong>|相对"容易"|可能"很难"（目前认为）|
+|<strong>关系</strong>|$\text{P} \subseteq \text{NP}$|是否相等？未知|
 
 ### 5.4 NP 类
 $NP = \{L \mid \text{语言 } L \text{ 有多项时间验证机}\}$
@@ -2958,7 +2958,7 @@ $NP = \{L \mid \text{语言 } L \text{ 有多项时间验证机}\}$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-89.png)
 
-**验证机定义： **
+<strong>验证机定义：</strong>
 
 语言 $A = \{w \mid \exists \text{ 字符串 } c, \text{ 算法 } V \text{ 接受 } \langle w, c \rangle\}$
 
@@ -2966,7 +2966,7 @@ $NP = \{L \mid \text{语言 } L \text{ 有多项时间验证机}\}$
 
 $c$ 称为 $w$ 是 $A$ 的成员的资格证书（证明）。
 
-**多项式时间验证机：**
+<strong>多项式时间验证机：</strong>
 
 语言 $A = \{w \mid \exists \text{ 字符串 } c, \text{ 算法 } V \text{ 接受 } \langle w, c \rangle\}$
 
@@ -2974,7 +2974,7 @@ $|c|$ 是 $|w|$ 的多项式（"短证明"）
 
 在 $|w|$ 的多项式时间内运行（"容易验证"）
 
-若 $A$ 有多项时间验证机，则称 $A$ 为**多项式可验证的**。
+若 $A$ 有多项时间验证机，则称 $A$ 为<strong>多项式可验证的</strong>。
 
 
 
@@ -2983,15 +2983,15 @@ $|c|$ 是 $|w|$ 的多项式（"短证明"）
 
 
 #### NTM 定义的等价性
-**定理 8\.17：** $NP = \{L \mid \text{某个多项式时间 NTM 判定语言 } L\}$
+<strong>定理 8\.17：</strong> $NP = \{L \mid \text{某个多项式时间 NTM 判定语言 } L\}$
 
 NP 也可以用非确定性图灵机来定义，与验证机等价。
 
 分析：多项式时间验证机 $\leftrightarrow$ 非确定型多项式时间判定机
 
-**证明：**
+<strong>证明：</strong>
 
-**验证机 **$\Rightarrow$** NTM：** NTM 非确定地猜一个多项式长度证书 $c$，再运行验证机 $V(w,c)$
+<strong>验证机</strong>$\Rightarrow$<strong>NTM：</strong> NTM 非确定地猜一个多项式长度证书 $c$，再运行验证机 $V(w,c)$
 
 \($\subseteq$\) 设 $A \in NP$，则 $A$ 有多项式时间验证机 $V$。设 $V$ 的运行时间是 $n^k$。构造非确定型多项式时间判定机 $N$。
 
@@ -3005,7 +3005,7 @@ $N =$ "对长为 $n$ 的输入 $w$：
 
 
 
-**NTM **$\Rightarrow$** 验证机。** 证书 $c$ 描述 NTM 在每一步的非确定选择；验证机按照 $c$ 模拟那条分支，看是否接受
+<strong>NTM</strong>$\Rightarrow$<strong>验证机。</strong> 证书 $c$ 描述 NTM 在每一步的非确定选择；验证机按照 $c$ 模拟那条分支，看是否接受
 
 \($\supseteq$\) 设多项式时间 NTM $N$ 判定 $A$。构造 $A$ 的多项式时间验证机 $V$。
 
@@ -3015,9 +3015,9 @@ $V =$ "对输入 $\langle w, c \rangle$，其中 $w, c$ 是字符串：
 
 2. 若 $N$ 的该计算分支接受，则接受；否则，拒绝。" \#
 
-**定义 8\.18：** $NTIME(t(n)) = \{L \mid \text{某个 } O(t(n)) \text{ 时间 NTM 判定语言 } L\}$。
+<strong>定义 8\.18：</strong> $NTIME(t(n)) = \{L \mid \text{某个 } O(t(n)) \text{ 时间 NTM 判定语言 } L\}$。
 
-**推论 8\.19：** $NP = \bigcup_k NTIME(n^k)$。$NP$ 表示**非确定型多项式时间类**
+<strong>推论 8\.19：</strong> $NP = \bigcup_k NTIME(n^k)$。$NP$ 表示<strong>非确定型多项式时间类</strong>
 
 
 
@@ -3042,9 +3042,9 @@ $CLIQUE=\{\langle G,k\rangle\mid G\text{ 有 }k\text{-团}\}.$
 
 证书是 $k$ 个顶点。验证它们是否两两相邻。
 
-**定理 8\.20：** $CLIQUE \in NP$
+<strong>定理 8\.20：</strong> $CLIQUE \in NP$
 
-**证明：** 验证机 DTM $V =$ "对输入 $\langle \langle G, k \rangle, c \rangle$：
+<strong>证明：</strong> 验证机 DTM $V =$ "对输入 $\langle \langle G, k \rangle, c \rangle$：
 
 1. 检查 $c$ 是否 $G$ 中 $k$ 个顶点的集合；
 
@@ -3061,7 +3061,7 @@ $SUBSET\text{-}SUM=\{\langle S,t\rangle\mid \exists S'\subseteq S,\sum_{x\in S'}
 
 证书是子集 $S'$。验证元素来自 $S$ 且总和为 $t$。
 
-**证明：** 验证机 DTM $V =$ "对输入 $\langle \langle S, t \rangle, c \rangle$：
+<strong>证明：</strong> 验证机 DTM $V =$ "对输入 $\langle \langle S, t \rangle, c \rangle$：
 
 1. 检查 $c$ 是否总和为 $t$ 的数的集合；
 
@@ -3069,7 +3069,7 @@ $SUBSET\text{-}SUM=\{\langle S,t\rangle\mid \exists S'\subseteq S,\sum_{x\in S'}
 
 3. 若两项检查都通过，则接受；否则，拒绝。" \#
 
-**另证：**NTM $N =$ "对输入 $\langle S, t \rangle$：
+<strong>另证：</strong>NTM $N =$ "对输入 $\langle S, t \rangle$：
 
 1. 非确定性地选择 $S$ 中数的子集 $c$；
 
@@ -3081,9 +3081,9 @@ $SUBSET\text{-}SUM=\{\langle S,t\rangle\mid \exists S'\subseteq S,\sum_{x\in S'}
 
 ### 5.5 P 与 NP、coNP、EXP
 #### P 与 NP
-$P =$ 成员资格可以**快速判定**的语言类
+$P =$ 成员资格可以<strong>快速判定</strong>的语言类
 
-$NP =$ 成员资格可以**快速验证**的语言类
+$NP =$ 成员资格可以<strong>快速验证</strong>的语言类
 
 $P \subseteq NP \subseteq EXP = \bigcup_k TIME(2^{n^k})$
 
@@ -3159,11 +3159,11 @@ $k$ 是与 $x$ 无关的常数
 |符号|名称|含义|
 |---|---|---|
 |$\leq$|归约|"A 可归约到 B"|
-|$P$|**多项式时间（Polynomial time）**|归约过程 $f$ 的计算复杂度|
-|$m$|**多一归约（Many\-one reduction）**|归约的类型|
+|$P$|<strong>多项式时间（Polynomial time）</strong>|归约过程 $f$ 的计算复杂度|
+|$m$|<strong>多一归约（Many\-one reduction）</strong>|归约的类型|
 |$f$|归约函数|具体的多项式时间可计算函数|
 
-**性质：**
+<strong>性质：</strong>
 
 传递性
 
@@ -3177,12 +3177,12 @@ $NP$ 对 $\le_m^P$ 封闭性
 
 若 $A \le_m^P B$ 且 $B \in NP$，则 $A \in NP$。
 
-**直观含义：** $A\le_m^p B$ 表示 $B$ 至少和 $A$ 一样难：如果能快速解 $B$，就能快速解 $A$。
+<strong>直观含义：</strong> $A\le_m^p B$ 表示 $B$ 至少和 $A$ 一样难：如果能快速解 $B$，就能快速解 $A$。
 
 
 
 ### 5.7 NP 难与 NP 完全
-**NP 难：** 若对所有 $A\in NP$，都有$A \le_m^P B$
+<strong>NP 难：</strong> 若对所有 $A\in NP$，都有$A \le_m^P B$
 
 则 $B$ 是 NP 难的，即：所有 NP 问题都能多项式归约到B。
 
@@ -3195,7 +3195,7 @@ NP-hard 是"NP 问题的上司"
     它解决了 → 所有 NP 都解决了
 ```
 
-**NP 完全：** 若 $B$ 是 NP 难的，且 $B\in NP$，则 $B$ 是 NP 完全的。
+<strong>NP 完全：</strong> 若 $B$ 是 NP 难的，且 $B\in NP$，则 $B$ 是 NP 完全的。
 
 $B\text{ NP-complete}\iff B\in NP\text{ 且 }\forall A\in NP, A \le_m^P B.$
 
@@ -3205,14 +3205,14 @@ $B\text{ NP-complete}\iff B\in NP\text{ 且 }\forall A\in NP, A \le_m^P B.$
 
 ||属于 NP？|所有 NP 可归约到它？|例子|
 |---|---|---|---|
-|**P**|✅ 是|❌ 不一定|排序、最短路径|
-|**NP**|✅ 是|❌ 不一定|所有 NP 完全问题|
-|**NP完全**|✅ 是|✅ 是|SAT、团、TSP\(判定版\)|
-|**NP难**|❓ 不一定|✅ 是|停机问题、广义象棋|
+|<strong>P</strong>|✅ 是|❌ 不一定|排序、最短路径|
+|<strong>NP</strong>|✅ 是|❌ 不一定|所有 NP 完全问题|
+|<strong>NP完全</strong>|✅ 是|✅ 是|SAT、团、TSP\(判定版\)|
+|<strong>NP难</strong>|❓ 不一定|✅ 是|停机问题、广义象棋|
 
-**定理 8\.28：** 若 $B$ 是 NP 完全的，并且 $B$ 属于 $P$，则 $NP = P$。
+<strong>定理 8\.28：</strong> 若 $B$ 是 NP 完全的，并且 $B$ 属于 $P$，则 $NP = P$。
 
-**定理 8\.29：** 若 $B$ 是 NP 完全的，$B$ 多项式时间归约到 $C$，$C$ 属于 NP，则 $C$ 是 NP 完全的。
+<strong>定理 8\.29：</strong> 若 $B$ 是 NP 完全的，$B$ 多项式时间归约到 $C$，$C$ 属于 NP，则 $C$ 是 NP 完全的。
 
 推论：$cnf\text{-}SAT$ 是 NP 完全的
 
@@ -3222,9 +3222,9 @@ $B\text{ NP-complete}\iff B\in NP\text{ 且 }\forall A\in NP, A \le_m^P B.$
 
 #### NP 完全性的意义
 
-**库克定理：** $SAT \in P \iff NP = P$
+<strong>库克定理：</strong> $SAT \in P \iff NP = P$
 
-**意义：**
+<strong>意义：</strong>
 
 $SAT$ 是 NP 完全的这个事实，提供证据说明 $SAT$ 没有多项式时间算法
 
@@ -3262,11 +3262,11 @@ $SAT=\{\langle \phi\rangle\mid \phi\text{ 是可满足布尔公式}\}.$
 
 #### cnf\-SAT
 ##### 合取范式
-**文字：** 布尔变元及其否定（$x, \neg x$ 等）
+<strong>文字：</strong> 布尔变元及其否定（$x, \neg x$ 等）
 
-**子句：** 文字的析取（$x \lor \neg y \lor z$ 等）
+<strong>子句：</strong> 文字的析取（$x \lor \neg y \lor z$ 等）
 
-**合取范式（cnf）：** 子句的合取 $(x \lor \neg y \lor z) \land (x \lor \neg y \lor z \lor v) \land (x \lor \neg u)$
+<strong>合取范式（cnf）：</strong> 子句的合取 $(x \lor \neg y \lor z) \land (x \lor \neg y \lor z \lor v) \land (x \lor \neg u)$
 
 ##### 合取范式可满足性问题
 给定一个合取范式（cnf），确定这个公式是否可满足
@@ -3284,9 +3284,9 @@ $cnf\text{-}SAT=\{\langle \phi\rangle\mid \phi\text{ 是可满足 CNF}\}.$
 #### 3SAT
 #### 3 元合取范式
 
-**3 子句：** 由三个文字组成的子句
+<strong>3 子句：</strong> 由三个文字组成的子句
 
-**3cnf：** 由 3\-子句组成的合取范式
+<strong>3cnf：</strong> 由 3\-子句组成的合取范式
 
 $(x \lor \neg y \lor z) \land (x \lor \neg y \lor u) \land (x \lor \neg u \lor z)$
 
@@ -3322,9 +3322,9 @@ $(a_1\vee a_2\vee z_1)\wedge(\neg z_1\vee a_3\vee z_2)\wedge(\neg z_2\vee a_4\ve
 
 
 ### 5.9 3SAT 到 CLIQUE
-**定理 8\.26：**$3SAT\le_m^p CLIQUE.$
+<strong>定理 8\.26：</strong>$3SAT\le_m^p CLIQUE.$
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 把一个公式转化成一个图和一个数
 
@@ -3348,7 +3348,7 @@ $\phi=(a_1\vee b_1\vee c_1)\wedge\cdots\wedge(a_k\vee b_k\vee c_k).$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-64.png)
 
-**第一步：为每个子句创建"文字节点"**
+<strong>第一步：为每个子句创建"文字节点"</strong>
 
 每个子句有 3 个文字，每个文字成为一个节点。
 
@@ -3360,17 +3360,17 @@ $\phi=(a_1\vee b_1\vee c_1)\wedge\cdots\wedge(a_k\vee b_k\vee c_k).$
 
 共 9 个节点，对应图中的 9 个圆圈。
 
-**第二步：确定边的连接规则**
+<strong>第二步：确定边的连接规则</strong>
 
 两个节点之间有边，当且仅当：
 
-1. **不在同一子句中**（不同子句的节点才能连）
+1. <strong>不在同一子句中</strong>（不同子句的节点才能连）
 
-2. **不矛盾**（不能同时是 $x$ 和 $\neg x$，同一变量可连）
+2. <strong>不矛盾</strong>（不能同时是 $x$ 和 $\neg x$，同一变量可连）
 
 ![image\.png](/Firefly/uploads/computability-notes/image-54.png)
 
-**第三步：逐对检查并连边**
+<strong>第三步：逐对检查并连边</strong>
 
 从 $C_1$ 的节点出发
 
@@ -3388,7 +3388,7 @@ $\phi=(a_1\vee b_1\vee c_1)\wedge\cdots\wedge(a_k\vee b_k\vee c_k).$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-45.png)
 
-**证明：** 记归约函数是 $f$。
+<strong>证明：</strong> 记归约函数是 $f$。
 
 设 $\phi = (a_1 \lor b_1 \lor c_1) \land (a_2 \lor b_2 \lor c_2) \land \ldots \land (a_k \lor b_k \lor c_k)$。
 
@@ -3423,9 +3423,9 @@ $|\langle G, k \rangle| = O(k^3)$。
 
 
 ### 5.10 Cook（库克）定理
-**定理 8\.30：** 任何 NP 语言都多项式时间归约到 $cnf\text{-}SAT$，即cnf\-SAT是NP完全的
+<strong>定理 8\.30：</strong> 任何 NP 语言都多项式时间归约到 $cnf\text{-}SAT$，即cnf\-SAT是NP完全的
 
-**证明思路：** 
+<strong>证明思路：</strong> 
 
 设语言 $A$ 属于 NP，设 $n^k$ 时间 NTM $N$ 判定 $A$，利用 $N$ 构造归约 $f_N$。
 
@@ -3467,15 +3467,15 @@ $x_{i,j,s}$：
 
 |下标|含义|
 |---|---|
-|$i$|**行号**（时间步）$1 \leq i \leq n^k$|
-|$j$|**列号**（磁带位置）$1 \leq j \leq n^k$|
-|$s$|**符号**，来自字母表 $C = Q \cup \Gamma \cup \{\#\}$|
+|$i$|<strong>行号</strong>（时间步）$1 \leq i \leq n^k$|
+|$j$|<strong>列号</strong>（磁带位置）$1 \leq j \leq n^k$|
+|$s$|<strong>符号</strong>，来自字母表 $C = Q \cup \Gamma \cup \{\#\}$|
 
 |集合|含义|
 |---|---|
-|$Q$|NTM 的**状态集合** $\{q_0, q_1, \ldots, q_{\text{accept}}, q_{\text{reject}}\}$|
-|$\Gamma$|**磁带符号集合**（输入符号 \+ 空白等）|
-|$\#$|**特殊分隔符/边界标记**|
+|$Q$|NTM 的<strong>状态集合</strong> $\{q_0, q_1, \ldots, q_{\text{accept}}, q_{\text{reject}}\}$|
+|$\Gamma$|<strong>磁带符号集合</strong>（输入符号 \+ 空白等）|
+|$\#$|<strong>特殊分隔符/边界标记</strong>|
 
 $x_{i,j,s} = 1$
 
@@ -3536,9 +3536,9 @@ $\phi_{accept}$：某一行是接受格局（最终接受）
 
 
 
-**断言 8\.31：** 如果画面的顶行是初始格局，每个窗口都是合法的，则画面中的下一行都是上一行的合法后续格局。
+<strong>断言 8\.31：</strong> 如果画面的顶行是初始格局，每个窗口都是合法的，则画面中的下一行都是上一行的合法后续格局。
 
-**证明：** 不与状态符号相邻的单元保持不变。包含状态符号的窗口保证与状态相邻的单元按照转移函数来更新。 \#
+<strong>证明：</strong> 不与状态符号相邻的单元保持不变。包含状态符号的窗口保证与状态相邻的单元按照转移函数来更新。 \#
 
 
 
@@ -3563,19 +3563,19 @@ $\phi$ 很有规律性，可在多项式时间内完成构造。 \#
 #### 顶点覆盖问题：VERTEX\-COVER
 给定图 $G$，数 $k$，确定 $G$ 是否有 $k$ 个顶点的顶点覆盖
 
-**顶点覆盖：** 任何一条边至少有一个端点属于这组顶点
+<strong>顶点覆盖：</strong> 任何一条边至少有一个端点属于这组顶点
 
 $VERTEX\text{-}COVER = \{\langle G, k \rangle \mid \text{无向图 } G \text{ 有 } k \text{ 个顶点的顶点覆盖}\}$
 
-**定理 8\.34：** $VERTEX\text{-}COVER$ 是 NP 完全的
+<strong>定理 8\.34：</strong> $VERTEX\text{-}COVER$ 是 NP 完全的
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 $VERTEX\text{-}COVER$ 属于 NP
 
 $3SAT \le_m^P VERTEX\text{-}COVER$
 
-**证明：** $3SAT \le_m^P VERTEX\text{-}COVER$ via $f$。
+<strong>证明：</strong> $3SAT \le_m^P VERTEX\text{-}COVER$ via $f$。
 
 $f(\phi) = \langle G, k \rangle$，
 
@@ -3585,12 +3585,12 @@ $f(\phi) = \langle G, k \rangle$，
 
 |符号|含义|例子|
 |---|---|---|
-|$m$|公式 $\phi$ 中**不同变量的个数**|$x_1, x_2$ → $m=2$|
-|$n$|公式 $\phi$ 中**子句的个数**|$C_1, C_2, C_3$ → $n=3$|
+|$m$|公式 $\phi$ 中<strong>不同变量的个数</strong>|$x_1, x_2$ → $m=2$|
+|$n$|公式 $\phi$ 中<strong>子句的个数</strong>|$C_1, C_2, C_3$ → $n=3$|
 
 则 $G$ 有 $2m + 3n$ 个顶点，$k = m + 2n$。
 
-1. **构造：** 
+1. <strong>构造：</strong> 
 
     - 对每个变元 $x$，构造 $\{x, \neg x\}$ 组成的 $K_2$ 子图，
 
@@ -3598,9 +3598,9 @@ $f(\phi) = \langle G, k \rangle$，
 
     |    原则|    说明|
     |---|---|
-    |    **变量小工具**|    每个 $K_2$ 必须选 **恰好1个**（覆盖变量边）|
-    |    **子句小工具**|    每个 $K_3$ 必须选 **恰好2个**（覆盖三角形边）|
-    |    **连接边**|    三角形节点与变量节点的连接边必须被覆盖|
+    |    <strong>变量小工具</strong>|    每个 $K_2$ 必须选 <strong>恰好1个</strong>（覆盖变量边）|
+    |    <strong>子句小工具</strong>|    每个 $K_3$ 必须选 <strong>恰好2个</strong>（覆盖三角形边）|
+    |    <strong>连接边</strong>|    三角形节点与变量节点的连接边必须被覆盖|
 
 ![image\.png](/Firefly/uploads/computability-notes/image-118.png)
 
@@ -3618,7 +3618,7 @@ $\phi$ 可满足 $\iff G$ 有 $k$ 个顶点的覆盖
 
 3. 复杂性：顶点数 $2m + 3n$，边数 $2m + 3n + 3n$。 \#
 
-**最小顶点覆盖问题**
+<strong>最小顶点覆盖问题</strong>
 
 给定图 $G$，求 $G$ 的最小顶点覆盖
 
@@ -3643,9 +3643,9 @@ $UHAMPATH = \{\langle G, s, t \rangle \mid \text{无向图 } G \text{ 有从 } s
 
 ![image\.png](/Firefly/uploads/computability-notes/image-75.png)
 
-**定理 8\.35：** $HAMPATH$ 是 NP 完全的
+<strong>定理 8\.35：</strong> $HAMPATH$ 是 NP 完全的
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 $HAMPATH$ 属于 NP
 
@@ -3703,9 +3703,9 @@ x_i 的链：
 ![image\.png](/Firefly/uploads/computability-notes/image-79.png)
 
 #### SUBSET\-SUM
-**定理 8\.37：** $SUBSET\text{-}SUM$ 是 NP 完全的
+<strong>定理 8\.37：</strong> $SUBSET\text{-}SUM$ 是 NP 完全的
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 $SUBSET\text{-}SUM$ 属于 NP
 
@@ -3713,7 +3713,7 @@ $3SAT \le_m^P SUBSET\text{-}SUM$
 
 用数字的每一位编码变量选择与子句满足情况。
 
-**规约目标：**
+<strong>规约目标：</strong>
 
 给定 3\-CNF 公式 $\phi$，构造集合 $S$ 和目标 $t$，使得：
 
@@ -3723,8 +3723,8 @@ $\phi \text{ 可满足 } \iff \exists A \subseteq S, \sum A = t$
 
 |行|何时选|$X_i$ 位|$C_j$ 位 = 1 的条件|
 |---|---|---|---|
-|$y_i$|$x_i = 1$|1|子句 $C_j$ **包含正文字** $x_i$|
-|$z_i$|$x_i = 0$|1|子句 $C_j$ **包含负文字** $\neg x_i$|
+|$y_i$|$x_i = 1$|1|子句 $C_j$ <strong>包含正文字</strong> $x_i$|
+|$z_i$|$x_i = 0$|1|子句 $C_j$ <strong>包含负文字</strong> $\neg x_i$|
 
 $y_i / z_i$ 是变量赋值选择（真/假），$g_j / h_j$ 是子句填充数（凑到目标 3）
 
@@ -3742,12 +3742,12 @@ $C_1$ 列的分析：选了 $z_1$（$x_1 = 0$）和 $y_2$（$x_2 = 1$）
 
 ### 5.12 空间复杂性
 #### DTM 空间复杂性
-若 DTM $M$ 在所有输入上都停机，且长度为 $n$ 的输入上最多扫描 $f(n)$ 个不同带格，则称**空间复杂性**为 $f(n)$。
+若 DTM $M$ 在所有输入上都停机，且长度为 $n$ 的输入上最多扫描 $f(n)$ 个不同带格，则称<strong>空间复杂性</strong>为 $f(n)$。
 
 
 
 #### NTM 空间复杂性
-若 NTM $M$ 在所有输入的**所有计算分支上都停机**，且**任一分支最多扫描** $f(n)$ 个不同带格，则**空间复杂性**为 $f(n)$。
+若 NTM $M$ 在所有输入的<strong>所有计算分支上都停机</strong>，且<strong>任一分支最多扫描</strong> $f(n)$ 个不同带格，则<strong>空间复杂性</strong>为 $f(n)$。
 
 
 
@@ -3778,7 +3778,7 @@ $SAT = \{\langle \phi \rangle \mid \phi \text{ 是可满足布尔公式}\}$
 
 $SAT \in SPACE(O(n))$。
 
-**证明：**
+<strong>证明：</strong>
 
 DTM $M_1 =$ "对输入 $\langle \phi \rangle$，$\phi$ 是布尔公式：
 
@@ -3797,11 +3797,11 @@ DTM $M_1 =$ "对输入 $\langle \phi \rangle$，$\phi$ 是布尔公式：
 
 
 ### 5.13 Savitch （萨维奇）定理
-**定理 9\.5：** 若 $f(n)\ge n$（实际上只要$\log n$），则
+<strong>定理 9\.5：</strong> 若 $f(n)\ge n$（实际上只要$\log n$），则
 
 $NSPACE(f(n))\subseteq SPACE(f^2(n)).$
 
-**证明思路：**
+<strong>证明思路：</strong>
 
 $f(n)$ 空间的计算，格局大小为 $O(f(n))$
 
@@ -3848,7 +3848,7 @@ $NSPACE(f(n))\subseteq SPACE(f^2(n)).$
 
 
 
-**证明：** 设 $A = L(N)$，$N$ 是 $O(f(n))$ 空间的 NTM，$N$ 在长度为 $n$ 的输入上不同格局总数为 $2^{df(n)}$。构造 DTM $M =$ "对输入 $w$：
+<strong>证明：</strong> 设 $A = L(N)$，$N$ 是 $O(f(n))$ 空间的 NTM，$N$ 在长度为 $n$ 的输入上不同格局总数为 $2^{df(n)}$。构造 DTM $M =$ "对输入 $w$：
 
 1. 输出 $CANYIELD(c_{start}, c_{accept}, 2^{df(n)})$。"
 
@@ -3866,7 +3866,7 @@ $CANYIELD =$ "对输入 $(c_1, c_2, t)$：
 
 6. 若此时还没有接受，则拒绝。"
 
-**证明**$M$ 正确模拟 $N$，因此 $L(M) = A$。
+<strong>证明</strong>$M$ 正确模拟 $N$，因此 $L(M) = A$。
 
 $M$ 递归深度为 $\log 2^{df(n)} = O(f(n))$，
 
@@ -3903,7 +3903,7 @@ $NSPACE(n^k) \subseteq SPACE(n^{2k})$
 
 
 
-**对数空间复杂性类**，是空间复杂性中最"小"的两类
+<strong>对数空间复杂性类</strong>，是空间复杂性中最"小"的两类
 
 $L=SPACE(\log n),$
 
@@ -3944,9 +3944,9 @@ $NSPACE(f(n)) = coNSPACE(f(n))$，
 
 课件给出 Immerman\-Szelepcsényi 定理思路：证明 $PATH^c\in NL$。若能在对数空间内计算从 $s$ 可达顶点数，就能验证 $t$ 不可达。
 
-**定理 9\.22：** $NL = coNL$
+<strong>定理 9\.22：</strong> $NL = coNL$
 
-**证明思路：** 证明 $PATH^c \in NL$。
+<strong>证明思路：</strong> 证明 $PATH^c \in NL$。
 
 当不存在从 $s$ 到 $t$ 的路径时，"短证书"是
 
@@ -4037,15 +4037,15 @@ $NP=?coNP.$
 
 
 ## 最后复习建议
-1\. **定义必须会默写。** DFA、NFA、CFG、PDA、TM、P、NP、SPACE、NSPACE 是基础分。
+1\. <strong>定义必须会默写。</strong> DFA、NFA、CFG、PDA、TM、P、NP、SPACE、NSPACE 是基础分。
 
-2\. **构造题要写“状态/变量含义”。** 只画图不解释状态含义，容易丢分。
+2\. <strong>构造题要写“状态/变量含义”。</strong> 只画图不解释状态含义，容易丢分。
 
-3\. **不可判定证明要明确归约方向。** 证明 $B$ 不可判定，通常要从已知不可判定的 $A$ 归约到 $B$。
+3\. <strong>不可判定证明要明确归约方向。</strong> 证明 $B$ 不可判定，通常要从已知不可判定的 $A$ 归约到 $B$。
 
-4\. **NP 完全证明要三步完整。** 先证在 NP，再做已知 NPC 问题到它的多项式归约，最后证正确性与多项式规模。
+4\. <strong>NP 完全证明要三步完整。</strong> 先证在 NP，再做已知 NPC 问题到它的多项式归约，最后证正确性与多项式规模。
 
-5\. **复杂性类关系要背图。** 尤其 $P\\subseteq NP\\subseteq PSPACE\\subseteq EXP$、$PSPACE=NPSPACE$、$P\\ne EXP$、$P=?NP$ 未知。
+5\. <strong>复杂性类关系要背图。</strong> 尤其 $P\\subseteq NP\\subseteq PSPACE\\subseteq EXP$、$PSPACE=NPSPACE$、$P\\ne EXP$、$P=?NP$ 未知。
 
 
 

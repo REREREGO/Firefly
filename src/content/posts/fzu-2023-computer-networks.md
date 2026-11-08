@@ -126,12 +126,12 @@ ISP（Internet Service Provider）：互联网服务提供商。分为主干ISP�
 <strong>发送时延：是主机或路由器发送数据帧所需要的时间，与传输信道的长度无关。</strong>计算公式为：
 
 $$
-\mathbf{发送时延 =}\frac{\mathbf{数据帧长度(bit)}}{\mathbf{发送速率}\left( \frac{\mathbf{bit}}{\mathbf{s}} \right)}
+\mathbf{\text{发送时延} =}\frac{\mathbf{\text{数据帧长度}(bit)}}{\mathbf{\text{发送速率}}\left( \frac{\mathbf{bit}}{\mathbf{s}} \right)}
 $$
 <strong>传播时延：是电磁波在信道中传播一定的距离需要花费的时间，与信号的发送速率无关。信号传送的距离越远，传播时延越大。</strong>计算公式为：
 
 $$
-\mathbf{传播时延 =}\frac{\mathbf{信道长度}\left( \mathbf{m} \right)}{\mathbf{电磁波在信道上的传播速率}\left( \frac{\mathbf{m}}{\mathbf{s}} \right)}
+\mathbf{\text{传播时延} =}\frac{\mathbf{\text{信道长度}}\left( \mathbf{m} \right)}{\mathbf{\text{电磁波在信道上的传播速率}}\left( \frac{\mathbf{m}}{\mathbf{s}} \right)}
 $$
 <strong>处理时延：</strong>主机或路由器在收到分组时要花费一定的时间进行处理，产生处理时延。
 
@@ -140,16 +140,16 @@ $$
 总时延：
 
 $$
-\mathbf{总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延}
+\mathbf{\text{总时延} = \text{发送时延} + \text{传播时延} + \text{处理时延} + \text{排队时延}}
 $$
 <strong>时延带宽积：</strong>将讨论网络性能的两个度量，传播时延和带宽，相乘。
 
-<strong>时延</strong>$\mathbf{带宽积 = 传播时延 \times 带宽}$
+<strong>时延</strong>$\mathbf{\text{带宽积} = \text{传播时延} \times \text{带宽}}$
 
 往返时间RTT：也称往返时延，指一共数据包从从发送端发送完毕，到接收到接收端的确认信息的时间总和。通常情况下：
 
 $$
-\mathbf{RTT \approx 2 \times 总时延}
+\mathbf{RTT \approx 2 \times \text{总时延}}
 $$
 利用率：有信道利用率和网络利用率两种。信道利用率往往指某信道有百分之几的时间是被利用的（有数据通过）；网络利用率是全网络的信息利用率的加权平均。
 
@@ -302,10 +302,10 @@ $$
 
 <!-- -->
 
-1.  奈奎斯特定律：要使实信号采样后能够不失真还原，采样频率必须大于信号最高频率的两倍。即，在带宽为$\mathbf{W(Hz)}$的低通信道中，若不考虑噪声影响，则码元传输的最高速率是$\mathbf{2W(码元/秒)}$：
+1.  奈奎斯特定律：要使实信号采样后能够不失真还原，采样频率必须大于信号最高频率的两倍。即，在带宽为$\mathbf{W(Hz)}$的低通信道中，若不考虑噪声影响，则码元传输的最高速率是$\mathbf{2W(\text{码元}/\text{秒})}$：
 
     $$
-    \left\{ \begin{array}{r} \mathbf{理想低通信道的最高码元传输速率}\mathbf{= 2}\mathbf{W\ Baud} \\ \mathbf{理想带通信道的最高码元传输速率}\mathbf{= W\ Baud} \end{array} \right.\,
+    \left\{ \begin{array}{r} \mathbf{\text{理想低通信道的最高码元传输速率}}\mathbf{= 2}\mathbf{W\ Baud} \\ \mathbf{\text{理想带通信道的最高码元传输速率}}\mathbf{= W\ Baud} \end{array} \right.\,
     $$
     若传输速率超过次上限，就会出现严重的码间串扰问题，使接收端对码元的判决（识别）成为不可能。
 
@@ -316,10 +316,10 @@ $$
     $$
     \mathbf{C = Wlo}\mathbf{g}_{\mathbf{2}}\mathbf{(1 +}\frac{\mathbf{S}}{\mathbf{N}}\mathbf{)(bit/s)}
     $$
-    其中，$\left\{ \begin{array}{r} \mathbf{C}\mathbf{：极限信息传输速率，单位}\mathbf{bit/s} \\ \mathbf{W}\mathbf{：信号的带宽，单位为}\mathbf{Hz} \\ \mathbf{S}\mathbf{：信道内所传信号的平均功率} \\ \mathbf{N}\mathbf{：信道内部高斯噪声功率} \\ \frac{\mathbf{S}}{\mathbf{N}}\mathbf{：无量纲的}\mathbf{d}\mathbf{信噪比} \end{array} \right.\,$
+    其中，$\left\{ \begin{array}{r} \mathbf{C}\mathbf{：\text{极限信息传输速率，}\text{单位}}\mathbf{bit/s} \\ \mathbf{W}\mathbf{：\text{信号的带宽，}\text{单位为}}\mathbf{Hz} \\ \mathbf{S}\mathbf{：\text{信道内所传信号的平均功率}} \\ \mathbf{N}\mathbf{：\text{信道内部高斯噪声功率}} \\ \frac{\mathbf{S}}{\mathbf{N}}\mathbf{：\text{无量纲的}}\mathbf{d}\mathbf{\text{信噪比}} \end{array} \right.\,$
 
     $$
-    \left( \frac{\mathbf{S}}{\mathbf{N}} \right)\left. \ \mathbf{} \right|_{\mathbf{分贝(db)}}\mathbf{= 10lo}\mathbf{g}_{\mathbf{10}}\left( \frac{\mathbf{S}}{\mathbf{N}} \right)\left. \ \mathbf{} \right|_{\mathbf{无量纲}}
+    \left( \frac{\mathbf{S}}{\mathbf{N}} \right)\left. \ \mathbf{} \right|_{\mathbf{\text{分贝}(db)}}\mathbf{= 10lo}\mathbf{g}_{\mathbf{10}}\left( \frac{\mathbf{S}}{\mathbf{N}} \right)\left. \ \mathbf{} \right|_{\mathbf{\text{无量纲}}}
     $$
 <!-- -->
 
@@ -694,7 +694,7 @@ $$
 2.  生成多样式：用多项式表示上面的除数，如：
 
     $$
-    \mathbf{P}\left( \mathbf{X} \right)\mathbf{=}\mathbf{X}^{\mathbf{3}}\mathbf{+}\mathbf{X}^{\mathbf{2}}\mathbf{+ 1表示除数P = 1101}
+    \mathbf{P}\left( \mathbf{X} \right)\mathbf{=}\mathbf{X}^{\mathbf{3}}\mathbf{+}\mathbf{X}^{\mathbf{2}}\mathbf{+ 1\text{表示除数}P = 1101}
     $$
 3.  如果数据链路层仅仅使用循环冗余检验CRC，只能做到对帧的无差错接受，即“凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概率认为这些帧在传输过程中没有产生差错”。
 
@@ -931,7 +931,7 @@ $$
     2)  从离散的集合$\mathbf{\lbrack 0,1,2,\ldots,(}\mathbf{2}^{\mathbf{k}}\mathbf{- 1)\rbrack}$中随机取出一个数，记作r。重传应推后的时间是r倍的争用期。$\mathbf{k}$的计算方法如下：
 
         $$
-        \mathbf{k =}\mathbf{\min}\mathbf{\{ 重传次数,10\}}
+        \mathbf{k =}\mathbf{\min}\mathbf{\{ \text{重传次数},10\}}
         $$
     3)  重传达16次仍不能成功（同时打算发送数据的站点太多），则丢弃帧，并向高层报告。
 
