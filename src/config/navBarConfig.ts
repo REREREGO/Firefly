@@ -146,7 +146,7 @@ export const navBarSearchConfig: NavBarSearchConfig = {
 // ============================================================================
 export const LinkPresets: Record<string, NavBarLink> = {
 	Home: {
-		name: "主页",
+		name: "首页",
 		url: "/",
 		icon: "material-symbols:home",
 	},
