@@ -1,4 +1,5 @@
 ---
+import VisitCounter from "@/components/analytics/VisitCounter.astro";
 import GoogleAnalytics from "@components/analytics/GoogleAnalytics.astro";
 import La51Analytics from "@components/analytics/La51Analytics.astro";
 import MicrosoftClarity from "@components/analytics/MicrosoftClarity.astro";
@@ -556,6 +557,7 @@ const ogImageAlt = propsOgImageAlt ?? pageTitle;
     <ConfigCarrier />
     <MusicManager />
     <slot />
+    <VisitCounter />
 
     <!-- 播放器视图脚本：必须在 <slot /> 之后（解析到它时所有 widget 的 DOM 要已存在），
          且在 MusicManager 之后（swup 重跑按文档顺序，window.__fireflyMusic 得先就位） -->
