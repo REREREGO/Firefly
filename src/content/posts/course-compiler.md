@@ -94,7 +94,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         3. $S $：开始符号\(start symbol\)：唯一的起始非终结符，表示该文法中最大的语法成分
 
-            1. 例：$S $* =* \<句子\>
+            1. 例：$S = \langle\text{句子}\rangle$
 
             2. 两种说明方式：
 
