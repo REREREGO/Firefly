@@ -1,5 +1,5 @@
-import authorSettings from "./authorSettings.json";
 import type { ProfileConfig } from "../types/profileConfig";
+import authorSettings from "./authorSettings.json";
 
 export const profileConfig: ProfileConfig = {
 	// 头像
@@ -28,7 +28,7 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/REREREGO",
 			showName: false,
 		},
-		
+
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
@@ -43,4 +43,3 @@ export const profileConfig: ProfileConfig = {
 		},
 	],
 };
-

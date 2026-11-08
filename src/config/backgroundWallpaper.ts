@@ -1,17 +1,32 @@
-import gallery from "./bannerGallery.json";
-import authorSettings from "./authorSettings.json";
 import type { BackgroundWallpaperConfig } from "@/types/backgroundWallpaper";
+import authorSettings from "./authorSettings.json";
+import gallery from "./bannerGallery.json";
 
-const galleryData: { images?: { name?: string; image: string; active: boolean }[]; slides?: string[]; reserve?: string[] } = gallery;
+const galleryData: {
+	images?: { name?: string; image: string; active: boolean }[];
+	slides?: string[];
+	reserve?: string[];
+} = gallery;
 const gallerySlides = Array.isArray(galleryData.images)
-  ? galleryData.images.filter((item) => item.active).map((item) => item.image)
-  : galleryData.slides ?? [];
+	? galleryData.images.filter((item) => item.active).map((item) => item.image)
+	: (galleryData.slides ?? []);
 const galleryReserve = Array.isArray(galleryData.images)
-  ? galleryData.images.filter((item) => !item.active).map((item) => item.image)
-  : galleryData.reserve ?? [];
-if (gallerySlides.length > 10 || galleryReserve.length > 30) throw new Error("首页图片限制：展示最多10张，备用最多30张。请在CMS图库关闭部分展示开关或移除多余备用条目后重新发布。");
-const orderedSlides = gallerySlides.filter(Boolean).map((src) => src.startsWith("public/") ? `https://rererego.github.io/Firefly/${src.slice(7)}` : src);
-const slideSources = orderedSlides.length ? orderedSlides : ["assets/images/ibuki.jpg"];
+	? galleryData.images.filter((item) => !item.active).map((item) => item.image)
+	: (galleryData.reserve ?? []);
+if (gallerySlides.length > 10 || galleryReserve.length > 30)
+	throw new Error(
+		"首页图片限制：展示最多10张，备用最多30张。请在CMS图库关闭部分展示开关或移除多余备用条目后重新发布。",
+	);
+const orderedSlides = gallerySlides
+	.filter(Boolean)
+	.map((src) =>
+		src.startsWith("public/")
+			? `https://rererego.github.io/Firefly/${src.slice(7)}`
+			: src,
+	);
+const slideSources = orderedSlides.length
+	? orderedSlides
+	: ["assets/images/ibuki.jpg"];
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 覆盖透明，"none" 纯色背景无壁纸
 	mode: "banner",

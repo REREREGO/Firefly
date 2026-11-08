@@ -1,7 +1,7 @@
-import authorSettings from "./authorSettings.json";
 import type { SiteConfig } from "@/types/siteConfig";
 import { resolvePageToggles } from "../utils/page-toggle-utils";
 import { resolveSiteLang } from "../utils/site-config-utils";
+import authorSettings from "./authorSettings.json";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru', 'ko'。
@@ -110,7 +110,11 @@ export const siteConfig: SiteConfig = {
 		// image 和 url 类型可额外设置 valueDark，用于暗色模式下显示另一张图片，不设置则亮暗色共用 value
 		// 例如: { type: "image", value: "assets/images/logo.png", valueDark: "assets/images/logo-dark.png", alt: "Logo" }
 		// 使用 Astro 图标库时不需要设置 valueDark，图标会自动跟随主题亮暗色切换
-		logo: { type: "image", value: "/favicon/ibuki-pixel-64.png", alt: "REREREGO · 伊吹" },
+		logo: {
+			type: "image",
+			value: "/favicon/ibuki-pixel-64.png",
+			alt: "REREREGO · 伊吹",
+		},
 		// 导航栏标题
 		title: authorSettings.title,
 		// 全宽导航栏，导航栏是否占满屏幕宽度

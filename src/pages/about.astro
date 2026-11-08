@@ -1,10 +1,10 @@
 ---
 
 import { createMarkdownProcessor } from "@astrojs/markdown-remark";
+import Markdown from "@components/common/Markdown.astro";
 import remarkEmoji from "remark-emoji";
 import sanitizeHtml from "sanitize-html";
 import aboutContent from "@/config/aboutContent.json";
-import Markdown from "@components/common/Markdown.astro";
 import { profileConfig } from "@/config/profileConfig";
 import { siteConfig } from "@/config/siteConfig";
 import I18nKey from "@/i18n/i18nKey";
@@ -13,9 +13,17 @@ import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import { getAuthorAvatarUrl } from "@/utils/schema-image";
 import { buildProfilePage } from "@/utils/schema-utils";
 
-const processor = await createMarkdownProcessor({ remarkPlugins: [remarkEmoji] });
+const processor = await createMarkdownProcessor({
+	remarkPlugins: [remarkEmoji],
+});
 const rendered = await processor.render(aboutContent.body);
-const aboutHtml = sanitizeHtml(rendered.code, { allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]), allowedAttributes: { ...sanitizeHtml.defaults.allowedAttributes, img: ["src", "alt", "title", "width", "height"] } });
+const aboutHtml = sanitizeHtml(rendered.code, {
+	allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+	allowedAttributes: {
+		...sanitizeHtml.defaults.allowedAttributes,
+		img: ["src", "alt", "title", "width", "height"],
+	},
+});
 
 const avatarUrl = await getAuthorAvatarUrl();
 const jsonLd = buildProfilePage({

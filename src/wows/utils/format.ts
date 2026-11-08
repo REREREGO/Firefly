@@ -1,6 +1,7 @@
 /** 展示层用的小工具 */
 
-export const pct = (v: number, digits = 1): string => `${(v * 100).toFixed(digits)}%`;
+export const pct = (v: number, digits = 1): string =>
+	`${(v * 100).toFixed(digits)}%`;
 
 export const num = (v: number): string => Math.round(v).toLocaleString("en-US");
 
@@ -49,4 +50,5 @@ export const typeKey = (type: string): string => {
 	return map[type] ?? "unknown";
 };
 
-export const typeVar = (type: string): string => `var(--wows-t-${typeKey(type)})`;
+export const typeVar = (type: string): string =>
+	`var(--wows-t-${typeKey(type)})`;

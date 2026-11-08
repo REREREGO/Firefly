@@ -21,7 +21,26 @@ export const friendsPageConfig: FriendsPageConfig = {
 };
 
 // 友链配置
-export const friendsConfig: FriendLink[] = [{ title: "寒鹤", imgurl: "https://hannah-akitsuki.github.io/Hannah-blog/assets/avatar.jpg", desc: "记录课堂与生活，也做一点小工具。", siteurl: "https://hannah-akitsuki.github.io/Hannah-blog/#home", tags: ["Blog"], weight: 9, enabled: true }, { title: "Attilio", imgurl: "https://github.com/ShaddockNH3.png", desc: "Attilio 的个人博客", siteurl: "https://blog.attilio.cc/", tags: ["Blog"], weight: 10, enabled: true }];
+export const friendsConfig: FriendLink[] = [
+	{
+		title: "寒鹤",
+		imgurl: "https://hannah-akitsuki.github.io/Hannah-blog/assets/avatar.jpg",
+		desc: "记录课堂与生活，也做一点小工具。",
+		siteurl: "https://hannah-akitsuki.github.io/Hannah-blog/#home",
+		tags: ["Blog"],
+		weight: 9,
+		enabled: true,
+	},
+	{
+		title: "Attilio",
+		imgurl: "https://github.com/ShaddockNH3.png",
+		desc: "Attilio 的个人博客",
+		siteurl: "https://blog.attilio.cc/",
+		tags: ["Blog"],
+		weight: 10,
+		enabled: true,
+	},
+];
 
 // 获取启用的友链并进行排序
 export const getEnabledFriends = (): FriendLink[] => {

@@ -132,7 +132,26 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 	icon: "material-symbols:docs",
 	// });
 
-	return { links: [LinkPresets.Home, LinkPresets.Archive, { name: "WoWs", url: "/wows/", icon: "material-symbols:anchor" }, { name: "社交", url: "#", icon: "material-symbols:group", children: [LinkPresets.Friends, LinkPresets.Guestbook] }, LinkPresets.About, { name: "GitHub", url: "https://github.com/REREREGO", external: true, icon: "fa7-brands:github" }] } as NavBarConfig;
+	return {
+		links: [
+			LinkPresets.Home,
+			LinkPresets.Archive,
+			{ name: "WoWs", url: "/wows/", icon: "material-symbols:anchor" },
+			{
+				name: "社交",
+				url: "#",
+				icon: "material-symbols:group",
+				children: [LinkPresets.Friends, LinkPresets.Guestbook],
+			},
+			LinkPresets.About,
+			{
+				name: "GitHub",
+				url: "https://github.com/REREREGO",
+				external: true,
+				icon: "fa7-brands:github",
+			},
+		],
+	} as NavBarConfig;
 };
 
 // 导航搜索配置

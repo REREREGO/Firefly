@@ -16,7 +16,15 @@ export const themes = {
 
 export type ThemeKey = keyof typeof themes;
 
-export const siteConfig: { title: string; description: string; blogUrl: string; defaultTheme: ThemeKey; defaultMode: "light" | "dark" | "system"; author: string; publicAppId: string } = {
+export const siteConfig: {
+	title: string;
+	description: string;
+	blogUrl: string;
+	defaultTheme: ThemeKey;
+	defaultMode: "light" | "dark" | "system";
+	author: string;
+	publicAppId: string;
+} = {
 	/** 页面标题（会显示在标签页与导航栏） */
 	title: "舰长档案",
 
