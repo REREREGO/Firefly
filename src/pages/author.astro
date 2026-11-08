@@ -3,9 +3,9 @@ import MainGridLayout from "@/layouts/MainGridLayout.astro";
 ---
 <MainGridLayout title="作者模式" description="管理文章与站点信息">
   <meta slot="head" name="robots" content="noindex,nofollow" />
-  <section class="card-base p-6 md:p-10 w-full author-guide">
+  <section class="card-base p-6 md:p-10 w-full author-guide text-90">
     <span class="eyebrow">AUTHOR SPACE</span>
-    <h1>作者模式</h1>
+    <h1 class="text-90">作者模式</h1>
     <p class="intro">把想法写下来，让小站慢慢生长。</p>
     <a class="login" href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">使用 GitHub 登录管理后台 ↗</a>
     <p>将在新窗口打开 Pages CMS。使用 REREREGO 登录，首次授权时仅选择 Firefly 仓库，再打开 master 分支。</p>
@@ -18,9 +18,9 @@ import MainGridLayout from "@/layouts/MainGridLayout.astro";
   </section>
 </MainGridLayout>
 <style>
-  .author-guide { color: var(--text-75); }
+
   .eyebrow { color: var(--primary); font-size: .75rem; letter-spacing: .18em; font-weight: 700; }
-  h1 { font-size: 2rem; font-weight: 750; margin: .5rem 0; color: var(--text-90); }
+  h1 { font-size: 2rem; font-weight: 750; margin: .5rem 0; }
   .intro { font-size: 1.1rem; margin-bottom: 1.5rem; }
   p { line-height: 1.8; margin: .7rem 0; }
   .login { display: inline-flex; background: var(--primary); color: var(--card-bg); padding: .85rem 1.2rem; border-radius: .8rem; font-weight: 700; }
