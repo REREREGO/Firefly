@@ -23,8 +23,24 @@ content:
       order: desc
     fields:
       - { name: title, label: 标题, type: string, required: true }
-      - { name: published, label: 发布日期, type: date, required: true }
-      - { name: updated, label: 最后修改日期, type: date }
+      - name: published
+        label: 首次公开时间（自动）
+        type: date
+        readonly: true
+        default: ""
+        description: 关闭草稿并保存后自动记录；重新隐藏后清空。后台处理完成后刷新查看。
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssXXX"
+      - name: updated
+        label: 最近修改时间（自动）
+        type: date
+        readonly: true
+        default: ""
+        description: 根据文章最近一次有效保存自动记录，不因单纯重建网站而改变。
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssXXX"
       - { name: description, label: 摘要, type: text }
       - { name: category, label: 分类, type: string }
       - { name: tags, label: 标签, type: string, list: true }

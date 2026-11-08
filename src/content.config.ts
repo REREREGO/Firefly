@@ -61,33 +61,54 @@ type ContentCollection<T> = CollectionConfig<
 
 const postsCollection: ContentCollection<PostData> = defineCollection({
 	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/posts" }),
-	schema: z.object({
-		title: z.string(),
-		published: z.coerce.date(),
-		updated: z.coerce.date().optional(),
-		draft: z.boolean().optional().default(false),
-		description: z.string().optional().default(""),
-		image: z.string().optional().default(""),
-		tags: z.array(z.string()).optional().default([]),
-		category: z.string().optional().nullable().default(""),
-		lang: z.string().optional().default(""),
-		pinned: z.boolean().optional().default(false),
-		author: z.string().optional().default(""),
-		sourceLink: z.string().optional().default(""),
-		licenseName: z.string().optional().default(""),
-		licenseUrl: z.string().optional().default(""),
-		comment: z.boolean().optional().default(true),
-		password: z.string().optional().default(""),
-		passwordHint: z.string().optional().default(""),
-		series: z.string().optional().default(""),
-		seriesOrder: z.number().optional(),
+	schema: z
+		.object({
+			title: z.string(),
+			published: z.preprocess(
+				(value) => (value == null || value === "" ? undefined : value),
+				z.coerce.date().optional(),
+			),
+			updated: z.preprocess(
+				(value) => (value == null || value === "" ? undefined : value),
+				z.coerce.date().optional(),
+			),
+			draft: z.boolean().optional().default(false),
+			description: z.string().optional().default(""),
+			image: z.string().optional().default(""),
+			tags: z.array(z.string()).optional().default([]),
+			category: z.string().optional().nullable().default(""),
+			lang: z.string().optional().default(""),
+			pinned: z.boolean().optional().default(false),
+			author: z.string().optional().default(""),
+			sourceLink: z.string().optional().default(""),
+			licenseName: z.string().optional().default(""),
+			licenseUrl: z.string().optional().default(""),
+			comment: z.boolean().optional().default(true),
+			password: z.string().optional().default(""),
+			passwordHint: z.string().optional().default(""),
+			series: z.string().optional().default(""),
+			seriesOrder: z.number().optional(),
 
-		/* For internal use */
-		prevTitle: z.string().default(""),
-		prevSlug: z.string().default(""),
-		nextTitle: z.string().default(""),
-		nextSlug: z.string().default(""),
-	}),
+			/* For internal use */
+			prevTitle: z.string().default(""),
+			prevSlug: z.string().default(""),
+			nextTitle: z.string().default(""),
+			nextSlug: z.string().default(""),
+		})
+		.superRefine((post, ctx) => {
+			if (!post.draft && !post.published) {
+				ctx.addIssue({
+					code: "custom",
+					path: ["published"],
+					message:
+						"Public posts require a publication timestamp; run scripts/sync-post-dates.mjs --write first.",
+				});
+			}
+		})
+		.transform((post) => ({
+			...post,
+			published: post.published ?? post.updated ?? new Date(0),
+		})),
 });
 
 const specCollection: ContentCollection<Record<string, never>> =

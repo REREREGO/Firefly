@@ -10,7 +10,7 @@ import MainGridLayout from "@/layouts/MainGridLayout.astro";
     <a class="login" href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">使用 GitHub 登录管理后台 ↗</a>
     <p>将在新窗口打开 Pages CMS。使用 REREREGO 登录，首次授权时仅选择 Firefly 仓库，再打开 master 分支。</p>
     <div class="features">
-      <article><h2>文章管理</h2><p>新建、编辑、删除文章，上传图片，设置分类和标签。新文章默认是草稿；准备好后关闭“草稿”再保存。</p></article>
+      <article><h2>文章管理</h2><p>新建、编辑、删除文章，上传图片，设置分类和标签。新文章默认是草稿；准备好后关闭“草稿”再保存。首次公开时间与最近修改时间自动记录，无需填写；重新设为草稿会清空公开时间，下次公开重新计时。后台处理完成后刷新 CMS 查看。</p></article>
       <article><h2>站点与首页</h2><p>直接修改博客名称、作者昵称、简介，以及首页横幅标题和轮播标语。“关于我”也可以单独编辑。在“首页轮播图库”查看图片预览：打开“参与首页轮播”开关即加入展示，关闭即移入备用。拖动左侧手柄排序，开启的图片从上到下播放；最多展示10张、备用30张。切换后保存，再点击“发布网站”。</p></article>
       <article><h2>发布进度</h2><p>保存会写回仓库并触发部署，通常需要稍等片刻。如果没有自动更新，在后台点击“发布网站”。</p><a href="https://github.com/REREREGO/Firefly/actions/workflows/deploy.yml" target="_blank" rel="noopener noreferrer">查看部署进度 ↗</a></article>
     </div>

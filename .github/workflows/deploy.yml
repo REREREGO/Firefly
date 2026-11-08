@@ -12,7 +12,7 @@ on:
 
 # Pages 部署需要的权限
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -27,6 +27,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -41,6 +44,18 @@ jobs:
           
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+
+      - name: Synchronize article timestamps
+        run: |
+          node --test scripts/sync-post-dates.test.mjs
+          node scripts/sync-post-dates.mjs --write
+          git add -- src/content/posts
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'chore: synchronize article timestamps'
+            git push origin HEAD:master
+          fi
       
       - name: Check site
         run: pnpm check && pnpm run type-check
