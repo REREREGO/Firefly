@@ -70,13 +70,13 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-37.png)
 
-        4. V自身的n次积：$V^n = VV...V(n\text{个}V) $
+        4. V 自身的 n 次积：$V^n = VV...V(n\text{个}V) $
 
             1. $V^0=\{\epsilon\}$
 
             2. $V^*$是$V$的克林闭包：$V^* = V^0 \cup V^1 \cup ...$ 
 
-            3. $V^+$是V的正规闭包：$V^+=VV^*$
+            3. $V^+$是 V 的正规闭包：$V^+=VV^*$
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-127.png)
 
@@ -100,11 +100,11 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 1. 明确指出
 
-                2. 第1条产生式规则左部的文法符号
+                2. 第 1 条产生式规则左部的文法符号
 
         4. $P$：产生式\(production\)集，也称规则：描述语言的语法结构的形式规则
 
-            1. 一般形式： α→β，读作：α定义为β
+            1. 一般形式：α→β，读作：α定义为β
 
             2. α称为左部或头。$\alpha\in (V_T\cup V_N)^*$，且至少包含一个非终结符
 
@@ -112,7 +112,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     2. 0\-3型文法
 
-        1. <strong>0型文法（无限制文法 / 短语结构文法）</strong>
+        1. <strong>0 型文法（无限制文法 / 短语结构文法）</strong>
 
             1. <strong>规则限制：</strong>产生式形如 α → β，其中 α 至少包含 1 个非终结符，β 可以是空串 / 任意终结符 \+ 非终结符组合。
 
@@ -126,7 +126,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         2. <strong>1型文法（上下文有关文法 Context\-sensitive Grammar，CSG）</strong>
 
-            1. <strong>规则限制：</strong>产生式形如 αAβ → αγβ（核心：非终结符 A 只有在 “上下文 α 和 β” 中才能替换为 γ）；
+            1. <strong>规则限制：</strong>产生式形如 αAβ → αγβ（核心：非终结符 A 只有在“上下文 α 和 β”中才能替换为 γ）；
 
             2. <strong>等价限制：</strong>\|α\| ≤ \|β\|（产生式右部长度≥左部长度，唯一例外是S → ε，且 S 不能出现在右部）。
 
@@ -152,7 +152,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             6. 例子：E → E \+ T 、E → T 、T → \(E\) 、T → i   
 
-        4. <strong>3型文法（正规文法 / 正则文法 Regular Grammar，RG）</strong>
+        4. <strong>3 型文法（正规文法 / 正则文法 Regular Grammar，RG）</strong>
 
             1. <strong>规则限制：</strong>产生式只能是以下两种形式之一（最严格）：
 
@@ -280,17 +280,17 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     2. <strong>串：</strong>是由字母表中符号组成的<strong>有限序列</strong>（以串$S=banana$为例）：
 
-        1. <strong>前缀：</strong>从尾部删除0或多个符号得到的串。ban, banana, ε
+        1. <strong>前缀：</strong>从尾部删除 0 或多个符号得到的串。ban, banana, ε
 
-        2. <strong>后缀</strong>：从首部删除0或多个符号得到的串。ana, banana, ε
+        2. <strong>后缀</strong>：从首部删除 0 或多个符号得到的串。ana, banana, ε
 
         3. <strong>真前缀：</strong>不等于原串，也不为ε的<strong>前缀</strong>
 
-        4. <strong>子串：</strong>删除某个前缀和某个后缀后得到的串。 nan, ban, ana, banana, ε
+        4. <strong>子串：</strong>删除某个前缀和某个后缀后得到的串。nan, ban, ana, banana, ε
 
-        5. <strong>子序列：</strong>删除0或多个符号所得的串。bnan, nn, ε
+        5. <strong>子序列：</strong>删除 0 或多个符号所得的串。bnan, nn, ε
 
-    3. <strong>正则式RE：</strong>基于字母表构造串的一组<strong>规则</strong>（<strong>模板、模式</strong>），如果$r $是正则式, 则$L(r)$表示$r$描述的<strong>语言</strong>（正规集、正则集）
+    3. <strong>正则式 RE：</strong>基于字母表构造串的一组<strong>规则</strong>（<strong>模板、模式</strong>），如果$r $是正则式，则$L(r)$表示$r$描述的<strong>语言</strong>（正规集、正则集）
 
         1. 模式（Pattern）：描述某个记号的词素组合的构造规则
 
@@ -304,7 +304,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-134.png)
 
-    4. 有穷自动机FA：是对<strong>一类处理系统</strong>建立的<strong>数学模型</strong>
+    4. 有穷自动机 FA：是对<strong>一类处理系统</strong>建立的<strong>数学模型</strong>
 
         1. 这类系统具有一系列<strong>离散的输入输出信息</strong>和<strong>有穷数目的内部状态</strong>（状态：概括了对过去输入信息处理的状况）
 
@@ -314,9 +314,9 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-109.png)
 
-        4. FA的分类
+        4. FA 的分类
 
-            1. <strong>确定的有穷自动机DFA：</strong>DFA 是 NFA 的一个特例
+            1. <strong>确定的有穷自动机 DFA：</strong>DFA 是 NFA 的一个特例
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-131.png)
 
@@ -326,7 +326,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 - 对每个状态 $s$ 和<strong>每个</strong>输入符号 $a$，<strong>有且仅有</strong>一条标号为 $a$ 的边离开
 
-            2. <strong>不确定的有穷自动机NFA：</strong>
+            2. <strong>不确定的有穷自动机 NFA：</strong>
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-28.png)
 
@@ -344,7 +344,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
         > 
         > 
 
-    5. 表示:
+    5. 表示：
 
         1. <strong>状态转换图：</strong>
 
@@ -396,31 +396,31 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     1. 手工法
 
-    2. MYT法
+    2. MYT 法
 
-        1. 正则式$\varepsilon$对应 NFA：<strong>增加2个状态，1条边</strong>
+        1. 正则式$\varepsilon$对应 NFA：<strong>增加 2 个状态，1 条边</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-81.png)
 
-        2. 正则式$a\in \Sigma$ 对应NFA：<strong>增加2个状态，1条边</strong>
+        2. 正则式$a\in \Sigma$ 对应 NFA：<strong>增加 2 个状态，1 条边</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-55.png)
 
-        3. 若 $s, t$ 是正则式，$N(s)$ 和 $N(t)$ 是对应的 NFA，则 $s \mid t$ 对应之 NFA 为：<strong>增加2个状态，4条边</strong>
+        3. 若 $s, t$ 是正则式，$N(s)$ 和 $N(t)$ 是对应的 NFA，则 $s \mid t$ 对应之 NFA 为：<strong>增加 2 个状态，4 条边</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-184.png)
 
-        4. 若 $s, t$ 为正则式，$N(s)$ 和 $N(t)$ 是对应的 NFA，则 $st$ 对应之 NFA 为：<strong>减少1个状态</strong>
+        4. 若 $s, t$ 为正则式，$N(s)$ 和 $N(t)$ 是对应的 NFA，则 $st$ 对应之 NFA 为：<strong>减少 1 个状态</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-112.png)
 
-        5. 如果 $s$ 是正则式，$N(s)$ 为对应 NFA，则 $s^*$ 对应之 NFA 为：<strong>增加2个状态，4条边</strong>
+        5. 如果 $s$ 是正则式，$N(s)$ 为对应 NFA，则 $s^*$ 对应之 NFA 为：<strong>增加 2 个状态，4 条边</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-105.png)
 
 4. NFA→DFA：子集构造法
 
-    1. <strong>前置知识：</strong>NFA状态集上的表示
+    1. <strong>前置知识：</strong>NFA 状态集上的表示
 
         ![image\.png](/Firefly/uploads/course-compiler/image-67.png)
 
@@ -436,7 +436,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             对于状态集 $T$，在输入 $a$ 时，可以到达的状态集合（<strong>不考虑</strong>$\varepsilon$<strong>边</strong>）
 
-    2. <strong>构造思路：</strong>DFA的每个状态都是一个由NFA中的状态构成的<strong>集合</strong>,即<strong>NFA状态集合的一个子集</strong>
+    2. <strong>构造思路：</strong>DFA 的每个状态都是一个由 NFA 中的状态构成的<strong>集合</strong>,即<strong>NFA 状态集合的一个子集</strong>
 
     3. <strong>构造算法</strong>
 
@@ -460,7 +460,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                     ![image\.png](/Firefly/uploads/course-compiler/image-165.png)
 
-5. DFA→最小化DFA
+5. DFA→最小化 DFA
 
     1. 前置概念
 
@@ -636,7 +636,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                         ![image\.png](/Firefly/uploads/course-compiler/image-136.png)
 
-            3. <strong>为什么A存在间接左递归，而S不存在？</strong>算法中的"消除左递归"是按非终结符顺序逐步代入，规则是：对于排序为 P₁, P₂, \.\.\., Pₙ 的非终结符，处理 Pᵢ 时，把所有 Pⱼ（j \< i）代入 Pᵢ 的产生式。
+            3. <strong>为什么 A 存在间接左递归，而 S 不存在？</strong>算法中的"消除左递归"是按非终结符顺序逐步代入，规则是：对于排序为 P₁, P₂, \.\.\., Pₙ 的非终结符，处理 Pᵢ 时，把所有 Pⱼ（j \< i）代入 Pᵢ 的产生式。
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-144.png)
 
@@ -652,7 +652,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-41.png)
 
-    5. 计算FIRST集、FOLLOW集及SELECT集
+    5. 计算 FIRST 集、FOLLOW 集及 SELECT 集
 
         1. FIRST 函数（FIRST 集）：对于任意文法符号串 $\alpha$，$\text{FIRST}(\alpha)$ 是可从 $\alpha$ 推导得到的串的<strong>首符号</strong>的集合。
 
@@ -718,7 +718,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                     ![image\.png](/Firefly/uploads/course-compiler/image-93.png)
 
-        3. SELECT集，产生式的<strong>可选集：</strong>产生式 $A \to \beta$ 的可选集是指可以选用该产生式时，对应的输入符号的集合，记为 $\text{SELECT}(A \to \beta)$。
+        3. SELECT 集，产生式的<strong>可选集：</strong>产生式 $A \to \beta$ 的可选集是指可以选用该产生式时，对应的输入符号的集合，记为 $\text{SELECT}(A \to \beta)$。
 
             1. $\text{SELECT}(A \to \beta) = \text{FIRST}(\beta) \cup \text{FOLLOW}(A)$
 
@@ -752,7 +752,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             5. 若表中存在<strong>多重定义项目</strong>，则本文法<strong>非 LL\(1\)</strong>。
 
-        2. 基于SELECT集的描述
+        2. 基于 SELECT 集的描述
 
             1. 为每条规则 $A \to \alpha$，若终结符 $a$ 或 $\char36$ 在 $\text{SELECT}(A \to \alpha)$ 中时，则将 $A \to \alpha$ 加入 $M[A, a]$ 或 $M[A, \char36]$ 中。
 
@@ -800,9 +800,9 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         是自顶向下分析的逆过程：把一个串归约到文法的开始符。对于文法 $G[S]$，$\alpha\beta\delta$ 是 $G$ 的一个句型，若有 $S \Rightarrow^*_{rm} \alpha A \delta$，且
 
-        1. 短语：$A \Rightarrow^+_{\text{rm}} \beta$，则称$\boldsymbol{\beta}$是句型$\alpha\beta\delta$相对于A的<strong>短语</strong>。
+        1. 短语：$A \Rightarrow^+_{\text{rm}} \beta$，则称$\boldsymbol{\beta}$是句型$\alpha\beta\delta$相对于 A 的<strong>短语</strong>。
 
-        2. 直接短语：$A \Rightarrow \beta$，则称$\boldsymbol{\beta}$是句型$\alpha\beta\delta$相对于A的<strong>直接短语</strong>。
+        2. 直接短语：$A \Rightarrow \beta$，则称$\boldsymbol{\beta}$是句型$\alpha\beta\delta$相对于 A 的<strong>直接短语</strong>。
 
             ![image\.png](/Firefly/uploads/course-compiler/image-4.png)
 
@@ -874,15 +874,15 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     2. 自底向上分析法的基本过程：
 
-        1. <strong>构建增广文法：引入S’→ S，给产生式编号</strong>
+        1. <strong>构建增广文法：引入 S’→ S，给产生式编号</strong>
 
-            1. LR\(0\)项目：简称<strong>项</strong>，由文法G的产生式加一个圆点构成
+            1. LR\(0\)项目：简称<strong>项</strong>，由文法 G 的产生式加一个圆点构成
 
                 > 项目描述了句柄识别的状态
                 > 
                 > 
 
-                1. 由文法G的每个产生式右部加一个圆点构成，简称<strong>项</strong>
+                1. 由文法 G 的每个产生式右部加一个圆点构成，简称<strong>项</strong>
 
                 2. 表示在分析过程中的给定点上，已经看到了产生式的哪些部分
 
@@ -910,7 +910,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                         1. 格式：$A→α\bullet Bβ$
 
-                        2. 圆点后面是<strong>非终结符</strong>，表示栈内是句柄的一部分，为了形成句柄，期待从输入串中进行归约而得到B，然后才能继续分析A的右部。
+                        2. 圆点后面是<strong>非终结符</strong>，表示栈内是句柄的一部分，为了形成句柄，期待从输入串中进行归约而得到 B，然后才能继续分析 A 的右部。
 
                     3. <strong>③ 归约项目</strong>
 
@@ -940,7 +940,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                         2. <strong>当且仅当</strong>使用产生式 $S' \to S$ 进行归约时，输入符号串被接受。
 
-        2. <strong>构建LR自动机（项集闭包，后继项集闭包）</strong>
+        2. <strong>构建 LR 自动机（项集闭包，后继项集闭包）</strong>
 
             1. 项集：项的集合。
 
@@ -950,7 +950,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 2. 若$A→α\bullet Bβ∈CLOSURE(I)$，将所有的$B→γ$产生式对应的项$B→\bullet γ$加入CLOSURE\(I\)
 
-                3. 反复使用规则2，直至无新项可加入
+                3. 反复使用规则 2，直至无新项可加入
 
                 4. 公式：$CLOSURE(I) = I ∪ \{B→\bullet γ \mid A→α\bullet Bβ∈CLOSURE(I),\ B→γ∈P\}$
 
@@ -984,9 +984,9 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-39.png)
 
-        3. <strong>构建LR分析表</strong>
+        3. <strong>构建 LR 分析表</strong>
 
-            1. LR分析器的核心是<strong>一张分析表：</strong>如果基于某文法构建的<strong>所有</strong> LR\(0\) 项集，<strong>要么只有移入项目，要么只有一个归约项目或接受项目</strong>，则可以构建 <strong>LR\(0\)</strong> 分析表，并且：
+            1. LR 分析器的核心是<strong>一张分析表：</strong>如果基于某文法构建的<strong>所有</strong> LR\(0\) 项集，<strong>要么只有移入项目，要么只有一个归约项目或接受项目</strong>，则可以构建 <strong>LR\(0\)</strong> 分析表，并且：
 
                 - 该文法称为 <strong>LR\(0\) 文法</strong>
 
@@ -1010,7 +1010,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 1. 注：可规约状态面临所有输入符号都有唯一的转移状态
 
-            3. <strong>ACTION\[s，a\]：</strong>当状态s<strong>面临输入符号a</strong>时，应采取的动作。语法分析动作函数 <strong>ACTION</strong> 有两个参数：状态 $i$，当前输入 $a$（<strong>终结符</strong>或 $\char36 $）
+            3. <strong>ACTION\[s，a\]：</strong>当状态 s<strong>面临输入符号 a</strong>时，应采取的动作。语法分析动作函数 <strong>ACTION</strong> 有两个参数：状态 $i$，当前输入 $a$（<strong>终结符</strong>或 $\char36 $）
 
                 - <strong>移入</strong>（$s_j$）：移入状态 $j$，同时移入符号 $a$
 
@@ -1020,7 +1020,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 - <strong>报错</strong>：发现一个错误并执行纠正动作。
 
-            4. <strong>GOTO\[s，X\]：</strong>状态s<strong>面对文法符号X</strong>时的下一状态。
+            4. <strong>GOTO\[s，X\]：</strong>状态 s<strong>面对文法符号 X</strong>时的下一状态。
 
                 - 有两个参数：状态 $i$ 和当前的<strong>非终结符</strong> $A$。
 
@@ -1068,9 +1068,9 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-51.png)
 
-        4. SLR分析表的构建
+        4. SLR 分析表的构建
 
-            若一个文法构造出的SLR分析表里<strong>不存在移进\-归约、归约\-归约冲突</strong>，则该文法称为<strong>SLR文法</strong>
+            若一个文法构造出的 SLR 分析表里<strong>不存在移进\-归约、归约\-归约冲突</strong>，则该文法称为<strong>SLR 文法</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-172.png)
 
@@ -1088,19 +1088,19 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             1. 构造拓广文法$G'$的规范LR\(0\)项集族 $C = \{I_0, I_1, \dots, I_n\}$
 
-            2. 项集$I_i$对应分析状态$i$，按以下规则填充ACTION表、GOTO表：
+            2. 项集$I_i$对应分析状态$i$，按以下规则填充 ACTION 表、GOTO 表：
 
-                - <strong>规则1（移进）：</strong>若项目$A→α·aβ ∈ I_i$，且$\text{GOTO}(I_i,a)=I_j$，则 $\text{ACTION}[i,a] = s_j$
+                - <strong>规则 1（移进）：</strong>若项目$A→α·aβ ∈ I_i$，且$\text{GOTO}(I_i,a)=I_j$，则 $\text{ACTION}[i,a] = s_j$
 
-                - <strong>规则2（GOTO跳转）：</strong>若项目$A→α·Bβ ∈ I_i$，且$\text{GOTO}(I_i,B)=I_j$，则 $\text{GOTO}[i,B] = j$
+                - <strong>规则 2（GOTO 跳转）：</strong>若项目$A→α·Bβ ∈ I_i$，且$\text{GOTO}(I_i,B)=I_j$，则 $\text{GOTO}[i,B] = j$
 
-                - <strong>规则3（归约）：</strong>若归约项目$A→α· ∈ I_i$ 且 $A≠S'$，对所有$a∈\text{FOLLOW}(A)$，令 $\text{ACTION}[i,a] = r_j$（$j$ 是产生式$A→α$的编号）
+                - <strong>规则 3（归约）：</strong>若归约项目$A→α· ∈ I_i$ 且 $A≠S'$，对所有$a∈\text{FOLLOW}(A)$，令 $\text{ACTION}[i,a] = r_j$（$j$ 是产生式$A→α$的编号）
 
-                - <strong>规则4（接受）：</strong>若接受项目$S'→S· ∈ I_i$，则 $\text{ACTION}[i,\char36 ]$\]= acc
+                - <strong>规则 4（接受）：</strong>若接受项目$S'→S· ∈ I_i$，则 $\text{ACTION}[i,\char36 ]$\]= acc
 
-                - <strong>规则5（报错）：</strong>所有未被上述规则定义的表格条目，统一赋值为`error`
+                - <strong>规则 5（报错）：</strong>所有未被上述规则定义的表格条目，统一赋值为`error`
 
-                - SLR文法定义 若一个文法构造出的SLR分析表里<strong>不存在移进\-归约、归约\-归约冲突</strong>，则该文法称为<strong>SLR文法</strong>
+                - SLR 文法定义 若一个文法构造出的 SLR 分析表里<strong>不存在移进\-归约、归约\-归约冲突</strong>，则该文法称为<strong>SLR 文法</strong>
 
                     ![image\.png](/Firefly/uploads/course-compiler/image-183.png)
 
@@ -1112,15 +1112,15 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                     ![image\.png](/Firefly/uploads/course-compiler/image-9.png)
 
-        5. SLR分析仍然可能存在冲突
+        5. SLR 分析仍然可能存在冲突
 
             ![image\.png](/Firefly/uploads/course-compiler/image-148.png)
 
             1. SLR只是简单地考察下一个输入符号b是否属于与归约项目A→α相关联的FOLLOW\(A\)，但b∈FOLLOW\(A\)只是归约α的一个必要条件，而非充分条件
 
-            2. 解决方法：通过<strong>分裂状态</strong>，使LR分析器的每个状态A→α•能确切知道句柄α后<strong>紧跟哪些终结符时才能把α归约成A</strong>。
+            2. 解决方法：通过<strong>分裂状态</strong>，使 LR 分析器的每个状态 A→α•能确切知道句柄α后<strong>紧跟哪些终结符时才能把α归约成 A</strong>。
 
-            3. 对于产生式 A→α的归约，<strong>在不同的使用位置，A会要求不同的后继符号</strong>
+            3. 对于产生式 A→α的归约，<strong>在不同的使用位置，A 会要求不同的后继符号</strong>
 
     4. LR\(1\)项集闭包：对项目 \[A→α·Bβ, a\]，添加\[B→·γ, b\]到项目集，其中b∈FIRST\(βa\)
 
@@ -1172,7 +1172,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         1. <strong>同心集：</strong>具有相同核心（LR\(1\)项目集的第一分量集合）的项集，即除展望符（搜索符）外，两个LR\(1\)项目集是相同的
 
-        2. <strong>LALR分析：寻找同心集，并将它们合并成一个项集。</strong>
+        2. <strong>LALR 分析：寻找同心集，并将它们合并成一个项集。</strong>
 
             1. 可以压缩LR\(1\)分析表中的状态数，从而可能得到LALR分析表
 
@@ -1182,7 +1182,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-64.png)
 
-5. 构建LR分析器消除文法二义性
+5. 构建 LR 分析器消除文法二义性
 
     1. 用优先级和结合性消除算术表达式文法二义性
 
@@ -1190,7 +1190,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         ![image\.png](/Firefly/uploads/course-compiler/image-76.png)
 
-    2. 用if和else的配对关系消除选择结构文法二义性
+    2. 用 if 和 else 的配对关系消除选择结构文法二义性
 
         ![image\.png](/Firefly/uploads/course-compiler/image-141.png)
 
@@ -1214,7 +1214,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             - <strong>语法制导翻译方案</strong> <strong>SDT</strong> （<strong>过程式</strong>）
 
-    2. <strong>语法制导定义</strong> <strong>SDD：</strong>SDD是CFG的推广
+    2. <strong>语法制导定义</strong> <strong>SDD：</strong>SDD 是 CFG 的推广
 
         - 为每个<strong>文法符号</strong>（终结符或非终结符）配备若干相关的"值"（称为<strong>属性</strong>），代表与文法符号相关信息，如<strong>表达式的属性</strong>可以有<strong>类型</strong>、<strong>值</strong>等。
 
@@ -1232,7 +1232,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         2. 文法属性：综合属性和继承属性
 
-            1. <strong>综合属性：</strong>在分析树结点 N 上的非终结符A的综合属性只能通过 N的子结点或 N本身的属性值来定义。
+            1. <strong>综合属性：</strong>在分析树结点 N 上的非终结符 A 的综合属性只能通过 N 的子结点或 N 本身的属性值来定义。
 
                 |                产生式|                语义规则|
                 |---|---|
@@ -1240,7 +1240,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-113.png)
 
-                1. 终结符可以具有综合属性。终结符的综合属性值是由词法分析器提供的<strong>词法值</strong>，在SDD中没有计算终结符属性值的语义规则。
+                1. 终结符可以具有综合属性。终结符的综合属性值是由词法分析器提供的<strong>词法值</strong>，在 SDD 中没有计算终结符属性值的语义规则。
 
             2. <strong>继承属性：</strong>在分析树结点 $N$ 上的非终结符 $A$ 的<strong>继承属性</strong>只能通过 $N$ 的<strong>父结点</strong>、$N$ 的<strong>兄弟结点</strong>或 $N$ <strong>本身</strong>的属性值来定义。
 
@@ -1282,7 +1282,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     5. <strong>良定义</strong>\-依赖图的拓扑排序：
 
-2. 语法制导定义SDD：
+2. 语法制导定义 SDD：
 
     1. SDD 属性的求值顺序
 
@@ -1344,9 +1344,9 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         - $Leaf(op, val)$：建立<strong>叶结点</strong>，返回叶子结点的指针，$op$为记号，$val$为值或指向符号表相关项目的指针。 
 
-3. <strong>翻译方案SDT：</strong>
+3. <strong>翻译方案 SDT：</strong>
 
-    1. SDT的定义：
+    1. SDT 的定义：
 
         1. <strong>语义规则</strong>：只给出属性计算的定义，没有属性计算的次序等实现细节。
 
@@ -1394,7 +1394,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     2. L\-SDT：
 
-        1. 将计算某个非终结符号A的<strong>继承属性</strong>的动作插入到产生式右部中<strong>紧靠在A的本次出现之前</strong>的位置上
+        1. 将计算某个非终结符号 A 的<strong>继承属性</strong>的动作插入到产生式右部中<strong>紧靠在 A 的本次出现之前</strong>的位置上
 
         2. 将计算一个产生式左部符号的<strong>综合属性</strong>的动作放置在这个产生式右部的<strong>最右端</strong>
 
@@ -1402,7 +1402,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-54.png)
 
-    3. LL分析法：自顶向下分析
+    3. LL 分析法：自顶向下分析
 
         ![image\.png](/Firefly/uploads/course-compiler/image-2.png)
 
@@ -1416,9 +1416,9 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-56.png)
 
-            1. 这里的新翻译模式的想法也很简单：就是要给这个<strong>新的R一个继承属性</strong>，让它实现自顶向下的分析，也就是LL文法的核心。 那我们最初的R\.i只能从左兄弟那边继承了，所以是<strong>R\.i=f\(X\.x\)</strong>，接下来一路传下去R\.i，下面的R\.i都是前一个R\.i和左兄弟Y\.y的函数，<strong>R1\.i=g\(R\.i,Y\.y\)</strong>
+            1. 这里的新翻译模式的想法也很简单：就是要给这个<strong>新的 R 一个继承属性</strong>，让它实现自顶向下的分析，也就是LL文法的核心。 那我们最初的R\.i只能从左兄弟那边继承了，所以是<strong>R\.i=f\(X\.x\)</strong>，接下来一路传下去R\.i，下面的R\.i都是前一个R\.i和左兄弟Y\.y的函数，<strong>R1\.i=g\(R\.i,Y\.y\)</strong>
 
-            2. 现在我们到了底部。根据我们的消除左递归方法，我们可以知道一定会有一个<strong>R→ε</strong>，这就到了我们自底向上分析的时候了。对于第一个出现的综合属性，我们给到<strong>R\.s=R\.i</strong>，现在逐步上传，直到顶端，顶端的A的综合属性由R提供，也就是<strong>A\.a=R\.s</strong>
+            2. 现在我们到了底部。根据我们的消除左递归方法，我们可以知道一定会有一个<strong>R→ε</strong>，这就到了我们自底向上分析的时候了。对于第一个出现的综合属性，我们给到<strong>R\.s=R\.i</strong>，现在逐步上传，直到顶端，顶端的 A 的综合属性由 R 提供，也就是<strong>A\.a=R\.s</strong>
 
             3. 这就是完整的逻辑闭环，所有的消除左递归方法后的翻译模式都可以套用
 
@@ -1428,7 +1428,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             2. 每一个L前加一个label\|\|
 
-            3. SDT前面提到过，就是把继承属性放在编号的前面，综合属性放在后面。所以我们可以看到，C前面放的都是C的继承属性，C后面S1前面放的是S1的继承属性，S1后面就是S1的综合属性
+            3. SDT 前面提到过，就是把继承属性放在编号的前面，综合属性放在后面。所以我们可以看到，C 前面放的都是 C 的继承属性，C 后面 S1 前面放的是 S1 的继承属性，S1 后面就是 S1 的综合属性
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-61.png)
 
@@ -1438,7 +1438,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-195.png)
 
-    4. LR分析法：自底向上分析
+    4. LR 分析法：自底向上分析
 
         1. 变换L\-SDT为S\-SDT
 
@@ -1492,15 +1492,15 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             - 用一个栈实现
 
-            - 自左至右扫描后缀是，每碰到运算量就把它推进栈。每碰到k目运算符就把它作用于栈顶的k个项，并用结果替代这k个项
+            - 自左至右扫描后缀是，每碰到运算量就把它推进栈。每碰到 k 目运算符就把它作用于栈顶的 k 个项，并用结果替代这 k 个项
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-157.png)
 
     2. 图形
 
-        1. <strong>抽象语法树AST</strong>
+        1. <strong>抽象语法树 AST</strong>
 
-        2. <strong>有向无环图DAG</strong>
+        2. <strong>有向无环图 DAG</strong>
 
             - DAG 的结点表示一个<strong>公共子表达式</strong>，它可能具有多个父结点
 
@@ -1508,7 +1508,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             - 一个<strong>内部结点</strong>代表一个<strong>操作符</strong>，它的孩子代表操作数
 
-            - <strong>tips：重复部分进行加环就是DAG图的本质，这个具体看作业题，比较有代表性。除此之外，关于编码方法这部分，编码是先写id等字母，然后是数字，接着是符号。左右两栏是进行操作的两行的行号。</strong>
+            - <strong>tips：重复部分进行加环就是 DAG 图的本质，这个具体看作业题，比较有代表性。除此之外，关于编码方法这部分，编码是先写 id 等字母，然后是数字，接着是符号。左右两栏是进行操作的两行的行号。</strong>
 
                 ![image\.png](/Firefly/uploads/course-compiler/image-123.png)
 
@@ -1520,7 +1520,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         - 三地址码可以看成是抽象语法树或 DAG 的一种<strong>线性表示</strong>。三地址码的<strong>临时名字</strong>对应图中的<strong>内部结点</strong>。
 
-        - DAG和AST的三地址码是不一样的，具体可以参考下面这个例题：
+        - DAG 和 AST 的三地址码是不一样的，具体可以参考下面这个例题：
 
             ![image\.png](/Firefly/uploads/course-compiler/image-66.png)
 
@@ -1670,7 +1670,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     1. 位移指出的相对地址：offset
 
-    2. 类型附加属性：type和width
+    2. 类型附加属性：type 和 width
 
     3. <strong>声明语句的翻译：</strong>对于声明语句，语义分析的主要任务是收集标识符的<strong>类型</strong>、<strong>所需存储单元大小</strong>等属性信息，并为每个名字分配一个<strong>相对地址</strong>，并将它们保存在相应的<strong>符号表</strong>记录中。
 
@@ -1682,7 +1682,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         - 在<strong>编译时刻</strong>，可以使用类型的宽度为每一个名字分配一个<strong>相对地址</strong>（ *offset* ）
 
-        - 变量声明语句的SDT：翻译的主要任务，类型表达式和相对地址。例子：
+        - 变量声明语句的 SDT：翻译的主要任务，类型表达式和相对地址。例子：
 
             ![image\.png](/Firefly/uploads/course-compiler/image-170.png)
 
@@ -1754,11 +1754,11 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         - 布尔表达式 $B$ 附加两个属性：
 
-            - $B.true$：B为真时的控制流
+            - $B.true$：B 为真时的控制流
 
-            - $B.false$：B为假时的控制流
+            - $B.false$：B 为假时的控制流
 
-    - $S.next$ 指向紧跟在S后执行的第一条三地址指令
+    - $S.next$ 指向紧跟在 S 后执行的第一条三地址指令
 
         ![image\.png](/Firefly/uploads/course-compiler/image-15.png)
 
@@ -1800,7 +1800,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         ![image\.png](/Firefly/uploads/course-compiler/image-101.png)
 
-        1. <strong>注意：避免生成冗余的goto指令</strong>
+        1. <strong>注意：避免生成冗余的 goto 指令</strong>
 
             ![image\.png](/Firefly/uploads/course-compiler/image-104.png)
 
@@ -1848,7 +1848,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
         - `nextinstr`：指向下一条将要产生但尚未形成的三地址码的地址（标号），初值为 1，每执行一次`gen`之后，`nextinstr`自动加 1
 
-        - <strong>*看不懂的话看这道例题就可以了。大概就是一开始goto都是没写的，写完一个个回填。根据没写的这个东西来画图</strong>*
+        - <strong>*看不懂的话看这道例题就可以了。大概就是一开始 goto 都是没写的，写完一个个回填。根据没写的这个东西来画图</strong>*
 
             ![image\.png](/Firefly/uploads/course-compiler/image-190.png)
 
@@ -1858,7 +1858,7 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
             ![image\.png](/Firefly/uploads/course-compiler/image-153.png)
 
-11. 控制流语句：语句S带有一个未填充的跳转链 *nextlist*, 该链同样使用回填策略来填充。*S\.nextlist* 为跳转到S之后的跳转指令列表。
+11. 控制流语句：语句 S 带有一个未填充的跳转链 *nextlist*, 该链同样使用回填策略来填充。*S\.nextlist* 为跳转到 S 之后的跳转指令列表。
 
     ![image\.png](/Firefly/uploads/course-compiler/image-18.png)
 
@@ -1894,17 +1894,17 @@ image: /uploads/course-covers/compiler-blueprint-v2.webp
 
     6. <strong>前瞻性思维：</strong>编译器各阶段密切关联，如语法分析的LL\(1\)、SLR、LR\(1\)、LALR文法都需要根据规则表（预测分析表或LR分析表）向后看一个token才能决定下一步的动作。需要学生充分考虑任何一个可能的输入，具备一定的前瞻性思维能力，在今后工作过程中养成做好应急预案的习惯，保障工作的正常开展。
 
-3. 经典案例1 从编译器到“中国芯”
+3. 经典案例 1 从编译器到“中国芯”
 
-    编译器是芯片开发的关键工具（如GCC、LLVM）
+    编译器是芯片开发的关键工具（如 GCC、LLVM）
 
-    在面临国外技术封锁的背景下，龙芯团队凭借坚定的信念和不懈的努力，研发出自主指令系统架构LoongArch，成功实现了从指令集到芯片设计的完全自主化，构建了完整的自主生态体系，为国产芯片的发展树立了标杆。
+    在面临国外技术封锁的背景下，龙芯团队凭借坚定的信念和不懈的努力，研发出自主指令系统架构 LoongArch，成功实现了从指令集到芯片设计的完全自主化，构建了完整的自主生态体系，为国产芯片的发展树立了标杆。
 
-4. 经典案例2 技术伦理与社会责任
+4. 经典案例 2 技术伦理与社会责任
 
 技术伦理：编译器生成的代码可能存在安全漏洞，编译器的安全性和可靠性直接影响到软件的运行效果。
 
-2018年，编译器领域发生了多起漏洞事件，这些漏洞引发了安全问题
+2018 年，编译器领域发生了多起漏洞事件，这些漏洞引发了安全问题
 
 Go语言编译器漏洞（CVE\-2018\-6574）
 
@@ -1926,7 +1926,7 @@ LibSaas越界读取漏洞（CNVD\-2018\-15185）
 
         1. CPU、操作系统、编译器、数据库、网络（软硬件）
 
-    3. 错误认识1：美国对中国的禁运，始于特朗普时代
+    3. 错误认识 1：美国对中国的禁运，始于特朗普时代
 
         1. 长期以来，以美国为代表的一些西方国家，奉行和实施对中国的货物、服务和技术的出口管制和禁运措施，极大损害了我国的国家利益、产业利益和广大消费者的权益。特别是当我国科技人员自主研发出被禁运装备、技术及软件等以后，美国和其他国家往往立即解禁该类产品与技术，向我国大肆倾销。
 
@@ -1934,27 +1934,27 @@ LibSaas越界读取漏洞（CNVD\-2018\-15185）
 
             1. 巴黎统筹委员会（COCOM，美国主导）：1949\-1994
 
-                1. 中国委员会成立于1952年，协调对中国进行最彻底的技术封锁
+                1. 中国委员会成立于 1952 年，协调对中国进行最彻底的技术封锁
 
-            2. 瓦森纳协定（美国主导）：1996至今
+            2. 瓦森纳协定（美国主导）：1996 至今
 
-                1. 中国系首批4个管制国家之一
+                1. 中国系首批 4 个管制国家之一
 
-            3. 沃尔夫条款（美国单独，全球实施）：2011至今
+            3. 沃尔夫条款（美国单独，全球实施）：2011 至今
 
                 1. 禁止中美之间的航天合作
 
-            4. 芯片与科学法案（美国单独，全球实施）：2022年8月至今
+            4. 芯片与科学法案（美国单独，全球实施）：2022 年 8 月至今
 
-                1. 限制在中国投资28纳米以下制程的芯片技术
+                1. 限制在中国投资 28 纳米以下制程的芯片技术
 
             5. 美国商务部、联邦通信委员会、国防部、总统行政令黑名单
 
                 1. 制裁中国信息产业相关的大多数龙头企业和部分高校
 
-    4. 错误认识2：禁运着力芯片，是因为中国硬件更弱
+    4. 错误认识 2：禁运着力芯片，是因为中国硬件更弱
 
-    5. 错误认识3：禁运着力芯片，是因为软件无法制裁
+    5. 错误认识 3：禁运着力芯片，是因为软件无法制裁
 
 6. 用唯物主义辩证法思想学习《编译原理》
 
@@ -1976,7 +1976,7 @@ LibSaas越界读取漏洞（CNVD\-2018\-15185）
 
 总结一下，事务都有两面性：
 
-没有轻轻松松的成就： 慵懒没成绩 成绩不慵懒
+没有轻轻松松的成就：慵懒没成绩 成绩不慵懒
 
 没有工作量就没有质量： 学习\+\+ = 娱乐\-\-
 

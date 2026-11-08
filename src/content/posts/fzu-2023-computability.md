@@ -130,7 +130,7 @@ $\forall x,\ x \in L(M) \iff x \notin L(M')$
 
 因此 $L(M') = \Sigma^* - L(M) = \overline{L(M)}$。
 
-<strong>易错点:</strong> 这个证明要求自动机是完整 DFA。若缺转移，要先补上死状态。
+<strong>易错点：</strong> 这个证明要求自动机是完整 DFA。若缺转移，要先补上死状态。
 
 
 
@@ -207,7 +207,7 @@ $\delta:Q\times \Sigma_\varepsilon\to \mathcal{P}(Q),\qquad
 
 与 DFA 相比，NFA 有两点不同：
 
-1. 同一个状态读同一个符号可以有多个后继（含0个选择）；
+1. 同一个状态读同一个符号可以有多个后继（含 0 个选择）；
 
 2. 可以不读输入直接进行 $\varepsilon$ 移动。
 
@@ -282,7 +282,7 @@ $F' = \{R \in Q' \mid R \cap F \neq \emptyset\}$
 
 
 
-<strong>NFA如何转换成DFA：</strong>
+<strong>NFA 如何转换成 DFA：</strong>
 
 - 写出子集状态
 
@@ -300,7 +300,7 @@ $F' = \{R \in Q' \mid R \cap F \neq \emptyset\}$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-83.png)
 
-<strong>推论2\.20:</strong>一个语言是正则的, 当且仅当有一台NFA识别它
+<strong>推论2\.20:</strong>一个语言是正则的，当且仅当有一台 NFA 识别它
 
 <strong>定理2\.22:</strong>正则语言对并封闭
 
@@ -399,7 +399,7 @@ $\delta(q, a) = \begin{cases}
 |---|---|
 |单个字符 $a$|$R_1 \cup R_2$|
 |空串 $\varepsilon$|$R_1 \circ R_2$（连接）|
-|空语言 $\emptyset$|$R^*$（Kleene星）|
+|空语言 $\emptyset$|$R^*$（Kleene 星）|
 
 ![image\.png](/Firefly/uploads/computability-notes/image-41.png)
 
@@ -407,7 +407,7 @@ $\delta(q, a) = \begin{cases}
 
 ![image\.png](/Firefly/uploads/computability-notes/image-67.png)
 
-1. <strong>情况1：</strong>单个字符 $a$，只有一个开始状态$q_1$和一个接受状态$q_2 $
+1. <strong>情况 1：</strong>单个字符 $a$，只有一个开始状态$q_1$和一个接受状态$q_2 $
 
     - $R = a$，$a \in \Sigma$\.
 
@@ -419,7 +419,7 @@ $\delta(q, a) = \begin{cases}
 
     - $\delta(r, b) = \emptyset$，若 $r \neq q_1$ 或 $b \neq a$\.
 
-2. <strong>情况2：</strong>空串 $\varepsilon$，只有一个状态，同时是开始和接受状态
+2. <strong>情况 2：</strong>空串 $\varepsilon$，只有一个状态，同时是开始和接受状态
 
     - $R = \varepsilon$\.
 
@@ -429,7 +429,7 @@ $\delta(q, a) = \begin{cases}
 
     - $\forall r, \forall b,\ \delta(r, b) = \emptyset$\.
 
-3. <strong>情况3：</strong>空语言$R = \emptyset$，不存在接受状态
+3. <strong>情况 3：</strong>空语言$R = \emptyset$，不存在接受状态
 
     - $L(R) = \emptyset$,
 
@@ -443,11 +443,11 @@ $\delta(q, a) = \begin{cases}
 
 ![image\.png](/Firefly/uploads/computability-notes/image-150.png)
 
-4. <strong>情况4：</strong>并
+4. <strong>情况 4：</strong>并
 
-5. <strong>情况5：</strong>连接
+5. <strong>情况 5：</strong>连接
 
-6. <strong>情况6：</strong>闭包（星号）
+6. <strong>情况 6：</strong>闭包（星号）
 
 
 
@@ -724,7 +724,7 @@ CNF 只允许规则：
 
 <strong>等价：</strong>两个文法生成同样的语言
 
-<strong>定理3\.6：</strong>任何CFG都有等价的CNF
+<strong>定理3\.6：</strong>任何 CFG 都有等价的 CNF
 
 <strong>证明思路：</strong> 下列算法：
 
@@ -895,9 +895,9 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 ### 2.7 PDA 与 CFG 的等价性
 <strong>定理 3\.12：</strong> 一个语言是 CFL，当且仅当存在 PDA 识别它。
 
-<strong>引理 3\.13：</strong>如果一个语言是CFL，则存在PDA识别它。
+<strong>引理 3\.13：</strong>如果一个语言是 CFL，则存在 PDA 识别它。
 
-<strong>引理 3\.15：</strong>如果一个语言被PDA识别，则这个语言是CFL。
+<strong>引理 3\.15：</strong>如果一个语言被 PDA 识别，则这个语言是 CFL。
 
 <strong>证明思路</strong>
 
@@ -909,9 +909,9 @@ $(r_0, s_0), (r_1, s_1), \ldots, (r_m, s_m)$，
 
     - 让栈顶的终结符与输入进行匹配
 
-    - 栈顶是变元,就模拟派生过程
+    - 栈顶是变元，就模拟派生过程
 
-    - 栈顶是终结符,就进行匹配
+    - 栈顶是终结符，就进行匹配
 
 ![image\.png](/Firefly/uploads/computability-notes/image-49.png)
 
@@ -962,7 +962,7 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 
 
 #### 方向一：CFG **$\Rightarrow$** PDA
-即<strong>引理 3\.13：</strong>如果一个语言是CFL，则存在PDA识别它。
+即<strong>引理 3\.13：</strong>如果一个语言是 CFL，则存在 PDA 识别它。
 
 假设 $G=(V,\Sigma,R,S)$。构造 PDA 的运行逻辑：
 
@@ -1003,7 +1003,7 @@ $L\text{ 是 CFL}\iff \exists \text{ PDA }M,\ L=L(M).$
 ![image\.png](/Firefly/uploads/computability-notes/image-11.png)
 
 #### 方向二：PDA **$\Rightarrow$** CFG
-即<strong>引理 3\.15：</strong>如果一个语言被PDA识别，则这个语言是CFL。
+即<strong>引理 3\.15：</strong>如果一个语言被 PDA 识别，则这个语言是 CFL。
 
 <strong>证明思路：</strong>
 
@@ -1165,7 +1165,7 @@ $R$ 包含如下规则：
 
     那么有计算 $(p, \varepsilon), (r, t), \ldots, (s, t), (q, \varepsilon)$。
 
-    所以 $\delta(p, a, \varepsilon)$ 包含 $(r, t)$ 且 $\delta(s, b, t)$ 包含 $(q, \varepsilon)$，（空串替换为t，t再替换回空串）
+    所以 $\delta(p, a, \varepsilon)$ 包含 $(r, t)$ 且 $\delta(s, b, t)$ 包含 $(q, \varepsilon)$，（空串替换为 t，t 再替换回空串）
 
     所以 $G$ 中有规则 $A_{pq} \to aA_{rs}b$。
 
@@ -1230,7 +1230,7 @@ $M=(Q,\Sigma,\Gamma,\delta,q_0,q_{acc},q_{rej}),$
 
 - $\Sigma$ 是输入字母表，不含空白符；
 
-- $\Gamma$ 是带字母表，满足 $\Sigma\subseteq\Gamma$ 且包含空白符 $\sqcup$（ppt中空白符是B）；
+- $\Gamma$ 是带字母表，满足 $\Sigma\subseteq\Gamma$ 且包含空白符 $\sqcup$（ppt 中空白符是 B）；
 
 - $\delta:Q\times\Gamma\to Q\times\Gamma\times\{L,R\}$；
 
@@ -1396,15 +1396,15 @@ $s_1, s_2, s_3, \ldots$ 是什么？
 
 |序号|$s_i$|说明|
 |---|---|---|
-|$s_1$|$\varepsilon$|空串（长度0）|
-|$s_2$|0|长度1|
-|$s_3$|1|长度1|
-|$s_4$|00|长度2|
-|$s_5$|01|长度2|
-|$s_6$|10|长度2|
-|$s_7$|11|长度2|
-|$s_8$|000|长度3|
-|$s_9$|001|长度3|
+|$s_1$|$\varepsilon$|空串（长度 0）|
+|$s_2$|0|长度 1|
+|$s_3$|1|长度 1|
+|$s_4$|00|长度 2|
+|$s_5$|01|长度 2|
+|$s_6$|10|长度 2|
+|$s_7$|11|长度 2|
+|$s_8$|000|长度 3|
+|$s_9$|001|长度 3|
 |\.\.\.|\.\.\.|\.\.\.|
 
 设 TM $M$ 识别语言 $A$，则设计枚举器 $E$ 枚举 $A$。
@@ -1421,22 +1421,22 @@ $E =$ "忽略输入。
 
     |    输入|    运行步数|    结果|
     |---|---|---|
-    |    $s_1 = \varepsilon$|    1步|    若接受，打印 $\varepsilon$|
+    |    $s_1 = \varepsilon$|    1 步|    若接受，打印 $\varepsilon$|
 
     - <strong>第</strong>$i = 2$<strong>轮：</strong>对 $s_1, s_2$ 各运行 $M$ <strong>2</strong> 步：
 
     |    输入|    运行步数|    说明|
     |---|---|---|
-    |    $s_1 = \varepsilon$|    2步|    之前跑了1步，现在继续到第2步|
-    |    $s_2 = 0$|    2步|    新加入的，从头跑2步|
+    |    $s_1 = \varepsilon$|    2 步|    之前跑了 1 步，现在继续到第 2 步|
+    |    $s_2 = 0$|    2 步|    新加入的，从头跑 2 步|
 
     - <strong>第</strong>$i = 3$<strong>轮：</strong>对 $s_1, s_2, s_3$ 各运行 $M$ <strong>3</strong> 步：
 
     |    输入|    运行步数|    说明|
     |---|---|---|
-    |    $s_1 = \varepsilon$|    3步|    累计运行（之前2步 \+ 再跑1步）|
-    |    $s_2 = 0$|    3步|    累计运行（之前2步 \+ 再跑1步）|
-    |    $s_3 = 1$|    3步|    新加入的，从头跑3步|
+    |    $s_1 = \varepsilon$|    3 步|    累计运行（之前2步 \+ 再跑1步）|
+    |    $s_2 = 0$|    3 步|    累计运行（之前2步 \+ 再跑1步）|
+    |    $s_3 = 1$|    3 步|    新加入的，从头跑 3 步|
 
     - \.\.\.
 
@@ -1501,7 +1501,7 @@ $\delta:Q\times\Gamma^k\to Q\times\Gamma^k\times\{L,R\}^k.$
 
 $S =$ "对于输入 $w = w_1 \ldots w_n$：
 
-1. $S$ 在自己带上放上 $\#w_1 w_2 \ldots w_n \# B \# B \# \ldots \#$。（假设第2到第k条子带初始为空）
+1. $S$ 在自己带上放上 $\#w_1 w_2 \ldots w_n \# B \# B \# \ldots \#$。（假设第 2 到第 k 条子带初始为空）
 
 ```text
 初始输入：a a a b b b
@@ -1587,7 +1587,7 @@ NTM 的转移函数为$\delta:Q\times\Gamma\to \mathcal{P}(Q\times\Gamma\times\{
 
 <strong>定理 4\.10：</strong> 每个 NTM 都有等价 DTM。
 
-<strong>证明原理：</strong>用DTM D来模拟NTM N
+<strong>证明原理：</strong>用 DTM D 来模拟 NTM N
 
 ![image\.png](/Firefly/uploads/computability-notes/image-18.png)
 
@@ -1683,7 +1683,7 @@ $\text{图灵可判定} \iff \text{可由 NTM 判定}.$
 
 <strong>问题和语言：</strong>编码
 
-<strong>可判定性：</strong>存在处处停机的TM程序
+<strong>可判定性：</strong>存在处处停机的 TM 程序
 
 
 
@@ -1786,7 +1786,7 @@ $P =$ "对于输入 $\langle R, w \rangle$，$R$ 是 RE，$w$ 是串：
 
 ### <strong>4\.2\.4 DFA 空性问题</strong>$E_{DFA}$
 
-一个DFA是否根本不接受任何串？
+一个 DFA 是否根本不接受任何串？
 
 $E_{DFA}=\{\langle A\rangle\mid A\text{ 是 DFA 且 }L(A)=\varnothing\}.$
 
@@ -1806,7 +1806,7 @@ $E_{DFA}=\{\langle A\rangle\mid A\text{ 是 DFA 且 }L(A)=\varnothing\}.$
 
 ### <strong>4\.2\.5 DFA 等价性问题</strong>$EQ_{DFA}$
 
-检查两个DFA是否识别同一个语言
+检查两个 DFA 是否识别同一个语言
 
 $EQ_{DFA}=\{\langle A,B\rangle\mid A,B\text{ 是 DFA 且 }L(A)=L(B)\}.$
 
@@ -1853,7 +1853,7 @@ TM $F =$ "对于输入 $\langle A, B \rangle$，$A$ 和 $B$ 都是 DFA：
 ### 4.3 关于上下文无关文法的可判定问题
 ### <strong>4\.3\.1 CFG 派生性问题</strong>$A_{CFG}$
 
-检查一个CFG是否派生一个特定的串
+检查一个 CFG 是否派生一个特定的串
 
 $A_{CFG}=\{\langle G,w\rangle\mid G\text{ 是 CFG 且 }G\text{ 派生 }w\}.$
 
@@ -1889,7 +1889,7 @@ $A_{CFG}=\{\langle G,w\rangle\mid G\text{ 是 CFG 且 }G\text{ 派生 }w\}.$
 
 ### <strong>4\.3\.2 CFG 空性问题</strong>$E_{CFG}$
 
-检查一共CFG是否不派生任何串
+检查一共 CFG 是否不派生任何串
 
 $E_{CFG}=\{\langle G\rangle\mid G\text{ 是 CFG 且 }L(G)=\varnothing\}.$
 
@@ -1918,7 +1918,7 @@ $E_{CFG}=\{\langle G\rangle\mid G\text{ 是 CFG 且 }L(G)=\varnothing\}.$
 
 
 #### 4.3.3 CFG 等价性问题
-两个CFG是否派生同一个语言
+两个 CFG 是否派生同一个语言
 
 $EQ_{CFG}=\{\langle G,H\rangle\mid L(G)=L(H)\}.$
 
@@ -2059,7 +2059,7 @@ $D(\langle M\rangle)=\neg H(\langle M,\langle M\rangle\rangle).$
 ### 4.5 可判定、可识别与非图灵可识别语言
 <strong>定理 5\.16：</strong>$A\text{ 可判定}\iff A\text{ 和 }\overline{A}\text{ 都图灵可识别}.$
 
-ppt中写作$A^c = \overline{A}$
+ppt 中写作$A^c = \overline{A}$
 
 #### 证明
 $\Rightarrow$<strong>：</strong> 若 $A$ 可判定，则补语言 $\overline A$ 也可判定，因为可判定语言但是可识别的，因此二者都可识别。
@@ -2144,7 +2144,7 @@ $S =$ "在输入 $\langle M, w \rangle$ 上，其中 $M$ 是 TM，$w$ 是串：
 
 1. 在输入 $\langle M, w \rangle$ 上运行 TM $R$。
 
-2. 如果 $R$ 拒绝，则拒绝。（R拒绝，则M必不停机，反之亦然）
+2. 如果 $R$ 拒绝，则拒绝。（R 拒绝，则 M 必不停机，反之亦然）
 
 3. 如果 $R$ 接受，则在 $w$ 上模拟 $M$，直到 $M$ 停机。
 
@@ -2398,7 +2398,7 @@ $A \le_m \overline{B} \text{ via } f \iff \overline{A} \le_m B \text{ via } f$
 
 ![image\.png](/Firefly/uploads/computability-notes/image-40.png)
 
-改造：只有M’接受时才停机，其他情况下都循环
+改造：只有 M’接受时才停机，其他情况下都循环
 
 归约函数 $f$ 的定义：$f(\langle M, w \rangle) = \langle M', w \rangle$
 
@@ -3184,7 +3184,7 @@ $NP$ 对 $\le_m^P$ 封闭性
 ### 5.7 NP 难与 NP 完全
 <strong>NP 难：</strong> 若对所有 $A\in NP$，都有$A \le_m^P B$
 
-则 $B$ 是 NP 难的，即：所有 NP 问题都能多项式归约到B。
+则 $B$ 是 NP 难的，即：所有 NP 问题都能多项式归约到 B。
 
 ```text
 NP-hard 是"NP 问题的上司"
@@ -3207,8 +3207,8 @@ $B\text{ NP-complete}\iff B\in NP\text{ 且 }\forall A\in NP, A \le_m^P B.$
 |---|---|---|---|
 |<strong>P</strong>|✅ 是|❌ 不一定|排序、最短路径|
 |<strong>NP</strong>|✅ 是|❌ 不一定|所有 NP 完全问题|
-|<strong>NP完全</strong>|✅ 是|✅ 是|SAT、团、TSP\(判定版\)|
-|<strong>NP难</strong>|❓ 不一定|✅ 是|停机问题、广义象棋|
+|<strong>NP 完全</strong>|✅ 是|✅ 是|SAT、团、TSP\(判定版\)|
+|<strong>NP 难</strong>|❓ 不一定|✅ 是|停机问题、广义象棋|
 
 <strong>定理 8\.28：</strong> 若 $B$ 是 NP 完全的，并且 $B$ 属于 $P$，则 $NP = P$。
 
@@ -3429,7 +3429,7 @@ $|\langle G, k \rangle| = O(k^3)$。
 
 设语言 $A$ 属于 NP，设 $n^k$ 时间 NTM $N$ 判定 $A$，利用 $N$ 构造归约 $f_N$。
 
-对于 $A$ 的输入 $w$（长度为 n ），$f_N(w) = \phi$
+对于 $A$ 的输入 $w$（长度为 n），$f_N(w) = \phi$
 
 - 公式 $\phi$ 描述 $N$ 在 $w$ 上一个计算分支
 
@@ -3526,7 +3526,7 @@ $\phi_{move}$：下一行都是上一行的合法后续格局（转移合法，�
 
 $\phi_{accept}$：某一行是接受格局（最终接受）
 
-- 存在某个时刻 i 、某个位置 j ，NTM 处于接受状态。
+- 存在某个时刻 i、某个位置 j，NTM 处于接受状态。
 
 - $\phi_{accept} = \vee_{i,j}(x_{i,j,q_{accept}}).$
 
@@ -3598,8 +3598,8 @@ $f(\phi) = \langle G, k \rangle$，
 
     |    原则|    说明|
     |---|---|
-    |    <strong>变量小工具</strong>|    每个 $K_2$ 必须选 <strong>恰好1个</strong>（覆盖变量边）|
-    |    <strong>子句小工具</strong>|    每个 $K_3$ 必须选 <strong>恰好2个</strong>（覆盖三角形边）|
+    |    <strong>变量小工具</strong>|    每个 $K_2$ 必须选 <strong>恰好 1 个</strong>（覆盖变量边）|
+    |    <strong>子句小工具</strong>|    每个 $K_3$ 必须选 <strong>恰好 2 个</strong>（覆盖三角形边）|
     |    <strong>连接边</strong>|    三角形节点与变量节点的连接边必须被覆盖|
 
 ![image\.png](/Firefly/uploads/computability-notes/image-118.png)
@@ -3694,7 +3694,7 @@ x_i 的链：
       C₁      C₂      C₃              Cₙ
 ```
 
-对于对应Ci的两个节点`(○─○)`，第一个连向Ci，第二个从Ci连回
+对于对应 Ci 的两个节点`(○─○)`，第一个连向 Ci，第二个从 Ci 连回
 
 ![image\.png](/Firefly/uploads/computability-notes/image-103.png)
 
@@ -3728,7 +3728,7 @@ $\phi \text{ 可满足 } \iff \exists A \subseteq S, \sum A = t$
 
 $y_i / z_i$ 是变量赋值选择（真/假），$g_j / h_j$ 是子句填充数（凑到目标 3）
 
-目标 $C_j = 3$ 是因为每个子句最多 3 个文字。变量行贡献"真文字的个数"（1到3），$g_j / h_j$ 用来填补剩余部分（凑到3）。这样无论几个文字为真，总能恰好达到目标，且子句满足当且仅当变量行至少贡献1（即至少1个真文字，取值为真）。
+目标 $C_j = 3$ 是因为每个子句最多 3 个文字。变量行贡献"真文字的个数"（1到3），$g_j / h_j$ 用来填补剩余部分（凑到 3）。这样无论几个文字为真，总能恰好达到目标，且子句满足当且仅当变量行至少贡献 1（即至少 1 个真文字，取值为真）。
 
 $C_1$ 列的分析：选了 $z_1$（$x_1 = 0$）和 $y_2$（$x_2 = 1$）
 
@@ -3796,7 +3796,7 @@ DTM $M_1 =$ "对输入 $\langle \phi \rangle$，$\phi$ 是布尔公式：
 
 
 
-### 5.13 Savitch （萨维奇）定理
+### 5.13 Savitch（萨维奇）定理
 <strong>定理 9\.5：</strong> 若 $f(n)\ge n$（实际上只要$\log n$），则
 
 $NSPACE(f(n))\subseteq SPACE(f^2(n)).$
@@ -3915,7 +3915,7 @@ $NL=NSPACE(\log n).$
 
 例：$PATH\in NL,$
 
-因为 NTM 只需保存当前顶点和步数，非确定地猜下一顶点即可。（m个点最多logm个数就能表示，logm个步数（二进制））
+因为 NTM 只需保存当前顶点和步数，非确定地猜下一顶点即可。（m 个点最多 logm 个数就能表示，logm 个步数（二进制））
 
 ![image\.png](/Firefly/uploads/computability-notes/image-130.png)
 

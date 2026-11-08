@@ -14,9 +14,9 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 >
 > 填空
 >
-> 简答 问一些概念性的问题 xx是什么，有什么用
+> 简答 问一些概念性的问题 xx 是什么，有什么用
 >
-> 综合题（计算或演绎）（PC问题必考，调度问题必考）
+> 综合题（计算或演绎）（PC 问题必考，调度问题必考）
 
 注意
 
@@ -35,9 +35,9 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 
 2.  多道程序的两种工作流程：顺序执行和并发执行
 
-    1)  顺序执行：处理器在开始执行一道程序后，只有在这道程序执行结束(程序指令运行完成，或程序执行过程出现错误而无法继续运行)，处理器才能开始执行下一道程序。
+    1)  顺序执行：处理器在开始执行一道程序后，只有在这道程序执行结束 (程序指令运行完成，或程序执行过程出现错误而无法继续运行)，处理器才能开始执行下一道程序。
 
-    2)  并发执行(Concurrence) ：在多道程序设计环境下，处理器在开始执行一道程序的第一条指令后，在这道程序完成之前，处理器可以开始执行另一道程序，甚至更多的其他程序。
+    2)  并发执行 (Concurrence) ：在多道程序设计环境下，处理器在开始执行一道程序的第一条指令后，在这道程序完成之前，处理器可以开始执行另一道程序，甚至更多的其他程序。
 
 3.  某资源在指定时间段的利用率定义为：
 
@@ -87,7 +87,7 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 
 作业控制语言（JCL）：程序员使用的，用于定义作业、描述作业运行控制的语言
 
-作业说明书：JCL命令组成的文件，描述作业由哪些程序组成、程序运行顺序、程序由何语言编写、程序所需数据及表示形式、出错处理等
+作业说明书：JCL 命令组成的文件，描述作业由哪些程序组成、程序运行顺序、程序由何语言编写、程序所需数据及表示形式、出错处理等
 
 程序卡片和读卡机：程序员编写的程序和数据按一定格式填写在程序卡片上，由读卡机读入计算机系统
 
@@ -133,7 +133,7 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 
 <strong>定义</strong>
 
-操作系统把主计算机的<strong>处理器工作时间</strong>分割成一些很短的<strong>时间片(Timeslice)</strong>，并<strong>轮流分配</strong>给<strong>用户程序（终端请求）</strong>
+操作系统把主计算机的<strong>处理器工作时间</strong>分割成一些很短的<strong>时间片 (Timeslice)</strong>，并<strong>轮流分配</strong>给<strong>用户程序（终端请求）</strong>
 
 用户程序在时间片内使用处理器，而在时间片结束时<strong>暂停</strong>，等待<strong>下一轮</strong>再继续运行
 
@@ -204,7 +204,7 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 
 定义：操作系统的启动依赖于一组称为<strong>固件</strong>的特殊软件，固件存储于只读存储器（ROM）中（或部分寸于硬盘中）
 
-与PC启动相关的固件有基本输入输出系统（BIOS）和UEFI
+与 PC 启动相关的固件有基本输入输出系统（BIOS）和 UEFI
 
 1)  在计算机启动时首先被运行
 
@@ -218,11 +218,11 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 
 2.  <strong>基本输入输出系统（Basic In Out System，BIOS）组成：包含三个部分</strong>
 
-    1)  <strong>POST自检程序</strong>：计算机启动后识别硬件配置、自检和初始化
+    1)  <strong>POST 自检程序</strong>：计算机启动后识别硬件配置、自检和初始化
 
     2)  <strong>基本启动程序</strong>：在存储介质中查找有效的（主）引导程序，若找到，则将其读入内存\[0000:7C00\]处并开始执行，从而引导操作系统启动
 
-    3)  <strong>基本硬件驱动程序及其中断处理程序</strong>：用于在未加载操作系统时识别和控制基本IO设备（键盘、鼠标、显卡、硬盘等）
+    3)  <strong>基本硬件驱动程序及其中断处理程序</strong>：用于在未加载操作系统时识别和控制基本 IO 设备（键盘、鼠标、显卡、硬盘等）
 
 ![原文插图](/Firefly/uploads/course-os/image7.png)
 
@@ -236,7 +236,7 @@ image: /uploads/course-covers/os-blueprint-v2.webp
 
 4.  <strong>主引导程序</strong>
 
-功能：一块硬盘可以有<strong>最多4个分区</strong>，但其中可以有<strong>1个扩展分区</strong>，扩展分区可以利用<strong>类似MBR的记录表</strong>进一步建立<strong>4个逻辑分区</strong>，而其中若存在<strong>逻辑扩展分区</strong>，又可以<strong>进一步分区</strong>，因此一块硬盘可以划分出<strong>任意多的逻辑分区。</strong>
+功能：一块硬盘可以有<strong>最多 4 个分区</strong>，但其中可以有<strong>1 个扩展分区</strong>，扩展分区可以利用<strong>类似 MBR 的记录表</strong>进一步建立<strong>4 个逻辑分区</strong>，而其中若存在<strong>逻辑扩展分区</strong>，又可以<strong>进一步分区</strong>，因此一块硬盘可以划分出<strong>任意多的逻辑分区。</strong>
 
 DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间最大为512\*2^32B,即2TB。
 
@@ -300,29 +300,29 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 5.  <strong>统一的可扩展固件接口（Unified EFI）</strong>
 
-定义：<strong>可扩展</strong>的、<strong>标准化</strong>的<strong>固件接口规范EFI</strong>（Extensible Firmware Interface），用于<strong>计算机系统的启动</strong>以及<strong>提供与操作系统的接口</strong>
+定义：<strong>可扩展</strong>的、<strong>标准化</strong>的<strong>固件接口规范 EFI</strong>（Extensible Firmware Interface），用于<strong>计算机系统的启动</strong>以及<strong>提供与操作系统的接口</strong>
 
 特点
 
 1)  驱动程序运行环境（DXE）
 
-2)  磁盘管理采用GUID分区方法
+2)  磁盘管理采用 GUID 分区方法
 
-3)  UEFI应用程序
+3)  UEFI 应用程序
 
 启动过程
 
 > ![原文插图](/Firefly/uploads/course-os/image8.png)
 
-<strong>UEFI体系包含两个部分：</strong>
+<strong>UEFI 体系包含两个部分：</strong>
 
 <strong>平台初始化框架：</strong>包含了支持系统启动的<strong>底层程序</strong>，包括：安全检查、硬件自检和初始化、DXE、启动管理器 等
 
-<strong>UEFI映像（UEFI Image）：</strong>一组在<strong>框架的支持下可执行的程序</strong>，包括启动管理器、操作系统装载程序、临时操作系统装载程序、EFI应用程序、设备驱动程序 等
+<strong>UEFI 映像（UEFI Image）：</strong>一组在<strong>框架的支持下可执行的程序</strong>，包括启动管理器、操作系统装载程序、临时操作系统装载程序、EFI 应用程序、设备驱动程序 等
 
-6.  <strong>GUID分区</strong>
+6.  <strong>GUID 分区</strong>
 
-由保护MBR（PMBR)、主分区表、数据区和备份分区表四个部分组成
+由保护 MBR（PMBR)、主分区表、数据区和备份分区表四个部分组成
 
 <strong>优点：</strong>
 
@@ -334,9 +334,9 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 4)  自带<strong>备份</strong>，增加<strong>可靠性</strong>
 
-5)  采用<strong>CRC32校验</strong>，增加<strong>完整性</strong>
+5)  采用<strong>CRC32 校验</strong>，增加<strong>完整性</strong>
 
-6)  每个分区都有<strong>唯一标识GUID（128位）</strong>
+6)  每个分区都有<strong>唯一标识 GUID（128 位）</strong>
 
 <!-- -->
 
@@ -354,7 +354,7 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 2)  <strong>用户态（目态）</strong>：只能执行<strong>非特权指令</strong>
 
-    特权级0（管态）、特权级1、特权级2、特权级3（目态）
+    特权级 0（管态）、特权级 1、特权级 2、特权级 3（目态）
 
 <!-- -->
 
@@ -362,7 +362,7 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 <strong>内核空间与用户空间</strong>
 
-<strong>内核空间：操作系统</strong>通常在<strong>启动时</strong>，处于<strong>管态</strong>，将其<strong>核心程序</strong>放置在<strong>特定的内存空间（段）</strong>内，并且通过配置<strong>该段的描述符</strong>，使得这块内存区域受到MMU保护
+<strong>内核空间：操作系统</strong>通常在<strong>启动时</strong>，处于<strong>管态</strong>，将其<strong>核心程序</strong>放置在<strong>特定的内存空间（段）</strong>内，并且通过配置<strong>该段的描述符</strong>，使得这块内存区域受到 MMU 保护
 
 <strong>用户空间：</strong>与内核空间相对的其他空间称作<strong>用户空间</strong>
 
@@ -388,7 +388,7 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 <strong>核外部分：</strong>操作系统加载到用户空间的部分称作<strong>核外部分</strong>
 
-<strong>操作系统</strong>令<strong>内核执行于管态上，用户程序执行于目态上</strong>，利用CPU机制（<strong>指令特权级别</strong>和<strong>MMU内存保护</strong>），实现了<strong>权限控制</strong>和<strong>系统保护</strong>
+<strong>操作系统</strong>令<strong>内核执行于管态上，用户程序执行于目态上</strong>，利用 CPU 机制（<strong>指令特权级别</strong>和<strong>MMU 内存保护</strong>），实现了<strong>权限控制</strong>和<strong>系统保护</strong>
 
 <table style="width:74%;">
 <colgroup>
@@ -489,7 +489,7 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 按命令接口的<strong>使用方式</strong>，分为：
 
-1)  脱机命令：<strong>预先编写好</strong>，送交执行后<strong>无法立即反馈</strong>的命令接口形式。例如批处理系统中的JCL。
+1)  脱机命令：<strong>预先编写好</strong>，送交执行后<strong>无法立即反馈</strong>的命令接口形式。例如批处理系统中的 JCL。
 
 2)  联机命令：<strong>交互式执行</strong>，能够<strong>立即得到反馈</strong>的命令接口形式。例如<strong>分时系统</strong>中的交互式命令接口。又可细分为<strong>字符命令、菜单命令和图标命令</strong>。
 
@@ -526,7 +526,7 @@ DPT用4字节表示分区占用的扇区数，因此每个分区的存储空间�
 
 3.  <strong>进程的定义：</strong>
 
-Dijkstra：一道程序在一个数据集上的一次执行过程，称为一个进程(Process)
+Dijkstra：一道程序在一个数据集上的一次执行过程，称为一个进程 (Process)
 
 IBM：程序的运行过程称为任务（Task）
 
@@ -558,9 +558,9 @@ IBM：程序的运行过程称为任务（Task）
 
     2)  运行：正在被处理器处理的状态
 
-    3)  阻塞：由于各种原因（IO操作、资源缺乏等）暂时无法运行的状态（即使有CPU也无法运行）
+    3)  阻塞：由于各种原因（IO 操作、资源缺乏等）暂时无法运行的状态（即使有 CPU 也无法运行）
 
-        运行→堵塞：I/O操作、缺乏资源、系统控制、硬件故障
+        运行→堵塞：I/O 操作、缺乏资源、系统控制、硬件故障
 
 ![原文插图](/Firefly/uploads/course-os/image10.png)
 
@@ -570,19 +570,19 @@ IBM：程序的运行过程称为任务（Task）
 
 1)  基本描述信息部分（至少包括）
 
-    1.  进程名pname：通常是程序名
+    1.  进程名 pname：通常是程序名
 
-    2.  进程标识符pid：操作系统用以识别进程的唯一标识
+    2.  进程标识符 pid：操作系统用以识别进程的唯一标识
 
-    3.  用户标识uid：创建进程的用户标识
+    3.  用户标识 uid：创建进程的用户标识
 
-    4.  进程状态pstate：运行、就绪或阻塞
+    4.  进程状态 pstate：运行、就绪或阻塞
 
 2)  管理信息部分（至少包括）
 
     1.  程序和数据地址：程序和数据在内存中的位置信息
 
-    2.  IO操作相关参数：进程进行IO操作时的参数
+    2.  IO 操作相关参数：进程进行 IO 操作时的参数
 
     3.  进程通信信息：用于进程间通信的消息队列指针等
 
@@ -596,11 +596,11 @@ IBM：程序的运行过程称为任务（Task）
 
 <!-- -->
 
-8.  <strong>操作系统用PCB来描述进程信息，并利用两种PCB队列来组织这些PCB：</strong>
+8.  <strong>操作系统用 PCB 来描述进程信息，并利用两种 PCB 队列来组织这些 PCB：</strong>
 
-    1)  <strong>就绪队列</strong>：<strong>就绪进程</strong>的PCB组成的队列，按照进程<strong>性质或优先级</strong>，系统中可以有<strong>多个就绪队列</strong>，以提高<strong>进程调度算法</strong>选择进程的效率。在<strong>多处理器系统</strong>中，就绪队列也被称作<strong>请求队列</strong>，每个处理器具有<strong>独立的请求队列</strong>。
+    1)  <strong>就绪队列</strong>：<strong>就绪进程</strong>的 PCB 组成的队列，按照进程<strong>性质或优先级</strong>，系统中可以有<strong>多个就绪队列</strong>，以提高<strong>进程调度算法</strong>选择进程的效率。在<strong>多处理器系统</strong>中，就绪队列也被称作<strong>请求队列</strong>，每个处理器具有<strong>独立的请求队列</strong>。
 
-    2)  <strong>等待队列</strong>：<strong>阻塞进程</strong>的PCB组成的队列，按照<strong>阻塞原因</strong>，系统中可以有<strong>多个等待队列</strong>，以便在<strong>阻塞原因解除</strong>时统一调整进程状态。
+    2)  <strong>等待队列</strong>：<strong>阻塞进程</strong>的 PCB 组成的队列，按照<strong>阻塞原因</strong>，系统中可以有<strong>多个等待队列</strong>，以便在<strong>阻塞原因解除</strong>时统一调整进程状态。
 
 9.  <strong>进程管理的主要内容：</strong>
 
@@ -632,7 +632,7 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  用于创建一个进程
 
-    2)  Create可能在以下情况下被使用：
+    2)  Create 可能在以下情况下被使用：
 
         1.  作业调度程序
 
@@ -640,13 +640,13 @@ IBM：程序的运行过程称为任务（Task）
 
         3.  系统调用
 
-    3)  Create被使用时完成以下操作：
+    3)  Create 被使用时完成以下操作：
 
-        1.  建立一个PCB
+        1.  建立一个 PCB
 
         2.  生成进程标识符（pid）
 
-        3.  初始化PCB各项内容
+        3.  初始化 PCB 各项内容
 
         4.  加入合适的就绪队列
 
@@ -658,7 +658,7 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  用于结束一个进程
 
-    2)  Destroy可能在以下情况下被使用：
+    2)  Destroy 可能在以下情况下被使用：
 
         1.  进程执行完毕
 
@@ -668,21 +668,21 @@ IBM：程序的运行过程称为任务（Task）
 
         4.  人为终止
 
-    3)  Destroy被使用时完成以下操作：
+    3)  Destroy 被使用时完成以下操作：
 
         1.  进程资源回收
 
-        2.  删除进程PCB
+        2.  删除进程 PCB
 
 16. <strong>阻塞原语（Block）</strong>
 
     1)  用于使一个进程进入阻塞状态
 
-    2)  Block在阻塞原因发生时被使用。
+    2)  Block 在阻塞原因发生时被使用。
 
-    3)  Block被使用时完成以下操作：
+    3)  Block 被使用时完成以下操作：
 
-        1.  修改PCB中进程状态为阻塞状态
+        1.  修改 PCB 中进程状态为阻塞状态
 
         2.  现场保护
 
@@ -692,15 +692,15 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  用于使一个进程从阻塞状态进入就绪状态
 
-    2)  Wakeup在阻塞原因解除时被使用。
+    2)  Wakeup 在阻塞原因解除时被使用。
 
-    3)  Wakeup被使用时完成以下操作：
+    3)  Wakeup 被使用时完成以下操作：
 
-        1.  将进程PCB从等待队列中移除
+        1.  将进程 PCB 从等待队列中移除
 
         2.  修改进程状态为就绪状态
 
-        3.  将进程PCB加入合适的就绪队列
+        3.  将进程 PCB 加入合适的就绪队列
 
         4.  阻塞原因解除后，进程未必可以直接运行，因此合理的唤醒原语并不会将阻塞状态直接修改为运行状态。
 
@@ -718,7 +718,7 @@ IBM：程序的运行过程称为任务（Task）
 
     它是仅由于使用相同的资源而造成的制约，实质上就是<strong>一组并发进程共享某种临界资源的制约关系。</strong>
 
-22. <strong>临界区(Critical Section，或Critical Region)</strong>
+22. <strong>临界区 (Critical Section，或 Critical Region)</strong>
 
     是指进程对应的程序中访问临界资源的一段程序代码，即进程在资源的一次使用过程中，从申请开始至归还为止的一段程序代码。
 
@@ -738,7 +738,7 @@ IBM：程序的运行过程称为任务（Task）
 
     4） <strong>让权等待</strong>：当一个进程离开临界区时，应当让请求进入相关临界区的下一个进程进入临界区执行。
 
-24. 加锁机制由三个要素组成<strong>：锁变量key、加锁操作lock(key)和解锁操作unlock(key)。</strong>
+24. 加锁机制由三个要素组成<strong>：锁变量 key、加锁操作 lock(key) 和解锁操作 unlock(key)。</strong>
 
 <table>
 <colgroup>
@@ -760,7 +760,7 @@ IBM：程序的运行过程称为任务（Task）
 </tbody>
 </table>
 
-1)  锁变量key=1时表示上锁状态，反之则未上锁
+1)  锁变量 key=1 时表示上锁状态，反之则未上锁
 
 2)  当进程申请资源时需对资源加锁，若资源已上锁，则上锁操作将进行反复测试（等待），直到资源被解锁；当进程归还资源时需对资源解锁。
 
@@ -783,7 +783,7 @@ IBM：程序的运行过程称为任务（Task）
 </tbody>
 </table>
 
-当key=0时，若按①③②④执行，则两个进程同时进入临界区，加锁失效。
+当 key=0 时，若按①③②④执行，则两个进程同时进入临界区，加锁失效。
 
 有效的加锁过程一般通过硬件指令完成。
 
@@ -791,11 +791,11 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  存在“忙等待”现象，浪费了处理器时间
 
-    2)  存在“饥饿”(Starvation)现象，进程等待时间可能无限长
+    2)  存在“饥饿”(Starvation) 现象，进程等待时间可能无限长
 
     3)  多个锁变量的加锁操作可能造成进程死锁
 
-26. 信号量机制由三个要素组成：<strong>信号量s、原语p和原语v</strong>。
+26. 信号量机制由三个要素组成：<strong>信号量 s、原语 p 和原语 v</strong>。
 
 <table style="width:99%;">
 <colgroup>
@@ -822,7 +822,7 @@ IBM：程序的运行过程称为任务（Task）
 </tbody>
 </table>
 
-该机制中，<strong>s.value\>0</strong>表示资源就绪，否则表示有进程在使用或请求使用资源。进程请求资源时需使用<strong>原语p</strong>，若资源非空闲，则进入由于<strong>s</strong>而导致的等待队列，直至正在使用资源的进程归还资源时使用<strong>原语v</strong>将其唤醒。
+该机制中，<strong>s.value\>0</strong>表示资源就绪，否则表示有进程在使用或请求使用资源。进程请求资源时需使用<strong>原语 p</strong>，若资源非空闲，则进入由于<strong>s</strong>而导致的等待队列，直至正在使用资源的进程归还资源时使用<strong>原语 v</strong>将其唤醒。
 
 27. <strong>信号量机制相比于加锁机制的优势：</strong>
 
@@ -860,11 +860,11 @@ IBM：程序的运行过程称为任务（Task）
 
 ![原文插图](/Firefly/uploads/course-os/image14.png)![原文插图](/Firefly/uploads/course-os/image15.png)
 
-代码段L1对L2依赖时，可将L2的一次执行看作一种“资源”的归还（就绪），而L1的执行，需要申请使用这种“资源”。
+代码段 L1 对 L2 依赖时，可将 L2 的一次执行看作一种“资源”的归还（就绪），而 L1 的执行，需要申请使用这种“资源”。
 
-于是，可以类似地使用信号量机制实现同步关系：在L1执行前执行<strong>原语p</strong>，而在L2执行后执行<strong>原语v</strong>。
+于是，可以类似地使用信号量机制实现同步关系：在 L1 执行前执行<strong>原语 p</strong>，而在 L2 执行后执行<strong>原语 v</strong>。
 
-与互斥关系不同的是，<strong>L1使用“资源”后并不归还</strong>（“资源”被消耗）。
+与互斥关系不同的是，<strong>L1 使用“资源”后并不归还</strong>（“资源”被消耗）。
 
 30. <strong>除加锁机制与信号量机制之外，常用的进程同步机制还有：标志位机制、管程机制 等。</strong>
 
@@ -907,7 +907,7 @@ IBM：程序的运行过程称为任务（Task）
 
 <strong>empty = k; (正信号量可表示就绪资源的数量)</strong>
 
-<strong>若规定仓库必须保持“栈式使用”方式 ，top表示最上方的货物在仓库中的位置（栈顶地址），初始化top = -1</strong>
+<strong>若规定仓库必须保持“栈式使用”方式，top 表示最上方的货物在仓库中的位置（栈顶地址），初始化 top = -1</strong>
 
 2)  （考虑互斥关系和top）\[可以只考虑互斥关系，如果是栈就要考虑top\]
 
@@ -944,7 +944,7 @@ IBM：程序的运行过程称为任务（Task）
 </tbody>
 </table>
 
-<strong>当连续使用原语p时，控制互斥关系的原语p应当置于内层。</strong>
+<strong>当连续使用原语 p 时，控制互斥关系的原语 p 应当置于内层。</strong>
 
 3)  多个生产者/消费者（必须考虑互斥）
 
@@ -985,7 +985,7 @@ IBM：程序的运行过程称为任务（Task）
 
     ![原文插图](/Firefly/uploads/course-os/image17.png)
 
-    <strong>用一个进程Writer表示写者，用多个进程Reader表示读者，Writer和Reader的代码为</strong>
+    <strong>用一个进程 Writer 表示写者，用多个进程 Reader 表示读者，Writer 和 Reader 的代码为</strong>
 
 <table>
 <colgroup>
@@ -1008,7 +1008,7 @@ IBM：程序的运行过程称为任务（Task）
 </tbody>
 </table>
 
-<strong>仅在第一个reader开始时对mutexWR做p操作，最后一个reader结束时对mutexWR做v操作，而在其他reader运行中不改动信号量，改进的代码：</strong>
+<strong>仅在第一个 reader 开始时对 mutexWR 做 p 操作，最后一个 reader 结束时对 mutexWR 做 v 操作，而在其他 reader 运行中不改动信号量，改进的代码：</strong>
 
 <table>
 <colgroup>
@@ -1113,35 +1113,35 @@ IBM：程序的运行过程称为任务（Task）
 
     2)  <strong>信箱通信：</strong>
 
-        1.  在<strong>内核空间</strong>中建立专门区域作为<strong>信箱</strong>，信箱中划分<strong>有限个信格</strong>，每个<strong>信格</strong>可存放<strong>一条信息（信件）</strong>。每个信箱可由<strong>多个发送进程</strong>与<strong>接收进程共享</strong>，发送进程用<strong>send操作</strong>将信息放入<strong>信格</strong>中，接收进程用<strong>receive操作</strong>从信格中取出<strong>信息</strong>。
+        1.  在<strong>内核空间</strong>中建立专门区域作为<strong>信箱</strong>，信箱中划分<strong>有限个信格</strong>，每个<strong>信格</strong>可存放<strong>一条信息（信件）</strong>。每个信箱可由<strong>多个发送进程</strong>与<strong>接收进程共享</strong>，发送进程用<strong>send 操作</strong>将信息放入<strong>信格</strong>中，接收进程用<strong>receive 操作</strong>从信格中取出<strong>信息</strong>。
 
         2.  ![原文插图](/Firefly/uploads/course-os/image20.png)
 
-        3.  与共享存储区通信比较，信箱通信的数据存取模式固定，其实现是一个多生产者多消费者的PC问题。
+        3.  与共享存储区通信比较，信箱通信的数据存取模式固定，其实现是一个多生产者多消费者的 PC 问题。
 
-        4.  信箱数据结构包括信箱头和信箱体。信箱头包括信箱的基本信息和解决PC问题所需的数据：
+        4.  信箱数据结构包括信箱头和信箱体。信箱头包括信箱的基本信息和解决 PC 问题所需的数据：
 
-            1)  信箱名boxname：信箱的名称
+            1)  信箱名 boxname：信箱的名称
 
-            2)  信箱标识符bid：生成信箱时生成的唯一的标识符
+            2)  信箱标识符 bid：生成信箱时生成的唯一的标识符
 
-            3)  信箱大小size：信格总数
+            3)  信箱大小 size：信格总数
 
-            4)  同步信号量mailnum：表征信件数量的同步信号量
+            4)  同步信号量 mailnum：表征信件数量的同步信号量
 
-            5)  同步信号量freenum：表征空信格数量的同步信号量
+            5)  同步信号量 freenum：表征空信格数量的同步信号量
 
-            6)  读互斥信号量rmutex：保证多个接收者进程互斥的信号量
+            6)  读互斥信号量 rmutex：保证多个接收者进程互斥的信号量
 
-            7)  写互斥信号量wmutex：保证多个发送者进程互斥的信号量
+            7)  写互斥信号量 wmutex：保证多个发送者进程互斥的信号量
 
-            8)  读指针out：当前可读信件所在信格地址
+            8)  读指针 out：当前可读信件所在信格地址
 
-            9)  写指针in：当前可写入的空信格地址
+            9)  写指针 in：当前可写入的空信格地址
 
             10) 信箱体由若干连续区域组成缓冲区数组buf\[size\]
 
-        5.  信箱通信中Send和Receive的实现（发送操作和接收操作）：
+        5.  信箱通信中 Send 和 Receive 的实现（发送操作和接收操作）：
 
 <table style="width:99%;">
 <colgroup>
@@ -1174,7 +1174,7 @@ IBM：程序的运行过程称为任务（Task）
 
 3)  消息缓冲通信：
 
-    1.  内核空间中为每个进程配备一个<strong>消息队列MQ</strong>，并记录在进程的<strong>PCB中</strong>。发送进程<strong>通过Send操作</strong>将信息封入<strong>一个消息缓冲区</strong>中，并追加到<strong>接收进程的消息队列</strong>内；接收进程<strong>通过Receive操作</strong>收取<strong>自身消息队列中的信息</strong>。
+    1.  内核空间中为每个进程配备一个<strong>消息队列 MQ</strong>，并记录在进程的<strong>PCB 中</strong>。发送进程<strong>通过 Send 操作</strong>将信息封入<strong>一个消息缓冲区</strong>中，并追加到<strong>接收进程的消息队列</strong>内；接收进程<strong>通过 Receive 操作</strong>收取<strong>自身消息队列中的信息</strong>。
 
     2.  ![原文插图](/Firefly/uploads/course-os/image21.png)
 
@@ -1343,7 +1343,7 @@ IBM：程序的运行过程称为任务（Task）
 
         1)  由一个分派线程（Dispatcher）负责接收工作需求，然后将工作任务分派给工作线程（Worker）以完成具体动作。![原文插图](/Firefly/uploads/course-os/image22.png)
 
-        2)  Dispatcher和Worker之间是主从关系。其中，Dispatcher处于控制地位
+        2)  Dispatcher 和 Worker 之间是主从关系。其中，Dispatcher 处于控制地位
 
     2.  <strong>队列模型（Team Model）</strong>
 
@@ -1361,7 +1361,7 @@ IBM：程序的运行过程称为任务（Task）
 
 <!-- -->
 
-1.  <strong>调度(Scheduling)</strong>
+1.  <strong>调度 (Scheduling)</strong>
 
     1)  是管理的一种方法，一种决策，使资源经过管理得到合理、有效的利用。
 
@@ -1397,19 +1397,19 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  周转时间和平均周转时间——从<strong>处理过程的完成时间</strong>来进行评价（批处理系统）
 
-        1.  处理过程Ji的周转时间：$T_i=\text{作业 }J_i\text{ 的完成时刻}-\text{作业 }J_i\text{ 的提交时刻}$
+        1.  处理过程 Ji 的周转时间：$T_i=\text{作业 }J_i\text{ 的完成时刻}-\text{作业 }J_i\text{ 的提交时刻}$
 
-        2.  一批（n个）处理过程的平均周转时间：$T=\left(\sum_{i=0}^{n}T_i\right)/n$
+        2.  一批（n 个）处理过程的平均周转时间：$T=\left(\sum_{i=0}^{n}T_i\right)/n$
 
         3.  <strong>周转时间</strong>并不直接体现某处理过程耗时的<strong>“合理性”</strong>
 
-        4.  处理过程Ji的带权周转时间：$Tw_i=T_i/Tr_i$
+        4.  处理过程 Ji 的带权周转时间：$Tw_i=T_i/Tr_i$
 
-        5.  一批（n个）处理过程的平均带权周转时间：$Tw=\left(\sum_{i=0}^{n}Tw_i\right)/n$
+        5.  一批（n 个）处理过程的平均带权周转时间：$Tw=\left(\sum_{i=0}^{n}Tw_i\right)/n$
 
     2)  响应时间——从<strong>处理过程的响应速度</strong>来进行评价
 
-        1.  处理过程Ji的响应时间：$R_i=\text{作业 }J_i\text{ 第一次对用户做出响应的时刻}-\text{作业 }J_i\text{ 的提交时刻}$
+        1.  处理过程 Ji 的响应时间：$R_i=\text{作业 }J_i\text{ 第一次对用户做出响应的时刻}-\text{作业 }J_i\text{ 的提交时刻}$
 
     3)  其他性能指标
 
@@ -1423,7 +1423,7 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  <strong>提交状态</strong>
 
-        1.  程序员完成了程序的编写、准备好了程序运行要的数据以及利用作业控制语言JCL编写好了作业说明书，全部提交给操作员后，称为提交状态。
+        1.  程序员完成了程序的编写、准备好了程序运行要的数据以及利用作业控制语言 JCL 编写好了作业说明书，全部提交给操作员后，称为提交状态。
 
     2)  <strong>后备状态</strong>
 
@@ -1487,7 +1487,7 @@ IBM：程序的运行过程称为任务（Task）
 
     4)  <strong>计算：</strong>
 
-        1.  <strong>周转时间＝完成执行时间-作业提交时间</strong>
+        1.  <strong>周转时间＝完成执行时间 - 作业提交时间</strong>
 
         <!-- -->
 
@@ -1505,7 +1505,7 @@ IBM：程序的运行过程称为任务（Task）
 
             3)  <strong>HRN</strong>
 
-                1.  <strong>响应比=（当前时间-作业提交时间）/作业大小（只比较当前有的作业）</strong>
+                1.  <strong>响应比=（当前时间 - 作业提交时间）/作业大小（只比较当前有的作业）</strong>
 
                 2.  <strong>顺序：响应比越大越优先</strong>
 
@@ -1533,27 +1533,27 @@ IBM：程序的运行过程称为任务（Task）
 
                 1.  按照进入就绪队列的先后顺序，调度时选择最先进入就绪队列的进程。调度时不修改就绪队列，并且总是选择队首。
 
-                2.  FCFS基于<strong>非抢占调度方式</strong>。
+                2.  FCFS 基于<strong>非抢占调度方式</strong>。
 
-                3.  FCFS进程调度的优缺点类似FCFS的作业调度。（公平，易实现，服务质量欠佳）
+                3.  FCFS 进程调度的优缺点类似 FCFS 的作业调度。（公平，易实现，服务质量欠佳）
 
             2)  <strong>时间片轮转（RR: Round-Robin）</strong>
 
-                1.  <strong>RR基于抢占调度方式</strong>。其实现依赖于计时器中断。
+                1.  <strong>RR 基于抢占调度方式</strong>。其实现依赖于计时器中断。
 
                 2.  思想：就绪队列按照先进先出方式组织。调度时选择一个进程，并分配一个时间片。选中的进程在规定的时间片内运行。调度时判断其时间片是否用尽，若用尽，则将其移至就绪队列末尾，否则不修改就绪队列。并且总是选择队首。
 
                 3.  时间片用完，任务还没完成就移到队列末尾。时间片没用完，任务已经完成，就轮到新的进程（分新的时间片）
 
-                4.  时间片长度为T，若就绪队列中已存在n个进程，则提交的新进程的最长响应时间：
+                4.  时间片长度为 T，若就绪队列中已存在 n 个进程，则提交的新进程的最长响应时间：
 
                     1)  R = T×n
 
-                    2)  应用RR算法的关键是根据实际需要确定T的值：
+                    2)  应用 RR 算法的关键是根据实际需要确定 T 的值：
 
-                        1.  T太长则响应时间过长
+                        1.  T 太长则响应时间过长
 
-                        2.  T太短则进程切换过于频繁，系统开销加大
+                        2.  T 太短则进程切换过于频繁，系统开销加大
 
             3)  优先级算法（Priority）
 
@@ -1573,7 +1573,7 @@ IBM：程序的运行过程称为任务（Task）
 
                         通过不同的优先数配置策略，优先级算法可灵活地体现各种算法思想（FCFS\[把已经来的时间作为优先级\]、SJF\[把进程长短作为优先级\]等）。
 
-                        经验：IO繁忙型进程应当被赋予高优先级以提高系统并行度。
+                        经验：IO 繁忙型进程应当被赋予高优先级以提高系统并行度。
 
             4)  短进程优先算法：
 
@@ -1615,7 +1615,7 @@ IBM：程序的运行过程称为任务（Task）
 
             1)  概念：对于一组事件，如果存在某种处理方式，使其中每个事件的时限要求都可以得到满足，则称这组事件是可调度的（Schedulable）。否则，如果无论用何种方式，都至少有一个事件无法满足其时限要求，则称这组事件不可调度。
 
-            2)  可调度的一个必要条件： μ ≥ λ。其中μ表示系统单位时间内可以处理的事件数（处理能力）， λ表示单位时间内到达的事件数。
+            2)  可调度的一个必要条件：μ ≥ λ。其中μ表示系统单位时间内可以处理的事件数（处理能力），λ表示单位时间内到达的事件数。
 
             3)  
 
@@ -1623,11 +1623,11 @@ IBM：程序的运行过程称为任务（Task）
 
             1)  是周期性触发的事件（处理时间），每次事件必须在下个周期到达前完成（完成时限）。
 
-            2)  若只有单一周期性事件，其发生周期为P，系统处理一次该事件需要的时间为C，则其可调度的充要条件：P ≥ C（ μ = 1/C ； λ = 1/P； μ ≥ λ此时成为充要条件） 。
+            2)  若只有单一周期性事件，其发生周期为 P，系统处理一次该事件需要的时间为 C，则其可调度的充要条件：P ≥ C（μ = 1/C；λ = 1/P；μ ≥ λ此时成为充要条件） 。
 
             3)  从系统占用的角度来看，此充要条件为：C/P ≤ 1。
 
-            4)  若有n个周期性事件，发生周期分别为P1、P2、…、Pn，系统处理所需时间分别为C1、C2、…、Cn，则其可调度的充要条件：$\sum_{i=1}^{n}\frac{C_i}{P_i}\leq1$
+            4)  若有 n 个周期性事件，发生周期分别为 P1、P2、…、Pn，系统处理所需时间分别为 C1、C2、…、Cn，则其可调度的充要条件：$\sum_{i=1}^{n}\frac{C_i}{P_i}\leq1$
 
         6.  <strong>时限调度算法</strong>
 
@@ -1641,7 +1641,7 @@ IBM：程序的运行过程称为任务（Task）
 
             5)  每次选择<strong>不改变可调度</strong>性。
 
-            6)  例子：有2个周期性任务A、B，它们的周期分别是20ms和56ms，处理时间分别是8ms和32ms。画出采用时限调度算法的调度图。![原文插图](/Firefly/uploads/course-os/image34.png)
+            6)  例子：有 2 个周期性任务 A、B，它们的周期分别是 20ms 和 56ms，处理时间分别是 8ms 和 32ms。画出采用时限调度算法的调度图。![原文插图](/Firefly/uploads/course-os/image34.png)
 
 9.  死锁：
 
@@ -1679,7 +1679,7 @@ IBM：程序的运行过程称为任务（Task）
 
     6)  死锁的解决——预防
 
-        通过在资源分配时采取一系列限制措施，破坏4条必要条件之一，以预防死锁的发生。
+        通过在资源分配时采取一系列限制措施，破坏 4 条必要条件之一，以预防死锁的发生。
 
         1.  “互斥条件”的破坏
 
@@ -1695,21 +1695,21 @@ IBM：程序的运行过程称为任务（Task）
 
         3.  “请求与保持条件”的破坏
 
-            1)  方法1：资源暂时归还——进程申请资源不成功时，暂时归还已分配的资源。
+            1)  方法 1：资源暂时归还——进程申请资源不成功时，暂时归还已分配的资源。
 
                 1.  缺陷：系统需处理“回退”；反复申请与归还。
 
-            2)  方法2：静态分配——进程需要一次申请完所有可能使用的资源。
+            2)  方法 2：静态分配——进程需要一次申请完所有可能使用的资源。
 
                 1.  缺陷：难以预知需要使用的资源；降低资源利用率。
 
         4.  “环路等待条件”的破坏
 
-            1)  方法1：单请求方式——资源申请不允许嵌套（但可一次申请多个），归还旧资源后方可申请新资源。
+            1)  方法 1：单请求方式——资源申请不允许嵌套（但可一次申请多个），归还旧资源后方可申请新资源。
 
                 1.  缺陷：同时需要多个资源时只能实行小范围内的“静态分配”。
 
-            2)  方法2：按序分配——对资源编号，进程只允许申请比当前已拥有资源编号更大的资源。
+            2)  方法 2：按序分配——对资源编号，进程只允许申请比当前已拥有资源编号更大的资源。
 
                 1.  缺陷：若使用大编号资源的段内需使用小编号资源，则只能实行小范围内的“静态分配”；编号管理困难。
 
@@ -1727,7 +1727,7 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  <strong>避免资源分配状态：</strong>
 
-            1)  n个并发进程P1～Pn，m种资源R1～Rm，考虑某时刻的资源分配状态：
+            1)  n 个并发进程 P1～Pn，m 种资源 R1～Rm，考虑某时刻的资源分配状态：
 
             2)  当前可用向量Available，其中Available\[j\]表示当前空闲的资源Rj的数量
 
@@ -1735,11 +1735,11 @@ IBM：程序的运行过程称为任务（Task）
 
             4)  最大需求矩阵Max，其中Max\[i, j\]表示Pi对Rj的最大需求量
 
-            5)  某进程P对某资源R的最大需求量是指：
+            5)  某进程 P 对某资源 R 的最大需求量是指：
 
-                1.  任意时刻进程P所需要持有的资源R的最大数量
+                1.  任意时刻进程 P 所需要持有的资源 R 的最大数量
 
-                2.  保证进程P完成所需资源R的最少数量
+                2.  保证进程 P 完成所需资源 R 的最少数量
 
         3.  <strong>避免安全状态：</strong>
 
@@ -1755,11 +1755,11 @@ IBM：程序的运行过程称为任务（Task）
 
                 3.  模拟过程中的临时参数：
 
-                    1)  矩阵Need表示各进程未满足的资源数量，<strong>Need = Max – Used</strong>
+                    1)  矩阵 Need 表示各进程未满足的资源数量，<strong>Need = Max – Used</strong>
 
-                    2)  向量SimAvailable记录模拟运行中的资源可用量，初始值为Available
+                    2)  向量 SimAvailable 记录模拟运行中的资源可用量，初始值为 Available
 
-                    3)  向量Finished记录模拟运行的进程顺序，初始值为0
+                    3)  向量 Finished 记录模拟运行的进程顺序，初始值为 0
 
                 4.  模拟运行的步骤：
 
@@ -1936,9 +1936,9 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  目的：对每次资源申请都判断可否分配以保证系统总在安全状态。
 
-    2)  系统环境：n个并发进程P1～Pn，m种资源R1～Rm
+    2)  系统环境：n 个并发进程 P1～Pn，m 种资源 R1～Rm
 
-    3)  对于某个进程Pt发出的某次资源申请，算法输入：
+    3)  对于某个进程 Pt 发出的某次资源申请，算法输入：
 
         1.  系统总资源向量Total，其中Total\[j\]表示Rj的总量
 
@@ -1948,7 +1948,7 @@ IBM：程序的运行过程称为任务（Task）
 
         4.  申请向量Request，其中Request\[j\]表示Pt对Rj的申请数量
 
-        5.  算法输出： Pt的资源申请Request能否得到分配。
+        5.  算法输出：Pt 的资源申请 Request 能否得到分配。
 
     4)  <strong>算法步骤：</strong>
 
@@ -1960,7 +1960,7 @@ IBM：程序的运行过程称为任务（Task）
 
         4.  预分配，假定Request得到满足：Available = Available – Request，Used\[t, j\] = Used\[t, j\] + Request\[j\]，Need\[t, j\] = Need\[t, j\] – Request\[j\]
 
-        5.  安全状态检查，检查预分配后的状态是否为安全状态，若不是安全状态则取消第4步的预分配，并阻塞进程Pt。
+        5.  安全状态检查，检查预分配后的状态是否为安全状态，若不是安全状态则取消第 4 步的预分配，并阻塞进程 Pt。
 
     5)  例题（还是刚刚那道题）：
 
@@ -1968,7 +1968,7 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  ![原文插图](/Firefly/uploads/course-os/image36.png)
 
-        3.  在当前状态下，如果进程P1申请request=(1，0，1，0)，系统能否分配？
+        3.  在当前状态下，如果进程 P1 申请 request=(1，0，1，0)，系统能否分配？
 
 <table style="width:99%;">
 <colgroup>
@@ -2121,7 +2121,7 @@ IBM：程序的运行过程称为任务（Task）
 </tbody>
 </table>
 
-4.  在当前状态下，如果进程P3申请request=(1，0，0，1)，系统能否分配？
+4.  在当前状态下，如果进程 P3 申请 request=(1，0，0，1)，系统能否分配？
 
 <table>
 <colgroup>
@@ -2284,24 +2284,24 @@ IBM：程序的运行过程称为任务（Task）
 
         2)  试图找到<strong>满足所有进程当前资源申请的分配顺序</strong>
 
-            1.  在检测中，用资源分配图G = (V，E)表示当前资源分配与申请的情况。
+            1.  在检测中，用资源分配图 G = (V，E) 表示当前资源分配与申请的情况。
 
-            2.  V为结点集。V = P∪R，其中P是进程结点子集，R是资源结点子集
+            2.  V 为结点集。V = P∪R，其中 P 是进程结点子集，R 是资源结点子集
 
-            3.  E为有向边集。从P中结点pi指向R中结点rj的边称作申请边，表示进程pi申请一个单位的资源rj，从R中结点rj指向P中结点pi的边称作分配边，表示已分配一个单位的资源ri给进程pj。
+            3.  E 为有向边集。从 P 中结点 pi 指向 R 中结点 rj 的边称作申请边，表示进程 pi 申请一个单位的资源 rj，从 R 中结点 rj 指向 P 中结点 pi 的边称作分配边，表示已分配一个单位的资源 ri 给进程 pj。
 
             4.  在画图时，用圆“○”表示进程结点，用正方形“□”表示资源结点，如果某类资源的数量有多个，则在对应的正方形“□”内用实心圆点表示其数量。
 
-            5.  例子：R1、R2、R3、R4、R5和R6数量分别为2、1、1、1、1和2
+            5.  例子：R1、R2、R3、R4、R5 和 R6 数量分别为 2、1、1、1、1 和 2
 
 |          |                              |                 |
 |:--------:|:-----------------------------|:----------------|
 | <strong>进程</strong> | <strong>已分配的资源</strong>             | <strong>申请的资源</strong>  |
-|  <strong>A</strong>   | <strong>2个单位的R1</strong>              | <strong>1个单位的R3</strong> |
-|  <strong>B</strong>   | <strong>1个单位的R5</strong>              | <strong>1个单位的R1</strong> |
-|  <strong>C</strong>   | <strong>1个单位的R2</strong>              | <strong>1个单位的R4</strong> |
-|  <strong>D</strong>   | <strong>1个单位的R3，1个单位的R6</strong> | <strong>1个单位的R5</strong> |
-|  <strong>E</strong>   | <strong>1个单位的R4</strong>              | <strong>1个单位的R6</strong> |
+|  <strong>A</strong>   | <strong>2 个单位的 R1</strong>              | <strong>1 个单位的 R3</strong> |
+|  <strong>B</strong>   | <strong>1 个单位的 R5</strong>              | <strong>1 个单位的 R1</strong> |
+|  <strong>C</strong>   | <strong>1 个单位的 R2</strong>              | <strong>1 个单位的 R4</strong> |
+|  <strong>D</strong>   | <strong>1 个单位的 R3，1 个单位的 R6</strong> | <strong>1 个单位的 R5</strong> |
+|  <strong>E</strong>   | <strong>1 个单位的 R4</strong>              | <strong>1 个单位的 R6</strong> |
 
 ![原文插图](/Firefly/uploads/course-os/image37.png)
 
@@ -2363,7 +2363,7 @@ IBM：程序的运行过程称为任务（Task）
 
             1)  <strong>静态重定位</strong>：操作系统装入程序时修改其中所引用的<strong>逻辑地址值</strong>为<strong>物理地址值</strong>——<strong>由操作系统实现</strong>
 
-            2)  <strong>动态重定位</strong>：在运行过程中需要做访问操作时才进行地址转换——由CPU的<strong>存储管理单元（MMU）</strong>自动实现，操作系统<strong>只登记MMU</strong>进行重定位时需要的相关信息。
+            2)  <strong>动态重定位</strong>：在运行过程中需要做访问操作时才进行地址转换——由 CPU 的<strong>存储管理单元（MMU）</strong>自动实现，操作系统<strong>只登记 MMU</strong>进行重定位时需要的相关信息。
 
 <table>
 <colgroup>
@@ -2425,7 +2425,7 @@ IBM：程序的运行过程称为任务（Task）
 
         1)  利用处理器的特权级，防止跨级访问
 
-        2)  利用MMU的界限寄存器规则，防止同级间访问
+        2)  利用 MMU 的界限寄存器规则，防止同级间访问
 
         3)  操作系统设置和检查存储区域的保护键与当前进程的键及操作是否匹配
 
@@ -2524,7 +2524,7 @@ IBM：程序的运行过程称为任务（Task）
 
         1)  可用表
 
-            1.  类似分区说明表，但其中的记录是变化的，且状态1表示空闲，而状态0表示记录无效（预留）。
+            1.  类似分区说明表，但其中的记录是变化的，且状态 1 表示空闲，而状态 0 表示记录无效（预留）。
 
 ![原文插图](/Firefly/uploads/course-os/image46.png)
 
@@ -2570,7 +2570,7 @@ IBM：程序的运行过程称为任务（Task）
 
     3)  <strong>最坏适应法（WF）</strong>：在<strong>所有足够装入</strong>程序的空闲区中选择<strong>最大者</strong>
 
-4.  例子：程序A、B、C和D，它们需要申请的空间大小分别是80K、30K、130K和25K。
+4.  例子：程序 A、B、C 和 D，它们需要申请的空间大小分别是 80K、30K、130K 和 25K。
 
     ![原文插图](/Firefly/uploads/course-os/image48.png)
 
@@ -2598,9 +2598,9 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  由于可能需要将已装入的程序进行移动，<strong>可变分区存储管理常采用动态重定位方式</strong>。
 
-    2)  进程变为<strong>运行状态</strong>时，其<strong>基址和界限</strong>将被写入到<strong>MMU的寄存器</strong>中。
+    2)  进程变为<strong>运行状态</strong>时，其<strong>基址和界限</strong>将被写入到<strong>MMU 的寄存器</strong>中。
 
-    3)  <strong>内存访问（重定位）</strong>时MMU首先检查所访问的<strong>逻辑地址</strong>是否超出<strong>界限寄存器中规定的界限值</strong>（存储保护），若未超出，则
+    3)  <strong>内存访问（重定位）</strong>时 MMU 首先检查所访问的<strong>逻辑地址</strong>是否超出<strong>界限寄存器中规定的界限值</strong>（存储保护），若未超出，则
 
     <strong>物理地址 = 逻辑地址 + 程序基址</strong> （由于<strong>连续装入</strong>）
 
@@ -2608,11 +2608,11 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  <strong>分区个数</strong>和<strong>每个分区的长度</strong>都在<strong>变化</strong>
 
-    2)  <strong>基本分配算法FF、BF和WF</strong>，在存储空间<strong>利用率</strong>上<strong>没有很大差别</strong>
+    2)  <strong>基本分配算法 FF、BF 和 WF</strong>，在存储空间<strong>利用率</strong>上<strong>没有很大差别</strong>
 
     3)  为进程的<strong>动态扩充</strong>存储空间<strong>提供可能</strong>
 
-    4)  存在<strong>外碎片(External Fragmentation)</strong>，<strong>降低了</strong>存储空间的<strong>利用率</strong>
+    4)  存在<strong>外碎片 (External Fragmentation)</strong>，<strong>降低了</strong>存储空间的<strong>利用率</strong>
 
     5)  存储区<strong>回收时</strong>需要<strong>相邻空闲区的合并</strong>，<strong>增加</strong>系统的<strong>开销</strong>
 
@@ -2650,7 +2650,7 @@ IBM：程序的运行过程称为任务（Task）
 
             1)  建立可覆盖区
 
-            2)  利用进程管理的EXEC（系统调用）功能装入可覆盖子程序的程序文件
+            2)  利用进程管理的 EXEC（系统调用）功能装入可覆盖子程序的程序文件
 
             3)  调用子程序
 
@@ -2664,17 +2664,17 @@ IBM：程序的运行过程称为任务（Task）
 
 5.  <strong>分页存储管理</strong>
 
-    1)  <strong>内存分块</strong>：将内存空间分割为<strong>若干个等长的小区域</strong>，这些区域称作<strong>块</strong>或帧。块的大小通常为2k字节。
+    1)  <strong>内存分块</strong>：将内存空间分割为<strong>若干个等长的小区域</strong>，这些区域称作<strong>块</strong>或帧。块的大小通常为 2k 字节。
 
         ![原文插图](/Firefly/uploads/course-os/image53.png)
 
-    2)  <strong>程序分页</strong>：程序装入内存前按照<strong>块的大小分为若干页</strong>，依次将这些页编号为0、1、2、……
+    2)  <strong>程序分页</strong>：程序装入内存前按照<strong>块的大小分为若干页</strong>，依次将这些页编号为 0、1、2、……
 
     3)  程序的装入：<strong>每一页被装入到内存的一块</strong>中，块（页）内连续装入，但块的位置<strong>可以是不连续的</strong>。
 
         1.  进程的堆栈也将分页存入块中。
 
-    4)  分页机制下，<strong>若块（页）的大小通常为2k字节</strong>，则某逻辑地址a对应的<strong>页号p</strong>和<strong>页内地址ω</strong>：
+    4)  分页机制下，<strong>若块（页）的大小通常为 2k 字节</strong>，则某逻辑地址 a 对应的<strong>页号 p</strong>和<strong>页内地址ω</strong>：
 
         1.  p = a / 2k
 
@@ -2684,7 +2684,7 @@ IBM：程序的运行过程称为任务（Task）
 
         4.  ω = a & (2k – 1)
 
-        5.  n位逻辑地址的高位和低位分别指示了<strong>其页号和页内地址</strong>
+        5.  n 位逻辑地址的高位和低位分别指示了<strong>其页号和页内地址</strong>
 
 ![原文插图](/Firefly/uploads/course-os/image54.png)
 
@@ -2702,7 +2702,7 @@ IBM：程序的运行过程称为任务（Task）
 
             1.  记录内存中各块的<strong>使用（空闲/被分配）情况</strong>
 
-                1)  <strong>位示图法</strong>：内存的<strong>第b个块</strong>的使用情况被记录在一个位示图<strong>第i个字的第j位</strong>上，0表示空闲，1表示已被分配
+                1)  <strong>位示图法</strong>：内存的<strong>第 b 个块</strong>的使用情况被记录在一个位示图<strong>第 i 个字的第 j 位</strong>上，0 表示空闲，1 表示已被分配
 
                     1.  <strong>b = 字长×i + j</strong>
 
@@ -2710,7 +2710,7 @@ IBM：程序的运行过程称为任务（Task）
 
                     3.  <strong>j = b % 字长</strong>
 
-                    4.  <strong>n个字</strong>的位示图可表示“<strong>字长×n</strong>”个块。
+                    4.  <strong>n 个字</strong>的位示图可表示“<strong>字长×n</strong>”个块。
 
                 2)  <strong>空闲块链表法</strong>：建立<strong>链表</strong>来记录<strong>空闲块的编号</strong>。
 
@@ -2730,15 +2730,15 @@ IBM：程序的运行过程称为任务（Task）
 
 ![原文插图](/Firefly/uploads/course-os/image56.png)
 
-2.  进程变为<strong>运行状态</strong>时，将<strong>页表基址和页表限长</strong>写入<strong>MMU的寄存器中</strong>。
+2.  进程变为<strong>运行状态</strong>时，将<strong>页表基址和页表限长</strong>写入<strong>MMU 的寄存器中</strong>。
 
 ![原文插图](/Firefly/uploads/course-os/image57.png)
 
-3.  进行<strong>内存访问</strong>时，MMU区分<strong>逻辑地址的页号与页内地址</strong>
+3.  进行<strong>内存访问</strong>时，MMU 区分<strong>逻辑地址的页号与页内地址</strong>
 
 ![原文插图](/Firefly/uploads/course-os/image58.png)
 
-4.  <strong>MMU检查页号是否越界</strong>（超出页表限长）
+4.  <strong>MMU 检查页号是否越界</strong>（超出页表限长）
 
 ![原文插图](/Firefly/uploads/course-os/image59.png)
 
@@ -2746,7 +2746,7 @@ IBM：程序的运行过程称为任务（Task）
 
 ![原文插图](/Firefly/uploads/course-os/image60.png)
 
-6.  MMU根据<strong>块号与页（块）内地址确定物理地址</strong>
+6.  MMU 根据<strong>块号与页（块）内地址确定物理地址</strong>
 
 ![原文插图](/Firefly/uploads/course-os/image61.png)
 
@@ -2762,11 +2762,11 @@ IBM：程序的运行过程称为任务（Task）
 
 6)  <strong>静态分页技术的不足：</strong>
 
-    1.  重定位时<strong>两次访存（查找页表和读取数据）</strong>，增大了CPU的开销。
+    1.  重定位时<strong>两次访存（查找页表和读取数据）</strong>，增大了 CPU 的开销。
 
-    2.  <strong>解决方案：</strong>利用特殊存储硬件——“<strong>快表</strong>”（TLB：Translation Lookaside Buffers）<strong>存储进程的部分页表</strong>，访存时先在TLB中查询。
+    2.  <strong>解决方案：</strong>利用特殊存储硬件——“<strong>快表</strong>”（TLB：Translation Lookaside Buffers）<strong>存储进程的部分页表</strong>，访存时先在 TLB 中查询。
 
-    3.  给定时间段内，MMU在访问页对应的块时，若有<strong>m</strong>次在快表中得到块号，有<strong>n</strong>次在页表中得到块号，那么，这个时间段MMU的快表命中率<strong>：</strong>$h=\frac{m}{m+n}\times100\%$
+    3.  给定时间段内，MMU 在访问页对应的块时，若有<strong>m</strong>次在快表中得到块号，有<strong>n</strong>次在页表中得到块号，那么，这个时间段 MMU 的快表命中率<strong>：</strong>$h=\frac{m}{m+n}\times100\%$
 
 <!-- -->
 
@@ -2810,23 +2810,23 @@ IBM：程序的运行过程称为任务（Task）
 
     3)  与静态分页技术不同，在动态分页中，页表不但需要记录页对应的块的编号，还需记录：
 
-        1.  页是否在内存中？ 中断位P
+        1.  页是否在内存中？中断位 P
 
-        2.  页在装入后是否再次被访问过？ 访问位A
+        2.  页在装入后是否再次被访问过？访问位 A
 
-        3.  页在装入后是否被修改？ 修改位M
+        3.  页在装入后是否被修改？修改位 M
 
         4.  页在外存中的位置 外存地址
 
-        5.  扩充页表的基本结构由页号、块号、外存地址、中断位P、访问位A、修改位M等组成，用于让CPU区分内、外存的页信息
+        5.  扩充页表的基本结构由页号、块号、外存地址、中断位 P、访问位 A、修改位 M 等组成，用于让 CPU 区分内、外存的页信息
 
-    4)  请求分页的<strong>重定位</strong>过程与静态分页大致相同<strong>（由MMU完成）</strong>：
+    4)  请求分页的<strong>重定位</strong>过程与静态分页大致相同<strong>（由 MMU 完成）</strong>：
 
         1.  根据<strong>页号</strong>在<strong>快表</strong>中查找，若<strong>找到</strong>且通过<strong>访问权限检查</strong>则访问<strong>物理地址</strong>，置该页<strong>A=1</strong>。
 
         2.  若在快表中<strong>未找到</strong>且页号<strong>未越界，</strong>则<strong>在页表中查找</strong>，若找到的页<strong>P=1</strong>且通过<strong>访问权限检查</strong>则访问<strong>物理地址</strong>，置该页<strong>A=1</strong>（并将此页信息写入快表中）。
 
-        3.  若页表中找到的页<strong>P=0</strong>，则MMU发出一个<strong>缺页中断</strong>。
+        3.  若页表中找到的页<strong>P=0</strong>，则 MMU 发出一个<strong>缺页中断</strong>。
 
         4.  <strong>当缺页中断</strong>发生时，将进入操作系统的<strong>缺页中断处理程序</strong>：
 
@@ -2836,9 +2836,9 @@ IBM：程序的运行过程称为任务（Task）
 
                 1.  若系统有空闲块，则选择一个空闲块
 
-                2.  若无空闲块，则根据<strong>某种策略</strong>，选择一个页，保存<strong>其已发生的修改（判断M位）</strong>，<strong>并调出内存（P=0）</strong>，以得到一个空闲块
+                2.  若无空闲块，则根据<strong>某种策略</strong>，选择一个页，保存<strong>其已发生的修改（判断 M 位）</strong>，<strong>并调出内存（P=0）</strong>，以得到一个空闲块
 
-            3)  将所缺的页写入空闲块中，<strong>并置P=1，A=0，M=0</strong>
+            3)  将所缺的页写入空闲块中，<strong>并置 P=1，A=0，M=0</strong>
 
     5)  当需要选择<strong>一个淘汰页</strong>时，可采取<strong>两种页面调度</strong>方式之一：
 
@@ -2856,23 +2856,23 @@ IBM：程序的运行过程称为任务（Task）
 
             1)  选择最长时间未被使用的页作为淘汰页
 
-            2)  LRU算法在实际应用中取得很好效果，但需要<strong>硬件特殊支持</strong>（重定位未缺页时修改页序列）。
+            2)  LRU 算法在实际应用中取得很好效果，但需要<strong>硬件特殊支持</strong>（重定位未缺页时修改页序列）。
 
-        3.  <strong>最近未使用（NRU）算法</strong>——LRU的近似实现
+        3.  <strong>最近未使用（NRU）算法</strong>——LRU 的近似实现
 
-            1)  定期重置A=0，选择最近（上次重置以来）未被使用的某页
+            1)  定期重置 A=0，选择最近（上次重置以来）未被使用的某页
 
         4.  <strong>最不常用（LFU）算法</strong>
 
             1)  记录页面使用次数，<strong>选择最少被使用的页</strong>作为淘汰页
 
-            2)  LFU算法也需要<strong>硬件特殊支持</strong>（重定位未缺页时更新页的使用次数记录），<strong>且使得新装入的页很容易被淘汰。</strong>
+            2)  LFU 算法也需要<strong>硬件特殊支持</strong>（重定位未缺页时更新页的使用次数记录），<strong>且使得新装入的页很容易被淘汰。</strong>
 
         5.  <strong>二次机会（Second Chance）算法</strong>
 
-            1)  在FIFO的基础上选择淘汰页，但<strong>淘汰前进行检查</strong>，若选择到的页<strong>A=1</strong>，则不淘汰此页，<strong>重置其A=0</strong>并将其放置<strong>回页序列末端</strong>，并转而选择下一页并检查。
+            1)  在 FIFO 的基础上选择淘汰页，但<strong>淘汰前进行检查</strong>，若选择到的页<strong>A=1</strong>，则不淘汰此页，<strong>重置其 A=0</strong>并将其放置<strong>回页序列末端</strong>，并转而选择下一页并检查。
 
-            2)  二次机会算法在FIFO的基础上<strong>考虑了页的使用情况</strong>。
+            2)  二次机会算法在 FIFO 的基础上<strong>考虑了页的使用情况</strong>。
 
             3)  二次机会（Second Chance）算法也被称为时钟算法，因为页序列可以放置在一个钟面上来考虑。
 
@@ -2880,13 +2880,13 @@ IBM：程序的运行过程称为任务（Task）
 
             5)  二次机会算法还可以同时考虑<strong>保存页（若被修改）的开销</strong>。将页分为四类：\[开销看M，抖动看A\]
 
-                1.  ① A=0，M=0。淘汰这类页I/O<strong>开销小</strong>，抖动现象可能性<strong>小</strong>；
+                1.  ① A=0，M=0。淘汰这类页 I/O<strong>开销小</strong>，抖动现象可能性<strong>小</strong>；
 
-                2.  ② A=0，M=1。淘汰这类页I/O<strong>开销大</strong>，抖动现象可能性<strong>小</strong>；
+                2.  ② A=0，M=1。淘汰这类页 I/O<strong>开销大</strong>，抖动现象可能性<strong>小</strong>；
 
-                3.  ③ A=1，M=0。淘汰这类页I/O开销<strong>小</strong>，抖动现象可能性<strong>大</strong>；
+                3.  ③ A=1，M=0。淘汰这类页 I/O 开销<strong>小</strong>，抖动现象可能性<strong>大</strong>；
 
-                4.  ④ <strong>A=1，M=1。淘汰这类页I/O开销大，抖动现象可能性大</strong>；
+                4.  ④ <strong>A=1，M=1。淘汰这类页 I/O 开销大，抖动现象可能性大</strong>；
 
             6)  检查步骤：
 
@@ -2898,21 +2898,21 @@ IBM：程序的运行过程称为任务（Task）
 
         6.  页缓冲算法
 
-            1)  设置<strong>两个容量界限T0和T1</strong>，其中<strong>T0 \> T1</strong>。
+            1)  设置<strong>两个容量界限 T0 和 T1</strong>，其中<strong>T0 \> T1</strong>。
 
             2)  在某次装入缺页的过程中
 
-                1.  <strong>若剩余空闲块数量低于T0</strong>，则<strong>重置所有页的A=0</strong>
+                1.  <strong>若剩余空闲块数量低于 T0</strong>，则<strong>重置所有页的 A=0</strong>
 
-                2.  <strong>若剩余空闲块数量低于T1</strong>，<strong>则将所有A=0的页信息存入链表M0（未被修改的页）和M1（被修改的页）中</strong>，并将这些页“<strong>淘汰</strong>”（<strong>仅置P=0，但未被替换</strong>）
+                2.  <strong>若剩余空闲块数量低于 T1</strong>，<strong>则将所有 A=0 的页信息存入链表 M0（未被修改的页）和 M1（被修改的页）中</strong>，并将这些页“<strong>淘汰</strong>”（<strong>仅置 P=0，但未被替换</strong>）
 
             3)  当缺页发生时
 
-                1.  若所缺页在<strong>M0或M1</strong>中，则恢复其<strong>P=1，</strong>并<strong>移除出链表</strong>
+                1.  若所缺页在<strong>M0 或 M1</strong>中，则恢复其<strong>P=1，</strong>并<strong>移除出链表</strong>
 
-                2.  若所缺页<strong>不在M0或M1</strong>中，则<strong>获取空闲块</strong>并<strong>装入缺页</strong>，其间先尝试<strong>淘汰M0</strong>中的页，若M0为空，则<strong>淘汰M1</strong>中的页，或者<strong>所有页</strong>
+                2.  若所缺页<strong>不在 M0 或 M1</strong>中，则<strong>获取空闲块</strong>并<strong>装入缺页</strong>，其间先尝试<strong>淘汰 M0</strong>中的页，若 M0 为空，则<strong>淘汰 M1</strong>中的页，或者<strong>所有页</strong>
 
-        7.  <strong>例子</strong>：一个进程运行过程依次访问的页号(也称进程的引用序列)是：0、2、3、1、4、1、2、3、5、2、3、1、4、5、0、3、6、9、8、3、6、7、3、6、9、8、7。假定该进程可以使用4个块，按局部页面调度，如何计算缺页中断的次数？依次淘汰的页号是哪些？
+        7.  <strong>例子</strong>：一个进程运行过程依次访问的页号 (也称进程的引用序列) 是：0、2、3、1、4、1、2、3、5、2、3、1、4、5、0、3、6、9、8、3、6、7、3、6、9、8、7。假定该进程可以使用 4 个块，按局部页面调度，如何计算缺页中断的次数？依次淘汰的页号是哪些？
 
             1)  <strong>FIFO：</strong>
 
@@ -2944,13 +2944,13 @@ IBM：程序的运行过程称为任务（Task）
 
     1.  <strong>缺页率</strong>是<strong>分页管理</strong>的<strong>评价指标之一</strong>。
 
-    2.  如果<strong>一个进程在一段时间内</strong>的<strong>引用序列长度为n</strong>，它在执行过程中，产生缺页<strong>中断的次数为m</strong>，那么，该进程执行这个引用序列的缺页率定义为：$f=\frac{m}{n}\times100\%$![原文插图](/Firefly/uploads/course-os/image69.png)
+    2.  如果<strong>一个进程在一段时间内</strong>的<strong>引用序列长度为 n</strong>，它在执行过程中，产生缺页<strong>中断的次数为 m</strong>，那么，该进程执行这个引用序列的缺页率定义为：$f=\frac{m}{n}\times100\%$![原文插图](/Firefly/uploads/course-os/image69.png)
 
     3.  一般而言，对于某个进程，<strong>可使用的内存块数越</strong>多，它在运行过程产生的<strong>缺页率越小</strong>。
 
-    4.  但对于某些置换算法（如FIFO），有可能在一些情况下<strong>存在相反的现象，即Belady现象</strong>。
+    4.  但对于某些置换算法（如 FIFO），有可能在一些情况下<strong>存在相反的现象，即 Belady 现象</strong>。
 
-        1)  <strong>Belady现象：随着内存块数增加，缺页率没有减小，甚至反而增加</strong>![原文插图](/Firefly/uploads/course-os/image70.jpeg)
+        1)  <strong>Belady 现象：随着内存块数增加，缺页率没有减小，甚至反而增加</strong>![原文插图](/Firefly/uploads/course-os/image70.jpeg)
 
 7)  <strong>分页存储管理的特点：</strong>
 
@@ -2960,7 +2960,7 @@ IBM：程序的运行过程称为任务（Task）
 
     3.  分页破坏了程序的完整性
 
-    4.  请求分页存在抖动现象，降低CPU的利用率
+    4.  请求分页存在抖动现象，降低 CPU 的利用率
 
     5.  页表占用额外的存储开销
 
@@ -2988,7 +2988,7 @@ IBM：程序的运行过程称为任务（Task）
 
 3)  反向页表的重定位：
 
-    1.  由于页表的主要作用是实现重定位，因此系统可以按照内存块统一建立一个表，称为反向页表，其结构由进程号（pid)和页号（p)组成，按块号顺序，每个块对应着反向页表中的一个表项，如果一个块是分配状态，则对应表项内容为（pid，p)，否则，表项内容为空。
+    1.  由于页表的主要作用是实现重定位，因此系统可以按照内存块统一建立一个表，称为反向页表，其结构由进程号（pid) 和页号（p) 组成，按块号顺序，每个块对应着反向页表中的一个表项，如果一个块是分配状态，则对应表项内容为（pid，p)，否则，表项内容为空。
 
         ![原文插图](/Firefly/uploads/course-os/image72.png)
 
@@ -2998,7 +2998,7 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  目的：减小页表占用的物理存储空间
 
-    2)  思路：<strong>对一个完整的页表划分为若干个小页表</strong>（每个记录2t个页），实现对<strong>页表本身的虚拟存储。</strong>
+    2)  思路：<strong>对一个完整的页表划分为若干个小页表</strong>（每个记录 2t 个页），实现对<strong>页表本身的虚拟存储。</strong>
 
 ![原文插图](/Firefly/uploads/course-os/image73.png)
 
@@ -3006,11 +3006,11 @@ IBM：程序的运行过程称为任务（Task）
 
 3)  多级页表的重定位：
 
-    1.  每个进程都对应一个页目录表，依次登记该进程的页表状态信息。与页表一样，一个进程的页目录表PDT共有1024个表项，每个表项占4B，所以一个页目录表共4KB，正好占用一个内存块。
+    1.  每个进程都对应一个页目录表，依次登记该进程的页表状态信息。与页表一样，一个进程的页目录表 PDT 共有 1024 个表项，每个表项占 4B，所以一个页目录表共 4KB，正好占用一个内存块。
 
-4)  从虚拟地址寄存器得到当前访问的虚拟地址所在的目录号d、页号p和页内地址w；如果页号p在TLB快表中，则直接形成物理地址，否则，从页目录基址寄存器中得到页目录表。
+4)  从虚拟地址寄存器得到当前访问的虚拟地址所在的目录号 d、页号 p 和页内地址 w；如果页号 p 在 TLB 快表中，则直接形成物理地址，否则，从页目录基址寄存器中得到页目录表。
 
-5)  根据目录号d检查页目录表，如果对应的页表在内存中，则根据页号p检查页表，如果页号p的中断位P=1,则该页在内存中，从页表中得到块号，形成物理地址；如果页号p的中断位P=0，产生缺页中断。如果目录表中目录号d对应的页表不在内存中，则建立或读取对应的页表。
+5)  根据目录号 d 检查页目录表，如果对应的页表在内存中，则根据页号 p 检查页表，如果页号 p 的中断位 P=1，则该页在内存中，从页表中得到块号，形成物理地址；如果页号 p 的中断位 P=0，产生缺页中断。如果目录表中目录号 d 对应的页表不在内存中，则建立或读取对应的页表。
 
     ![原文插图](/Firefly/uploads/course-os/image75.png)
 
@@ -3018,7 +3018,7 @@ IBM：程序的运行过程称为任务（Task）
 
 7)  在分页存储管理中，<strong>页（块）越长，则页表越短</strong>，但可能产生的碎片（不足页）越大。
 
-8)  假设系统中<strong>页的长度为p</strong>，系统所需处理的<strong>进程的平均长度为</strong>s，页表中<strong>每个表项的长度为e</strong>，那么，则
+8)  假设系统中<strong>页的长度为 p</strong>，系统所需处理的<strong>进程的平均长度为</strong>s，页表中<strong>每个表项的长度为 e</strong>，那么，则
 
     1.  每个进程需要占用的页表空间约为<strong>es/p</strong>
 
@@ -3026,7 +3026,7 @@ IBM：程序的运行过程称为任务（Task）
 
 9)  于是，每个进程的额外存储开销：f(p) = <strong>es/p+p/2。</strong>
 
-    当 $p=\sqrt{2es}$时，f取最小值。![原文插图](/Firefly/uploads/course-os/image77.png)
+    当 $p=\sqrt{2es}$时，f 取最小值。![原文插图](/Firefly/uploads/course-os/image77.png)
 
 <!-- -->
 
@@ -3034,7 +3034,7 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  将进程按其内部结构划分为<strong>若干段</strong>，将每段看作<strong>一个独立的逻辑空间</strong>，段的<strong>内部独立编排地址</strong>（段内地址）。
 
-    2)  使用二维逻辑地址，即“<strong>段号:段内地址</strong>”的形式。
+    2)  使用二维逻辑地址，即“<strong>段号：段内地址</strong>”的形式。
 
     3)  <strong>将进程分段，并按段编址，便于实现</strong>：
 
@@ -3052,7 +3052,7 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  为记录进程中各段的信息，<strong>必须维护数据结构</strong>——<strong>段表</strong>
 
-        3.  在<strong>可变分区存储系统</strong>上，段表中的每一项记录的信息有：<strong>段号、段长度、所在内存分区起始地址（段基址）</strong>、<strong>外存地址、存取控制信息、中断位P、访问位A和修改位M</strong>等。
+        3.  在<strong>可变分区存储系统</strong>上，段表中的每一项记录的信息有：<strong>段号、段长度、所在内存分区起始地址（段基址）</strong>、<strong>外存地址、存取控制信息、中断位 P、访问位 A 和修改位 M</strong>等。
 
     5)  <strong>重定位</strong>
 
@@ -3060,23 +3060,23 @@ IBM：程序的运行过程称为任务（Task）
 
     ![原文插图](/Firefly/uploads/course-os/image78.png)
 
-    2.  进程变为运行状态时，将段表基址和段表长度<strong>写入MMU的寄存器中</strong>。
+    2.  进程变为运行状态时，将段表基址和段表长度<strong>写入 MMU 的寄存器中</strong>。
 
     ![原文插图](/Firefly/uploads/course-os/image79.png)
 
-    3.  进行内存访问时， <strong>MMU检查段号是否越界（超出段表长度）</strong>
+    3.  进行内存访问时， <strong>MMU 检查段号是否越界（超出段表长度）</strong>
 
     ![原文插图](/Firefly/uploads/course-os/image80.png)
 
-    4.  MMU按照段号查找段表，<strong>并检查段内地址是否越界（超出段长）</strong>
+    4.  MMU 按照段号查找段表，<strong>并检查段内地址是否越界（超出段长）</strong>
 
     ![原文插图](/Firefly/uploads/course-os/image81.png)![原文插图](/Firefly/uploads/course-os/image82.png)
 
-    5.  MMU根据<strong>段基址与段内地址</strong>确定物理地址
+    5.  MMU 根据<strong>段基址与段内地址</strong>确定物理地址
 
     ![原文插图](/Firefly/uploads/course-os/image83.png)
 
-    6.  若重定位时所需要的段<strong>不在内存中（P = 0），MMU将发出缺段中断</strong>。
+    6.  若重定位时所需要的段<strong>不在内存中（P = 0），MMU 将发出缺段中断</strong>。
 
     <!-- -->
 
@@ -3112,9 +3112,9 @@ IBM：程序的运行过程称为任务（Task）
 
     3)  段页式存储管理的重定位过程：
 
-        1.  在段页式管理中，虚拟地址是二维的，由段号s和段内地址d组成。
+        1.  在段页式管理中，虚拟地址是二维的，由段号 s 和段内地址 d 组成。
 
-        2.  从段内地址d得到页号p和页内地址w，首先检查快表，如果段号s的页号p在快表中则直接形成物理地址；如果不在快表中，则当段号s大于或等于段表限长寄存器时产生地址越界中断，在段号s小于段表限长寄存器时，访问段表，如果段表中段号s的中断位P=0，则产生缺段中断；在中断位P=1时，如果页号p小于段长（页数），则从段表中的页表基地访问页表，如果页表中页号p对应的中断位P=1,则得到b，形成物理地址，否则，产生缺页中断；如果页号p大于或等于段长（页数）则产生地址越界中断。
+        2.  从段内地址 d 得到页号 p 和页内地址 w，首先检查快表，如果段号 s 的页号 p 在快表中则直接形成物理地址；如果不在快表中，则当段号 s 大于或等于段表限长寄存器时产生地址越界中断，在段号 s 小于段表限长寄存器时，访问段表，如果段表中段号 s 的中断位 P=0，则产生缺段中断；在中断位 P=1 时，如果页号 p 小于段长（页数），则从段表中的页表基地访问页表，如果页表中页号 p 对应的中断位 P=1，则得到 b，形成物理地址，否则，产生缺页中断；如果页号 p 大于或等于段长（页数）则产生地址越界中断。
 
             ![原文插图](/Firefly/uploads/course-os/image87.png)
 
@@ -3136,7 +3136,7 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  主存储器<strong>容量较小</strong>，且只能<strong>临时保存数据</strong>，因此计算机系统需要使用外存储器，用以<strong>长期保存大量的数据</strong>。
 
-    2)  外存储器的种类繁多，常见的有<strong>磁盘、光盘、U盘、磁带</strong>等。
+    2)  外存储器的种类繁多，常见的有<strong>磁盘、光盘、U 盘、磁带</strong>等。
 
     3)  外存储设备按其访问特性可分为：
 
@@ -3160,13 +3160,13 @@ IBM：程序的运行过程称为任务（Task）
 
         4.  ![原文插图](/Firefly/uploads/course-os/image88.png)
 
-    4)  用<strong>三元组“柱面号-磁头号-扇区号”</strong>为坐标指示磁盘上的一个<strong>块（也称扇区</strong>，其中<strong>包含一组存储单元</strong>），此三元组称作这个块（扇区）的<strong>物理地址参数（CHS）</strong>。
+    4)  用<strong>三元组“柱面号 - 磁头号 - 扇区号”</strong>为坐标指示磁盘上的一个<strong>块（也称扇区</strong>，其中<strong>包含一组存储单元</strong>），此三元组称作这个块（扇区）的<strong>物理地址参数（CHS）</strong>。
 
-    5)  设某<strong>磁盘磁头数量为heads</strong>，<strong>扇区个数为sectors</strong>，则
+    5)  设某<strong>磁盘磁头数量为 heads</strong>，<strong>扇区个数为 sectors</strong>，则
 
-        1.  一个柱面的<strong>存储量为heads×sectors个块</strong>（扇区）
+        1.  一个柱面的<strong>存储量为 heads×sectors 个块</strong>（扇区）
 
-        2.  一个磁道的<strong>存储量为sectors个块</strong>（扇区）。
+        2.  一个磁道的<strong>存储量为 sectors 个块</strong>（扇区）。
 
 4.  磁带
 
@@ -3180,9 +3180,9 @@ IBM：程序的运行过程称为任务（Task）
 
 5.  <strong>文件系统</strong>
 
-    1)  对外存的某个位置进行访问（读写）时，需要首先组织<strong>相关的存取参数</strong>，然后通过<strong>IO中断启动存储设备</strong>的<strong>驱动器</strong>。
+    1)  对外存的某个位置进行访问（读写）时，需要首先组织<strong>相关的存取参数</strong>，然后通过<strong>IO 中断启动存储设备</strong>的<strong>驱动器</strong>。
 
-    2)  操作系统<strong>封装IO操作</strong>，并向用户<strong>提供文件系统</strong>。
+    2)  操作系统<strong>封装 IO 操作</strong>，并向用户<strong>提供文件系统</strong>。
 
     3)  这样做的目的是：
 
@@ -3248,13 +3248,13 @@ IBM：程序的运行过程称为任务（Task）
 
     1)  逻辑上，可<strong>对块（扇区）</strong>依次编号，形成<strong>块的块号（逻辑地址）</strong>，主要使用于<strong>文件系统内部</strong>。
 
-    2)  设CHS为<strong>（c0，h0，s0）</strong>的块（扇区）对应块号<strong>block0</strong>
+    2)  设 CHS 为<strong>（c0，h0，s0）</strong>的块（扇区）对应块号<strong>block0</strong>
 
-    3)  则CHS为（c，h，s）的块（扇区）的块号：
+    3)  则 CHS 为（c，h，s）的块（扇区）的块号：
 
         1.  <strong>block = block0 + heads×sectors×(c-c0) + sectors×(h-h0) + s-s0</strong>
 
-    4)  块号为block的块（扇区）的CHS为：
+    4)  块号为 block 的块（扇区）的 CHS 为：
 
         1.  s = (block - block0 + s0 <strong>– 1</strong>) % sectors <strong>+ 1</strong>
 
@@ -3266,9 +3266,9 @@ IBM：程序的运行过程称为任务（Task）
 
     5)  若某文件系统使用<strong>n</strong>位的块号，则可以表示<strong>2^n</strong>个块。
 
-    6)  外存储设备最大存储容量<strong>不可超过2^n×块容量</strong>。
+    6)  外存储设备最大存储容量<strong>不可超过 2^n×块容量</strong>。
 
-    7)  对于较大的外存储设备，文件系统内部将<strong>2^k</strong>个扇区划分为一个<strong>簇</strong>，以<strong>簇</strong>（而非扇区）作为基本<strong>IO操作单元</strong>，并为其编排逻辑地址（块号）。
+    7)  对于较大的外存储设备，文件系统内部将<strong>2^k</strong>个扇区划分为一个<strong>簇</strong>，以<strong>簇</strong>（而非扇区）作为基本<strong>IO 操作单元</strong>，并为其编排逻辑地址（块号）。
 
     8)  外存储设备存储容量限制：2^n ×块容量 = 2^(n+k) ×扇区容量。
 
@@ -3312,15 +3312,15 @@ IBM：程序的运行过程称为任务（Task）
 
                 4.  破坏了文件完整性和块中信息的单纯性，安全控制困难
 
-        3.  FAT系列文件系统中采用改进的链接结构：将指针信息从实际存储数据的物理块中分离，并记录到文件分配表（FAT：File Allocation Table）中。
+        3.  FAT 系列文件系统中采用改进的链接结构：将指针信息从实际存储数据的物理块中分离，并记录到文件分配表（FAT：File Allocation Table）中。
 
-            1)  FAT中的每一项对应一个物理块。
+            1)  FAT 中的每一项对应一个物理块。
 
-                1.  值0表示该块空闲
+                1.  值 0 表示该块空闲
 
-                2.  值FFFF（全1）表示该块为文件尾
+                2.  值 FFFF（全 1）表示该块为文件尾
 
-                3.  值FFF7表示该块损坏
+                3.  值 FFF7 表示该块损坏
 
                 4.  其他值指示该块中的文件的下一块位置
 
@@ -3346,15 +3346,15 @@ IBM：程序的运行过程称为任务（Task）
 
                 5.  为了不连续保存索引表，常用多级索引——检索时的时间开销大
 
-        5.  Unix使用改进的多级索引结构（i-node）
+        5.  Unix 使用改进的多级索引结构（i-node）
 
-            1)  直接索引：10个
+            1)  直接索引：10 个
 
-            2)  一次间接索引：m个（m为一个块内最多可以存放的索引数）
+            2)  一次间接索引：m 个（m 为一个块内最多可以存放的索引数）
 
-            3)  二次间接索引：m^2个
+            3)  二次间接索引：m^2 个
 
-            4)  三次间接索引：m^3个
+            4)  三次间接索引：m^3 个
 
     ![原文插图](/Firefly/uploads/course-os/image95.png)
 
@@ -3362,33 +3362,33 @@ IBM：程序的运行过程称为任务（Task）
 
     1.  与进程管理类似，为了记录文件的相关信息，文件系统需要维护特殊的数据结构——<strong>文件控制块（FCB</strong>），将其存储于外存中。
 
-    2.  不同的文件系统其FCB设计差异较大，但主要都包含两部分：
+    2.  不同的文件系统其 FCB 设计差异较大，但主要都包含两部分：
 
         1)  描述信息部分——文件名、逻辑结构相关信息、物理结构相关信息
 
         2)  管理信息部分——存取控制信息、使用信息
 
-    3.  FAT32的一个FCB的长度固定为32字节。每个文件对应一个FCB数组，此数组中包含1个短文件名FCB和0个或多个长文件名FCB。
+    3.  FAT32 的一个 FCB 的长度固定为 32 字节。每个文件对应一个 FCB 数组，此数组中包含 1 个短文件名 FCB 和 0 个或多个长文件名 FCB。
 
-        1)  短文件名FCB用于记录文件的短文件名（8字符主名，3字符扩展名）和文件的其他相关信息
+        1)  短文件名 FCB 用于记录文件的短文件名（8 字符主名，3 字符扩展名）和文件的其他相关信息
 
-        2)  长文件名FCB仅用于记录文件的全名（当文件具有长文件名时）
+        2)  长文件名 FCB 仅用于记录文件的全名（当文件具有长文件名时）
 
     4.  步骤：
 
-        1)  用FCB数组记录长文件名文件时，先将长文件名以Unicode编码（每个Unicode字符占用2个字节）
+        1)  用 FCB 数组记录长文件名文件时，先将长文件名以 Unicode 编码（每个 Unicode 字符占用 2 个字节）
 
     ![原文插图](/Firefly/uploads/course-os/image96.png)
 
-    2)  然后将其按每13个双字节（26个字节，13个Unicode字符）分组，存放进多个长文件名FCB中
+    2)  然后将其按每 13 个双字节（26 个字节，13 个 Unicode 字符）分组，存放进多个长文件名 FCB 中
 
     ![原文插图](/Firefly/uploads/course-os/image97.png)
 
-    3)  将这些长文件名FCB倒序组成FCB数组
+    3)  将这些长文件名 FCB 倒序组成 FCB 数组
 
     ![原文插图](/Firefly/uploads/course-os/image98.png)
 
-    4)  在FCB数组的最后添加一个短文件名FCB，其中记录文件的短文件名和其他相关信息
+    4)  在 FCB 数组的最后添加一个短文件名 FCB，其中记录文件的短文件名和其他相关信息
 
     ![原文插图](/Firefly/uploads/course-os/image99.png)
 
@@ -3396,19 +3396,19 @@ IBM：程序的运行过程称为任务（Task）
 
         1)  无法识别的字符（非ASCII字符）用“\_”替代
 
-        2)  取全名的前6个字符加“~1”作主名，扩展名的前3个字符作扩展名
+        2)  取全名的前 6 个字符加“~1”作主名，扩展名的前 3 个字符作扩展名
 
         3)  若重名，则编号“~1”依次增加，最多编号到“~4”
 
-        4)  若编号超过“~4”，则保留主名的前2个字符，用全名剩下部分的头4个字符生成其他4个字符，并从“~1”开始重新编号
+        4)  若编号超过“~4”，则保留主名的前 2 个字符，用全名剩下部分的头 4 个字符生成其他 4 个字符，并从“~1”开始重新编号
 
 9.  文件目录及其结构
 
     1)  单级结构
 
-        1.  若干个文件的FCB数据的有序集合称作文件目录，文件目录本身也以文件形式保存于外存中，称作目录文件。
+        1.  若干个文件的 FCB 数据的有序集合称作文件目录，文件目录本身也以文件形式保存于外存中，称作目录文件。
 
-        2.  若将文件系统中的所有文件的FCB都保存在一个目录中，称作单级目录结构。
+        2.  若将文件系统中的所有文件的 FCB 都保存在一个目录中，称作单级目录结构。
 
             1)  访问文件时，检索范围大，影响了存取时间
 
@@ -3418,7 +3418,7 @@ IBM：程序的运行过程称为任务（Task）
 
     2)  二级结构
 
-        1.  二级目录结构中存在一个系统主目录（MFD）和多个用户文件目录（UFD）。MFD中存放UFD的FCB，而UFD中存放用户文件的FCB。
+        1.  二级目录结构中存在一个系统主目录（MFD）和多个用户文件目录（UFD）。MFD 中存放 UFD 的 FCB，而 UFD 中存放用户文件的 FCB。
 
         2.  特点：
 
@@ -3430,45 +3430,45 @@ IBM：程序的运行过程称为任务（Task）
 
             4)  容易实现用户之间的文件共享
 
-            5)  拥有多文件的UFD检索开销大
+            5)  拥有多文件的 UFD 检索开销大
 
-            6)  同个UFD下文件不可重名
+            6)  同个 UFD 下文件不可重名
 
             7)  ![原文插图](/Firefly/uploads/course-os/image101.png)
 
         3.  多级结构
 
-            1)  目前常见的多级目录结构，是在二级目录结构基础上进一步扩展：任意目录文件中都可以存放目录的FCB或文件的FCB，以形成多级目录。
+            1)  目前常见的多级目录结构，是在二级目录结构基础上进一步扩展：任意目录文件中都可以存放目录的 FCB 或文件的 FCB，以形成多级目录。
 
-                1.  根目录(Root)
+                1.  根目录 (Root)
 
                 2.  父目录/子目录
 
-                3.  绝对路径(Absolute Path) /B/C/a.txt
+                3.  绝对路径 (Absolute Path) /B/C/a.txt
 
-                4.  当前目录(Current Directory)
+                4.  当前目录 (Current Directory)
 
-                5.  相对路径(Relative Path) B/C/a.txt
+                5.  相对路径 (Relative Path) B/C/a.txt
 
                 6.  两个特殊的子目录：“.”和“..”
 
-                ./a.txt：上一级的a.txt ../a.txt上一级的下一级的a.txt(同级）
+                ./a.txt：上一级的 a.txt ../a.txt上一级的下一级的a.txt(同级）
 
                 7.  ![原文插图](/Firefly/uploads/course-os/image102.png)
 
-10. UNIX目录结构
+10. UNIX 目录结构
 
-    1)  目录文件中直接存放FCB引起的问题：目录文件本身较大，搜索文件时IO操作过多。
+    1)  目录文件中直接存放 FCB 引起的问题：目录文件本身较大，搜索文件时 IO 操作过多。
 
-    2)  解决思路：将文件名信息从FCB中抽离出来。
+    2)  解决思路：将文件名信息从 FCB 中抽离出来。
 
-    3)  Unix系统中每个文件或目录拥有唯一的标识。维护符号文件目录（SFD）和基本文件目录（BFD，也称二进制文件目录）：
+    3)  Unix 系统中每个文件或目录拥有唯一的标识。维护符号文件目录（SFD）和基本文件目录（BFD，也称二进制文件目录）：
 
-        1.  BFD（唯一）：记录标识与FCB的对应关系。
+        1.  BFD（唯一）：记录标识与 FCB 的对应关系。
 
         2.  SFD（按多级目录文件组织）：记录文件名（目录名）同标识的对应关系。
 
-    4)  进入一个目录时实际上打开（读入）一个SFD。访问文件或子目录时按名搜索，得到标识后再查找BFD，以找到对应的FCB，从而访问需要的文件或子目录。
+    4)  进入一个目录时实际上打开（读入）一个 SFD。访问文件或子目录时按名搜索，得到标识后再查找 BFD，以找到对应的 FCB，从而访问需要的文件或子目录。
 
         1.  搜索文件或子目录的开销减小
 
@@ -3476,7 +3476,7 @@ IBM：程序的运行过程称为任务（Task）
 
         3.  如要找/u2/sub1/zz5.c
 
-            1)  先去BFD找2的FCB，找到SFD里u2对应的6，找6指向的SFD，sub1对应ID14，找14对应的SFD，zz5.c对应13.而13的FCB为f.c/zz5.c,结束
+            1)  先去 BFD 找 2 的 FCB，找到 SFD 里 u2 对应的 6，找 6 指向的 SFD，sub1 对应 ID14，找 14 对应的 SFD，zz5.c 对应 13.而 13 的 FCB 为 f.c/zz5.c，结束
 
             2)  检索在右侧，找物在左侧，降低检索开销
 
@@ -3500,19 +3500,19 @@ IBM：程序的运行过程称为任务（Task）
 
     ![原文插图](/Firefly/uploads/course-os/image105.png)
 
-12. UNIX的文件存储空间管理
+12. UNIX 的文件存储空间管理
 
-    1)  Unix系统采用改进的空闲块链表法——空闲块成组链接法。
+    1)  Unix 系统采用改进的空闲块链表法——空闲块成组链接法。
 
-        1.  文件系统建立时（空外存），将所有空闲块分组（每组n个块，n=100）。
+        1.  文件系统建立时（空外存），将所有空闲块分组（每组 n 个块，n=100）。
 
     ![原文插图](/Firefly/uploads/course-os/image106.png)
 
-    2.  其中，最后一组可能不满n块，而第一组实际的空闲块为n-1块（第一块被作为专用块，用于存储相关信息）。
+    2.  其中，最后一组可能不满 n 块，而第一组实际的空闲块为 n-1 块（第一块被作为专用块，用于存储相关信息）。
 
     ![原文插图](/Firefly/uploads/course-os/image107.png)
 
-    3.  在每组的第一个块中记录上一组的块数和块号（指针）。记录中第一组的块数仍记n，但专用块的块号被记作0
+    3.  在每组的第一个块中记录上一组的块数和块号（指针）。记录中第一组的块数仍记 n，但专用块的块号被记作 0
 
 ![原文插图](/Firefly/uploads/course-os/image108.png)
 
@@ -3526,7 +3526,7 @@ IBM：程序的运行过程称为任务（Task）
 
 ![原文插图](/Firefly/uploads/course-os/image110.png)
 
-7.  若根据指针信息指示，将被分配的块的块号为0，说明已无空闲块。
+7.  若根据指针信息指示，将被分配的块的块号为 0，说明已无空闲块。
 
 ![原文插图](/Firefly/uploads/course-os/image111.png)
 
@@ -3538,7 +3538,7 @@ IBM：程序的运行过程称为任务（Task）
 
 ![原文插图](/Firefly/uploads/course-os/image113.png)![原文插图](/Firefly/uploads/course-os/image114.png)
 
-10. 当专用组的块数超过n时，将专用块内的指针信息复制到新的空闲块中，新空闲块成为新的专用组，并更新专用块中的指针信息。
+10. 当专用组的块数超过 n 时，将专用块内的指针信息复制到新的空闲块中，新空闲块成为新的专用组，并更新专用块中的指针信息。
 
 ![原文插图](/Firefly/uploads/course-os/image115.png)![原文插图](/Firefly/uploads/course-os/image116.png)
 
@@ -3588,13 +3588,13 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  链接法（指针法）
 
-            1)  通过将不同的FCB指向相同的外存位置，使不同用户（进程）访问到一个实际上相同的文件。
+            1)  通过将不同的 FCB 指向相同的外存位置，使不同用户（进程）访问到一个实际上相同的文件。
 
             2)  ![原文插图](/Firefly/uploads/course-os/image118.png)![原文插图](/Firefly/uploads/course-os/image119.png)
 
         3.  基本文件目录法
 
-            1)  在SFD中将一个文件标识对应于不同的访问路径，从而使不同用户（进程）找到实际相同的FCB，从而访问同个文件
+            1)  在 SFD 中将一个文件标识对应于不同的访问路径，从而使不同用户（进程）找到实际相同的 FCB，从而访问同个文件
 
             2)  ![原文插图](/Firefly/uploads/course-os/image120.png)
 
@@ -3604,7 +3604,7 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  三种基本的共享语义：
 
-            1)  Unix语义：系统按照读写操作的顺序依次执行读写操作。
+            1)  Unix 语义：系统按照读写操作的顺序依次执行读写操作。
 
             2)  会话语义：进程打开文件时建立会话，会话期间的修改操作仅对进程自身可见，当文件关闭时结束会话，此时这些修改才对其他进程可见（实际实施）。
 
@@ -3652,21 +3652,21 @@ IBM：程序的运行过程称为任务（Task）
 
                 2.  自主访问策略（DAC）：在主体与客体之间建立一组一致性原则，其中描述每个主体与每个客体之间的访问规则。这些访问规则由客体的创建者自主定义。
 
-        4.  DAC策略最常见的是基于主体权限的存取控制方式。
+        4.  DAC 策略最常见的是基于主体权限的存取控制方式。
 
             1)  其实现可采用三种数据结构：
 
-                1.  存取控制矩阵(PM)
+                1.  存取控制矩阵 (PM)
 
                     1)  行表示主体，列表示客体，矩阵中的元素表示主体可以对客体的访问属性。存取控制矩阵M的元素M\[i,j\]表示第i个主体对第j个客体的存取访问属性。如果M\[i,j\]为空或0，则表示第i个主体对第j个客体没有访问权限。
 
                 ![原文插图](/Firefly/uploads/course-os/image122.png)
 
-                2.  存取控制表(ACL)
+                2.  存取控制表 (ACL)
 
                 ![原文插图](/Firefly/uploads/course-os/image123.png)
 
-                3.  权能表(CL)
+                3.  权能表 (CL)
 
                 ![原文插图](/Firefly/uploads/course-os/image124.png)
 
@@ -3677,7 +3677,7 @@ IBM：程序的运行过程称为任务（Task）
 
         1.  硬件层面上，设备由芯片、电路、电源、发动机等物理部件组成。
 
-        2.  软件层面上，设备是一组指令、状态标志、IO传输过程、错误处理 等。
+        2.  软件层面上，设备是一组指令、状态标志、IO 传输过程、错误处理 等。
 
         3.  操作系统关注如何管理和控制设备，而不关心其硬件层面。
 
@@ -3715,71 +3715,71 @@ IBM：程序的运行过程称为任务（Task）
 
 2.  设备独立性含义
 
-    I/O软件的层次结构为用户和程序隐藏了底层设备的物理特性差异，实现了设备独立性。用户或程序中使用的设备与具体的物理设备无关，用户或程序使用的是逻辑设备，当进程运行时，由操作系统在逻辑设备与物理设备之间建立连接，即设备的分配，把这种设备使用方法的特点称为设备独立性。
+    I/O 软件的层次结构为用户和程序隐藏了底层设备的物理特性差异，实现了设备独立性。用户或程序中使用的设备与具体的物理设备无关，用户或程序使用的是逻辑设备，当进程运行时，由操作系统在逻辑设备与物理设备之间建立连接，即设备的分配，把这种设备使用方法的特点称为设备独立性。
 
 3.  主机对设备的访问
 
-    1)  设备连接到主机后将占用一组IO（端口）地址（记录于设备控制器中）。主机对设备的访问表现为使用基本的端口通讯指令（IN和OUT）与这组IO地址通讯。
+    1)  设备连接到主机后将占用一组 IO（端口）地址（记录于设备控制器中）。主机对设备的访问表现为使用基本的端口通讯指令（IN 和 OUT）与这组 IO 地址通讯。
 
-    2)  打印机接入并行端口，则占用三个地址：378H（数据信号端）， 37AH（控制信号端），379H（状态信号端）。
+    2)  打印机接入并行端口，则占用三个地址：378H（数据信号端），37AH（控制信号端），379H（状态信号端）。
 
     ![原文插图](/Firefly/uploads/course-os/image125.png)
 
-4.  数据传输控制(I/O控制方式）
+4.  数据传输控制 (I/O 控制方式）
 
     1)  介绍
 
-        1.  传输控制是指通过<strong>控制底层信号</strong>传递来实现<strong>主机与设备间数据传输</strong>以满足用户/程序的IO请求。
+        1.  传输控制是指通过<strong>控制底层信号</strong>传递来实现<strong>主机与设备间数据传输</strong>以满足用户/程序的 IO 请求。
 
-        2.  传输控制在其发展历史中产生<strong>四种不同的方式</strong>，方式的进化主要为了<strong>减少CPU等待时间、减轻CPU的负担，提高系统并行性。</strong>
+        2.  传输控制在其发展历史中产生<strong>四种不同的方式</strong>，方式的进化主要为了<strong>减少 CPU 等待时间、减轻 CPU 的负担，提高系统并行性。</strong>
 
         3.  传输控制是<strong>软硬件协作</strong>完成的，各种控制方式需要不同的<strong>硬件支持</strong>。
 
-        4.  <strong>在软件方面</strong>，现行的软件架构中，一般由<strong>（上层）驱动程序配置和启动传输控制</strong>，由<strong>IO子程序（中断处理程序或称下层驱动程序）</strong>实现传输控制的<strong>具体操</strong>作。
+        4.  <strong>在软件方面</strong>，现行的软件架构中，一般由<strong>（上层）驱动程序配置和启动传输控制</strong>，由<strong>IO 子程序（中断处理程序或称下层驱动程序）</strong>实现传输控制的<strong>具体操</strong>作。
 
     2)  程序查询方式
 
         1.  程序查询方式是最早提出的传输控制方式。
 
-        2.  进程提出<strong>IO请求</strong>并<strong>获得设备</strong>后，<strong>IO子程序</strong>将<strong>不断循环检测</strong>设备的状态，直到<strong>设备能够满足IO操作的要求</strong>（例如呈现就绪状态）时<strong>实施一个传输动作。</strong>
+        2.  进程提出<strong>IO 请求</strong>并<strong>获得设备</strong>后，<strong>IO 子程序</strong>将<strong>不断循环检测</strong>设备的状态，直到<strong>设备能够满足 IO 操作的要求</strong>（例如呈现就绪状态）时<strong>实施一个传输动作。</strong>
 
-        3.  由于<strong>不断循环检测</strong>设备状态，正在进行IO操作的进程将<strong>耗费CPU资源。</strong>
+        3.  由于<strong>不断循环检测</strong>设备状态，正在进行 IO 操作的进程将<strong>耗费 CPU 资源。</strong>
 
     3)  中断方式
 
         1.  中断是实现<strong>系统并行处理</strong>的<strong>核心技术</strong>。利用中断来<strong>控制数据传输</strong>是现代系统的常用方式。
 
-            1)  进程提出<strong>IO请求</strong>并获得设备后，若设备未就绪<strong>，则阻塞进程。</strong>
+            1)  进程提出<strong>IO 请求</strong>并获得设备后，若设备未就绪<strong>，则阻塞进程。</strong>
 
             2)  当设备进入<strong>就绪状态时</strong>，<strong>发出中断信号</strong>，已在系统中注册的中断处理程序<strong>唤醒进程以</strong>启动一个传输动作，而后再阻塞进程直到设备再次就绪。
 
             3)  如此循环，直到传输完成。
 
-        2.  正在<strong>等待设备就绪</strong>的进程<strong>处于阻塞状态</strong>，<strong>不消耗CPU资源</strong>。
+        2.  正在<strong>等待设备就绪</strong>的进程<strong>处于阻塞状态</strong>，<strong>不消耗 CPU 资源</strong>。
 
-        3.  但<strong>中断发生</strong>时仍然需要<strong>CPU以实施传输动作。</strong>
+        3.  但<strong>中断发生</strong>时仍然需要<strong>CPU 以实施传输动作。</strong>
 
-    4)  DMA方式
+    4)  DMA 方式
 
-        1.  <strong>直接存储器访问（DMA）</strong>方式中由<strong>DMA控制器</strong>（而非中断处理程序）来实施具体的传输动作，从而进一步减小CPU开销。
+        1.  <strong>直接存储器访问（DMA）</strong>方式中由<strong>DMA 控制器</strong>（而非中断处理程序）来实施具体的传输动作，从而进一步减小 CPU 开销。
 
-            1)  进程提出IO请求并获得设备后，<strong>将数据（或接收缓冲区）</strong>安置在内存中的<strong>位置</strong>和<strong>大小</strong>写入<strong>DMA控制器的寄存器</strong>内，启动DMA过程并<strong>阻塞进程。</strong>
+            1)  进程提出 IO 请求并获得设备后，<strong>将数据（或接收缓冲区）</strong>安置在内存中的<strong>位置</strong>和<strong>大小</strong>写入<strong>DMA 控制器的寄存器</strong>内，启动 DMA 过程并<strong>阻塞进程。</strong>
 
-            2)  DMA控制器控制<strong>指定内存区域同设备之间的数据交换</strong>。其间需要使用总线时，总线控制权将<strong>供DMA使用（</strong>硬件机制）。
+            2)  DMA 控制器控制<strong>指定内存区域同设备之间的数据交换</strong>。其间需要使用总线时，总线控制权将<strong>供 DMA 使用（</strong>硬件机制）。
 
-            3)  当原进程请求的IO操作全部完成时，DMA控制器<strong>发出中断</strong>，中断处理程序<strong>唤醒</strong>进程。
+            3)  当原进程请求的 IO 操作全部完成时，DMA 控制器<strong>发出中断</strong>，中断处理程序<strong>唤醒</strong>进程。
 
     5)  通道
 
-        1.  在DMA方式的基础上，通道方式中使用通道处理器替代DMA控制器来实施传输动作。
+        1.  在 DMA 方式的基础上，通道方式中使用通道处理器替代 DMA 控制器来实施传输动作。
 
-        2.  通道处理器是一个简单的专用处理器，具有自身的指令系统，可按程序完成传输动作。这使得通道处理器较只能进行单纯传输动作的DMA控制器具有更强大的功能，例如传输纠错、数据格式转换、数据预处理 等。
+        2.  通道处理器是一个简单的专用处理器，具有自身的指令系统，可按程序完成传输动作。这使得通道处理器较只能进行单纯传输动作的 DMA 控制器具有更强大的功能，例如传输纠错、数据格式转换、数据预处理 等。
 
-        3.  对于系统中的每一个通道，内存中有两个固定的专用存储单元分别存储通道程序的首地址（CAW通道地址字）和状态信息（CSW通道状态字）。
+        3.  对于系统中的每一个通道，内存中有两个固定的专用存储单元分别存储通道程序的首地址（CAW 通道地址字）和状态信息（CSW 通道状态字）。
 
         4.  通道方式的运作过程：
 
-            1)  进程提出<strong>IO请求</strong>并获得设备后，根据所要求的IO操作，生成由<strong>通道指令</strong>组成的<strong>通道程序</strong>，并将<strong>程序首地址</strong>写入<strong>CAW</strong>中。然后启动<strong>通道并阻塞进程</strong>。
+            1)  进程提出<strong>IO 请求</strong>并获得设备后，根据所要求的 IO 操作，生成由<strong>通道指令</strong>组成的<strong>通道程序</strong>，并将<strong>程序首地址</strong>写入<strong>CAW</strong>中。然后启动<strong>通道并阻塞进程</strong>。
 
             2)  通道处理器从<strong>CAW</strong>中找到通道程序，并按通道程序的指令完成<strong>数据传输过程</strong>。每条指令执行之后都将<strong>通道状态</strong>写入<strong>CSW</strong>中，使得主机能够<strong>随时掌握通道运行情况</strong>。
 
@@ -3801,17 +3801,17 @@ IBM：程序的运行过程称为任务（Task）
 
 5.  设备访问的软件架构
 
-    1)  架构1. 用户/程序直接通过IN和OUT指令访问设备。
+    1)  架构 1. 用户/程序直接通过 IN 和 OUT 指令访问设备。
 
-    2)  架构2. 将访问指令封装为一些子程序，用户/程序通过调用它们来访问设备。
+    2)  架构 2. 将访问指令封装为一些子程序，用户/程序通过调用它们来访问设备。
 
         1.  用户级子程序
 
         2.  利用中断机制
 
-    3)  架构3. 在架构2基础上，由操作系统对这些子程序实施管理、保护、配置和优化。用户/程序通过操作系统的用户接口访问设备。
+    3)  架构 3. 在架构 2 基础上，由操作系统对这些子程序实施管理、保护、配置和优化。用户/程序通过操作系统的用户接口访问设备。
 
-        1.  在这一架构中，（上层）驱动程序利用下层IO子程序提供用户接口的具体实现
+        1.  在这一架构中，（上层）驱动程序利用下层 IO 子程序提供用户接口的具体实现
 
     ![原文插图](/Firefly/uploads/course-os/image126.png)
 
@@ -3827,7 +3827,7 @@ IBM：程序的运行过程称为任务（Task）
 
         1.  （驱动程序和中断处理程序）实现数据传输控制
 
-        2.  （设备管理框架）为设备管理系统资源（IO地址、中断号 等）、驱动程序和中断处理程序
+        2.  （设备管理框架）为设备管理系统资源（IO 地址、中断号 等）、驱动程序和中断处理程序
 
         3.  （设备管理框架）为用户/程序分配与回收设备
 
@@ -3835,9 +3835,9 @@ IBM：程序的运行过程称为任务（Task）
 
         5.  （设备管理框架）实现磁盘驱动调度
 
-7.  Unix的地址、驱动、中断管理
+7.  Unix 的地址、驱动、中断管理
 
-    欲在Unix中使用一个新的设备，需要：
+    欲在 Unix 中使用一个新的设备，需要：
 
     1)  根据实际情况对硬件参数进行配置，并将设备连接到主机上。
 
@@ -3845,9 +3845,9 @@ IBM：程序的运行过程称为任务（Task）
 
 早期的设备通过一系列开关或跳线来手动配置硬件参数。
 
-使用PnP技术的设备，能够在连接到主机时自动配置硬件参数，并在系统中完成各项注册任务（驱动程序安装与初始化）。
+使用 PnP 技术的设备，能够在连接到主机时自动配置硬件参数，并在系统中完成各项注册任务（驱动程序安装与初始化）。
 
-2)  向系统注册设备，以及对应的（上层）驱动程序中实现的各系统调用（open、read、write、close等）的入口（设备开关表）。所有设备将在文件系统中以设备文件的形式呈现，当用户/程序使用系统调用访问设备（文件）时，系统根据设备（文件）名称，在设备开关表中查找，以决定具体调用哪个（上层）驱动程序中的相应操作。
+2)  向系统注册设备，以及对应的（上层）驱动程序中实现的各系统调用（open、read、write、close 等）的入口（设备开关表）。所有设备将在文件系统中以设备文件的形式呈现，当用户/程序使用系统调用访问设备（文件）时，系统根据设备（文件）名称，在设备开关表中查找，以决定具体调用哪个（上层）驱动程序中的相应操作。
 
 ![原文插图](/Firefly/uploads/course-os/image128.png)![原文插图](/Firefly/uploads/course-os/image129.png)
 
@@ -3863,7 +3863,7 @@ IBM：程序的运行过程称为任务（Task）
 
 8.  设备的分配与回收
 
-    1)  操作系统的IO管理框架<strong>不进行实际</strong>的设备控制和传输操作，但必须负责在<strong>进程操作设备前</strong>进行<strong>检查，</strong>避免多个进程在其<strong>open</strong>与<strong>close</strong>操作之间同时访问独占设备，即<strong>管理设备的分配（open时</strong>）和<strong>回收（close时）</strong>。
+    1)  操作系统的 IO 管理框架<strong>不进行实际</strong>的设备控制和传输操作，但必须负责在<strong>进程操作设备前</strong>进行<strong>检查，</strong>避免多个进程在其<strong>open</strong>与<strong>close</strong>操作之间同时访问独占设备，即<strong>管理设备的分配（open 时</strong>）和<strong>回收（close 时）</strong>。
 
     2)  设备的分配
 
@@ -3875,23 +3875,23 @@ IBM：程序的运行过程称为任务（Task）
 
         1)  每个通道对应一个通道控制表（CHCT）。记录通道信息，包含通道标识、状态、等待队列指针等。
 
-        2)  每个设备控制器对应一个控制器控制表（COCT）。记录设备控制器信息，包含控制器标识、状态、等待队列指针、所连接的通道的CHCT指针等。
+        2)  每个设备控制器对应一个控制器控制表（COCT）。记录设备控制器信息，包含控制器标识、状态、等待队列指针、所连接的通道的 CHCT 指针等。
 
-        3)  每个设备对应一个设备控制表（DCT）。记录设备信息，包含设备的名称、类型、标识、状态、等待队列指针、所连接到的控制器的COCT指针等。
+        3)  每个设备对应一个设备控制表（DCT）。记录设备信息，包含设备的名称、类型、标识、状态、等待队列指针、所连接到的控制器的 COCT 指针等。
 
-        4)  系统中有唯一的系统设备表（SDT）。用于按设备名称搜索设备并获取设备的基本信息。其中每一项记录一个设备的基本信息，包括名称、类型、标识、DCT指针、分配给的进程标识等。
+        4)  系统中有唯一的系统设备表（SDT）。用于按设备名称搜索设备并获取设备的基本信息。其中每一项记录一个设备的基本信息，包括名称、类型、标识、DCT 指针、分配给的进程标识等。
 
     3.  分配步骤
 
     ![原文插图](/Firefly/uploads/course-os/image132.png)
 
-    1)  启动时，系统检测硬件连接情况，生成一个SDT及各部件的DCT、COCT或CHCT。
+    1)  启动时，系统检测硬件连接情况，生成一个 SDT 及各部件的 DCT、COCT 或 CHCT。
 
-    2)  需要分配设备时，从SDT中按名找到需要的设备的DCT。若设备忙，则进程进入该DCT的等待队列。
+    2)  需要分配设备时，从 SDT 中按名找到需要的设备的 DCT。若设备忙，则进程进入该 DCT 的等待队列。
 
-    3)  否则，将设备置为忙状态（被分配），查找该设备连接的控制器的COCT。若控制器忙，则进程进入该COCT的等待队列。
+    3)  否则，将设备置为忙状态（被分配），查找该设备连接的控制器的 COCT。若控制器忙，则进程进入该 COCT 的等待队列。
 
-    4)  若控制器空闲，则先将其分配后继续检查其所连接的通道的CHCT（若存在）。若通道忙，则进程进入该CHCT的等待若通道空闲，则将其分配。只有当设备、控制器、通道都能成功分配时，进程方可继续执行。
+    4)  若控制器空闲，则先将其分配后继续检查其所连接的通道的 CHCT（若存在）。若通道忙，则进程进入该 CHCT 的等待若通道空闲，则将其分配。只有当设备、控制器、通道都能成功分配时，进程方可继续执行。
 
     5)  设备回收时同样依次回收设备、控制器和通道，当回收一个部件时需按一定策略唤醒该部件等待队列中的一个进程。
 
@@ -3899,7 +3899,7 @@ IBM：程序的运行过程称为任务（Task）
 
     4.  设备分配方式
 
-        1)  静态分配——在创建进程时，为进程分配运行所需的全部设备、控制器、通道，如果又一个资源不满足， 则进程创建被推迟。一个进程在运行结束后归还全部设备。
+        1)  静态分配——在创建进程时，为进程分配运行所需的全部设备、控制器、通道，如果又一个资源不满足，则进程创建被推迟。一个进程在运行结束后归还全部设备。
 
         2)  动态分配——在进程运行过程需要时再分配，使用完成后立即归还。
 
@@ -3909,11 +3909,11 @@ IBM：程序的运行过程称为任务（Task）
 
         2)  多请求方式：一个进程可以根据需要多次申请新的设备，是一种动态分配方式。综合“剥夺资源”和“资源暂时释放”。
 
-            1.  当一个进程Pi申请新资源R得不到满足时，检查占有新资源R的进程Pj，比较Pi和Pj的进程标识符pid，如果Pi的进程标识符更小，则允许Pi阻塞，否则选择如下之一进一步处理
+            1.  当一个进程 Pi 申请新资源 R 得不到满足时，检查占有新资源 R 的进程 Pj，比较 Pi 和 Pj 的进程标识符 pid，如果 Pi 的进程标识符更小，则允许 Pi 阻塞，否则选择如下之一进一步处理
 
-                1)  Pi终止，或Pi归还已经得到的资源后进入阻塞状态
+                1)  Pi 终止，或 Pi 归还已经得到的资源后进入阻塞状态
 
-                2)  Pi抢占Pj的资源R
+                2)  Pi 抢占 Pj 的资源 R
 
             2.  这样子破坏了“环路等待条件”
 
@@ -3925,13 +3925,13 @@ IBM：程序的运行过程称为任务（Task）
 
         3)  系统的安全性
 
-9.  I/O缓冲技术
+9.  I/O 缓冲技术
 
     1)  缓冲技术一般应用于两种速度不一致的部件之间的协作。一般形式是以缓冲区来暂时存放需要交换的信息，将来再把信息传输到目标位置。其目的在于：
 
         1.  缓解设备和处理器之间速度不匹配的矛盾，提高系统工作的并行程度
 
-        2.  减少I/O操作的次数
+        2.  减少 I/O 操作的次数
 
         3.  减少中断次数
 
@@ -3943,7 +3943,7 @@ IBM：程序的运行过程称为任务（Task）
 
     3)  在一般的设备管理软件架构中，将一个透明的缓冲管理模块添加到用户接口和上层驱动程序接口之间。
 
-    4)  缓冲区属性指示了访问的属性（读或写），于是Unix系统中，上层驱动程序仅用一个接口request处理读写操作。
+    4)  缓冲区属性指示了访问的属性（读或写），于是 Unix 系统中，上层驱动程序仅用一个接口 request 处理读写操作。
 
     ![原文插图](/Firefly/uploads/course-os/image134.png)
 
@@ -3953,27 +3953,27 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  缓冲技术可分为：
 
-            1)  单缓冲区——系统中只存在一个缓冲区，任意时刻只能服务于一个进程对一个设备的读操作或写操作（一组IO操作）。
+            1)  单缓冲区——系统中只存在一个缓冲区，任意时刻只能服务于一个进程对一个设备的读操作或写操作（一组 IO 操作）。
 
-            2)  双缓冲区——系统中存在两个缓冲区，可以同时服务于两组IO操作。
+            2)  双缓冲区——系统中存在两个缓冲区，可以同时服务于两组 IO 操作。
 
-            3)  多缓冲区（缓冲池）——系统中有多个缓冲区，可以同时服务于多组IO操作。
+            3)  多缓冲区（缓冲池）——系统中有多个缓冲区，可以同时服务于多组 IO 操作。
 
     6)  使用缓冲技术的输出（Write）的一般过程：
 
-        1.  用户提出Write请求后，缓冲管理模块检查进程是否已取得相应的输出缓冲区，若已取得，则使用此缓冲区，否则申请一个空缓冲区，将其更改为该进程对该设备的输出缓冲区（可能阻塞原进程）。
+        1.  用户提出 Write 请求后，缓冲管理模块检查进程是否已取得相应的输出缓冲区，若已取得，则使用此缓冲区，否则申请一个空缓冲区，将其更改为该进程对该设备的输出缓冲区（可能阻塞原进程）。
 
         2.  缓冲管理模块使用访存指令将数据写入缓冲区内。
 
-        3.  其间若达到一定的缓冲条件，则缓冲管理模块启动上层驱动程序，将整个缓冲区内的数据写入设备（冲洗，可能阻塞原进程），之后再继续步骤2，直到数据写入完成。
+        3.  其间若达到一定的缓冲条件，则缓冲管理模块启动上层驱动程序，将整个缓冲区内的数据写入设备（冲洗，可能阻塞原进程），之后再继续步骤 2，直到数据写入完成。
 
     7)  使用缓冲技术的输入（Read）的一般过程：
 
-        1.  用户提出Read请求后，缓冲管理模块检查进程是否已取得相应的输入缓冲区，若已取得，则使用此缓冲区，否则申请一个空缓冲区，将其更改为该进程对该设备的输入缓冲区（可能阻塞原进程）。
+        1.  用户提出 Read 请求后，缓冲管理模块检查进程是否已取得相应的输入缓冲区，若已取得，则使用此缓冲区，否则申请一个空缓冲区，将其更改为该进程对该设备的输入缓冲区（可能阻塞原进程）。
 
         2.  缓冲管理模块使用访存指令从缓冲区内读出数据。
 
-        3.  其间若缓冲区为空，则缓冲管理模块启动上层驱动程序，从设备读出数据到缓冲区（可能阻塞原进程），直至达到一定的缓冲条件后再继续步骤2，直到数据读出完成。
+        3.  其间若缓冲区为空，则缓冲管理模块启动上层驱动程序，从设备读出数据到缓冲区（可能阻塞原进程），直至达到一定的缓冲条件后再继续步骤 2，直到数据读出完成。
 
     8)  当进程关闭（Close）设备时，将归还所有该进程针对该设备的输入/输出缓冲区（强制冲洗输出缓冲区），将他们更改为空缓冲区。
 
@@ -3983,51 +3983,51 @@ IBM：程序的运行过程称为任务（Task）
 
         2.  行缓冲——当缓冲区中出现换行符则达到缓冲条件。
 
-10. I/O调度
+10. I/O 调度
 
     1)  个实际的读写请求到达设备驱动程序时不能保证能够被立即处理。为了存放等待设备驱动程序处理的读写请求，需要维护一个请求队列。
 
     2)  而当设备完成上一个读写请求后不但应唤醒原进程还应当将请求队列中的一个（或多个）请求送交设备驱动程序。
 
-    3)  规划这些请求的优先关系就是IO调度。
+    3)  规划这些请求的优先关系就是 IO 调度。
 
-    4)  在Unix系统的设备管理框架中，通过IO调度器为块设备提供调度：
+    4)  在 Unix 系统的设备管理框架中，通过 IO 调度器为块设备提供调度：
 
         1.  为设备注册请求队列
 
-        2.  为请求队列绑定request入口
+        2.  为请求队列绑定 request 入口
 
         3.  新请求到来时，调度器按照调度算法将其合并或插入队列中
 
-        4.  设备空闲时，request通过调度器按照调度算法从队列中取出请求加以处理
+        4.  设备空闲时，request 通过调度器按照调度算法从队列中取出请求加以处理
 
     ![原文插图](/Firefly/uploads/course-os/image135.png)
 
 11. 磁盘的读写时间
 
-    1)  评价IO调度算法的优劣，要根据不同设备自身的需求。
+    1)  评价 IO 调度算法的优劣，要根据不同设备自身的需求。
 
-    2)  对于磁盘而言，IO调度算法的目标是缩短一组读写请求的执行时间。
+    2)  对于磁盘而言，IO 调度算法的目标是缩短一组读写请求的执行时间。
 
     3)  磁盘设备完成一次读写动作的时间分为三部分：
 
-        1.  寻道时间——磁头从当前磁道移动到目标磁道所花费的时间Ts = s0 + s1 + m×n
+        1.  寻道时间——磁头从当前磁道移动到目标磁道所花费的时间 Ts = s0 + s1 + m×n
 
-            s0是磁头启动时间， s1 是磁头稳定时间，m是跨越一个磁道的平均时间，n是跨越的磁道数。
+            s0 是磁头启动时间，s1 是磁头稳定时间，m 是跨越一个磁道的平均时间，n 是跨越的磁道数。
 
-        2.  旋转延迟时间——磁头在磁道上搜索扇区的时间Tr = r/2
+        2.  旋转延迟时间——磁头在磁道上搜索扇区的时间 Tr = r/2
 
-            r是磁头旋转一周的平均时间。 Tr 远小于Ts 。
+            r 是磁头旋转一周的平均时间。Tr 远小于 Ts。
 
-        3.  传输时间——传输数据的时间Tr
+        3.  传输时间——传输数据的时间 Tr
 
-            一个读写请求的执行时间： Ta = Ts + Tr + Tt = s0 + s1 + m×n + r/2 + Tt。k个读写请求的总执行时间： T = k( s0 + s1 + r/2) + ΣTti + m× Σni
+            一个读写请求的执行时间：Ta = Ts + Tr + Tt = s0 + s1 + m×n + r/2 + Tt。k 个读写请求的总执行时间：T = k( s0 + s1 + r/2) + ΣTti + m× Σni
 
 12. 磁盘驱动调度
 
-    1)  指的是对于一组磁盘I/O操作的请求，系统按照一定策略依次为各个I/O操作的请求服务，使得完成这组磁盘I/O操作所花的时间尽可能小。
+    1)  指的是对于一组磁盘 I/O 操作的请求，系统按照一定策略依次为各个 I/O 操作的请求服务，使得完成这组磁盘 I/O 操作所花的时间尽可能小。
 
-    2)  如果有n个磁盘的I/O操作请求，第i个请求的访问数据记为Tai，则理想调度就是让从1加到n的Tai最小
+    2)  如果有 n 个磁盘的 I/O 操作请求，第 i 个请求的访问数据记为 Tai，则理想调度就是让从 1 加到 n 的 Tai 最小
 
     3)  磁盘驱动调度分为
 
@@ -4045,7 +4045,7 @@ IBM：程序的运行过程称为任务（Task）
 
             1)  按照请求提交的时间，依次执行。
 
-            2)  例子 假定某磁盘的一组I/O操作的访问请求，它们的请求提出顺序依次是：55、72、100、88、93和66(I/O操作请求所在的柱面号)。当前磁盘位于90号柱面。采用移臂调度采用FCFS算法时，系统服务的顺序和磁头移动的距离以及磁头改变方向次数？
+            2)  例子 假定某磁盘的一组 I/O 操作的访问请求，它们的请求提出顺序依次是：55、72、100、88、93 和 66(I/O 操作请求所在的柱面号)。当前磁盘位于 90 号柱面。采用移臂调度采用 FCFS 算法时，系统服务的顺序和磁头移动的距离以及磁头改变方向次数？
 
             3)  请求柱面：55、72、100、88、93、66 当前柱面：90
 
@@ -4105,12 +4105,12 @@ IBM：程序的运行过程称为任务（Task）
 
     3)  移臂调度过程中，由于频繁访问临近柱面而产生的饥饿现象称为“磁臂黏着”。
 
-        1.  N-step方法：
+        1.  N-step 方法：
 
-            1)  采用多个请求队列，每个请求队列最多容纳N个请求
+            1)  采用多个请求队列，每个请求队列最多容纳 N 个请求
 
             2)  当系统开始处理一个请求队列后，新的请求只能进入其他队列
 
             3)  只有当一个请求队列中的全部请求都处理完毕，系统才转向另一个请求队列
 
-            4)  采用N-step方法后，一个当前请求队列中的读写请求最多等待N-1个其他请求后即可被处理。
+            4)  采用 N-step 方法后，一个当前请求队列中的读写请求最多等待 N-1 个其他请求后即可被处理。
