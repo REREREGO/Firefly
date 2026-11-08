@@ -72,7 +72,6 @@ content:
           - name: image
             label: false
             type: image
-            required: true
             options:
               media: banners
           - name: active
