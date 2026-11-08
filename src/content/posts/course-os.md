@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级操作系统课程复习提纲
-published: 2026-11-08
 description: 操作系统课程复习提纲，涵盖进程与线程、处理机调度、同步与互斥、死锁、存储管理及文件系统。
 category: 学习笔记
 tags: [操作系统知识点梳理, 课程复习]
 draft: false
 image: /uploads/course-covers/os-blueprint-v2.webp
+published: "2026-11-08T03:32:33+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 题型

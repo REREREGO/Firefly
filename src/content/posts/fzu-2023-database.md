@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级数据库课程复习提纲
-published: 2026-11-08
 description: 数据库课程复习提纲，涵盖数据库系统与关系模型、SQL、安全性与完整性、关系数据理论、数据库设计、恢复技术及并发控制。
 category: 学习笔记
 tags: [数据库, 福州大学, 课程复习]
 image: /uploads/database/cover.webp
 draft: false
+published: "2026-11-08T18:35:16+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 ## 知识梳理

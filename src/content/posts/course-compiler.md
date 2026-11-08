@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级编译原理课程复习提纲
-published: 2026-11-08
 description: 编译原理课程复习提纲，涵盖形式语言与文法、词法分析、语法分析、语法制导翻译及中间代码生成。
 category: 学习笔记
 tags: [编译原理, 课程复习]
 draft: false
 image: /uploads/course-covers/compiler-blueprint-v2.webp
+published: "2026-11-08T03:32:33+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 1、选择题 2分\*5=10分

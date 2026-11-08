@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级可计算理论课程复习提纲
-published: 2026-11-08
 description: 可计算理论课程复习笔记，涵盖正则语言、上下文无关文法、图灵机、可判定性、归约与复杂性理论。
 category: 学习笔记
 tags: [可计算理论, 福州大学, 课程复习]
 image: /uploads/computability-notes/cover.png
 draft: false
+published: "2026-11-08T02:45:38+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 ## 第一部分：正则语言

@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级Internet实验课程复习提纲
-published: 2026-11-08
 description: Internet实验课程复习提纲，涵盖以太网与ARP、IP寻址与路由、TCP与UDP、DNS与HTTP，以及加密、报文鉴别与数字签名。
 category: 学习笔记
 tags: [Internet实验, 课程复习]
 draft: false
 image: /uploads/course-covers/internet-blueprint-v2.webp
+published: "2026-11-08T03:32:33+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 ### 第一章 数据链路层

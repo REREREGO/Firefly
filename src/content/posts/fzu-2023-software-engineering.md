@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级软件工程课程复习提纲
-published: 2026-11-08
 description: 软件工程课程复习提纲，涵盖软件过程与需求分析、UML建模、设计原则、软件测试、项目管理及风险管理。
 category: 学习笔记
 tags: [软件工程, 福州大学, 课程复习]
 image: /uploads/software-engineering/cover.webp
 draft: false
+published: "2026-11-08T13:55:55+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 考点：

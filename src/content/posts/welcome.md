@@ -1,10 +1,11 @@
 ---
 title: 小站启程
-published: 2026-11-07
 description: 一个记录学习与生活的地方，正在慢慢生长。
 tags: [小站日记]
 category: 随笔
 draft: false
+published: "2026-11-07T20:59:32+08:00"
+updated: "2026-11-07T20:59:32+08:00"
 ---
 
 欢迎来到 **REREREGO** 的个人博客。

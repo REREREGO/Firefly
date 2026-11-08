@@ -1,7 +1,5 @@
 ---
 title: 福州大学2023级数学建模课程复习提纲
-published: 2026-11-08
-updated: 2026-11-08
 description: 数学建模课程复习提纲，涵盖初等模型、优化模型、数学规划、微分方程、差分模型、离散模型与概率模型。
 category: 学习笔记
 tags:
@@ -11,6 +9,8 @@ tags:
 image: /uploads/math-modeling-2023/cover.png
 draft: false
 pinned: false
+published: "2026-11-08T01:49:24+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 ## 前言
 

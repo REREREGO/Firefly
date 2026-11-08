@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级人工智能安全课程复习提纲
-published: 2026-11-08
 description: 人工智能安全课程复习提纲，涵盖神经网络与大语言模型、对抗攻击与防御、模型提取、后门攻防、数据隐私、深度伪造及智能体安全。
 category: 学习笔记
 tags: [人工智能安全, 福州大学, 课程复习]
 image: /uploads/ai-security/cover.webp
 draft: false
+published: "2026-11-08T14:08:19+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 ## 人工智能导论

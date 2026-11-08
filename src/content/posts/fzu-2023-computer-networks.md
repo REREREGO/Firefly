@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级计算机网络课程复习提纲
-published: 2026-11-08
 description: 计算机网络课程复习提纲，涵盖网络体系结构、物理层与数据链路层、IP与路由、传输层协议、应用层服务及无线网络。
 category: 学习笔记
 tags: [计算机网络, 福州大学, 课程复习]
 image: /uploads/computer-networks/cover.webp
 draft: false
+published: "2026-11-08T18:18:32+08:00"
+updated: "2026-11-09T02:17:21+08:00"
 ---
 
 1.  网络、互联网、因特网、internet、Internet。

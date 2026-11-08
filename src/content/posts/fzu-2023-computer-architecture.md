@@ -1,11 +1,12 @@
 ---
 title: 福州大学2023级计算机系统结构课程复习提纲
-published: 2026-11-09
 description: 计算机系统结构课程复习提纲，涵盖系统结构基础与性能分析、指令系统、标量与向量处理机、多处理机及数据流机。
 category: 学习笔记
 tags: [计算机系统结构, 福州大学, 课程复习]
 image: /uploads/computer-architecture/cover.webp
 draft: false
+published: "2026-11-09T03:30:31+08:00"
+updated: "2026-11-09T03:30:31+08:00"
 ---
 
 ## 第一章 计算机系统结构导论
