@@ -5,6 +5,7 @@ description: 操作系统知识点梳理，保留课程知识点、例题和原�
 category: 学习笔记
 tags: [操作系统知识点梳理, 课程复习]
 draft: false
+image: /uploads/course-covers/os-blueprint-v2.webp
 ---
 
 题型

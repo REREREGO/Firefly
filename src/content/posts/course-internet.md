@@ -5,6 +5,7 @@ description: Internet实验课程复习笔记，保留课程知识点、例题�
 category: 学习笔记
 tags: [Internet实验, 课程复习]
 draft: false
+image: /uploads/course-covers/internet-blueprint-v2.webp
 ---
 
 ### 第一章 数据链路层

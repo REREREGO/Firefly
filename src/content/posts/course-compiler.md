@@ -5,6 +5,7 @@ description: 编译原理课程复习笔记，保留课程知识点、例题和�
 category: 学习笔记
 tags: [编译原理, 课程复习]
 draft: false
+image: /uploads/course-covers/compiler-blueprint-v2.webp
 ---
 
 1、选择题 2分\*5=10分
