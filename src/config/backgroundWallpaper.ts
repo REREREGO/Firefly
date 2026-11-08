@@ -2,10 +2,14 @@ import gallery from "./bannerGallery.json";
 import authorSettings from "./authorSettings.json";
 import type { BackgroundWallpaperConfig } from "@/types/backgroundWallpaper";
 
-const galleryData: { slides?: string[]; reserve?: string[] } = gallery;
-const gallerySlides = Array.isArray(galleryData.slides) ? galleryData.slides : [];
-const galleryReserve = Array.isArray(galleryData.reserve) ? galleryData.reserve : [];
-if (gallerySlides.length > 10 || galleryReserve.length > 30) throw new Error("首页图片限制：展示最多10张，备用最多30张");
+const galleryData: { images?: { name: string; image: string; active: boolean }[]; slides?: string[]; reserve?: string[] } = gallery;
+const gallerySlides = Array.isArray(galleryData.images)
+  ? galleryData.images.filter((item) => item.active).map((item) => item.image)
+  : galleryData.slides ?? [];
+const galleryReserve = Array.isArray(galleryData.images)
+  ? galleryData.images.filter((item) => !item.active).map((item) => item.image)
+  : galleryData.reserve ?? [];
+if (gallerySlides.length > 10 || galleryReserve.length > 30) throw new Error("首页图片限制：展示最多10张，备用最多30张。请在CMS图库关闭部分展示开关或移除多余备用条目后重新发布。");
 const orderedSlides = gallerySlides.filter(Boolean);
 const slideSources = orderedSlides.length ? orderedSlides : ["assets/images/ibuki.jpg"];
 export const backgroundWallpaper: BackgroundWallpaperConfig = {

@@ -49,22 +49,32 @@ content:
     fields:
       - { name: body, label: 正文, type: rich-text }
   - name: banners
-    label: 首页图片序列与备用图库
+    label: 首页轮播图库（开关切换展示与备用）
     type: file
     path: src/config/bannerGallery.json
     format: json
     fields:
-      - name: slides
-        label: 展示序列（从上到下播放，最多10张）
-        type: image
+      - name: images
+        label: 图片管理
+        description: 打开“参与首页轮播”即加入展示，关闭即移入备用。拖动左侧手柄调整顺序，开启的图片按从上到下播放。最多展示10张、备用30张，切换后请保存。删除条目不会删除媒体库中的原文件。
+        type: object
         list:
-          min: 1
-          max: 10
-      - name: reserve
-        label: 备用图库（最多30张，不参与轮播）
-        type: image
-        list:
-          max: 30
+          max: 40
+          collapsible:
+            collapsed: false
+            summary: "{fields.name}"
+        fields:
+          - { name: name, label: 图片名称, type: string, required: true }
+          - name: image
+            label: 图片预览（点击可替换）
+            type: image
+            required: true
+            options:
+              path: public/uploads/banner-gallery
+          - name: active
+            label: 参与首页轮播（开=展示，关=备用）
+            type: boolean
+            default: false
 actions:
   - name: deploy
     label: 发布网站
