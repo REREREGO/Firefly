@@ -47,7 +47,7 @@ const ranges = [
 	const initialized = new WeakSet<HTMLElement>();
 	function initializeTraffic() {
 		const candidate = document.querySelector<HTMLElement>("[data-traffic-dashboard]");
-		if (!candidate || initialized.has(candidate)) return;
+		if (!candidate || initialized.has(candidate)) return;
         const root: HTMLElement = candidate;
 		initialized.add(root);
 		const get = <T extends Element = HTMLElement>(selector: string) => root.querySelector<T>(selector)!;

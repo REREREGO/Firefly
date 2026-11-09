@@ -1,120 +1,120 @@
-media:
-  - name: uploads
-    label: 文章图片
-    input: public/uploads
-    output: https://rererego.github.io/MyBlog/uploads
-    categories: [image]
-  - name: banners
-    label: 轮播图片
-    input: public/uploads/banner-gallery
-    output: public/uploads/banner-gallery
-    categories: [image]
-content:
-  - name: posts
-    label: 已公开文章（新草稿请切换 BlogDraft）
-    type: collection
-    path: src/content/posts
-    format: yaml-frontmatter
-    filename: "{year}-{month}-{day}-{primary}.md"
-    view:
-      primary: title
-      fields: [title, published, draft, category]
-      sort: published
-      order: desc
-    fields:
-      - { name: title, label: 标题, type: string, required: true }
-      - name: published
-        label: 首次公开时间（自动）
-        type: date
-        readonly: true
-        default: ""
-        description: 关闭草稿并保存后自动记录；重新隐藏后清空。后台处理完成后刷新查看。
-        options:
-          time: true
-          format: "yyyy-MM-dd'T'HH:mm:ssXXX"
-      - name: updated
-        label: 最近修改时间（自动）
-        type: date
-        readonly: true
-        default: ""
-        description: 根据文章最近一次有效保存自动记录，不因单纯重建网站而改变。
-        options:
-          time: true
-          format: "yyyy-MM-dd'T'HH:mm:ssXXX"
-      - { name: description, label: 摘要, type: text }
-      - { name: category, label: 分类, type: string }
-      - { name: tags, label: 标签, type: string, list: true }
-      - { name: image, label: 封面图片, type: image }
-      - name: draft
-        label: 转为私密草稿（开启后保存）
-        type: boolean
-        default: true
-      - { name: pinned, label: 置顶, type: boolean, default: false }
-      - { name: body, label: 正文, type: rich-text }
-  - name: site
-    label: 站点与首页设置
-    type: file
-    path: src/config/authorSettings.json
-    format: json
-    fields:
-      - { name: title, label: 博客名称（含导航栏）, type: string, required: true }
-      - { name: subtitle, label: 站点副标题, type: string }
-      - { name: description, label: 站点描述, type: text }
-      - { name: name, label: 作者昵称, type: string, required: true }
-      - { name: bio, label: 个人简介, type: text }
-      - { name: heroTitle, label: 首页横幅标题, type: string, required: true }
-      - { name: heroSubtitles, label: 首页轮播标语, type: string, list: true }
-      - name: navigationVisibility
-        label: 顶栏功能显示
-        description: 默认开启；关闭仅隐藏导航入口，不限制通过网址访问。保存并部署后生效。
-        type: object
-        fields:
-          - { name: home, label: 首页, type: boolean, default: true }
-          - { name: archive, label: 时间线, type: boolean, default: true }
-          - { name: wows, label: WoWs, type: boolean, default: true }
-          - { name: social, label: 社交总菜单, type: boolean, default: true }
-          - { name: friends, label: 友链, type: boolean, default: true }
-          - { name: guestbook, label: 留言, type: boolean, default: true }
-          - { name: about, label: 关于我, type: boolean, default: true }
-          - { name: github, label: GitHub, type: boolean, default: true }
-          - { name: search, label: 搜索, type: boolean, default: true }
-          - { name: music, label: 音乐按钮, type: boolean, default: true }
-          - { name: appearance, label: 外观设置, type: boolean, default: true }
-          - { name: theme, label: 日夜模式切换, type: boolean, default: true }
-          - { name: author, label: 设置：作者模式, type: boolean, default: true }
-          - { name: stats, label: 设置：统计, type: boolean, default: true }
-  - name: about
-    label: 关于我
-    type: file
-    path: src/config/aboutContent.json
-    format: json
-    fields:
-      - { name: body, label: 正文, type: rich-text }
-  - name: banners
-    label: 首页轮播图库（开关切换展示与备用）
-    type: file
-    path: src/config/bannerGallery.json
-    format: json
-    fields:
-      - name: images
-        label: 图片管理
-        description: 开启展示，关闭备用；拖动排序。展示最多10张，备用最多30张。
-        type: object
-        list:
-          max: 40
-          collapsible: false
-        fields:
-          - name: image
-            label: false
-            type: image
-            options:
-              media: banners
-          - name: active
-            label: 展示
-            type: boolean
-            default: false
-actions:
-  - name: deploy
-    label: 发布网站
-    workflow: deploy.yml
-    ref: master
+media:
+  - name: uploads
+    label: 文章图片
+    input: public/uploads
+    output: https://rererego.github.io/MyBlog/uploads
+    categories: [image]
+  - name: banners
+    label: 轮播图片
+    input: public/uploads/banner-gallery
+    output: public/uploads/banner-gallery
+    categories: [image]
+content:
+  - name: posts
+    label: 已公开文章（新草稿请切换 BlogDraft）
+    type: collection
+    path: src/content/posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      fields: [title, published, draft, category]
+      sort: published
+      order: desc
+    fields:
+      - { name: title, label: 标题, type: string, required: true }
+      - name: published
+        label: 首次公开时间（自动）
+        type: date
+        readonly: true
+        default: ""
+        description: 关闭草稿并保存后自动记录；重新隐藏后清空。后台处理完成后刷新查看。
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssXXX"
+      - name: updated
+        label: 最近修改时间（自动）
+        type: date
+        readonly: true
+        default: ""
+        description: 根据文章最近一次有效保存自动记录，不因单纯重建网站而改变。
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssXXX"
+      - { name: description, label: 摘要, type: text }
+      - { name: category, label: 分类, type: string }
+      - { name: tags, label: 标签, type: string, list: true }
+      - { name: image, label: 封面图片, type: image }
+      - name: draft
+        label: 转为私密草稿（开启后保存）
+        type: boolean
+        default: true
+      - { name: pinned, label: 置顶, type: boolean, default: false }
+      - { name: body, label: 正文, type: rich-text }
+  - name: site
+    label: 站点与首页设置
+    type: file
+    path: src/config/authorSettings.json
+    format: json
+    fields:
+      - { name: title, label: 博客名称（含导航栏）, type: string, required: true }
+      - { name: subtitle, label: 站点副标题, type: string }
+      - { name: description, label: 站点描述, type: text }
+      - { name: name, label: 作者昵称, type: string, required: true }
+      - { name: bio, label: 个人简介, type: text }
+      - { name: heroTitle, label: 首页横幅标题, type: string, required: true }
+      - { name: heroSubtitles, label: 首页轮播标语, type: string, list: true }
+      - name: navigationVisibility
+        label: 顶栏功能显示
+        description: 默认开启；关闭仅隐藏导航入口，不限制通过网址访问。保存并部署后生效。
+        type: object
+        fields:
+          - { name: home, label: 首页, type: boolean, default: true }
+          - { name: archive, label: 时间线, type: boolean, default: true }
+          - { name: wows, label: WoWs, type: boolean, default: true }
+          - { name: social, label: 社交总菜单, type: boolean, default: true }
+          - { name: friends, label: 友链, type: boolean, default: true }
+          - { name: guestbook, label: 留言, type: boolean, default: true }
+          - { name: about, label: 关于我, type: boolean, default: true }
+          - { name: github, label: GitHub, type: boolean, default: true }
+          - { name: search, label: 搜索, type: boolean, default: true }
+          - { name: music, label: 音乐按钮, type: boolean, default: true }
+          - { name: appearance, label: 外观设置, type: boolean, default: true }
+          - { name: theme, label: 日夜模式切换, type: boolean, default: true }
+          - { name: author, label: 设置：作者模式, type: boolean, default: true }
+          - { name: stats, label: 设置：统计, type: boolean, default: true }
+  - name: about
+    label: 关于我
+    type: file
+    path: src/config/aboutContent.json
+    format: json
+    fields:
+      - { name: body, label: 正文, type: rich-text }
+  - name: banners
+    label: 首页轮播图库（开关切换展示与备用）
+    type: file
+    path: src/config/bannerGallery.json
+    format: json
+    fields:
+      - name: images
+        label: 图片管理
+        description: 开启展示，关闭备用；拖动排序。展示最多10张，备用最多30张。
+        type: object
+        list:
+          max: 40
+          collapsible: false
+        fields:
+          - name: image
+            label: false
+            type: image
+            options:
+              media: banners
+          - name: active
+            label: 展示
+            type: boolean
+            default: false
+actions:
+  - name: deploy
+    label: 发布网站
+    workflow: deploy.yml
+    ref: master

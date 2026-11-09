@@ -16,7 +16,7 @@ const git = (cwd, ...args) =>
 // Preserve the body byte-for-byte. Never reserialize formulas or other frontmatter.
 function split(source) {
 	const match = source.match(
-		/^(\uFEFF?---\r?\n)([\s\S]*?)(\r?\n---(?:\r?\n|$))/,
+		/^(\uFEFF?---\r*\n)([\s\S]*?)(\r*\n---(?:\r*\n|$))/,
 	);
 	if (!match) throw new Error("Missing YAML frontmatter");
 	return {
@@ -29,16 +29,16 @@ function split(source) {
 export function withoutDates(source) {
 	const f = split(source);
 	const yaml = f.yaml
-		.split(/\r?\n/)
+		.split(/\r*\n/)
 		.filter((line) => !/^(published|updated):/.test(line))
 		.join("\n");
-	return yaml.replace(/\/MyBlog\//g, "/Firefly/") + "\n---\n" + f.body.replace(/\r\n/g, "\n").replace(/\/MyBlog\//g, "/Firefly/");
+	return yaml.replace(/\/MyBlog\//g, "/Firefly/") + "\n---\n" + f.body.replace(/\r+\n/g, "\n").replace(/\/MyBlog\//g, "/Firefly/");
 }
 export function stamp(source, state) {
 	const f = split(source),
 		eol = f.start.includes("\r\n") ? "\r\n" : "\n";
 	const lines = f.yaml
-		.split(/\r?\n/)
+		.split(/\r*\n/)
 		.filter((line) => !/^(published|updated):/.test(line));
 	lines.push(
 		"published: " +
@@ -55,7 +55,7 @@ export function beijing(time) {
 export function advance(previous, source, time, renamed = false) {
 	const fingerprint = withoutDates(source);
 	if (previous?.fingerprint === fingerprint && !renamed) return previous;
-	const draft = matter(source).data.draft === true;
+	const draft = matter(source.replace(/\r+\n/g, "\n")).data.draft === true;
 	return {
 		fingerprint,
 		draft,

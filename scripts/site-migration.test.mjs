@@ -14,3 +14,8 @@ test('URL migration alone does not change article modification dates',()=>{
  assert.equal(withoutDates(old),withoutDates(next));
  assert.notEqual(withoutDates(old),withoutDates(next+' actual edit'));
 });
+
+test('repeated Windows line endings in migration history preserve fingerprints',()=>{
+ const source='---\ntitle: Test\ndraft: false\npublished: null\n---\nBody $x_1$';
+ assert.equal(withoutDates(source),withoutDates(source.replaceAll('\n','\r\r\n')));
+});
