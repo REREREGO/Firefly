@@ -164,10 +164,14 @@ export function sync(cwd, write = false) {
 			}
 			const previous = states.get(renamed ? oldPath : file);
 			if (renamed) states.delete(oldPath);
-			states.set(
-				file,
-				advance(previous, git(cwd, "show", `${sha}:${file}`), time, renamed),
-			);
+			try {
+				states.set(
+					file,
+					advance(previous, git(cwd, "show", `${sha}:${file}`), time, renamed),
+				);
+			} catch (error) {
+				throw new Error(`Invalid article history: ${file} at ${sha}`, { cause: error });
+			}
 		}
 	}
 	const report = [];
