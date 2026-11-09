@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import PostViews from "@/components/analytics/PostViews.astro";
 import { commentConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
@@ -29,6 +30,7 @@ export interface Props {
 	showWords?: boolean;
 	showReadingTime?: boolean;
 	variant?: "default" | "cover";
+	viewsUrl?: string;
 }
 
 const {
@@ -54,6 +56,7 @@ const {
 	showReadingTime = false,
 	password,
 	variant = "default",
+	viewsUrl,
 } = Astro.props;
 
 const path = customPath || (id ? `/posts/${id}` : "");
@@ -100,6 +103,10 @@ const visibleTags =
         </span>
       </div>
     )
+  }
+
+  {
+    viewsUrl && <PostViews url={viewsUrl} />
   }
 
   {
