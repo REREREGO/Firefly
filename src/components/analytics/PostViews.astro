@@ -17,6 +17,7 @@ const { url } = Astro.props;
 </div>
 
 <script>
+ import { visitPath } from "@/utils/visit-key";
 	const seen = new WeakSet<HTMLElement>();
 	async function loadPostViews() {
 		if (location.hostname !== "rererego.github.io") return;
@@ -27,7 +28,7 @@ const { url } = Astro.props;
 			const target = new URL(element.dataset.postViews || "", location.origin);
 			if (target.origin !== location.origin) continue;
 			// Match the detail page counter: no query/hash, one trailing slash.
-			const key = target.origin + target.pathname.replace(/\/+$/, "") + "/";
+			const key = target.origin + visitPath(target.pathname);
 			const elements = groups.get(key) || [];
 			elements.push(element);
 			groups.set(key, elements);

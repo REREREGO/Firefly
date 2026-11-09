@@ -47,7 +47,7 @@ const ranges = [
 	const initialized = new WeakSet<HTMLElement>();
 	function initializeTraffic() {
 		const candidate = document.querySelector<HTMLElement>("[data-traffic-dashboard]");
-		if (!candidate || initialized.has(candidate)) return;
+		if (!candidate || initialized.has(candidate)) return;
         const root: HTMLElement = candidate;
 		initialized.add(root);
 		const get = <T extends Element = HTMLElement>(selector: string) => root.querySelector<T>(selector)!;
@@ -89,7 +89,7 @@ const ranges = [
 			button.disabled = true;
 			get("[data-traffic-status]").textContent = "正在读取统计记录…";
 			try {
-				const response = await fetch("https://raw.githubusercontent.com/REREREGO/Firefly/analytics-data/history.json",{cache:"no-store",signal:AbortSignal.timeout(15000)});
+				const response = await fetch("https://raw.githubusercontent.com/REREREGO/Firefly-public/main/history.json",{cache:"no-store",signal:AbortSignal.timeout(15000)});
 				if (!response.ok) throw new Error("History unavailable");
 				history = parseTrafficHistory(await response.json());
 				if (!root.isConnected) return;

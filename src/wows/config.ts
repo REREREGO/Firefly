@@ -32,7 +32,7 @@ export const siteConfig: {
 	description: "一个静态的战舰世界个人战绩页面。",
 
 	/** 博客主站地址，用于导航栏「返回博客」按钮；留空则不显示 */
-	blogUrl: "https://rererego.github.io/Firefly/",
+	blogUrl: "https://rererego.github.io/MyBlog/",
 
 	/** 默认配色主题：blog | wows */
 	defaultTheme: "blog" as ThemeKey,

@@ -21,7 +21,7 @@ const orderedSlides = gallerySlides
 	.filter(Boolean)
 	.map((src) =>
 		src.startsWith("public/")
-			? `https://rererego.github.io/Firefly/${src.slice(7)}`
+			? `https://rererego.github.io/MyBlog/${src.slice(7)}`
 			: src,
 	);
 const slideSources = orderedSlides.length

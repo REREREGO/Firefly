@@ -1,11 +1,12 @@
 <!-- Counts are stored by the public Busuanzi service, not in the repository. -->
 <script>
+ import { visitPath } from "@/utils/visit-key";
 	const fields = ["site_pv", "site_uv", "page_pv"] as const;
 	let lastPath = "";
 	let generation = 0;
 	async function updateVisits() {
 		if (location.hostname !== "rererego.github.io") return;
-		const path = location.pathname.replace(/\/+$/, "") + "/";
+		const path = visitPath(location.pathname);
 		if (path === lastPath) return;
 		lastPath = path;
 		const current = ++generation;
@@ -44,4 +45,4 @@
 		document.addEventListener("DOMContentLoaded", updateVisits, { once: true });
 	} else { void updateVisits(); }
 	document.addEventListener("astro:page-load", updateVisits);
-</script>
+</script>

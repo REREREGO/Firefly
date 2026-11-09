@@ -32,7 +32,7 @@ export function withoutDates(source) {
 		.split(/\r?\n/)
 		.filter((line) => !/^(published|updated):/.test(line))
 		.join("\n");
-	return yaml + "\n---\n" + f.body.replace(/\r\n/g, "\n");
+	return yaml.replace(/\/MyBlog\//g, "/Firefly/") + "\n---\n" + f.body.replace(/\r\n/g, "\n").replace(/\/MyBlog\//g, "/Firefly/");
 }
 export function stamp(source, state) {
 	const f = split(source),

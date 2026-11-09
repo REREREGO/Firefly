@@ -45,6 +45,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Verify migration compatibility
+        run: node --experimental-strip-types --test scripts/site-migration.test.mjs
+
       - name: Synchronize article timestamps
         run: |
           node --test scripts/sync-post-dates.test.mjs

@@ -29,13 +29,6 @@ jobs:
           version: 11.22.0
           run_install: false
       - run: pnpm install --frozen-lockfile
-      - name: Record hourly traffic snapshot
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          node --experimental-strip-types --test scripts/traffic-stats.test.mjs
-          node scripts/collect-traffic.mjs
       - name: Synchronize only when article dates changed
         env:
           GH_TOKEN: ${{ github.token }}
