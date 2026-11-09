@@ -9,5 +9,21 @@
     "Greeting",
     "你好",
     "Hello"
-  ]
+  ],
+  "navigationVisibility": {
+    "home": true,
+    "archive": true,
+    "wows": true,
+    "social": true,
+    "friends": true,
+    "guestbook": true,
+    "about": true,
+    "github": true,
+    "search": true,
+    "music": true,
+    "appearance": true,
+    "theme": true,
+    "author": true,
+    "stats": true
+  }
 }

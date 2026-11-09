@@ -64,6 +64,25 @@ content:
       - { name: bio, label: 个人简介, type: text }
       - { name: heroTitle, label: 首页横幅标题, type: string, required: true }
       - { name: heroSubtitles, label: 首页轮播标语, type: string, list: true }
+      - name: navigationVisibility
+        label: 顶栏功能显示
+        description: 默认开启；关闭仅隐藏导航入口，不限制通过网址访问。保存并部署后生效。
+        type: object
+        fields:
+          - { name: home, label: 首页, type: boolean, default: true }
+          - { name: archive, label: 时间线, type: boolean, default: true }
+          - { name: wows, label: WoWs, type: boolean, default: true }
+          - { name: social, label: 社交总菜单, type: boolean, default: true }
+          - { name: friends, label: 友链, type: boolean, default: true }
+          - { name: guestbook, label: 留言, type: boolean, default: true }
+          - { name: about, label: 关于我, type: boolean, default: true }
+          - { name: github, label: GitHub, type: boolean, default: true }
+          - { name: search, label: 搜索, type: boolean, default: true }
+          - { name: music, label: 音乐按钮, type: boolean, default: true }
+          - { name: appearance, label: 外观设置, type: boolean, default: true }
+          - { name: theme, label: 日夜模式切换, type: boolean, default: true }
+          - { name: author, label: 设置：作者模式, type: boolean, default: true }
+          - { name: stats, label: 设置：统计, type: boolean, default: true }
   - name: about
     label: 关于我
     type: file
