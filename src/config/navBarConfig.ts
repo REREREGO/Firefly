@@ -24,6 +24,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		children: [
 			// 归档
 			LinkPresets.Archive,
+			{
+				name: "统计",
+				url: "/stats/",
+				icon: "material-symbols:monitoring-rounded",
+			},
 
 			// 分类
 			LinkPresets.Categories,

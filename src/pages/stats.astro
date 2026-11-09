@@ -1,0 +1,148 @@
+---
+import { Icon } from "astro-icon/components";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+
+const ranges = [
+	{ hours: 24, label: "近 24 小时" },
+	{ hours: 168, label: "近 7 天" },
+	{ hours: 720, label: "近 30 天" },
+];
+---
+<MainGridLayout title="访问统计" description="近24小时、7天与30天的网站浏览量趋势">
+  <section class="card-base traffic-panel text-90" data-traffic-dashboard>
+    <header class="traffic-heading">
+      <div><p class="traffic-eyebrow">SITE ACTIVITY</p><h1><Icon name="material-symbols:monitoring-rounded" />访问统计</h1><p class="text-60">记录小站被看见的每一次。</p></div>
+      <button type="button" class="traffic-refresh" data-traffic-refresh>刷新数据</button>
+    </header>
+    <p class="traffic-status text-60" data-traffic-status role="status">正在读取统计记录…</p>
+    <div class="traffic-ranges" aria-label="选择统计时间范围">
+      {ranges.map(({hours,label})=>(
+        <button type="button" class="traffic-range" data-traffic-range={hours} aria-pressed={hours===24}>
+          <span>{label}</span><strong data-traffic-value={hours}>—</strong><span class="traffic-unit">次浏览</span><small data-traffic-coverage={hours}>等待数据</small>
+        </button>
+      ))}
+    </div>
+    <section class="traffic-chart" aria-label="浏览量增长趋势">
+      <div class="traffic-chart-heading"><h2 data-traffic-chart-title>近 24 小时 · 浏览量增长</h2><span class="text-60">范围内累计新增</span></div>
+      <p class="text-60" data-traffic-window>历史数据从启用后开始积累。</p>
+      <div class="traffic-plot" hidden data-traffic-plot>
+        <span class="traffic-maximum text-60" data-traffic-maximum></span>
+        <svg viewBox="0 0 800 240" preserveAspectRatio="none" role="img" aria-label="按小时采样的累计新增浏览量">
+          <path d="M 0 10 H 800 M 0 115 H 800 M 0 220 H 800" class="traffic-grid" />
+          <polygon data-traffic-area class="traffic-area" points="" />
+          <polyline data-traffic-line class="traffic-line" points="" />
+        </svg>
+        <div class="traffic-axis text-60"><span data-traffic-first></span><span data-traffic-last></span></div>
+      </div>
+      <div class="traffic-empty text-60" data-traffic-empty>等待下一次小时采样后显示增长趋势。</div>
+    </section>
+    <div class="traffic-details text-60"><span>采集开始：<b data-traffic-start>—</b></span><span>最近采样：<b data-traffic-updated>—</b></span><span>最近采样时累计浏览：<b data-traffic-total>—</b></span></div>
+    <details class="traffic-explanation text-60"><summary>统计口径</summary><p>浏览量（PV）指本站域名下页面的累计访问次数，不是去重访客人数。每小时读取一次现有计数，不会额外增加浏览量。区间以最近采样为终点，使用范围内第一个实际采样值计算增长，因此边界有小时级误差；实际覆盖范围显示在图表上方。</p><p>启用前没有小时记录，不能补算过去的历史。数据不足时显示已采集范围，不把缺失数据当成零。GitHub 调度或统计服务异常可能导致采样延迟；图上采样点之间的连线不代表逐次访问时刻。所有时间均为北京时间。</p></details>
+    <noscript><p>请启用 JavaScript 读取访问统计。</p></noscript>
+  </section>
+</MainGridLayout>
+
+<script>
+	import { parseTrafficHistory, trafficWindow, type TrafficHistory } from "@/utils/traffic-stats";
+	const initialized = new WeakSet<HTMLElement>();
+	function initializeTraffic() {
+		const candidate = document.querySelector<HTMLElement>("[data-traffic-dashboard]");
+		if (!candidate || initialized.has(candidate)) return;
+        const root: HTMLElement = candidate;
+		initialized.add(root);
+		const get = <T extends Element = HTMLElement>(selector: string) => root.querySelector<T>(selector)!;
+		const format = (value: string) => new Date(value).toLocaleString("zh-CN", {timeZone:"Asia/Shanghai",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false});
+		const fullDate = (value: string) => new Date(value).toLocaleString("zh-CN", {timeZone:"Asia/Shanghai",hour12:false});
+		let selected = 24;
+		let history: TrafficHistory | undefined;
+		function render() {
+			if (!history) return;
+			const latest = history.samples[history.samples.length-1];
+			get("[data-traffic-start]").textContent = fullDate(history.startedAt);
+			get("[data-traffic-updated]").textContent = fullDate(latest.at);
+			get("[data-traffic-total]").textContent = latest.pv.toLocaleString("zh-CN");
+			for (const button of root.querySelectorAll<HTMLButtonElement>("[data-traffic-range]")) {
+				const hours = Number(button.dataset.trafficRange);
+				const result = trafficWindow(history,hours);
+				button.setAttribute("aria-pressed",String(selected===hours));
+				get(`[data-traffic-value="${hours}"]`).textContent = result.views===null ? "—" : result.views.toLocaleString("zh-CN");
+				get(`[data-traffic-coverage="${hours}"]`).textContent = result.views===null ? "等待下一次采样" : `${result.partial ? "数据积累中 · " : ""}已覆盖 ${result.coveredHours.toFixed(1)} 小时`;
+			}
+			const result = trafficWindow(history,selected);
+			get("[data-traffic-chart-title]").textContent = `${selected===24?"近 24 小时":selected===168?"近 7 天":"近 30 天"} · 浏览量增长`;
+			get("[data-traffic-window]").textContent = `${format(result.samples[0].at)} — ${format(latest.at)}${result.maxGapHours>3?" · 存在较长采样间隔，无法还原期间的小时分布":""}`;
+			get<HTMLElement>("[data-traffic-plot]").hidden = result.views===null;
+			get<HTMLElement>("[data-traffic-empty]").hidden = result.views!==null;
+			if (result.views===null) return;
+			const first = result.samples[0];
+			const duration = Date.parse(latest.at)-Date.parse(first.at);
+			const maximum = Math.max(1,result.views);
+			const points = result.samples.map(sample=>`${((Date.parse(sample.at)-Date.parse(first.at))/duration*800).toFixed(2)},${(220-(sample.pv-first.pv)/maximum*210).toFixed(2)}`).join(" ");
+			get("[data-traffic-line]").setAttribute("points",points);
+			get("[data-traffic-area]").setAttribute("points",`0,220 ${points} 800,220`);
+			get("[data-traffic-maximum]").textContent = `${maximum.toLocaleString("zh-CN")} 次`;
+			get("[data-traffic-first]").textContent = format(first.at);
+			get("[data-traffic-last]").textContent = format(latest.at);
+		}
+		async function load() {
+			const button = get<HTMLButtonElement>("[data-traffic-refresh]");
+			button.disabled = true;
+			get("[data-traffic-status]").textContent = "正在读取统计记录…";
+			try {
+				const response = await fetch("https://raw.githubusercontent.com/REREREGO/Firefly/analytics-data/history.json",{cache:"no-store",signal:AbortSignal.timeout(15000)});
+				if (!response.ok) throw new Error("History unavailable");
+				history = parseTrafficHistory(await response.json());
+				if (!root.isConnected) return;
+				const last = history.samples[history.samples.length-1];
+				const stale = Date.now()-Date.parse(last.at)>3*3600_000;
+				get("[data-traffic-status]").textContent = `${stale?"采样已超过 3 小时未更新，当前展示历史记录。":"每小时更新一次；刷新按钮读取已采集的数据。"}${history.resetAt?" 统计源曾重置，已重新开始积累。":""}`;
+				render();
+			} catch {
+				get("[data-traffic-status]").textContent = history ? "更新暂不可用，保留上次读取的数据。" : "统计记录暂不可用，请稍后点击刷新重试。";
+			} finally { button.disabled = false; }
+		}
+		for (const button of root.querySelectorAll<HTMLButtonElement>("[data-traffic-range]")) button.addEventListener("click",()=>{selected=Number(button.dataset.trafficRange);render();});
+		get("[data-traffic-refresh]").addEventListener("click",()=>void load());
+		void load();
+	}
+	if (document.readyState==="loading") document.addEventListener("DOMContentLoaded",initializeTraffic,{once:true}); else initializeTraffic();
+	document.addEventListener("astro:page-load",initializeTraffic);
+</script>
+
+<style>
+  .traffic-panel { padding: clamp(1.2rem,4vw,2.5rem); width:100%; }
+  .traffic-heading,.traffic-chart-heading { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  .traffic-eyebrow { color:var(--primary); font-size:.75rem; letter-spacing:.2em; font-weight:700; }
+  h1 { font-size:clamp(1.7rem,4vw,2.3rem); font-weight:750; display:flex; align-items:center; gap:.6rem; margin:.5rem 0; }
+  h1 :global(svg) { color:var(--primary); }
+  .traffic-refresh { background:var(--btn-regular-bg); color:var(--primary); padding:.65rem 1rem; border-radius:.75rem; }
+  .traffic-refresh:disabled { opacity:.5; }
+  button:focus-visible,summary:focus-visible { outline:2px solid var(--primary); outline-offset:4px; }
+  .traffic-status { font-size:.85rem; margin:1.5rem 0 1rem; }
+  .traffic-ranges { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+  .traffic-range { text-align:left; padding:1.2rem; border:1px solid var(--btn-regular-bg); border-radius:1rem; background:var(--btn-regular-bg); transition:border-color .2s; }
+  .traffic-range[aria-pressed="true"] { border-color:var(--primary); box-shadow:inset 0 0 0 1px var(--primary); }
+  .traffic-range>span:first-child { display:block; font-weight:600; }
+  .traffic-range strong { display:inline-block; font-size:2.2rem; line-height:1.3; margin:.6rem .35rem .5rem 0; color:var(--primary); font-variant-numeric:tabular-nums; }
+  .traffic-unit { font-size:.8rem; }
+  .traffic-range small { display:block; opacity:.7; font-size:.75rem; }
+  .traffic-chart { margin-top:2rem; }
+  .traffic-chart h2 { font-size:1.1rem; font-weight:650; }
+  .traffic-chart-heading>span,.traffic-chart>p { font-size:.8rem; }
+  .traffic-chart>p { margin-top:.6rem; }
+  .traffic-plot { margin-top:2rem; position:relative; padding-top:1rem; }
+  .traffic-plot svg { width:100%; height:240px; overflow:visible; }
+  .traffic-grid { fill:none; stroke:currentColor; opacity:.12; stroke-dasharray:4 5; }
+  .traffic-line { fill:none; stroke:var(--primary); stroke-width:3; vector-effect:non-scaling-stroke; }
+  .traffic-area { fill:var(--primary); opacity:.1; }
+  .traffic-maximum { position:absolute; top:-.4rem; left:0; font-size:.75rem; }
+  .traffic-axis { display:flex; justify-content:space-between; font-size:.75rem; }
+  .traffic-empty { padding:4rem 1rem; text-align:center; font-size:.9rem; }
+  [hidden] { display:none!important; }
+  .traffic-details { display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; margin-top:2rem; font-size:.8rem; }
+  .traffic-details b { font-weight:500; }
+  .traffic-explanation { margin-top:1.5rem; font-size:.8rem; line-height:1.8; }
+  summary { cursor:pointer; }
+  .traffic-explanation p { margin-top:.6rem; }
+  @media(max-width:640px) { .traffic-ranges { gap:.5rem; } .traffic-range { padding:.8rem .6rem; } .traffic-range strong { font-size:1.7rem; } .traffic-range>span:first-child { font-size:.85rem; } .traffic-range small { line-height:1.5; } .traffic-plot svg { height:190px; } }
+</style>
